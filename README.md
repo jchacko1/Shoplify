@@ -1,8 +1,9 @@
-# H1 Shoplify -- CSc4350 Software Engineering Fall 2014 Group project 
-## H2 Java based Desktop software program
-## H3 Group member: Kaili An, Natthakit Athakahanh, Jervine Chacko, Munir Limay, Jay Marquez
+#  Shoplify -- CSc4350 Software Engineering Fall 2014 Group project 
+##  Java based Desktop software program
+##  Group member: 
+   Kaili An, Natthakit Athakahanh, Jervine Chacko, Munir Limay, Jay Marquez
 
-## H3 Introduction:
+##  Introduction:
   
   Only a week ago, our team was approached with the idea to create a shopping system, similar to Amazon.com and other e-commerce platforms that would help users manage their online shopping inventory. We will develop a Desktop application in Java which will represent a “shopping cart” where users can add and subtract different items for purchase on their order. Our Shopping system will also support discounts through coupon codes that the user can enter, as well as pickup scheduling to configure when the user would like to receive their order.  
 
