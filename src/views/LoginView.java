@@ -1,7 +1,9 @@
+package views;
+
 import javax.swing.*;
 import java.awt.event.*;
 
-public class login extends JDialog {
+public class LoginView extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
@@ -10,7 +12,7 @@ public class login extends JDialog {
     private JButton signupBtn;
     private JPanel signupPanel;
 
-    public login() {
+    public LoginView() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -54,7 +56,7 @@ public class login extends JDialog {
     }
 
     public static void main(String[] args) {
-        login dialog = new login();
+        LoginView dialog = new LoginView();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);

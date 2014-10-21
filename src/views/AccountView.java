@@ -1,6 +1,8 @@
+package views;
+
 import javax.swing.*;
 
-public class categories extends JDialog {
+public class AccountView extends JDialog {
     private JPanel contentPane;
     private JPanel iconPanel;
     private JPanel topRightPanel;
@@ -9,24 +11,25 @@ public class categories extends JDialog {
     private JTextField searchField;
     private JButton searchBtn;
     private JLabel categoryLabel;
-    private JList Deli;
-    private JList Meat;
-    private JList Seafood;
-    private JList Vegetable;
+    private JList accountName;
+    private JList subscription;
+    private JList password;
+    private JList details;
     private JList Bakery;
-    private JPanel adBannerPanel;
-    private JTable foodTable;
-    private JScrollBar scrollBar1;
+    private JList pastOrder;
+    private JList RAform;
+    private JList cardInfo;
+    private JList GiftCards;
     private JButton buttonOK;
 
-    public categories() {
+    public AccountView() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
     }
 
     public static void main(String[] args) {
-        categories dialog = new categories();
+        AccountView dialog = new AccountView();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);

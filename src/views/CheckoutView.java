@@ -1,6 +1,8 @@
+package views;
+
 import javax.swing.*;
 
-public class subscription extends JDialog {
+public class CheckoutView extends JDialog {
     private JPanel contentPane;
     private JPanel iconPanel;
     private JPanel topRightPanel;
@@ -14,33 +16,42 @@ public class subscription extends JDialog {
     private JList Seafood;
     private JList Vegetable;
     private JList Bakery;
-    private JPanel adBannerPanel;
     private JLabel totalTxt;
     private JLabel totalNumAmount;
-    private JButton couponBtn;
-    private JButton checkOutBtn;
-    private JButton subscriptionBtn;
-    private JPanel subPanel;
-    private JPanel calendarPane;
+    private JTextArea etaDateField;
     private JLabel shippingLabel;
-    private JList item1;
-    private JList item2;
-    private JEditorPane updateAmount1;
-    private JEditorPane updateAmount2;
-    private JTextArea item1Amount;
-    private JTextArea item2Amount;
+    private JLabel paymentLabel;
+    private JList shippingName;
+    private JList address;
+    private JList phone;
+    private JList priority;
+    private JList carrier;
+    private JList cardHolderName;
+    private JList billingAddr;
+    private JList paymentPhone;
+    private JList cardType;
+    private JList cardExp;
+    private JPanel shippingPan;
+    private JPanel paymentPan;
     private JButton buttonOK;
+    private JButton buttonCancel;
 
-    public subscription() {
+    public CheckoutView() {
         setContentPane(contentPane);
         setModal(true);
-        getRootPane().setDefaultButton(buttonOK);
-    }
+        
+        }
+
+
 
     public static void main(String[] args) {
-        subscription dialog = new subscription();
+        CheckoutView dialog = new CheckoutView();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);
+    }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
     }
 }

@@ -1,6 +1,8 @@
+package views;
+
 import javax.swing.*;
 
-public class homepage extends JDialog {
+public class HomepageView extends JDialog {
     private JPanel contentPane;
     private JButton loginBtn;
     private JButton buttonOK;
@@ -18,14 +20,14 @@ public class homepage extends JDialog {
     private JList Vegetable;
     private JList Bakery;
 
-    public homepage() {
+    public HomepageView() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
     }
 
     public static void main(String[] args) {
-        homepage dialog = new homepage();
+        HomepageView dialog = new HomepageView();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);

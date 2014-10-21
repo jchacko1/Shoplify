@@ -1,6 +1,8 @@
+package views;
+
 import javax.swing.*;
 
-public class shoppingCart extends JDialog {
+public class ShoppingCartView extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JPanel iconPanel;
@@ -30,14 +32,14 @@ public class shoppingCart extends JDialog {
     private JButton couponBtn;
     private JButton checkOutBtn;
 
-    public shoppingCart() {
+    public ShoppingCartView() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
     }
 
     public static void main(String[] args) {
-        shoppingCart dialog = new shoppingCart();
+        ShoppingCartView dialog = new ShoppingCartView();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);
