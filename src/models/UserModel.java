@@ -1,5 +1,7 @@
 package models;
 
+import businessLogic.Utilities;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -21,6 +23,7 @@ public class UserModel {
     //private String gender;
     private boolean isAdmin;
     private Enums.UserType userType;
+    private int accountId;
 
 
 //    public UserModel(String username, String password, int userId, boolean isAdmin,
@@ -29,7 +32,8 @@ public class UserModel {
         this.userId = 1;        //todo needs to be a value from the database
         this.firstName = firstName;
         this.lastName = lastName;
-        createDate = getCurrentDate();
+        createDate = Utilities.getCurrentDate();
+            this.accountId = -1;
     }
 
     public UserModel()
@@ -37,28 +41,27 @@ public class UserModel {
         //return new UserModel();
     }
 
-    //TODO maybe move this to somewhere for other objects to use
-    public String getCurrentDate()
-    {
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date date = new Date();
-        return dateFormat.format(date);
+    public UserModel(int userId)
+    {    this.userId = userId;
     }
 
     //@precondition: this method has been called
     //@postcondition: user’s first name is set
-    public void setFirstName(String firstName) {
+    public void setFirstName(String firstName)
+    {
         this.firstName = firstName;
     }
 
     //@precondition: this method has been called
     //@postcondition: the user’s last name is set
-    public void setLastName(String lastName) {
+    public void setLastName(String lastName)
+    {
         this.lastName = lastName;
     }
 
 
-    public void setCreateDate(String createDate) {
+    public void setCreateDate(String createDate)
+    {
         this.createDate = createDate;
     }
 
@@ -66,20 +69,29 @@ public class UserModel {
         return createDate;
     }
 
-    public void setUserType(String userType) {
+    public void setUserType(String userType)
+    {
         this.userType = Enums.UserType.valueOf(userType);
     }
 
-    public Enums.UserType getUserType() {
+    public Enums.UserType getUserType()
+    {
         return userType;
     }
 
-    public String getFirstName() {
+    public String getFirstName()
+    {
         return firstName;
     }
 
-    public String getLastName() {
+    public String getLastName()
+    {
         return lastName;
+    }
+
+    public boolean isAdmin()
+    {
+        return userType == Enums.UserType.ADMIN;
     }
 
 }

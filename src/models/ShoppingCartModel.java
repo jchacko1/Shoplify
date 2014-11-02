@@ -17,35 +17,46 @@ public class ShoppingCartModel {
     //private int shoppingCartId;
     //private int orderId;
     private ArrayList<ItemModel> _items;
-    private double total;
+    private double _subtotal;
     private int quantity;
 
     //@precondition: none
 //@postcondition: creates an empty shopping cart
     public ShoppingCartModel () {
-       _items = new ArrayList<ItemModel>();
+        _items = new ArrayList<ItemModel>();
     }
 
     //@precondition: customer selects desired item
 //@postcondition: adds item to the shopping cart
     public void addItem(ItemModel item){
-        //cart.add(item);
+        _items.add(item);
     }
 
-    //@precondition: customer selects unwanted item
-//@postcondition: deletes item to the shopping cart
-    public void deleteItem(ItemModel item)
-    {
-        //cart.remove(item);
+   //@precondition: customer selects unwanted item
+   //@postcondition: deletes item to the shopping cart
+    public void deleteItem(ItemModel item){
+        for(ItemModel itemToDelete : _items)
+        if(itemToDelete.getShoppingCartItemId() == item.getShoppingCartItemId())
+        {
+            _items.remove(itemToDelete);
+        }
     }
 
     //@precondition: none
-//@postcondition: displays the total cost of all items in the shopping cart
-    public double getTotal(){
-        //cart.get();
+//@postcondition: displays the subtotal cost of all items in the shopping cart
+    public double getSubtotal(){
+          return _subtotal;
+    }
 
-          return 0.0;
-        //}
+    //call this after adding an item to the ShoppingCart
+    public void setSubtotal()
+    {
+        double newSubtotal = 0.0;
+        for(ItemModel item : _items)
+        {
+            newSubtotal += item.getPrice();
+        }
+       _subtotal = newSubtotal;
     }
 
     //@precondition: user inputs quantity

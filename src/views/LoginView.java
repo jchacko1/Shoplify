@@ -1,5 +1,10 @@
 package views;
 
+import businessLogic.AccountManager;
+import controllers.AccountController;
+import global.Global;
+import models.AccountModel;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -53,6 +58,22 @@ public class LoginView extends JDialog {
     private void onCancel() {
 // add your code here if necessary
         dispose();
+    }
+
+    public boolean verifyAccountWithLogin(String login, String password)
+    {
+        AccountModel accountModel = AccountController.getAccountWithLogin(login, password);
+        if(accountModel != null)
+        {
+            Global.currentAccount = accountModel;
+            //do something with the data on the account
+            return true;
+        }
+        else
+        {
+            //we did not find an account with this login and password
+            return false;
+        }
     }
 
     public static void main(String[] args) {

@@ -4,8 +4,7 @@ package models;
  * Created by jmarquez on 11/2/2014.
  */
 public class RegisteredUserModel extends UserModel {
-    private String username;
-    private String password;
+
     private String address;
     private String phoneNumber;
     private String dateOfBirth;

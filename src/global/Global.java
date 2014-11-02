@@ -1,5 +1,6 @@
 package global;
 
+import models.AccountModel;
 import models.OrderModel;
 import models.UserModel;
 
@@ -8,5 +9,5 @@ import models.UserModel;
  */
 public class Global {
     public static OrderModel currentOrder;
-    public static UserModel currentUser;
+    public static AccountModel currentAccount;
 }

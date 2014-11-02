@@ -11,6 +11,7 @@ public class  AccountModel {
     private int _userId;
     private Date _createDate;
     private int _subscriptionId;
+    private UserModel _userModel;
 
     private String username;
     private String password;
@@ -24,7 +25,15 @@ public class  AccountModel {
     private int price;
     private int itemID;
 
+    public AccountModel()
+    {
 
+    }
+
+    public void setUserModel(UserModel userModel)
+    {
+        this._userModel = userModel;
+    }
 
     //@precondition: the method has been called
     //@postcondition: returns user account’s history
@@ -215,5 +224,10 @@ public class  AccountModel {
     //@postcondition: an item has it’s price adjusted
     public void adjustPrice() {
 
+    }
+
+    public int getUserId()
+    {
+        return this._userId;
     }
 } // end of class

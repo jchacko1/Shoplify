@@ -1,5 +1,6 @@
 package DataAccess;
 
+import controllers.UserController;
 import models.AccountModel;
 
 /**
@@ -26,6 +27,17 @@ public class AccountService {
     public AccountModel getAccount(int accountId)
     {
         return _accountRepository.getAccount(accountId);
+    }
+
+    public AccountModel getAccount(String login, String password)
+    {
+        AccountModel accountModel =  _accountRepository.getAccount(login, password);
+        if(accountModel != null)
+        {
+            //set the user on the account
+            accountModel.setUserModel(UserController.getUser(accountModel.getUserId()));
+        }
+        return accountModel;
     }
 
 }

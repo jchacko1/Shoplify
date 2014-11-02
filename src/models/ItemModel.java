@@ -10,6 +10,7 @@ public class ItemModel {
     private int quantity;
     private String description;
     private Category category;
+    private int shoppingCartItemId;
 
 
     public ItemModel(int itemId, String itemName, double price, int quantity, String description, Category category){
@@ -19,6 +20,7 @@ public class ItemModel {
         this.quantity = quantity;
         this.description = description;
         this.category = category;
+        this.shoppingCartItemId = 0;
     }
 
     public ItemModel(int itemId){
@@ -31,7 +33,14 @@ public class ItemModel {
         this.category = category;
     }
 
+   public int getShoppingCartItemId() {
+        return shoppingCartItemId;
+    }
 
+    public void setShoppingCartItemId(int id)
+    {
+        shoppingCartItemId = id;
+    }
 
     //@precondition: none
     //@postcondition: returns item number
