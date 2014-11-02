@@ -10,14 +10,15 @@ public class OrderModel {
     private double _orderTotal;
     private double _subTotal;
     private double _tax;
-    //private ItemModel[] _items;
-    private List<ItemModel> _items;
     private int _loggedInUser;
     private double _discount;
     private boolean _isSubscriptionOrder;
+    public ShoppingCartModel _shoppingCart;
 
-    public void addItem(ItemModel item)
+    public OrderModel()
     {
-        _items.add(item);
+        _shoppingCart = new ShoppingCartModel();
     }
+
+
 }
