@@ -81,7 +81,7 @@ public class  AccountModel {
     //2) has to be an admin
     //@postcondition: returns other user’s account info for admin
     public String getOtherFirstName(UserModel user) {
-        if (user.getUserType()) {
+        if (user != null) {
             return user.getFirstName();
         } else {
             return null;
@@ -89,7 +89,7 @@ public class  AccountModel {
     }
 
     public String getOtherLastName(UserModel user) {
-        if (user.getUserType()) {
+        if (user.getUserType() == Enums.UserType.REGISTERED) {
             return user.getLastName();
         } else {
             return null;
@@ -97,23 +97,26 @@ public class  AccountModel {
     }
 
     public String getOtherAddress(UserModel user) {
-        if (user.getUserType()) {
-            return user.getAddress();
+        if (user.getUserType() == Enums.UserType.REGISTERED) {
+            RegisteredUserModel registeredUser = (RegisteredUserModel)user;
+            return registeredUser.getAddress();
         } else {
             return null;
         }
     }
 
     public String getOtherDOB(UserModel user) {
-        if (user.getUserType()) {
-            return user.getDOB();
+        if (user.getUserType() == Enums.UserType.REGISTERED) {
+            RegisteredUserModel registeredUser = (RegisteredUserModel)user;
+            return registeredUser.getDateOfBirth();
         } else {
             return null;
         }
     }
     public String getOtherGender(UserModel user) {
-        if (user.getUserType()) {
-            return user.getGender();
+        if (user.getUserType() == Enums.UserType.REGISTERED) {
+            RegisteredUserModel registeredUser = (RegisteredUserModel)user;
+            return registeredUser.getGender();
         } else {
             return null;
         }
@@ -132,7 +135,7 @@ public class  AccountModel {
     //2) has to be an admin
     //@postcondition: the user account info has been edited
     public void setOtherFirstName(UserModel user) {
-        if (user.getUserType()) {
+        if (user.getUserType() == Enums.UserType.REGISTERED) {
             //user.setFirstName();          //need more info on textfield
         } else {
             //user can't set other account info
@@ -140,7 +143,7 @@ public class  AccountModel {
     }
 
     public void setOtherLastName(UserModel user) {
-        if (user.getUserType()) {
+        if (user.getUserType() == Enums.UserType.REGISTERED) {
             //user.setLastName();          //need more info on textfield
         } else {
             //user can't set other account info
@@ -149,7 +152,7 @@ public class  AccountModel {
     }
 
     public void setAddress(UserModel user) {
-        if (user.getUserType()) {
+        if (user.getUserType() == Enums.UserType.REGISTERED) {
             //user.setAddress();          //need more info on textfield
         } else {
             //user can't set other account info
@@ -157,7 +160,7 @@ public class  AccountModel {
     }
 
     public void setPhoneNumber(UserModel user) {
-        if (user.getUserType()) {
+        if (user.getUserType() == Enums.UserType.REGISTERED) {
             //user.setPhoneNumber();          //need more info on textfield
         } else {
             //user can't set other account info
@@ -165,7 +168,7 @@ public class  AccountModel {
     }
 
     public void setDOB(UserModel user) {
-        if (user.getUserType()) {
+        if (user.getUserType() == Enums.UserType.REGISTERED) {
             //user.setDOB();          //need more info on textfield
         } else {
             //user can't set other account info
@@ -173,7 +176,7 @@ public class  AccountModel {
     }
 
     public void setGender(UserModel user) {
-        if (user.getUserType()) {
+        if (user.getUserType() == Enums.UserType.REGISTERED) {
             //user.setGender();          //need more info on textfield
         } else {
             //user can't set other account info

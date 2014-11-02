@@ -1,35 +1,48 @@
 package models;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created by jmarquez on 10/20/2014.A
  */
-public class UserModel implements User {
+public class UserModel {
 
     private int userId;
     private String createDate;
     private String firstName;
     private String lastName;
-    private String username;
-    private String password;
-    private String address;
-    private String phoneNumber;
-    private String DOB;
-    private String gender;
+    //private String username;
+    //private String password;
+    //private String address;
+    //private String phoneNumber;
+    //private String dateOfBirth;
+    //private String gender;
     private boolean isAdmin;
+    private Enums.UserType userType;
 
 
-    public UserModel(String username, String password, int userId, boolean isAdmin,
-                     String firstName, String lastName, String address, String phoneNumber, String DOB, String gender) {
-        this.username = username;
-        this.password = password;
-        this.userId = userId;
-        this.isAdmin = isAdmin;
+//    public UserModel(String username, String password, int userId, boolean isAdmin,
+//                     String firstName, String lastName, String address, String phoneNumber, String DOB, String gender) {
+        public UserModel(String firstName, String lastName) {
+        this.userId = 1;        //todo needs to be a value from the database
         this.firstName = firstName;
         this.lastName = lastName;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
-        this.DOB = DOB;
-        this.gender = gender;
+        createDate = getCurrentDate();
+    }
+
+    public UserModel()
+    {
+        //return new UserModel();
+    }
+
+    //TODO maybe move this to somewhere for other objects to use
+    public String getCurrentDate()
+    {
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date();
+        return dateFormat.format(date);
     }
 
     //@precondition: this method has been called
@@ -44,33 +57,6 @@ public class UserModel implements User {
         this.lastName = lastName;
     }
 
-    //@precondition: this method has been called
-    //@postcondition: the user’s address is set
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-
-    //@precondition: this method has been called
-    //@postcondition: the user’s phone number is set
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-
-    }
-
-
-    //@precondition: this method has been called
-    //@postcondition: the user’s date of birth is set
-    public void setDOB(String DOB) {
-        this.DOB = DOB;
-    }
-
-
-    //@precondition: this method has been called
-    //@postcondition: the user’s date of birth is set
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
 
     public void setCreateDate(String createDate) {
         this.createDate = createDate;
@@ -78,6 +64,14 @@ public class UserModel implements User {
 
     public String getCreateDate() {
         return createDate;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = Enums.UserType.valueOf(userType);
+    }
+
+    public Enums.UserType getUserType() {
+        return userType;
     }
 
     public String getFirstName() {
@@ -88,21 +82,4 @@ public class UserModel implements User {
         return lastName;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public String getDOB() {
-        return DOB;
-    }
-
-    public String getGender() { return gender;  }
-
-    public boolean getUserType() {
-        return isAdmin;
-    }
 }

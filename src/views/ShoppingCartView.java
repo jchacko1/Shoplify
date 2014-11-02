@@ -1,5 +1,8 @@
 package views;
 
+import controllers.ShoppingCartController;
+import global.Global;
+
 import javax.swing.*;
 
 public class ShoppingCartView extends JDialog {
@@ -31,11 +34,13 @@ public class ShoppingCartView extends JDialog {
     private JLabel totalNumAmount;
     private JButton couponBtn;
     private JButton checkOutBtn;
+    private ShoppingCartController _shoppingCartController;
 
     public ShoppingCartView() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
+        _shoppingCartController = new ShoppingCartController();
     }
 
     public static void main(String[] args) {
@@ -43,5 +48,11 @@ public class ShoppingCartView extends JDialog {
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);
+    }
+
+    public void addItemToCart()
+    {
+        int itemId = 1; //TODO needs to be a value somehow passed from the view
+        _shoppingCartController.addItemToCart(Global.currentOrder._shoppingCart,itemId);
     }
 }

@@ -3,7 +3,7 @@ package models;
 /**
  * Created by jmarquez on 10/20/2014.
  */
-public class ItemModel implements Item {
+public class ItemModel {
     private int itemId;
     private String itemName;
     private double price;
@@ -21,6 +21,15 @@ public class ItemModel implements Item {
         this.category = category;
     }
 
+    public ItemModel(int itemId){
+        this.itemId = itemId;
+        //todo get the rest of the Item data by a call to the database, using the itemId
+        this.itemName = itemName;
+        this.price = price;
+        this.quantity = quantity;
+        this.description = description;
+        this.category = category;
+    }
 
 
 
