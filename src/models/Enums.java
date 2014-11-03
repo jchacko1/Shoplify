@@ -11,4 +11,10 @@ public class Enums {
         SUBSCRIPTION,
         GENERIC
     }
+
+    public enum DiscountType {
+        OFFORDER,
+        OFFITEM,
+        FREESHIPPING
+    }
 }

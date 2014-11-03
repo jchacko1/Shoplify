@@ -12,23 +12,34 @@ public class OrderModel {
     private double _tax;
     private double _taxPercentage = 0.1;
     private int _loggedInUser;
-    private double _discount;
+    private double _discountAmount;
     private boolean _isSubscriptionOrder;
     public ShoppingCartModel _shoppingCart;
+    private double _shippingFee;
 
     public OrderModel()
     {
         _shoppingCart = new ShoppingCartModel();
     }
 
+    public double getShippingFee()
+    {
+        return _shippingFee;
+    }
+
+    public void setShippingFee(double shippingFee)
+    {
+       _shippingFee = shippingFee;
+    }
+
     public double getDiscount()
     {
-        return _discount;
+        return _discountAmount;
     }
 
     public void setDiscount(double discountAmount)
     {
-        _discount = discountAmount;
+        _discountAmount = discountAmount;
     }
 
     public double getOrderTotal()
@@ -38,7 +49,7 @@ public class OrderModel {
 
     public void setOrderTotal()
     {
-        _orderTotal = _subTotal + _tax + _discount;
+        _orderTotal = _subTotal + _tax - _discountAmount;
     }
 
     public void setSubTotal()

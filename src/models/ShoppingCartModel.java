@@ -48,6 +48,18 @@ public class ShoppingCartModel {
           return _subtotal;
     }
 
+    public ItemModel getDiscountItem(int discountItemId)
+    {
+        for(ItemModel item : _items)
+        {
+            if (item.getItemID() == discountItemId)
+            {
+                return item;
+            }
+        }
+        return null;
+    }
+
     //call this after adding an item to the ShoppingCart
     public void setSubtotal()
     {
