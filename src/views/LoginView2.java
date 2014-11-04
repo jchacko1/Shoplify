@@ -1,56 +1,106 @@
 
-import javax.swing.*;
+package loginview;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import javax.swing.event.*;
 
+
 public class LoginView2 extends JFrame {
 
     JPanel topPanel, midPanel, bottomPanel;
-    JLabel loginLabel;
+    JLabel loginLabel, usernameLabel, passwordLabel;
     JTextField usernameTF, passwordTF;
     JButton signupButton, okButton, cancelButton;
+    String username, password;
+    
 
 
     public LoginView2() {
         
+        ActionListener listener = new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                username = usernameTF.getText();
+                password = passwordTF.getText(); 
+                System.out.println(username);
+            }
+            
+            
+        };
+        
+        
         Container content = getContentPane();
-        content.setLayout(new GridLayout(3,1));
+        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
         
 
         topPanel = new JPanel();
-        topPanel.setLayout(new GridLayout(1,1));
+        topPanel.setLayout(new FlowLayout());
         content.add(topPanel);
 
         loginLabel = new JLabel("Login", SwingConstants.CENTER);
         topPanel.add(loginLabel);
         
         midPanel = new JPanel();
-        midPanel.setLayout(new GridLayout(2,1,3,3));
+        midPanel.setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        
+        usernameLabel = new JLabel("Username:");
+        c.fill = GridBagConstraints.LINE_START;
+        c.weightx = 1;
+        c.weighty = 0;
+        c.gridx = 0;
+        c.gridy = 0;
+        midPanel.add(usernameLabel, c);
         
         usernameTF = new JTextField();
-        midPanel.add(usernameTF);
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.weightx = 1;
+        c.weighty = 0;
+        c.gridx = 1;
+        c.gridy = 0;
+        midPanel.add(usernameTF, c);
+        
+        passwordLabel = new JLabel("Password:");
+        c.fill = GridBagConstraints.LINE_START;
+        c.weightx = 1;
+        c.weighty = 0;
+        c.gridx = 0;
+        c.gridy = 1;
+        midPanel.add(passwordLabel, c);
         
         passwordTF = new JTextField();
-        midPanel.add(passwordTF);
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.weightx = 1;
+        c.weighty = 0;
+        c.gridx = 1;
+        c.gridy = 1;
+        midPanel.add(passwordTF, c);
+        
         content.add(midPanel);
         
+        
+        
         bottomPanel = new JPanel();
-        bottomPanel.setLayout(new GridLayout(1,3));
+        bottomPanel.setLayout(new FlowLayout());
         
         signupButton = new JButton("Sign Up");
         bottomPanel.add(signupButton);
         
         okButton = new JButton("OK");
+        okButton.addActionListener(listener);
         bottomPanel.add(okButton);
+        
         
         cancelButton = new JButton("Cancel");
         bottomPanel.add(cancelButton);
         content.add(bottomPanel);
         
-           
+        
+        
 
     }
 

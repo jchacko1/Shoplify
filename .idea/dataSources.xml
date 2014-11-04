@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1535144741">
+  <component name="DataSourceManagerImpl" format="xml" hash="2113462322">
     <data-source source="LOCAL" name="SQLite - ShoplifyDb" uuid="6399c84a-b5f7-4246-9b30-24b7099ad112">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
