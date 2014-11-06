@@ -17,4 +17,13 @@ public class Enums {
         OFFITEM,
         FREESHIPPING
     }
+
+    //What could be the possible report type?
+    public enum ReportType {
+
+    }
+
+
+
+
 }
