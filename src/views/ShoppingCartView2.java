@@ -8,7 +8,7 @@ import javax.swing.*;
 
 public class ShoppingCartView2 extends JFrame{
     
-    private JLabel categoryLabel, deli, seafood, meat, vegetable, bakery, total, price;
+    private JLabel categoryLabel, deli, seafood, meat, vegetable, bakery, total;
     private JPanel topPanel, categoryPanel, categorySubPanel1, categorySubPanel2, 
             categorySubPanel3, categorySubPanel4, categorySubPanel5, itemlistPanel, 
             totalPanel;
@@ -57,7 +57,7 @@ public class ShoppingCartView2 extends JFrame{
         
         categoryLabel = new JLabel("Categories");
         c.fill = GridBagConstraints.LINE_START;
-        c.weightx = 0;
+        c.weightx = 2;
         c.weighty = 1;
         c.gridx = 0;
         c.gridy = 1;
@@ -66,8 +66,8 @@ public class ShoppingCartView2 extends JFrame{
         
         categoryPanel = new JPanel();
         c.fill = GridBagConstraints.LINE_START;
-        c.weightx = 1;
-        c.weighty = 3;
+        c.weightx = 2;
+        c.weighty = 1;
         c.gridx = 0;
         c.gridy = 2;
         content.add(categoryPanel, c);
@@ -105,8 +105,7 @@ public class ShoppingCartView2 extends JFrame{
         itemlistPanel = new JPanel();
         c.fill = GridBagConstraints.CENTER;
         c.weightx = 1;
-        c.weighty = 3;
-        c.gridheight = 2;
+        c.weighty = 1;
         c.gridwidth = 2;
         c.gridx = 1;
         c.gridy = 1;
@@ -116,17 +115,15 @@ public class ShoppingCartView2 extends JFrame{
         totalPanel = new JPanel();
         c.fill = GridBagConstraints.LINE_END;
         c.weightx = 1;
-        c.weighty = 3;
+        c.weighty = 1;
+        c.gridwidth = 2;
         c.gridx = 3;
         c.gridy = 2;
         content.add(totalPanel, c);
-        totalPanel.setLayout(new GridLayout(4,1));
+        totalPanel.setLayout(new GridLayout(3,1));
         
-        total = new JLabel("Total: ");
+        total = new JLabel("Total: 150");
         totalPanel.add(total);
-        
-        price = new JLabel("150");
-        totalPanel.add(price);
         
         couponButton = new JButton("Coupon");
         totalPanel.add(couponButton);
@@ -146,7 +143,7 @@ public class ShoppingCartView2 extends JFrame{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setTitle("Shopping Cart");
-        frame.setSize(500,500);
+        frame.setSize(500,300);
     }
     
 }

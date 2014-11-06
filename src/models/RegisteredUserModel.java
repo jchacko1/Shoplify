@@ -9,6 +9,7 @@ public class RegisteredUserModel extends UserModel {
     private String phoneNumber;
     private String dateOfBirth;
     private String gender;
+    private String email;
 
 
 

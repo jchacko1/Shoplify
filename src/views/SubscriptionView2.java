@@ -68,7 +68,7 @@ public class SubscriptionView2 extends JFrame implements ActionListener{
 
     public void init() {
 
-        setTitle("Account View");
+        setTitle("Subscription View");
         setLayout(new GridBagLayout());
         setSize(500,500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -15,10 +15,6 @@ public class AccountService {
         _accountRepository = new AccountRepository();
     }
 
-    public void insertAccount(AccountModel accountModel){
-        _accountRepository.insertAccount(accountModel);
-    }
-
     public void updateAccount(AccountModel accountModel)
     {
         _accountRepository.updateAccount(accountModel);
@@ -38,6 +34,11 @@ public class AccountService {
             accountModel.setUserModel(UserController.getUser(accountModel.getUserId()));
         }
         return accountModel;
+    }
+
+    public AccountModel createAccount(String login, String password)
+    {
+        return _accountRepository.createAccount(login, password);
     }
 
 }

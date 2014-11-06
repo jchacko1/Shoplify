@@ -1,5 +1,6 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.Date;
 import com.sun.org.apache.bcel.internal.generic.RETURN;
 
@@ -8,22 +9,20 @@ import com.sun.org.apache.bcel.internal.generic.RETURN;
  */
 public class  AccountModel {
     private int _accountId;
-    private int _userId;
-    private Date _createDate;
-    private int _subscriptionId;
     private UserModel _userModel;
-
     private String username;
     private String password;
-    private String firstName;
-    private String lastName;
-    private String address;
-    private String phoneNumber;
-    private String email;
-    private String DOB;
-    private String Gender;
-    private int price;
-    private int itemID;
+//    private String firstName;         //on UserModel
+//    private String lastName;          //on UserModel
+    //private String address;     //on RegisteredUserModel
+    //private String phoneNumber;      //on RegisteredUserModel
+    //private String email;               //on RegisteredUserModel
+    //private String DOB;               //on RegisteredUserModel
+    //private String Gender;                        //on RegisteredUserModel
+    //private int _userId;              //on UserModel
+    //private Date _createDate;         //on UserModel
+    //ArrayList<ItemModel> _shoppingList;  //on RegisteredUserModel
+    //private int _subscriptionId;         //on RegisteredUserModel
 
     public AccountModel()
     {
@@ -35,16 +34,17 @@ public class  AccountModel {
         this._userModel = userModel;
     }
 
+    public UserModel getUserModel()
+    {
+        return _userModel;
+    }
+
     //@precondition: the method has been called
     //@postcondition: returns user account’s history
     public String getHistory() {
         return null;            //not enough info
-
     }
 
-
-
-    //@precondition: this method has been called
     //@postcondition: the user’s own account info is edited
     public void EditfirstName(UserModel user) {
        //user.setFirstName();            //need additional information on textfield
@@ -228,6 +228,6 @@ public class  AccountModel {
 
     public int getUserId()
     {
-        return this._userId;
+        return this._userModel.getUserId();
     }
 } // end of class
