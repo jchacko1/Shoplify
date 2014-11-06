@@ -6,17 +6,18 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class ShoppingCartView2 extends JFrame{
+public class CheckoutView2 extends JFrame{
     
-    private JLabel categoryLabel, deli, seafood, meat, vegetable, bakery, total;
+    private JLabel categoryLabel, deli, seafood, meat, vegetable, bakery, shippingLabel,
+            paymentLabel, totalLabel;
     private JPanel topPanel, categoryPanel, categorySubPanel1, categorySubPanel2, 
-            categorySubPanel3, categorySubPanel4, categorySubPanel5, itemlistPanel, 
-            totalPanel;
+            categorySubPanel3, categorySubPanel4, categorySubPanel5, shapePanel, 
+            colorPanel;
     private JTextField searchTF;
-    private JButton searchButton, loginSignupButton, couponButton, checkoutButton;
+    private JButton searchButton, loginSignupButton;
    
     
-    public ShoppingCartView2() {
+    public CheckoutView2() {
         
         Container content = getContentPane();
         content.setLayout(new GridBagLayout());
@@ -57,7 +58,7 @@ public class ShoppingCartView2 extends JFrame{
         
         categoryLabel = new JLabel("Categories");
         c.fill = GridBagConstraints.LINE_START;
-        c.weightx = 2;
+        c.weightx = 1;
         c.weighty = 1;
         c.gridx = 0;
         c.gridy = 1;
@@ -66,7 +67,7 @@ public class ShoppingCartView2 extends JFrame{
         
         categoryPanel = new JPanel();
         c.fill = GridBagConstraints.LINE_START;
-        c.weightx = 2;
+        c.weightx = 1;
         c.weighty = 1;
         c.gridx = 0;
         c.gridy = 2;
@@ -102,34 +103,37 @@ public class ShoppingCartView2 extends JFrame{
         categoryPanel.add(categorySubPanel5);
         
         
-        itemlistPanel = new JPanel();
+        shippingLabel = new JLabel("Shipping");
         c.fill = GridBagConstraints.CENTER;
         c.weightx = 1;
         c.weighty = 1;
-        c.gridwidth = 2;
         c.gridx = 1;
         c.gridy = 1;
-        content.add(itemlistPanel, c);
-        itemlistPanel.setLayout(new BoxLayout(itemlistPanel, BoxLayout.Y_AXIS));
+        content.add(shippingLabel, c);
         
-        totalPanel = new JPanel();
+        
+        
+        paymentLabel = new JLabel("Payment");
         c.fill = GridBagConstraints.LINE_END;
         c.weightx = 1;
         c.weighty = 1;
-        c.gridwidth = 2;
+        c.gridx = 2;
+        c.gridy = 1;
+        content.add(paymentLabel, c);
+        
+        totalLabel = new JLabel("Total");
+        c.fill = GridBagConstraints.LINE_END;
+        c.weightx = 1;
+        c.weighty = 1;
         c.gridx = 3;
-        c.gridy = 2;
-        content.add(totalPanel, c);
-        totalPanel.setLayout(new GridLayout(3,1));
+        c.gridy = 1;
+        content.add(totalLabel, c);
         
-        total = new JLabel("Total: 150");
-        totalPanel.add(total);
         
-        couponButton = new JButton("Coupon");
-        totalPanel.add(couponButton);
         
-        checkoutButton = new JButton("Checkout");
-        totalPanel.add(checkoutButton);
+        
+        
+        
         
         
         
@@ -139,10 +143,10 @@ public class ShoppingCartView2 extends JFrame{
     
     public static void main(String[] args) {
 
-        ShoppingCartView2 frame = new ShoppingCartView2();
+        CheckoutView2 frame = new CheckoutView2();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        frame.setTitle("Shopping Cart");
+        frame.setTitle("Checkout");
         frame.setSize(500,300);
     }
     
