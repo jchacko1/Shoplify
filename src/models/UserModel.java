@@ -45,6 +45,11 @@ public class UserModel {
     {    this.userId = userId;
     }
 
+    public int getUserId()
+    {
+        return userId;
+    }
+
     //@precondition: this method has been called
     //@postcondition: user’s first name is set
     public void setFirstName(String firstName)

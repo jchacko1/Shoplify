@@ -2,6 +2,7 @@ package businessLogic;
 
 import DataAccess.UserRepository;
 import DataAccess.UserService;
+import models.Enums;
 import models.UserModel;
 
 /**
@@ -12,7 +13,16 @@ public class UserManager {
 
     public UserModel getUser(int userId)
     {
-        //TODO get the user from the database with the userId
-          return new UserModel(userId);
+          return _userService.getUser(userId);
+    }
+
+    public UserModel createUser(String firstName, String lastName,String userType)
+    {
+        return _userService.createUser(firstName, lastName, userType);
+    }
+
+    public int createNewSubscription(int userId)
+    {
+        return _userService.createNewSubscription(userId);
     }
 }

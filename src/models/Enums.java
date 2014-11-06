@@ -8,8 +8,7 @@ public class Enums {
         ADMIN,
         REGISTERED,
         GUEST,
-        SUBSCRIPTION,
-        GENERIC
+        SUBSCRIPTION
     }
 
     public enum DiscountType {
