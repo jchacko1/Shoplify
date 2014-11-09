@@ -13,7 +13,7 @@ public class LoginView2 extends JFrame {
     JPanel topPanel, midPanel, bottomPanel;
     JLabel loginLabel, usernameLabel, passwordLabel;
     JTextField usernameTF, passwordTF;
-    JButton signupButton, okButton, cancelButton;
+    JButton signupButton, okButton, cancelButton, forgotButton;
     String username, password;
     
 
@@ -79,7 +79,7 @@ public class LoginView2 extends JFrame {
         c.gridx = 1;
         c.gridy = 1;
         midPanel.add(passwordTF, c);
-        
+
         content.add(midPanel);
         
         
@@ -97,8 +97,13 @@ public class LoginView2 extends JFrame {
         
         cancelButton = new JButton("Cancel");
         bottomPanel.add(cancelButton);
+
+        forgotButton = new JButton("Forgot my password");
+        bottomPanel.add(forgotButton);
+
         content.add(bottomPanel);
-        
+
+
         
         
 
@@ -110,7 +115,7 @@ public class LoginView2 extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setTitle("Login Page");
-        frame.setSize(300,150);
+        frame.setSize(450,150);
     }
 
 }

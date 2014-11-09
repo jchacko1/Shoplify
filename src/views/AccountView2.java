@@ -27,9 +27,10 @@ public class AccountView2 extends JFrame implements ActionListener{
     private JButton loginBtn;
     private JButton okBtn;
     private JButton searchBtn;
+    private JButton history;
 
     private JLabel accountInfoLabel;
-    private JLabel historyInfoLabel;
+//    private JLabel historyInfoLabel;
     private JLabel returnInfoLabel;
     private JLabel paymentInfoLabel;
 
@@ -54,13 +55,12 @@ public class AccountView2 extends JFrame implements ActionListener{
         this.searchField = new JTextField("Search field");
         this.c = new GridBagConstraints();
         this.accountInfoLabel = new JLabel("Account Info");
-        this.historyInfoLabel = new JLabel();
         this.returnInfoLabel = new JLabel();
         this.paymentInfoLabel = new JLabel();
         this.accountListPane = new JPanel();
         //this.accountNameList = new JList();
         this.historyListPane = new JPanel();
-        this.historyInfoLabel = new JLabel("History");
+        this.history = new JButton("History");
         this.paymentInfoPane = new JPanel();
         this.paymentInfoLabel = new JLabel("Payment info");
         this.returnInfoPane = new JPanel();
@@ -77,6 +77,17 @@ public class AccountView2 extends JFrame implements ActionListener{
     }
 
     public void init() {
+        ActionListener loginViewPopup = new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                LoginView2 LoginView2Frame = new LoginView2();
+                LoginView2Frame.setVisible(true);
+                LoginView2Frame.setSize(500,150);
+
+            }
+
+        };
 
         setTitle("Account View");
         setLayout(new GridBagLayout());
@@ -140,8 +151,8 @@ public class AccountView2 extends JFrame implements ActionListener{
         c.gridy = 1;
         add(historyListPane,c);
         historyListPane.setLayout(new BoxLayout(historyListPane, BoxLayout.Y_AXIS));
-        historyListPane.add(historyInfoLabel);
-
+        historyListPane.add(history);
+        history.addActionListener(loginViewPopup);
 
         c.weightx = 1;
         c.weightx = 0;
