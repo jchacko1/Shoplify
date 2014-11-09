@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2113462322">
+  <component name="DataSourceManagerImpl" format="xml" hash="908954253">
     <data-source source="LOCAL" name="SQLite - ShoplifyDb" uuid="6399c84a-b5f7-4246-9b30-24b7099ad112">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../../SQLite/shoplify.db</jdbc-url>
       <libraries />
     </data-source>
   </component>

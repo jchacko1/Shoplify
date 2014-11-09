@@ -1,5 +1,7 @@
 package models;
 
+import businessLogic.Utilities;
+
 import java.util.Date;
 
 /**
@@ -7,22 +9,33 @@ import java.util.Date;
  */
 public class ReportModel {
 
-    private int _reportId;
-    private int _reportName;
-    private int _userId;
-    private Date _createDate;
-    private int _subscriptionId;
-    private UserModel _userModel;
+    private String reportId;
+    private String reportName;
+    private int userId;
+    private String createDate;
+    private int subscriptionId;
+    private UserModel userModel;
+    private ReportModel reportModel;
 
 
-    public ReportModel()
+    public ReportModel(String reportName, String reportId)
     {
+        this.reportName = reportName;
+        this.userId = 1;
+        createDate = Utilities.getCurrentDate();
+    }
 
+    public ReportModel() {
+
+    }
+
+    public ReportModel(String reportId){
+        this.reportId = reportId;
     }
 
     public void setUserModel(UserModel userModel)
     {
-        this._userModel = userModel;
+        this.userModel = userModel;
     }
 
     /**
@@ -30,7 +43,7 @@ public class ReportModel {
      * @return
      */
     public String getReportId(){
-        return this._reportId;
+        return reportId;
     }
 
     /**
@@ -38,8 +51,11 @@ public class ReportModel {
      * @return
      */
     public String getReportName(){
-        return this._reportName;
+        return this.reportName;
     }
 
+    public void setReportModel(ReportModel model){
+        this.reportModel = model;
+    }
 
 }

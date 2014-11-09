@@ -6,8 +6,62 @@
     <schema name="" catalog=""/>
     <table name="Account" schema="" catalog="" type="TABLE">
       <column name="AccountId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
-      <column name="CreateDate" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="UserModelId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="UserName" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="Password" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
       <primary-key columns="AccountId"/>
+    </table>
+    <table name="Discount" schema="" catalog="" type="TABLE">
+      <column name="DiscountId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="DiscountCode" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="DiscountAmount" sqlType="DOUBLE" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <column name="IsDiscountInPercent" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="DiscountType" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="ItemIdToDiscount" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="DiscountId"/>
+    </table>
+    <table name="Item" schema="" catalog="" type="TABLE">
+      <column name="ItemId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="ItemName" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="Price" sqlType="DOUBLE" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <column name="Quantity" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="Description" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="CategoryId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="ShoppingCartItemId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="ItemId"/>
+    </table>
+    <table name="Order" schema="" catalog="" type="TABLE">
+      <column name="OrderId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="OrderTotal" sqlType="DOUBLE" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <column name="Subtotal" sqlType="DOUBLE" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <column name="Tax" sqlType="DOUBLE" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <column name="LoggedInUser" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="DiscountAmount" sqlType="DOUBLE" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <column name="IsSubscriptionOrder" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="ShippingFee" sqlType="DOUBLE" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <primary-key columns="OrderId"/>
+    </table>
+    <table name="User" schema="" catalog="" type="TABLE">
+      <column name="UserId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="CreateDate" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="FirstName" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="LastName" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="IsAdmin" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="UserType" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="AccountID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="Address" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="PhoneNumber" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="DateOfBirth" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Gender" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="Email" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="ShoppingListId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="SubscriptionId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="CanEditItems" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="CanEditUsers" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="CanRefundOrders" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="SecurityQuestionId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="SecurityAnswer" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="UserId"/>
     </table>
   </data-source>
 </component>
