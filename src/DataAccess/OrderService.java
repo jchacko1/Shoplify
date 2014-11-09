@@ -19,4 +19,9 @@ public class OrderService {
                  return _orderRepository.submitOrder(order);
     }
 
+    public int[] getOrderIds(int userId)
+    {
+        return _orderRepository.getOrderIds(userId);
+    }
+
 }

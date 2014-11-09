@@ -13,4 +13,9 @@ public class OrderManager {
         {
                return _orderService.submitOrder(Global.currentOrder);
         }
+
+    public int[] getOrderIds(int userId)
+    {
+        return _orderService.getOrderIds(userId);
+    }
 }

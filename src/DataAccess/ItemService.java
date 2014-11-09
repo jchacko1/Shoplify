@@ -39,4 +39,10 @@ public class ItemService {
     {
         return _itemRepository.getOrderItemsHistory(userId);
     }
+
+    public ItemModel[] getItems(int orderId)
+    {
+        return _itemRepository.getItems(orderId);
+    }
+
 }

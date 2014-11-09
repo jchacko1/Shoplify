@@ -13,4 +13,9 @@ public class OrderController {
         return _orderManager.submitOrder();
     }
 
+    public static int[] getOrderIds(int userId)
+    {
+        return _orderManager.getOrderIds(userId);
+    }
+
 }
