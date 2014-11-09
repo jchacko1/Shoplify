@@ -1,3 +1,5 @@
+package views;
+
 import javax.swing.*;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
