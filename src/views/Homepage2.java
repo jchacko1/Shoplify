@@ -14,7 +14,7 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.*;
 
-public class homepage2 extends JFrame {
+public class Homepage2 extends JFrame {
 
     private JPanel topPane, homePane, category, adBannerPanel;
     private JButton loginBtn, buttonOK, searchBtn;
@@ -28,15 +28,15 @@ public class homepage2 extends JFrame {
 
     //private LoginView loginView;
 
-    public homepage2() {
+    public Homepage2() {
 
         ActionListener loginViewPopup = new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                LoginView2 LoginView2Frame = new LoginView2();
-                LoginView2Frame.setVisible(true);
-                LoginView2Frame.setSize(500, 150);
+            LoginView2 LoginView2Frame = new LoginView2();
+            LoginView2Frame.setVisible(true);
+            LoginView2Frame.setSize(500, 150);
 
             }
 
@@ -68,12 +68,22 @@ public class homepage2 extends JFrame {
 
 
         //top panel for icon
-        c.fill = GridBagConstraints.NORTH;
-        c.weightx = 1;
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.weightx = 0;
         c.weighty = 0;
         c.gridx = 0;
         c.gridy = 0;
-        add(topPane, c);
+        content.add(topPane, c);
+
+//1st column for account info list
+        c.fill = GridBagConstraints.LINE_START;
+        c.weightx = 0;
+        c.weighty = 0;
+        c.gridx = 0;
+        c.gridy = 0;
+        topPane.add(homeLabel, c);
+//        homePane.setLayout(new BoxLayout(homePane, BoxLayout.Y_AXIS));
+//        homePane.add(homeLabel);
 
         //search field
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -81,7 +91,7 @@ public class homepage2 extends JFrame {
         c.weighty = 0;
         c.gridx = 1;
         c.gridy = 0;
-        add(searchField, c);
+        topPane.add(searchField, c);
 
         //search button
         c.fill = GridBagConstraints.LINE_END;
@@ -89,7 +99,7 @@ public class homepage2 extends JFrame {
         c.weighty = 0;
         c.gridx = 2;
         c.gridy = 0;
-        content.add(searchBtn, c);
+        topPane.add(searchBtn, c);
 
         //login button
         c.fill = GridBagConstraints.FIRST_LINE_END;
@@ -97,36 +107,34 @@ public class homepage2 extends JFrame {
         c.weighty = 0;
         c.gridx = 3;
         c.gridy = 0;
-        content.add(loginBtn, c);
+        topPane.add(loginBtn, c);
         loginBtn.addActionListener(loginViewPopup);
 
         //end of top panel//
 
-
-        //1st column for account info list
-        c.fill = GridBagConstraints.LINE_START;
-        c.weightx = 1;
-        c.weighty = 0;
-        c.gridx = 0;
-        c.gridy = 0;
-        content.add(homeLabel, c);
-//        homePane.setLayout(new BoxLayout(homePane, BoxLayout.Y_AXIS));
-//        homePane.add(homeLabel);
-
-        //category field
+        //catigory panel for icon
         c.fill = GridBagConstraints.VERTICAL;
-        c.weightx = 1;
+        c.weightx = 0;
         c.weighty = 1;
         c.gridx = 0;
         c.gridy = 1;
-        add(category, c);
+        content.add(category, c);
+
+
+
+        //category field
+//        c.fill = GridBagConstraints.VERTICAL;
+//        c.weightx = 1;
+//        c.weighty = 1;
+//        c.gridx = 0;
+//        c.gridy = 1;
         category.setBorder(blackline);
         category.setLayout(new BoxLayout(category, BoxLayout.Y_AXIS));
         category.add(categoryLabel1);
         category.add(categoryLabel2);
         category.add(categoryLabel3);
         category.add(categoryLabel4);
-        content.add(category);
+
 
         //Advertisment panel
         c.fill = GridBagConstraints.BOTH;
@@ -135,10 +143,10 @@ public class homepage2 extends JFrame {
         c.gridwidth = 3;
         c.gridx = 1;
         c.gridy = 1;
-        add(adBannerPanel, c);
+        content.add(adBannerPanel, c);
         adBannerPanel.setBorder(blackline);
         adBannerPanel.add(ad);
-        content.add(adBannerPanel);
+
         // c.fill = GridBagConstraints.
 
         //   loginBtn.addActionListener(this);
@@ -146,9 +154,10 @@ public class homepage2 extends JFrame {
     }
 
     public static void main(String[] args) {
-        homepage2 account = new homepage2();
+
+        Homepage2 account = new Homepage2();
         account.setTitle("Homepage");
-        account.setLayout(new GridBagLayout());
+        account.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         account.setSize(1000, 500);
         account.setVisible(true);
         // windows.addActionListeners();
