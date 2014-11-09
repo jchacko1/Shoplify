@@ -36,4 +36,10 @@ public class ItemManager {
     {
         return _itemService.getOrderItemsHistory(userId);
     }
+
+    public ItemModel[] getItems(int orderId)
+    {
+        return _itemService.getItems(orderId);
+    }
+
 }

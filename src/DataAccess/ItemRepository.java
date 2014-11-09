@@ -48,4 +48,11 @@ public class ItemRepository {
         items.add(modelThree);
         return items;
     }
+
+    public ItemModel[] getItems(int orderId)
+    {
+        //todo get an array of items
+        return new ItemModel[]{new ItemModel(1)};
+    }
+
 }

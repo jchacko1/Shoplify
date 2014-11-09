@@ -4,7 +4,7 @@ package businessLogic;
 import DataAccess.ReportService;
 import controllers.ReportController;
 import models.ReportModel;
-import models.UserMode;
+import models.UserModel;
 import controllers.UserController;
 
 /**
@@ -13,13 +13,13 @@ import controllers.UserController;
 
 public class ReportManager {
     private ReportService _reportService = new ReportService();
+    //private ReportController _reportController = new ReportController();
 
     public ReportManager()
     {
 
     }
 
-    public
 
     private UserController _userController = new UserController();
 
@@ -28,9 +28,15 @@ public class ReportManager {
         ReportModel reportModel = _reportService.getReport(reportName, reportId);
         if(reportModel != null)
         {
-            UserModel userModel = _reportController.getReport(reportModel.getReportId());
+            reportModel = ReportController.getReportWithLogin(reportModel.getReportId(), reportModel.getReportName());
+            // UserModel userModel = .getReport(reportModel.getReportId());
+            // UserModel userModel = UserController.getUser(reportModel.getReportId());
             reportModel.setReportModel(reportModel);
         }
         return reportModel;
+    }
+
+    public ReportModel createReport(String reportName, String reportId){
+        return _reportService.createReport(reportName, reportId);
     }
 }

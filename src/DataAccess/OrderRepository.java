@@ -15,4 +15,10 @@ public class OrderRepository {
 
         return 1;
     }
+
+    public int[] getOrderIds(int userId)
+    {
+        //todo get an array of OrderIds
+        return new int[]{1,2,3};
+    }
 }

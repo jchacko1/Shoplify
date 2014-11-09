@@ -26,7 +26,10 @@ public class ItemController {
         return null;
     }
 
-
+    public static ItemModel[] getItems(int orderId)
+    {
+        return _itemManager.getItems(orderId);
+    }
 
 
 }
