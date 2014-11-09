@@ -14,36 +14,38 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.*;
 
-public class homepage2 extends JFrame{
+public class homepage2 extends JFrame {
 
-    private JPanel topPane;
-    private JButton loginBtn;
-    private JButton buttonOK;
+    private JPanel topPane, homePane, category, adBannerPanel;
+    private JButton loginBtn, buttonOK, searchBtn;
     private JTextField searchField;
-    private JButton searchBtn;
-    private JLabel homeLabel;
-    private JPanel homePane;
-    private JPanel category;
-    private JPanel adBannerPanel;
     private JTextArea advertismentsAndBannersTextArea;
-    private JLabel categoryLabel1;
-    private JLabel categoryLabel2;
-    private JLabel categoryLabel3;
-    private JLabel categoryLabel4;
-    private JLabel ad;
-    private JList Deli;
-    private JList Meat;
-    private JList Seafood;
-    private JList Vegetable;
-    private JList Bakery;
+    private JLabel homeLabel, categoryLabel1,categoryLabel2, categoryLabel3, categoryLabel4, ad;
+    private JList Deli, Meat, Seafood, Vegetable, Bakery;
     private Border blackline;
     private GridBagConstraints c;
-
 
 
     //private LoginView loginView;
 
     public homepage2() {
+
+        ActionListener loginViewPopup = new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                LoginView2 LoginView2Frame = new LoginView2();
+                LoginView2Frame.setVisible(true);
+                LoginView2Frame.setSize(500, 150);
+
+            }
+
+        };
+
+        Container content = getContentPane();
+        content.setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+
         //this.contentPane = new JPanel();
         this.topPane = new JPanel();
         this.category = new JPanel();
@@ -64,14 +66,6 @@ public class homepage2 extends JFrame{
 
         //this.loginView = new LoginView();
 
-    }
-
-    public void init() {
-
-        setTitle("Homepage");
-        setLayout(new GridBagLayout());
-        setSize(1000,500);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //top panel for icon
         c.fill = GridBagConstraints.NORTH;
@@ -95,7 +89,7 @@ public class homepage2 extends JFrame{
         c.weighty = 0;
         c.gridx = 2;
         c.gridy = 0;
-        add(searchBtn, c);
+        content.add(searchBtn, c);
 
         //login button
         c.fill = GridBagConstraints.FIRST_LINE_END;
@@ -103,7 +97,8 @@ public class homepage2 extends JFrame{
         c.weighty = 0;
         c.gridx = 3;
         c.gridy = 0;
-        add(loginBtn, c);
+        content.add(loginBtn, c);
+        loginBtn.addActionListener(loginViewPopup);
 
         //end of top panel//
 
@@ -113,8 +108,8 @@ public class homepage2 extends JFrame{
         c.weightx = 1;
         c.weighty = 0;
         c.gridx = 0;
-        c.gridy =0;
-        add(homeLabel,c);
+        c.gridy = 0;
+        content.add(homeLabel, c);
 //        homePane.setLayout(new BoxLayout(homePane, BoxLayout.Y_AXIS));
 //        homePane.add(homeLabel);
 
@@ -131,6 +126,7 @@ public class homepage2 extends JFrame{
         category.add(categoryLabel2);
         category.add(categoryLabel3);
         category.add(categoryLabel4);
+        content.add(category);
 
         //Advertisment panel
         c.fill = GridBagConstraints.BOTH;
@@ -142,21 +138,19 @@ public class homepage2 extends JFrame{
         add(adBannerPanel, c);
         adBannerPanel.setBorder(blackline);
         adBannerPanel.add(ad);
-
+        content.add(adBannerPanel);
         // c.fill = GridBagConstraints.
 
-     //   loginBtn.addActionListener(this);
-
-        setVisible(true);
-    }
-
-    public void actionPerformed(ActionEvent e) {
+        //   loginBtn.addActionListener(this);
 
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         homepage2 account = new homepage2();
-        account.init();
+        account.setTitle("Homepage");
+        account.setLayout(new GridBagLayout());
+        account.setSize(1000, 500);
+        account.setVisible(true);
         // windows.addActionListeners();
     }
 }
