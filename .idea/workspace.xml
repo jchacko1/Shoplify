@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
+    <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="More attempts at checking in code. Previous commits added the OrderController and associated classes, functionality for getting ItemHistory, and functionality for adding an item to a Shopping List">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessLogic/ReportManager.java" afterPath="$PROJECT_DIR$/src/businessLogic/ReportManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/ReportModel.java" afterPath="$PROJECT_DIR$/src/models/ReportModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -69,7 +71,7 @@
     <favorites_list name="Shoplify" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47603306">
+    <splitter split-orientation="horizontal" split-proportion="0.32218844">
       <split-first>
         <leaf>
           <file leaf-file-name="AccountRepository.java" pinned="false" current="false" current-in-tab="false">
@@ -124,7 +126,7 @@
           <file leaf-file-name="UserModel.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/models/UserModel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.61298704" vertical-offset="544" max-vertical-offset="1215">
+                <state vertical-scroll-proportion="0.6082474" vertical-offset="544" max-vertical-offset="1215">
                   <caret line="59" column="36" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="36" />
                   <folding>
                     <element signature="e#1463#1464#0" expanded="true" />
@@ -185,8 +187,8 @@
           <file leaf-file-name="ReportManager.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/businessLogic/ReportManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="705">
-                  <caret line="39" column="65" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+                  <caret line="30" column="116" selection-start-line="30" selection-start-column="116" selection-end-line="30" selection-end-column="116" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -197,18 +199,20 @@
           <file leaf-file-name="ReportModel.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/models/ReportModel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="960">
-                  <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="990">
+                  <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#618#619#0" expanded="true" />
-                    <element signature="e#658#659#0" expanded="true" />
-                    <element signature="e#715#716#0" expanded="true" />
-                    <element signature="e#757#758#0" expanded="true" />
-                    <element signature="e#843#844#0" expanded="true" />
-                    <element signature="e#874#875#0" expanded="true" />
-                    <element signature="e#1057#1058#0" expanded="true" />
-                    <element signature="e#1097#1098#0" expanded="true" />
+                    <element signature="e#624#625#0" expanded="true" />
+                    <element signature="e#664#665#0" expanded="true" />
+                    <element signature="e#721#722#0" expanded="true" />
+                    <element signature="e#763#764#0" expanded="true" />
+                    <element signature="e#852#853#0" expanded="true" />
+                    <element signature="e#883#884#0" expanded="true" />
+                    <element signature="e#976#977#0" expanded="true" />
+                    <element signature="e#1014#1015#0" expanded="true" />
+                    <element signature="e#1066#1067#0" expanded="true" />
+                    <element signature="e#1106#1107#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -232,8 +236,8 @@
           <file leaf-file-name="ReportController.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/controllers/ReportController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.8598575" vertical-offset="238" max-vertical-offset="945">
-                  <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+                <state vertical-scroll-proportion="0.87829614" vertical-offset="212" max-vertical-offset="840">
+                  <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -309,12 +313,12 @@
         <option value="$PROJECT_DIR$/src/views/LoginView2.java" />
         <option value="$PROJECT_DIR$/src/views/SubscriptionView2.java" />
         <option value="$PROJECT_DIR$/src/global/Global.java" />
-        <option value="$PROJECT_DIR$/src/businessLogic/ReportManager.java" />
         <option value="$PROJECT_DIR$/src/DataAccess/ReportRepository.java" />
         <option value="$PROJECT_DIR$/src/DataAccess/ReportService.java" />
         <option value="$PROJECT_DIR$/src/models/UserModel.java" />
-        <option value="$PROJECT_DIR$/src/models/ReportModel.java" />
         <option value="$PROJECT_DIR$/src/controllers/ReportController.java" />
+        <option value="$PROJECT_DIR$/src/models/ReportModel.java" />
+        <option value="$PROJECT_DIR$/src/businessLogic/ReportManager.java" />
       </list>
     </option>
   </component>
@@ -975,7 +979,7 @@
       <workItem from="1415235685186" duration="6217000" />
       <workItem from="1415246500491" duration="546000" />
       <workItem from="1415250629925" duration="163000" />
-      <workItem from="1415558974013" duration="4152000" />
+      <workItem from="1415558974013" duration="4369000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1005,15 +1009,19 @@
       <created>1415246063848</created>
       <updated>1415246063848</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="More attempts at checking in code. Previous commits added the OrderController and associated classes, functionality for getting ItemHistory, and functionality for adding an item to a Shopping List">
+      <created>1415563241289</created>
+      <updated>1415563241289</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74180000" />
+    <option name="totallyTimeSpent" value="74397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46131805" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1028,7 +1036,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5006974" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2900433" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32378224" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22063038" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5006974" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1401,19 +1409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataAccess/ReportService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding>
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/businessLogic/AccountManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
@@ -1478,37 +1473,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessLogic/ReportManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="705">
-          <caret line="39" column="65" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/ReportModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="960">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-            <element signature="e#757#758#0" expanded="true" />
-            <element signature="e#843#844#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#1057#1058#0" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/UserModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61298704" vertical-offset="544" max-vertical-offset="1215">
+        <state vertical-scroll-proportion="0.6082474" vertical-offset="544" max-vertical-offset="1215">
           <caret line="59" column="36" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="36" />
           <folding>
             <element signature="e#1463#1464#0" expanded="true" />
@@ -1519,10 +1486,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/ReportModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="990">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
+            <element signature="e#976#977#0" expanded="true" />
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1066#1067#0" expanded="true" />
+            <element signature="e#1106#1107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataAccess/ReportService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding>
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/businessLogic/ReportManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+          <caret line="30" column="116" selection-start-line="30" selection-start-column="116" selection-end-line="30" selection-end-column="116" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/ReportController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8598575" vertical-offset="238" max-vertical-offset="945">
-          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.87829614" vertical-offset="212" max-vertical-offset="840">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

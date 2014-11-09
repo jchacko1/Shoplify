@@ -9,7 +9,7 @@ import java.util.Date;
  */
 public class ReportModel {
 
-    private int reportId;
+    private String reportId;
     private String reportName;
     private int userId;
     private String createDate;
@@ -29,7 +29,7 @@ public class ReportModel {
 
     }
 
-    public ReportModel(int reportId){
+    public ReportModel(String reportId){
         this.reportId = reportId;
     }
 
@@ -42,7 +42,7 @@ public class ReportModel {
      * Get reporting id
      * @return
      */
-    public int getReportId(){
+    public String getReportId(){
         return reportId;
     }
 

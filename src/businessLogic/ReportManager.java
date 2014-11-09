@@ -28,9 +28,9 @@ public class ReportManager {
         ReportModel reportModel = _reportService.getReport(reportName, reportId);
         if(reportModel != null)
         {
-            //ReportModel reportModel = ReportController.getReport(reportModel.getReportId());
+            reportModel = ReportController.getReportWithLogin(reportModel.getReportId(), reportModel.getReportName());
            // UserModel userModel = .getReport(reportModel.getReportId());
-            UserModel userModel = UserController.getUser(reportModel.getReportId());
+           // UserModel userModel = UserController.getUser(reportModel.getReportId());
             reportModel.setReportModel(reportModel);
         }
         return reportModel;
