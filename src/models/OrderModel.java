@@ -11,7 +11,7 @@ public class OrderModel {
     private double _subTotal;
     private double _tax;
     private double _taxPercentage = 0.1;
-    private int _loggedInUser;
+    private int _loggedInUserId; //saved as 'LoggedInUser' in the Order database
     private double _discountAmount;
     private boolean _isSubscriptionOrder;
     public ShoppingCartModel _shoppingCart;
