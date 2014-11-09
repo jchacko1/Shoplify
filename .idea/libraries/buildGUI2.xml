@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="buildGUI">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/buildGUI/subscription.jar!/" />
+      <root url="jar://$PROJECT_DIR$/buildGUI/account.jar!/" />
+      <root url="jar://$PROJECT_DIR$/buildGUI/checkout.jar!/" />
+      <root url="jar://$PROJECT_DIR$/buildGUI/login.jar!/" />
+      <root url="jar://$PROJECT_DIR$/buildGUI/homepage.jar!/" />
+      <root url="jar://$PROJECT_DIR$/buildGUI/shoppingcart.jar!/" />
+      <root url="jar://$PROJECT_DIR$/buildGUI/categories.jar!/" />
+      <root url="jar://$PROJECT_DIR$/buildGUI/sqlite-jdbc-3.8.5-pre1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
