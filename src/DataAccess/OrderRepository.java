@@ -41,7 +41,7 @@ public class OrderRepository extends BaseRepository {
             System.out.println("Opened database successfully");
 
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "SELECT * FROM \"Order\";" );
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM UserOrder;" );
             while ( rs.next() ) {
                 int id = rs.getInt("OrderId");
                 //String  name = rs.getString("name");
