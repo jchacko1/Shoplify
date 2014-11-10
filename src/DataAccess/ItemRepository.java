@@ -1,5 +1,6 @@
 package DataAccess;
 
+import models.Enums;
 import models.ItemModel;
 
 import java.util.ArrayList;
@@ -7,11 +8,11 @@ import java.util.ArrayList;
 /**
  * Created by jmarquez on 11/2/2014.
  */
-public class ItemRepository {
+public class ItemRepository extends BaseRepository {
 
     public ItemModel getItem(int itemId)
     {
-        return new ItemModel(itemId);  //todo need to get the item from the database
+        return new ItemModel(itemId,"Name",0.00,5,"Description", Enums.Category.Bread);  //todo need to get the item from the database
     }
 
     public ArrayList<ItemModel> getShoppingList(int subscriptionId)
@@ -20,9 +21,9 @@ public class ItemRepository {
         //todo the "shopping list" needs to come from the database
 
         ArrayList<ItemModel> shoppingList = new ArrayList<ItemModel>();
-        shoppingList.add(new ItemModel(1));
-        shoppingList.add(new ItemModel(2));
-        shoppingList.add(new ItemModel(3));
+        shoppingList.add(new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread));
+        shoppingList.add(new ItemModel(2,"Name",0.00,5,"Description", Enums.Category.Bread));
+        shoppingList.add(new ItemModel(3,"Name",0.00,5,"Description", Enums.Category.Bread));
         return shoppingList;
     }
 
@@ -39,9 +40,9 @@ public class ItemRepository {
     public ArrayList<ItemModel> getOrderItemsHistory(int userId)
     {
         //todo read from the database all items placed by a userId, in OrderItems table
-        ItemModel modelOne = new ItemModel(1);
-        ItemModel modelTwo = new ItemModel(2);
-        ItemModel modelThree = new ItemModel(3);
+        ItemModel modelOne = new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread);
+        ItemModel modelTwo = new ItemModel(2,"Name",0.00,5,"Description", Enums.Category.Bread);
+        ItemModel modelThree = new ItemModel(3,"Name",0.00,5,"Description", Enums.Category.Bread);
         ArrayList<ItemModel> items = new ArrayList<ItemModel>();
         items.add(modelOne);
         items.add(modelTwo);
@@ -52,7 +53,7 @@ public class ItemRepository {
     public ItemModel[] getItems(int orderId)
     {
         //todo get an array of items
-        return new ItemModel[]{new ItemModel(1)};
+        return new ItemModel[]{new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread)};
     }
 
 }

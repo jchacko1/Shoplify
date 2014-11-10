@@ -18,4 +18,7 @@ public class OrderController {
         return _orderManager.getOrderIds(userId);
     }
 
+    public static void testSql() throws ClassNotFoundException {
+        _orderManager.testSql();
+    }
 }

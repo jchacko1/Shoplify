@@ -1,5 +1,7 @@
 package views;
 
+import controllers.OrderController;
+
 import javax.swing.*;
 
 public class AccountView extends JDialog {
@@ -28,7 +30,7 @@ public class AccountView extends JDialog {
         getRootPane().setDefaultButton(buttonOK);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
         AccountView dialog = new AccountView();
         dialog.pack();
         dialog.setVisible(true);

@@ -7,7 +7,7 @@ import models.Enums;
 /**
  * Created by Kelly An on 11/5/2014
  */
-public class ReportRepository {
+public class ReportRepository extends BaseRepository {
 
     public ReportModel getId(int report)
     {

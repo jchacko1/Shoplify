@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 
-public class AccountRepository {
+public class AccountRepository extends BaseRepository {
 
     public void testSql() throws ClassNotFoundException {
         Class.forName("org.sqlite.JDBC");
