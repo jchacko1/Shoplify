@@ -5,7 +5,7 @@ import models.DiscountModel;
 /**
  * Created by jmarquez on 11/2/2014.
  */
-public class DiscountRepository {
+public class DiscountRepository extends BaseRepository {
 
     public DiscountModel getDiscountModel(String promoCode)
     {

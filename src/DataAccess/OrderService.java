@@ -24,4 +24,8 @@ public class OrderService {
         return _orderRepository.getOrderIds(userId);
     }
 
+    public void testSql() throws ClassNotFoundException {
+        _orderRepository.testSql();
+    }
+
 }

@@ -17,11 +17,22 @@ public class Enums {
         FREESHIPPING
     }
 
-    //What could be the possible report type?
+    //todo What could be the possible report type?
     public enum ReportType {
 
     }
 
+
+
+    public enum Category {
+        Meat,
+        Dairy,
+        Fruit,
+        Vegetables,
+        Drink,
+        Dessert,
+        Bread
+    }
 
 
 

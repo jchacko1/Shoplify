@@ -9,11 +9,11 @@ public class ItemModel {
     private double price;
     private int quantity;
     private String description;
-    private Category category;
+    private Enums.Category category;
     private int shoppingCartItemId;
 
 
-    public ItemModel(int itemId, String itemName, double price, int quantity, String description, Category category){
+    public ItemModel(int itemId, String itemName, double price, int quantity, String description, Enums.Category category){
         this.itemId = itemId;
         this.itemName = itemName;
         this.price = price;
@@ -21,16 +21,6 @@ public class ItemModel {
         this.description = description;
         this.category = category;
         this.shoppingCartItemId = 0;
-    }
-
-    public ItemModel(int itemId){
-        this.itemId = itemId;
-        //todo get the rest of the Item data by a call to the database, using the itemId
-        this.itemName = itemName;
-        this.price = price;
-        this.quantity = quantity;
-        this.description = description;
-        this.category = category;
     }
 
    public int getShoppingCartItemId() {
@@ -99,19 +89,10 @@ public class ItemModel {
         this.description = description;
     }
 
-    public void setCategory(Category category){
+    public void setCategory(Enums.Category category){
         this.category = category;
     }
 
-    public enum Category {
-     Meat,
-     Dairy,
-     Fruit,
-     Vegetables,
-     Drink,
-     Dessert,
-     Bread
-    }
 }
 
 

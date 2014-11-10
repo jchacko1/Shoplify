@@ -18,4 +18,8 @@ public class OrderManager {
     {
         return _orderService.getOrderIds(userId);
     }
+
+    public void testSql() throws ClassNotFoundException {
+        _orderService.testSql();
+    }
 }

@@ -4,6 +4,7 @@ import DataAccess.DiscountService;
 import DataAccess.ItemService;
 import businessLogic.ShoppingCartManager;
 import models.DiscountModel;
+import models.Enums;
 import models.ItemModel;
 import models.ShoppingCartModel;
 
@@ -17,12 +18,12 @@ public class ShoppingCartController {
     private static DiscountService _discountService = new DiscountService();
 
     public static void addItemToCart(ShoppingCartModel shoppingCart, int itemId)
-    {            ItemModel itemModel = new ItemModel(itemId); //todo needs to be a call to get an Item
+    {            ItemModel itemModel = new ItemModel(itemId,"Name",0.00,5,"Description", Enums.Category.Bread); //todo needs to be a call to get an Item
                  _shoppingCartManager.addItemToCart(shoppingCart, itemModel);
     }
 
     public static void deleteItemFromCart(ShoppingCartModel shoppingCart, int itemId)
-    {   ItemModel itemModel = new ItemModel(itemId); //todo needs to be a call to get an Item
+    {   ItemModel itemModel = new ItemModel(itemId,"Name",0.00,5,"Description", Enums.Category.Bread); //todo needs to be a call to get an Item
         _shoppingCartManager.deleteItemFromCart(shoppingCart, itemModel);
     }
 
