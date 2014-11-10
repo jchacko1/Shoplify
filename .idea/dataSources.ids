@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source source="LOCAL" name="SQLite - ShoplifyDb" uuid="6399c84a-b5f7-4246-9b30-24b7099ad112">
-    <database-info product="SQLite" version="3.7.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <database-info product="SQLite" version="3.6.23.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="pure"/>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
     <schema name="" catalog=""/>
     <table name="Account" schema="" catalog="" type="TABLE">
@@ -40,6 +40,14 @@
       <column name="IsSubscriptionOrder" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
       <column name="ShippingFee" sqlType="DOUBLE" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
       <primary-key columns="OrderId"/>
+    </table>
+    <table name="ShoppingList" schema="" catalog="" type="TABLE">
+      <column name="ShoppingListId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="ShoppingListId"/>
+    </table>
+    <table name="ShoppingListItems" schema="" catalog="" type="TABLE">
+      <column name="ShoppingListId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="ItemId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
     </table>
     <table name="User" schema="" catalog="" type="TABLE">
       <column name="UserId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
