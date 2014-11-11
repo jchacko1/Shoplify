@@ -38,4 +38,5 @@ public class AccountController {
             Global.currentAccount = accountModel;
         }
     }
+
 }

@@ -14,6 +14,7 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.*;
 
+//TODO: Need ReminderList GUI
 public class homepage2 extends JFrame{
 
     private JPanel topPane;
