@@ -12,9 +12,10 @@ public class SearchController {
     private static SearchManager _searchManager = new SearchManager();
     private static ItemService _itemService = new ItemService();
 
-    public static void enterItemToSearch(SearchModel search, int itemId){
-        ItemModel itemModel = new ItemModel(itemId);
-        _searchManager.enterItemToSearch(search, itemModel);
+    public static void enterItemToSearch(SearchModel search, String itemId){
+        //TODO: Type need to change
+        //ItemModel itemModel = new ItemModel(itemId);
+        //_searchManager.enterItemToSearch(search, itemModel);
     }
 
     /**
