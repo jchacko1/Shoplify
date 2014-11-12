@@ -8,132 +8,117 @@ import javax.swing.*;
 
 public class ShoppingCartView2 extends JFrame{
     
-    private JLabel categoryLabel, deli, seafood, meat, vegetable, bakery, total;
-    private JPanel topPanel, categoryPanel, categorySubPanel1, categorySubPanel2, 
-            categorySubPanel3, categorySubPanel4, categorySubPanel5, itemlistPanel, 
-            totalPanel;
-    private JTextField searchTF;
-    private JButton searchButton, loginSignupButton, couponButton, checkoutButton;
+    private JLabel shoppingcartLabel, blankLabel, totalLabel, valueLabel, couponLabel;
+    private JPanel topPanel, midPanel, bottomPanel, pricePanel, couponPanel;
+    private JButton closeButton, couponButton, checkoutButton, subscriptionButton;
+    private JTextField couponTF;
+    private JScrollPane scrollpane;
    
     
     public ShoppingCartView2() {
         
+        
+        ActionListener subscriptionListener = new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SubscriptionView2 SubscriptionView2Frame = new SubscriptionView2();
+                SubscriptionView2Frame.setVisible(true);
+                SubscriptionView2Frame.setSize(500,300);
+                dispose();
+            }
+
+        };
+        
+        ActionListener checkoutListener = new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                CheckoutView2 CheckoutView2Frame = new CheckoutView2();
+                CheckoutView2Frame.setVisible(true);
+                CheckoutView2Frame.setSize(350,500);
+                dispose();
+            }
+
+        };
+        
+        ActionListener closeListener = new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+
+        };
+        
+        
         Container content = getContentPane();
-        content.setLayout(new GridBagLayout());
-        GridBagConstraints c = new GridBagConstraints();
+        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
         
         topPanel = new JPanel();
-        c.fill = GridBagConstraints.NORTH;
-        c.weightx = 1;
-        c.weighty = 0;
+        topPanel.setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        subscriptionButton = new JButton("Subscription");
+        subscriptionButton.addActionListener(subscriptionListener);
+        c.fill = GridBagConstraints.FIRST_LINE_START;
         c.gridx = 0;
         c.gridy = 0;
-        content.add(topPanel, c);
-        
-        searchTF = new JTextField("Search Field");
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.weightx = 1;
+        c.weightx = 0;
         c.weighty = 0;
+        topPanel.add(subscriptionButton, c);
+        
+        shoppingcartLabel = new JLabel("Shopping Cart");
+        c.fill = GridBagConstraints.PAGE_START;
         c.gridx = 1;
         c.gridy = 0;
-        content.add(searchTF, c);
-        
-        searchButton = new JButton("Search");
-        c.fill = GridBagConstraints.LINE_END;
         c.weightx = 1;
         c.weighty = 0;
+        topPanel.add(shoppingcartLabel, c);
+        
+        blankLabel = new JLabel("");
+        c.fill = GridBagConstraints.FIRST_LINE_END;
         c.gridx = 2;
         c.gridy = 0;
-        content.add(searchButton, c);
-        
-        loginSignupButton = new JButton("Login/Signup");
-        c.fill = GridBagConstraints.FIRST_LINE_END;
-        c.weightx = 1;
+        c.weightx = 0.5;
         c.weighty = 0;
-        c.gridx = 3;
-        c.gridy = 0;
-        content.add(loginSignupButton, c);
+        topPanel.add(blankLabel, c);
+        
+        content.add(topPanel);
         
         
-        categoryLabel = new JLabel("Categories");
-        c.fill = GridBagConstraints.LINE_START;
-        c.weightx = 2;
-        c.weighty = 1;
-        c.gridx = 0;
-        c.gridy = 1;
-        content.add(categoryLabel, c);
+        midPanel = new JPanel();
+        midPanel.setLayout(new BoxLayout(midPanel, BoxLayout.Y_AXIS));
+        scrollpane = new JScrollPane(midPanel, ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+        ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollpane.setPreferredSize(new Dimension(300, 250));
+        content.add(scrollpane);
         
+        couponPanel = new JPanel();
+        couponPanel.setLayout(new BoxLayout(couponPanel, BoxLayout.X_AXIS));
+        couponLabel = new JLabel("Coupon Code: ");
+        couponPanel.add(couponLabel);
+        couponTF = new JTextField();
+        couponPanel.add(couponTF);
+        couponButton = new JButton("Submit");
+        couponPanel.add(couponButton);
+        content.add(couponPanel);
         
-        categoryPanel = new JPanel();
-        c.fill = GridBagConstraints.LINE_START;
-        c.weightx = 2;
-        c.weighty = 1;
-        c.gridx = 0;
-        c.gridy = 2;
-        content.add(categoryPanel, c);
-        categoryPanel.setLayout(new GridLayout(5,1));
+        pricePanel = new JPanel();
+        pricePanel.setLayout(new BorderLayout());
+        totalLabel = new JLabel("Total: ");
+        pricePanel.add(totalLabel, BorderLayout.WEST);
+        valueLabel = new JLabel("$ Value");
+        pricePanel.add(valueLabel, BorderLayout.CENTER);
+        content.add(pricePanel);
         
-       
-        
-        categorySubPanel1 = new JPanel();
-        deli = new JLabel("Deli");
-        categorySubPanel1.add(deli);
-        categoryPanel.add(categorySubPanel1);
-        
-        categorySubPanel2 = new JPanel();
-        seafood = new JLabel("Seafood");
-        categorySubPanel2.add(seafood);
-        categoryPanel.add(categorySubPanel2);
-        
-        categorySubPanel3 = new JPanel();
-        meat = new JLabel("Meat");
-        categorySubPanel3.add(meat);
-        categoryPanel.add(categorySubPanel3);
-        
-        
-        categorySubPanel4 = new JPanel();
-        vegetable = new JLabel("Vegetable");
-        categorySubPanel4.add(vegetable);
-        categoryPanel.add(categorySubPanel4);
-        
-        categorySubPanel5 = new JPanel();
-        bakery = new JLabel("Bakery");
-        categorySubPanel5.add(bakery);
-        categoryPanel.add(categorySubPanel5);
-        
-        
-        itemlistPanel = new JPanel();
-        c.fill = GridBagConstraints.CENTER;
-        c.weightx = 1;
-        c.weighty = 1;
-        c.gridwidth = 2;
-        c.gridx = 1;
-        c.gridy = 1;
-        content.add(itemlistPanel, c);
-        itemlistPanel.setLayout(new BoxLayout(itemlistPanel, BoxLayout.Y_AXIS));
-        
-        totalPanel = new JPanel();
-        c.fill = GridBagConstraints.LINE_END;
-        c.weightx = 1;
-        c.weighty = 1;
-        c.gridwidth = 2;
-        c.gridx = 3;
-        c.gridy = 2;
-        content.add(totalPanel, c);
-        totalPanel.setLayout(new GridLayout(3,1));
-        
-        total = new JLabel("Total: 150");
-        totalPanel.add(total);
-        
-        couponButton = new JButton("Coupon");
-        totalPanel.add(couponButton);
-        
-        checkoutButton = new JButton("Checkout");
-        totalPanel.add(checkoutButton);
-        
-        
-        
-        
+        bottomPanel = new JPanel();
+        closeButton = new JButton("Close");
+        closeButton.addActionListener(closeListener);
+        bottomPanel.add(closeButton);
+        checkoutButton = new JButton("Check Out");
+        checkoutButton.addActionListener(checkoutListener);
+        bottomPanel.add(checkoutButton);
+        content.add(bottomPanel);
         
     }
     

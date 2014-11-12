@@ -7,138 +7,132 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class CheckoutView2 extends JFrame{
-    
-    private JLabel categoryLabel, deli, seafood, meat, vegetable, bakery, shippingLabel,
-            paymentLabel, totalLabel;
-    private JPanel topPanel, categoryPanel, categorySubPanel1, categorySubPanel2, 
-            categorySubPanel3, categorySubPanel4, categorySubPanel5, shapePanel, 
-            colorPanel;
-    private JTextField searchTF;
-    private JButton searchButton, loginSignupButton;
+
+   private JPanel topPanel, midPanel, paymentLabelPanel, paymentPanel, bottomPanel,
+           totalPanel;
+   private JLabel shippingInfoLabel, paymentInfoLabel, firstnameLabel, lastnameLabel,
+           addressLabel, cityLabel, stateLabel, countryLabel, zipLabel, phoneLabel,
+           emailLabel, creditcardLabel, cardholderLabel, creditcardnumberLabel, 
+           expirationLabel, totalLabel, valueLabel;
+   private JTextField firstnameTF, lastnameTF, cardholderTF, creditcardTF,
+           addressTF, cityTF, stateTF, countryTF, zipTF, phoneTF, expirationTF,
+           emailTF;
+   private JButton okButton, cancelButton;
    
-    
     public CheckoutView2() {
         
+        ActionListener cancelListener = new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+   
+        };
+        
+        ActionListener okListener = new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+   
+        };
+        
         Container content = getContentPane();
-        content.setLayout(new GridBagLayout());
-        GridBagConstraints c = new GridBagConstraints();
-        
+        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
+      
         topPanel = new JPanel();
-        c.fill = GridBagConstraints.NORTH;
-        c.weightx = 1;
-        c.weighty = 0;
-        c.gridx = 0;
-        c.gridy = 0;
-        content.add(topPanel, c);
+        topPanel.setLayout(new FlowLayout());
+        shippingInfoLabel = new JLabel("Shipping Information");
+        topPanel.add(shippingInfoLabel);
+        content.add(topPanel);
         
-        searchTF = new JTextField("Search Field");
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.weightx = 1;
-        c.weighty = 0;
-        c.gridx = 1;
-        c.gridy = 0;
-        content.add(searchTF, c);
+        midPanel = new JPanel();
+        midPanel.setLayout(new GridLayout(9,2));
+        firstnameLabel = new JLabel("First Name: ", SwingConstants.CENTER);
+        midPanel.add(firstnameLabel);
+        firstnameTF = new JTextField();
+        midPanel.add(firstnameTF);
+        lastnameLabel = new JLabel("Last Name: ", SwingConstants.CENTER);
+        midPanel.add(lastnameLabel);
+        lastnameTF = new JTextField();
+        midPanel.add(lastnameTF);
+        addressLabel = new JLabel("Address: ", SwingConstants.CENTER);
+        midPanel.add(addressLabel);
+        addressTF = new JTextField();
+        midPanel.add(addressTF);
+        cityLabel = new JLabel("City: ", SwingConstants.CENTER);
+        midPanel.add(cityLabel);
+        cityTF = new JTextField();
+        midPanel.add(cityTF);
+        stateLabel = new JLabel("State: ", SwingConstants.CENTER);
+        midPanel.add(stateLabel);
+        stateTF = new JTextField();
+        midPanel.add(stateTF);
+        countryLabel = new JLabel("Country: ", SwingConstants.CENTER);
+        midPanel.add(countryLabel);
+        countryTF = new JTextField();
+        midPanel.add(countryTF);
+        zipLabel = new JLabel("Zip Code: ", SwingConstants.CENTER);
+        midPanel.add(zipLabel);
+        zipTF = new JTextField();
+        midPanel.add(zipTF);
+        phoneLabel = new JLabel("Phone Number: ", SwingConstants.CENTER);
+        midPanel.add(phoneLabel);
+        phoneTF = new JTextField();
+        midPanel.add(phoneTF);
+        emailLabel = new JLabel("Email: ", SwingConstants.CENTER);
+        midPanel.add(emailLabel);
+        emailTF = new JTextField();
+        midPanel.add(emailTF);
+        content.add(midPanel);
         
-        searchButton = new JButton("Search");
-        c.fill = GridBagConstraints.LINE_END;
-        c.weightx = 1;
-        c.weighty = 0;
-        c.gridx = 2;
-        c.gridy = 0;
-        content.add(searchButton, c);
+        paymentLabelPanel = new JPanel();
+        paymentLabelPanel.setLayout(new FlowLayout());
         
-        loginSignupButton = new JButton("Login/Signup");
-        c.fill = GridBagConstraints.FIRST_LINE_END;
-        c.weightx = 1;
-        c.weighty = 0;
-        c.gridx = 3;
-        c.gridy = 0;
-        content.add(loginSignupButton, c);
+        paymentInfoLabel = new JLabel("Payment Information");
+        paymentLabelPanel.add(paymentInfoLabel);
+        content.add(paymentLabelPanel);
         
+        paymentPanel = new JPanel();
+        paymentPanel.setLayout(new GridLayout(4,2));
+        creditcardLabel = new JLabel("Credit Card Type: ", SwingConstants.CENTER);
+        paymentPanel.add(creditcardLabel);
+        countryTF = new JTextField();
+        paymentPanel.add(countryTF);
+        cardholderLabel = new JLabel("Cardholder's Name: ", SwingConstants.CENTER);
+        paymentPanel.add(cardholderLabel);
+        cardholderTF = new JTextField();
+        paymentPanel.add(cardholderTF);
+        creditcardnumberLabel = new JLabel("Credit Card Number: ", SwingConstants.CENTER);
+        paymentPanel.add(creditcardnumberLabel);
+        creditcardTF = new JTextField();
+        paymentPanel.add(creditcardTF);
+        expirationLabel = new JLabel("Expiration Date: ", SwingConstants.CENTER);
+        paymentPanel.add(expirationLabel);
+        expirationTF = new JTextField();
+        paymentPanel.add(expirationTF);
+        content.add(paymentPanel);
         
-        categoryLabel = new JLabel("Categories");
-        c.fill = GridBagConstraints.LINE_START;
-        c.weightx = 1;
-        c.weighty = 1;
-        c.gridx = 0;
-        c.gridy = 1;
-        content.add(categoryLabel, c);
-        
-        
-        categoryPanel = new JPanel();
-        c.fill = GridBagConstraints.LINE_START;
-        c.weightx = 1;
-        c.weighty = 1;
-        c.gridx = 0;
-        c.gridy = 2;
-        content.add(categoryPanel, c);
-        categoryPanel.setLayout(new GridLayout(5,1));
-        
+        totalPanel = new JPanel();
+        totalPanel.setLayout(new GridLayout(1,1));
+        totalLabel = new JLabel("Total: ", SwingConstants.CENTER);
+        totalPanel.add(totalLabel);
+        valueLabel = new JLabel("$ Value");
+        totalPanel.add(valueLabel);
+        content.add(totalPanel);
        
         
-        categorySubPanel1 = new JPanel();
-        deli = new JLabel("Deli");
-        categorySubPanel1.add(deli);
-        categoryPanel.add(categorySubPanel1);
-        
-        categorySubPanel2 = new JPanel();
-        seafood = new JLabel("Seafood");
-        categorySubPanel2.add(seafood);
-        categoryPanel.add(categorySubPanel2);
-        
-        categorySubPanel3 = new JPanel();
-        meat = new JLabel("Meat");
-        categorySubPanel3.add(meat);
-        categoryPanel.add(categorySubPanel3);
-        
-        
-        categorySubPanel4 = new JPanel();
-        vegetable = new JLabel("Vegetable");
-        categorySubPanel4.add(vegetable);
-        categoryPanel.add(categorySubPanel4);
-        
-        categorySubPanel5 = new JPanel();
-        bakery = new JLabel("Bakery");
-        categorySubPanel5.add(bakery);
-        categoryPanel.add(categorySubPanel5);
-        
-        
-        shippingLabel = new JLabel("Shipping");
-        c.fill = GridBagConstraints.CENTER;
-        c.weightx = 1;
-        c.weighty = 1;
-        c.gridx = 1;
-        c.gridy = 1;
-        content.add(shippingLabel, c);
-        
-        
-        
-        paymentLabel = new JLabel("Payment");
-        c.fill = GridBagConstraints.LINE_END;
-        c.weightx = 1;
-        c.weighty = 1;
-        c.gridx = 2;
-        c.gridy = 1;
-        content.add(paymentLabel, c);
-        
-        totalLabel = new JLabel("Total");
-        c.fill = GridBagConstraints.LINE_END;
-        c.weightx = 1;
-        c.weighty = 1;
-        c.gridx = 3;
-        c.gridy = 1;
-        content.add(totalLabel, c);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        bottomPanel = new JPanel();
+        bottomPanel.setLayout(new FlowLayout());
+        okButton = new JButton("Submit Order");
+        okButton.addActionListener(okListener);
+        bottomPanel.add(okButton);
+        cancelButton = new JButton("Cancel");
+        cancelButton.addActionListener(cancelListener);
+        bottomPanel.add(cancelButton);
+        content.add(bottomPanel);
     }
     
     public static void main(String[] args) {
@@ -147,7 +141,7 @@ public class CheckoutView2 extends JFrame{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setTitle("Checkout");
-        frame.setSize(500,300);
+        frame.setSize(350,500);
     }
     
 }

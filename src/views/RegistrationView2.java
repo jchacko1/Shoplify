@@ -5,16 +5,37 @@ import java.awt.event.*;
 import javax.swing.*;
 
 
-public class Registration2 extends JFrame{
+public class RegistrationView2 extends JFrame{
     
-    private JPanel topPanel, midPanel, bottomPanel;
+    private JPanel topPanel, midPanel, bottomPanel, securityPanel, securityPanel2;
     private JLabel signupLabel, firstnameLabel, lastnameLabel, emailLabel, 
-            usernameLabel, passwordLabel;
-    private JTextField firstnameTF, lastnameTF, emailTF, usernameTF, passwordTF;
+            usernameLabel, passwordLabel, securityquestionLabel, securityLabel;
+    private JTextField firstnameTF, lastnameTF, emailTF, usernameTF, passwordTF, securityTF;
     private JButton signupButton, cancelButton;
+    private JComboBox combobox;
+    
+    String[] questionString = {"Question1", "Question2", "Question3"};
     
     
-    public Registration2() {
+    public RegistrationView2() {
+        
+        ActionListener signupListener = new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+   
+        };
+        
+        ActionListener cancelListener = new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+   
+        };
         
         Container content = getContentPane();
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
@@ -49,25 +70,46 @@ public class Registration2 extends JFrame{
         midPanel.add(passwordTF);      
         content.add(midPanel);
         
+        securityPanel = new JPanel();
+        securityPanel.setLayout(new FlowLayout());
+        securityquestionLabel = new JLabel("Pick your security qustion for password recovery", SwingConstants.CENTER);
+        securityPanel.add(securityquestionLabel);
+        content.add(securityPanel);
+
+        securityPanel2 = new JPanel();
+        securityPanel2.setLayout(new GridLayout(1,1));
+        combobox = new JComboBox(questionString);
+        
+        securityPanel2.add(combobox);
+        securityTF = new JTextField();
+        securityPanel2.add(securityTF); 
+        content.add(securityPanel2);
+        
         bottomPanel = new JPanel();
         bottomPanel.setLayout(new FlowLayout());
         signupButton = new JButton("Sign Up");
+        signupButton.addActionListener(signupListener);
         bottomPanel.add(signupButton);
         cancelButton = new JButton("Cancel");
+        cancelButton.addActionListener(cancelListener);
         bottomPanel.add(cancelButton);
         content.add(bottomPanel);
         
 
     }
     
+    public String getQuestionString() {
+        return questionString[0];
+    }
+    
     
     public static void main(String[] args) {
 
-        Registration2 frame = new Registration2();
+        RegistrationView2 frame = new RegistrationView2();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setTitle("Registration");
-        frame.setSize(300,300);
+        frame.setSize(320,300);
     }
     
 }

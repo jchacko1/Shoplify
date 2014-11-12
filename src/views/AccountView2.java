@@ -1,192 +1,171 @@
 package views;
 
-import javax.swing.*;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
 import java.awt.*;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.event.ActionListener;
 import java.awt.event.*;
+import javax.swing.*;
 
-public class AccountView2 extends JFrame implements ActionListener{
 
-    private JPanel iconPane;
-    //private JPanel searchPan;
-    private JPanel topPane;
-    private JPanel accountListPane;
-    private JPanel historyListPane;
-    private JPanel returnInfoPane;
-    private JPanel paymentInfoPane;
-
-    private JButton loginBtn;
-    private JButton okBtn;
-    private JButton searchBtn;
-    private JButton history;
-
-    private JLabel accountInfoLabel;
-//    private JLabel historyInfoLabel;
-    private JLabel returnInfoLabel;
-    private JLabel paymentInfoLabel;
-
-    private JTextField searchField;
-
-    private GridBagConstraints c;
-
-    private JTextArea accountNameList;
-    private JTextArea passwordList;
-    private JTextArea subscriptionList;
-    private JTextArea detailsList;
-    private JTextArea bakeryList;
-
-    //private LoginView loginView;
-
+public class AccountView2 extends JFrame{
+    
+    private JPanel topPanel, midPanel, bottomPanel, securityPanel, extraPanel;
+    private JLabel signupLabel, firstnameLabel, lastnameLabel, emailLabel, 
+            usernameLabel, passwordLabel, securityquestionLabel, blankLabel;
+    private JTextField firstnameTF, lastnameTF, emailTF, passwordTF, securityTF;
+    private JButton cancelButton, makechangeButton, historyButton, returnInfoButton,
+            paymentInfoButton, reminderButton;
+    private JComboBox combobox;
+    
+    String[] questionString = {"Question1", "Question2", "Question3"};
+    
+    
     public AccountView2() {
+        
+        ActionListener makechangeListener = new ActionListener() {
 
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+   
+        };
+        
+        ActionListener cancelListener = new ActionListener() {
 
-        this.iconPane = new JPanel();
-        this.topPane = new JPanel();
-        this.loginBtn = new JButton("Login/SignUp");
-        this.searchBtn = new JButton("Search");
-        this.okBtn = new JButton("OK");
-        this.searchField = new JTextField("Search field");
-        this.c = new GridBagConstraints();
-        this.accountInfoLabel = new JLabel("Account Info");
-        this.returnInfoLabel = new JLabel();
-        this.paymentInfoLabel = new JLabel();
-        this.accountListPane = new JPanel();
-        //this.accountNameList = new JList();
-        this.historyListPane = new JPanel();
-        this.history = new JButton("History");
-        this.paymentInfoPane = new JPanel();
-        this.paymentInfoLabel = new JLabel("Payment info");
-        this.returnInfoPane = new JPanel();
-        this.returnInfoLabel = new JLabel("Return Info");
-        this.accountNameList = new JTextArea("account name");
-        this.passwordList = new JTextArea("password list");
-        this.subscriptionList = new JTextArea("subscription list");
-        this.detailsList = new JTextArea("detail list");
-        this.bakeryList = new JTextArea("bakery");
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+   
+        };
+        
+        ActionListener historyListener = new ActionListener() {
 
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                HistoryView2 HistoryView2Frame = new HistoryView2();
+                HistoryView2Frame.setVisible(true);
+                HistoryView2Frame.setSize(500,500);
+            }
+   
+        };
+        
+        ActionListener reminderListener = new ActionListener() {
 
-        //this.loginView = new LoginView();
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ReminderListView ReminderListFrame = new ReminderListView();
+                ReminderListFrame.setVisible(true);
+                ReminderListFrame.setSize(320,300);
+            }
+   
+        };
+        
+        ActionListener paymentListener = new ActionListener() {
 
-    }
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                
+            }
+   
+        };
+        
+        ActionListener returnListener = new ActionListener() {
 
-        public void init() {
-
-            ActionListener HistoryViewPopup = new ActionListener() {
-
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    HistoryView2 historyView2Frame = new HistoryView2();
-                    historyView2Frame.setVisible(true);
-                    historyView2Frame.setSize(500, 500);
-                }
-            };
-
-
-        setTitle("Account View");
-        setLayout(new GridBagLayout());
-        setSize(500,500);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        //top panel for icon
-        c.fill = GridBagConstraints.NORTH;
-        c.weightx = 1;
-        c.weighty = 0;
-        c.gridx = 0;
-        c.gridy = 0;
-        add(topPane, c);
-
-        //search field
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.weightx = 1;
-        c.weighty = 0;
-        c.gridx = 1;
-        c.gridy = 0;
-        add(searchField, c);
-
-        //search button
-        c.fill = GridBagConstraints.LINE_END;
-        c.weightx = 0.5;
-        c.weighty = 0;
-        c.gridx = 2;
-        c.gridy = 0;
-        add(searchBtn, c);
-
-        //login button
-        c.fill = GridBagConstraints.FIRST_LINE_END;
-        c.weightx = 1;
-        c.weighty = 0;
-        c.gridx = 3;
-        c.gridy = 0;
-        add(loginBtn, c);
-
-        //end of top panel//
-
-        //1st column for account info list
-        c.fill = GridBagConstraints.LINE_START;
-        c.weightx = 1;
-        c.weighty = 0;
-        c.gridx = 0;
-        c.gridy =1;
-        add(accountListPane,c);
-        accountListPane.setLayout(new BoxLayout(accountListPane, BoxLayout.Y_AXIS));
-        accountListPane.add(accountInfoLabel);
-       // accountNameList.setSize(150, 50);
-        accountListPane.add(accountNameList);
-        accountListPane.add(passwordList);
-        accountListPane.add(subscriptionList);
-        accountListPane.add(detailsList);
-        accountListPane.add(bakeryList);
-
-        c.fill = GridBagConstraints.CENTER;
-        c.weightx = 1;
-        c.weighty = 0;
-        c.gridx = 1;
-        c.gridy = 1;
-        add(historyListPane,c);
-        historyListPane.setLayout(new BoxLayout(historyListPane, BoxLayout.Y_AXIS));
-        historyListPane.add(history);
-        history.addActionListener(HistoryViewPopup);
-
-        c.weightx = 1;
-        c.weightx = 0;
-        c.gridx = 2;
-        c.gridy = 1;
-        add(returnInfoPane, c);
-        returnInfoPane.setLayout(new BoxLayout(returnInfoPane, BoxLayout.Y_AXIS));
-        returnInfoPane.add(returnInfoLabel);
-
-        c.weightx = 1;
-        c.weighty = 0;
-        c.gridx = 3;
-        c.gridy = 1;
-        add(paymentInfoPane, c);
-        paymentInfoPane.setLayout(new BoxLayout(paymentInfoPane, BoxLayout.Y_AXIS));
-        paymentInfoPane.add(paymentInfoLabel);
-
-
-       // c.fill = GridBagConstraints.
-
-        loginBtn.addActionListener(this);
-
-        setVisible(true);
-    }
-
-    public void actionPerformed(ActionEvent e) {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                
+            }
+   
+        };
+        
+        Container content = getContentPane();
+        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
+        
+        topPanel = new JPanel();
+        topPanel.setLayout(new FlowLayout());
+        signupLabel = new JLabel("Account Information");
+        topPanel.add(signupLabel);
+        content.add(topPanel);
+        
+        midPanel = new JPanel();
+        midPanel.setLayout(new GridLayout (6,2));
+        usernameLabel = new JLabel("yourUsername", SwingConstants.CENTER);
+        midPanel.add(usernameLabel);
+        blankLabel = new JLabel("");
+        midPanel.add(blankLabel);
+        passwordLabel = new JLabel("Password: ", SwingConstants.CENTER);
+        midPanel.add(passwordLabel);
+        passwordTF = new JTextField("Your password");
+        midPanel.add(passwordTF);
+        firstnameLabel = new JLabel("Firstname:", SwingConstants.CENTER);
+        midPanel.add(firstnameLabel);
+        firstnameTF = new JTextField("Your first name");
+        midPanel.add(firstnameTF);
+        lastnameLabel = new JLabel("Lastname:", SwingConstants.CENTER);
+        midPanel.add(lastnameLabel);
+        lastnameTF = new JTextField("Your last name");
+        midPanel.add(lastnameTF);
+        emailLabel = new JLabel("Email:", SwingConstants.CENTER);
+        midPanel.add(emailLabel);
+        emailTF = new JTextField("your email");
+        midPanel.add(emailTF);
+        securityquestionLabel = new JLabel("Security Question:", SwingConstants.CENTER);
+        midPanel.add(securityquestionLabel);
+        
+        content.add(midPanel);
+        
+        securityPanel = new JPanel();
+        securityPanel.setLayout(new GridLayout(1,1));
+        combobox = new JComboBox(questionString);
+        
+        securityPanel.add(combobox);
+        securityTF = new JTextField("Your security answer");
+        securityPanel.add(securityTF); 
+        content.add(securityPanel);
+        
+        extraPanel = new JPanel();
+        extraPanel.setLayout(new FlowLayout());
+        historyButton = new JButton("History");
+        extraPanel.add(historyButton);
+        historyButton.addActionListener(historyListener);
+        reminderButton = new JButton("Reminder List");
+        reminderButton.addActionListener(reminderListener);
+        extraPanel.add(reminderButton);
+        returnInfoButton = new JButton("Return Info");
+        reminderButton.addActionListener(returnListener);
+        extraPanel.add(returnInfoButton);
+        paymentInfoButton = new JButton("Payment Info");
+        reminderButton.addActionListener(paymentListener);
+        extraPanel.add(paymentInfoButton);
+        content.add(extraPanel);
+        
+        bottomPanel = new JPanel();
+        bottomPanel.setLayout(new FlowLayout());
+        makechangeButton = new JButton("Make Change");
+        makechangeButton.addActionListener(makechangeListener);
+        bottomPanel.add(makechangeButton);
+        cancelButton = new JButton("Close");
+        cancelButton.addActionListener(cancelListener);
+        bottomPanel.add(cancelButton);
+        content.add(bottomPanel);
+        
 
     }
-
-    public static void main(String[] args){
-        AccountView2 account = new AccountView2();
-        account.init();
-       // windows.addActionListeners();
+    
+    public String getQuestionString() {
+        return questionString[0];
     }
+    
+    
+    public static void main(String[] args) {
+
+        AccountView2 frame = new AccountView2();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.setTitle("Account");
+        frame.setSize(350,450);
+    }
+    
 }
+
+
