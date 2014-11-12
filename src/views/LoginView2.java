@@ -1,6 +1,8 @@
 
 package views;
 
+import controllers.OrderController;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -98,19 +100,20 @@ public class LoginView2 extends JFrame {
         cancelButton = new JButton("Cancel");
         bottomPanel.add(cancelButton);
         content.add(bottomPanel);
-        
-        
-        
+
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
 
         LoginView2 frame = new LoginView2();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setTitle("Login Page");
         frame.setSize(300,150);
+
+        OrderController.testSql();
+
     }
 
 }

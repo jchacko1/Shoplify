@@ -93,5 +93,40 @@ public class UserController {
                          }
     }
 
+    public static boolean isValidUser(UserModel userModel){
+
+        if(userModel.getFirstName() == null ||
+           userModel.getLastName() == null ||
+           userModel.getUserId() == 0 ||
+           userModel.getCreateDate() == null){
+            return false;
+        }
+        if(userModel.getFirstName().isEmpty() || userModel.getLastName().isEmpty()) {
+            return false;
+        }
+        //TODO: add checkemail and checkLogin method inside userModel?
+        return true;
+
+    }
+
+    public static boolean checkLogin(String login){
+        if(login == null)
+            return false;
+        return true;
+    }
+
+
+    public static boolean checkPassword(String password){
+        if(password == null)
+            return false;
+        return true;
+    }
+
+    public static boolean checkEmail(String email){
+        if(email == null)
+            return false;
+        return true;
+    }
+
 
 }

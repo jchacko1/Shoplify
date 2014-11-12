@@ -27,9 +27,10 @@ public class AccountView2 extends JFrame implements ActionListener{
     private JButton loginBtn;
     private JButton okBtn;
     private JButton searchBtn;
+    private JButton history;
 
     private JLabel accountInfoLabel;
-    private JLabel historyInfoLabel;
+//    private JLabel historyInfoLabel;
     private JLabel returnInfoLabel;
     private JLabel paymentInfoLabel;
 
@@ -46,6 +47,8 @@ public class AccountView2 extends JFrame implements ActionListener{
     //private LoginView loginView;
 
     public AccountView2() {
+
+
         this.iconPane = new JPanel();
         this.topPane = new JPanel();
         this.loginBtn = new JButton("Login/SignUp");
@@ -54,13 +57,12 @@ public class AccountView2 extends JFrame implements ActionListener{
         this.searchField = new JTextField("Search field");
         this.c = new GridBagConstraints();
         this.accountInfoLabel = new JLabel("Account Info");
-        this.historyInfoLabel = new JLabel();
         this.returnInfoLabel = new JLabel();
         this.paymentInfoLabel = new JLabel();
         this.accountListPane = new JPanel();
         //this.accountNameList = new JList();
         this.historyListPane = new JPanel();
-        this.historyInfoLabel = new JLabel("History");
+        this.history = new JButton("History");
         this.paymentInfoPane = new JPanel();
         this.paymentInfoLabel = new JLabel("Payment info");
         this.returnInfoPane = new JPanel();
@@ -76,7 +78,18 @@ public class AccountView2 extends JFrame implements ActionListener{
 
     }
 
-    public void init() {
+        public void init() {
+
+            ActionListener HistoryViewPopup = new ActionListener() {
+
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    HistoryView2 historyView2Frame = new HistoryView2();
+                    historyView2Frame.setVisible(true);
+                    historyView2Frame.setSize(500, 500);
+                }
+            };
+
 
         setTitle("Account View");
         setLayout(new GridBagLayout());
@@ -140,8 +153,8 @@ public class AccountView2 extends JFrame implements ActionListener{
         c.gridy = 1;
         add(historyListPane,c);
         historyListPane.setLayout(new BoxLayout(historyListPane, BoxLayout.Y_AXIS));
-        historyListPane.add(historyInfoLabel);
-
+        historyListPane.add(history);
+        history.addActionListener(HistoryViewPopup);
 
         c.weightx = 1;
         c.weightx = 0;
