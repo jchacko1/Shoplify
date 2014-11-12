@@ -8,11 +8,8 @@
       <root url="jar://$PROJECT_DIR$/buildGUI/subscription.jar!/" />
       <root url="jar://$PROJECT_DIR$/buildGUI/account.jar!/" />
       <root url="jar://$PROJECT_DIR$/buildGUI/shoppingcart.jar!/" />
-      <root url="jar://$PROJECT_DIR$/buildGUI/sqlite-jdbc-3.8.5-pre1.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$PROJECT_DIR$/buildGUI/sqlite-jdbc-3.8.5-pre1.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

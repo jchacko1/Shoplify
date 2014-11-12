@@ -5,10 +5,7 @@ import models.Enums;
 import models.UserModel;
 import models.UserModelDto;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  * Created by jmarquez on 11/2/2014.
@@ -94,5 +91,41 @@ public class UserRepository extends BaseRepository {
     {
         int subscriptionId = 1; //todo this needs to be a primary key from the Subscription table
         return subscriptionId;
+    }
+
+    /**
+     * Test User DB syndication
+     * @throws ClassNotFoundException
+     */
+    public void testSql() throws ClassNotFoundException {
+        Connection c = null;
+        Statement stmt = null;
+
+        try{
+            System.out.println("Begin User table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened User database successfully");
+
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM User;");
+
+            while(rs.next()) {
+                int id = rs.getInt("UserId");
+                System.out.println("ID = " + id);
+            }
+
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+
+        System.out.println("User DB Operation done successfully");
+
     }
 }

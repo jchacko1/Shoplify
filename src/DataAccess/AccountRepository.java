@@ -14,6 +14,10 @@ import java.sql.Statement;
 
 public class AccountRepository extends BaseRepository {
 
+    /**
+     * Test Account DB syndication
+     * @throws ClassNotFoundException
+     */
     public void testSql() throws ClassNotFoundException {
         Class.forName("org.sqlite.JDBC");
 
@@ -138,4 +142,6 @@ public class AccountRepository extends BaseRepository {
         }
         return null;
     }
+
+
 }
