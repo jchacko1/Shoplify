@@ -25,13 +25,13 @@ public class Enums {
 
 
     public enum Category {
-        Meat,
-        Dairy,
-        Fruit,
-        Vegetables,
-        Drink,
-        Dessert,
-        Bread
+        Meat,                      //CategoryId 1
+        Dairy,                     //CategoryId 2
+        Fruit,                     //CategoryId 3
+        Vegetables,                //CategoryId 4
+        Drink,                     //CategoryId 5
+        Dessert,                   //CategoryId 6
+        Bread                      //CategoryId 7
     }
 
 
