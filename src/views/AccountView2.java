@@ -47,6 +47,8 @@ public class AccountView2 extends JFrame implements ActionListener{
     //private LoginView loginView;
 
     public AccountView2() {
+
+
         this.iconPane = new JPanel();
         this.topPane = new JPanel();
         this.loginBtn = new JButton("Login/SignUp");
@@ -76,18 +78,18 @@ public class AccountView2 extends JFrame implements ActionListener{
 
     }
 
-    public void init() {
-        ActionListener loginViewPopup = new ActionListener() {
+        public void init() {
 
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                LoginView2 LoginView2Frame = new LoginView2();
-                LoginView2Frame.setVisible(true);
-                LoginView2Frame.setSize(500,150);
+            ActionListener HistoryViewPopup = new ActionListener() {
 
-            }
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    HistoryView2 historyView2Frame = new HistoryView2();
+                    historyView2Frame.setVisible(true);
+                    historyView2Frame.setSize(500, 500);
+                }
+            };
 
-        };
 
         setTitle("Account View");
         setLayout(new GridBagLayout());
@@ -152,7 +154,7 @@ public class AccountView2 extends JFrame implements ActionListener{
         add(historyListPane,c);
         historyListPane.setLayout(new BoxLayout(historyListPane, BoxLayout.Y_AXIS));
         historyListPane.add(history);
-        history.addActionListener(loginViewPopup);
+        history.addActionListener(HistoryViewPopup);
 
         c.weightx = 1;
         c.weightx = 0;

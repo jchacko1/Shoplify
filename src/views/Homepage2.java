@@ -1,6 +1,9 @@
 package views;
 
 
+import models.Enums;
+import models.ItemModel;
+
 import javax.swing.*;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -15,72 +18,80 @@ import java.awt.event.ActionListener;
 import java.awt.event.*;
 
 //TODO: Need ReminderList GUI
-public class homepage2 extends JFrame{
+public class Homepage2 extends JFrame{
 
     private JPanel topPane;
-    private JButton loginBtn;
-    private JButton buttonOK;
+    private JButton loginBtn, buttonOK, searchBtn, categoryLabel1, categoryLabel2,
+            categoryLabel3, categoryLabel4;
     private JTextField searchField;
-    private JButton searchBtn;
-    private JLabel homeLabel;
-    private JPanel homePane;
-    private JPanel category;
-    private JPanel adBannerPanel;
+    private JLabel homeLabel, ad;
+    private JPanel homePane, category, adBannerPanel, cat;
     private JTextArea advertismentsAndBannersTextArea;
-    private JLabel categoryLabel1;
-    private JLabel categoryLabel2;
-    private JLabel categoryLabel3;
-    private JLabel categoryLabel4;
-    private JLabel ad;
-    private JList Deli;
-    private JList Meat;
-    private JList Seafood;
-    private JList Vegetable;
-    private JList Bakery;
+    private JList Deli,Meat,Seafood,Vegetable,Bakery;
     private Border blackline;
+    private Container content;
     private GridBagConstraints c;
 
+    public Homepage2() {
+        ActionListener listener = new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cat = new JPanel();
+                GridBagConstraints c = new GridBagConstraints();
+                content = getContentPane();
+                content.remove(adBannerPanel);
+                c.fill = GridBagConstraints.BOTH;
+                c.weightx = 1;
+                c.weighty = 1;
+                c.gridwidth = 3;
+                c.gridx = 1;
+                c.gridy = 1;
+                content.add(cat, c);
+                cat.setBorder(blackline);
+                validate();
+                repaint();
+
+            }
 
 
-    //private LoginView loginView;
+        };
 
-    public homepage2() {
-        //this.contentPane = new JPanel();
-        this.topPane = new JPanel();
-        this.category = new JPanel();
-        this.homeLabel = new JLabel("Shoplify");
-        this.loginBtn = new JButton("Login/SignUp");
-        this.searchBtn = new JButton("Search");
-        this.searchField = new JTextField("Search field");
-        this.c = new GridBagConstraints();
-        this.homePane = new JPanel();
-        this.adBannerPanel = new JPanel();
-        this.categoryLabel1 = new JLabel("Some category 1");
-        this.categoryLabel2 = new JLabel("Some category 2");
-        this.categoryLabel3 = new JLabel("Some category 3");
-        this.categoryLabel4 = new JLabel("Some category 4");
-        this.ad = new JLabel("Some ad goes here");
-        this.blackline = BorderFactory.createLineBorder(Color.black);
+        Container content = getContentPane();
+        content.setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
 
 
-        //this.loginView = new LoginView();
+        topPane = new JPanel();
+        category = new JPanel();
+        homePane = new JPanel();
+        adBannerPanel = new JPanel();
 
-    }
+        homeLabel = new JLabel("Shoplify");
+        ad = new JLabel("Some ad goes here");
 
-    public void init() {
+        loginBtn = new JButton("Login/SignUp");
+        searchBtn = new JButton("Search");
+        categoryLabel1 = new JButton("Meat");
+        categoryLabel1.setBorderPainted(false);
+        categoryLabel1.addActionListener(listener);
+        categoryLabel2 = new JButton("Some category 2");
+        categoryLabel3 = new JButton("Some category 3");
+        categoryLabel4 = new JButton("Some category 4");
 
-        setTitle("Homepage");
-        setLayout(new GridBagLayout());
-        setSize(1000,500);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        searchField = new JTextField("Search field");
+
+        blackline = BorderFactory.createLineBorder(Color.black);
+
 
         //top panel for icon
         c.fill = GridBagConstraints.NORTH;
-        c.weightx = 1;
+        c.weightx = 0;
         c.weighty = 0;
         c.gridx = 0;
         c.gridy = 0;
-        add(topPane, c);
+        content.add(homeLabel, c);
+        homeLabel.setBorder(blackline);
 
         //search field
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -88,7 +99,7 @@ public class homepage2 extends JFrame{
         c.weighty = 0;
         c.gridx = 1;
         c.gridy = 0;
-        add(searchField, c);
+        content.add(searchField, c);
 
         //search button
         c.fill = GridBagConstraints.LINE_END;
@@ -96,7 +107,7 @@ public class homepage2 extends JFrame{
         c.weighty = 0;
         c.gridx = 2;
         c.gridy = 0;
-        add(searchBtn, c);
+        content.add(searchBtn, c);
 
         //login button
         c.fill = GridBagConstraints.FIRST_LINE_END;
@@ -129,6 +140,7 @@ public class homepage2 extends JFrame{
         category.setBorder(blackline);
         category.setLayout(new BoxLayout(category, BoxLayout.Y_AXIS));
         category.add(categoryLabel1);
+
         category.add(categoryLabel2);
         category.add(categoryLabel3);
         category.add(categoryLabel4);
@@ -140,24 +152,30 @@ public class homepage2 extends JFrame{
         c.gridwidth = 3;
         c.gridx = 1;
         c.gridy = 1;
-        add(adBannerPanel, c);
+        content.add(adBannerPanel, c);
         adBannerPanel.setBorder(blackline);
         adBannerPanel.add(ad);
-
         // c.fill = GridBagConstraints.
 
      //   loginBtn.addActionListener(this);
 
-        setVisible(true);
     }
 
-    public void actionPerformed(ActionEvent e) {
-
-    }
 
     public static void main(String[] args){
-        homepage2 account = new homepage2();
-        account.init();
+        Homepage2 hp = new Homepage2();
+        hp.setTitle("Homepage");
+        hp.setSize(1000, 500);
+        hp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        hp.setVisible(true);
+
+//        Enums.Category
         // windows.addActionListeners();
+//        for (Enums dir : Enum.values()) {
+            // do what you want
+//        }
+
+
+
     }
 }
