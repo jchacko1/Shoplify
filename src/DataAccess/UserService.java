@@ -1,8 +1,9 @@
 package DataAccess;
 
-import models.Enums;
-import models.RegisteredUserModel;
-import models.UserModel;
+import controllers.ItemController;
+import models.*;
+
+import java.util.ArrayList;
 
 /**
  * Created by jmarquez on 11/2/2014.
@@ -18,23 +19,32 @@ public class UserService {
 
     public UserModel getUser(int userId)
     {
-        //TODO get the user from the database with the userId
-        UserModel userModel = new UserModel(userId);
+        UserModelDto userModelDto = _userRepository.getUser(userId);
         RegisteredUserModel registeredUserModel = new RegisteredUserModel();
 
-        if(userModel.getUserType() == Enums.UserType.REGISTERED)
+       if(userModelDto.getUserType() == Enums.UserType.GUEST)
         {
-            userModel = registeredUserModel;
+            return new UserModel(userModelDto._userId,userModelDto._createDate,userModelDto._firstName,userModelDto._lastName,userModelDto._isAdmin,userModelDto._userType,userModelDto._accountId);
         }
-        else if(userModel.getUserType() == Enums.UserType.SUBSCRIPTION)
+        else if(userModelDto.getUserType() == Enums.UserType.REGISTERED)
         {
-            //TODO fill in code for if a user is a subscription user
+            return new RegisteredUserModel(userModelDto._userId,userModelDto._createDate,userModelDto._firstName,userModelDto._lastName,userModelDto._isAdmin,userModelDto._userType,userModelDto._accountId,userModelDto._address,
+                    userModelDto._phoneNumber, userModelDto._dateOfBirth,userModelDto._gender,userModelDto._email);
         }
-        else if(userModel.getUserType() == Enums.UserType.ADMIN)
+        else if(userModelDto.getUserType() == Enums.UserType.SUBSCRIPTION)
         {
-            //TODO fill in code for if a user is a admin user
+            ArrayList<ItemModel> shoppingList = ItemController.getShoppingList(userModelDto._subscriptionId);
+            SubscriptionUserModel subscriptionUserModel = new SubscriptionUserModel(userModelDto._userId,userModelDto._createDate,userModelDto._firstName,userModelDto._lastName,userModelDto._isAdmin,userModelDto._userType,userModelDto._accountId,userModelDto._address,
+                    userModelDto._phoneNumber, userModelDto._dateOfBirth,userModelDto._gender,userModelDto._email,userModelDto._subscriptionId);
+            subscriptionUserModel.setShoppingList(shoppingList);
+            return subscriptionUserModel;
         }
-            return userModel;
+        else if(userModelDto.getUserType() == Enums.UserType.ADMIN)
+        {
+           return new AdminUserModel(userModelDto._userId,userModelDto._createDate,userModelDto._firstName,userModelDto._lastName,userModelDto._isAdmin,userModelDto._userType,userModelDto._accountId,userModelDto._address,
+                   userModelDto._phoneNumber, userModelDto._dateOfBirth,userModelDto._gender,userModelDto._email,userModelDto._subscriptionId, userModelDto._canEditItems, userModelDto._canEditUsers, userModelDto._canRefundOrders);
+        }
+        return null;
     }
 
     public UserModel createUser(String firstName, String lastName, String userType)

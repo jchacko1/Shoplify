@@ -9,24 +9,14 @@ import com.sun.org.apache.bcel.internal.generic.RETURN;
  */
 public class  AccountModel {
     private int _accountId;
+    private int _userModelId;
     private UserModel _userModel;
-    private String username;
-    private String password;
-//    private String firstName;         //on UserModel
-//    private String lastName;          //on UserModel
-    //private String address;     //on RegisteredUserModel
-    //private String phoneNumber;      //on RegisteredUserModel
-    //private String email;               //on RegisteredUserModel
-    //private String DOB;               //on RegisteredUserModel
-    //private String Gender;                        //on RegisteredUserModel
-    //private int _userId;              //on UserModel
-    //private Date _createDate;         //on UserModel
-    //ArrayList<ItemModel> _shoppingList;  //on RegisteredUserModel
-    //private int _subscriptionId;         //on RegisteredUserModel
-
-    public AccountModel()
+    private String _userName;
+    public AccountModel(int accountId, int userModelId, String userName)
     {
-
+     _accountId = accountId;
+     _userModelId = userModelId;
+     _userName = userName;
     }
 
     public void setUserModel(UserModel userModel)

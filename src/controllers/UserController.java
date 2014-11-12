@@ -19,7 +19,6 @@ public class UserController {
 
     public static models.UserModel getUser(int userId)
     {
-
         return _userManager.getUser(userId);
     }
 

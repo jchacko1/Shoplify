@@ -11,92 +11,97 @@ import java.util.Date;
  */
 public class UserModel {
 
-    private int userId;
-    private String createDate;
-    private String firstName;
-    private String lastName;
-    //private String username;
-    //private String password;
-    //private String address;
-    //private String phoneNumber;
-    //private String dateOfBirth;
-    //private String gender;
-    private boolean isAdmin;
-    private Enums.UserType userType;
-    private int accountId;
+    private int _userId;
+    private String _createDate;
+    private String _firstName;
+    private String _lastName;
+    private boolean _isAdmin;
+    private Enums.UserType _userType;
+    private int _accountId;
 
-
-//    public UserModel(String username, String password, int userId, boolean isAdmin,
-//                     String firstName, String lastName, String address, String phoneNumber, String DOB, String gender) {
-        public UserModel(String firstName, String lastName) {
-        this.userId = 1;        //todo needs to be a value from the database
-        this.firstName = firstName;
-        this.lastName = lastName;
-        createDate = Utilities.getCurrentDate();
-            this.accountId = -1;
-    }
 
     public UserModel()
     {
         //return new UserModel();
     }
 
-    public UserModel(int userId)
-    {    this.userId = userId;
+    public UserModel(int userId, String createDate, String firstName, String lastName, boolean isAdmin, Enums.UserType userType, int accountId)
+    {    _userId = userId;
+         _createDate = createDate;
+        _firstName = firstName;
+        _lastName = lastName;
+        _isAdmin = isAdmin;
+        _userType = userType;
+        _accountId = accountId;
     }
 
     public int getUserId()
     {
-        return userId;
+        return _userId;
+    }
+
+    public void setUserId(int userId)
+    {
+      _userId = userId;
     }
 
     //@precondition: this method has been called
     //@postcondition: user’s first name is set
     public void setFirstName(String firstName)
     {
-        this.firstName = firstName;
+        _firstName = firstName;
     }
 
     //@precondition: this method has been called
     //@postcondition: the user’s last name is set
     public void setLastName(String lastName)
     {
-        this.lastName = lastName;
+        _lastName = lastName;
     }
 
 
     public void setCreateDate(String createDate)
     {
-        this.createDate = createDate;
+        _createDate = createDate;
     }
 
     public String getCreateDate() {
-        return createDate;
+        return _createDate;
     }
 
-    public void setUserType(String userType)
+    public void setUserType(Enums.UserType userType)
     {
-        this.userType = Enums.UserType.valueOf(userType);
+        _userType = userType;
     }
 
     public Enums.UserType getUserType()
     {
-        return userType;
+        return _userType;
     }
 
     public String getFirstName()
     {
-        return firstName;
+        return _firstName;
     }
 
     public String getLastName()
     {
-        return lastName;
+        return _lastName;
     }
 
-    public boolean isAdmin()
+    public void setIsAdmin(boolean isAdmin)
     {
-        return userType == Enums.UserType.ADMIN;
+        _isAdmin = isAdmin;
+    }
+
+    public boolean getIsAdmin()
+    {
+        return _isAdmin;
+    }
+
+    public void setAccountId(int accountId)
+    {
+        _accountId = accountId;
     }
 
 }

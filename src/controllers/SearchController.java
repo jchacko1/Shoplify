@@ -2,6 +2,7 @@ package controllers;
 
 import DataAccess.ItemService;
 import businessLogic.SearchManager;
+import models.Enums;
 import models.ItemModel;
 import models.SearchModel;
 
@@ -13,7 +14,7 @@ public class SearchController {
     private static ItemService _itemService = new ItemService();
 
     public static void enterItemToSearch(SearchModel search, int itemId){
-        ItemModel itemModel = new ItemModel(itemId);
+        ItemModel itemModel = new ItemModel(itemId, "",0.0,-1,"", Enums.Category.Bread);
         _searchManager.enterItemToSearch(search, itemModel);
     }
 

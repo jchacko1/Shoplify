@@ -13,7 +13,7 @@ public class UserManager {
 
     public UserModel getUser(int userId)
     {
-          return _userService.getUser(userId);
+        return _userService.getUser(userId);
     }
 
     public UserModel createUser(String firstName, String lastName,String userType)

@@ -61,7 +61,7 @@ public class AccountRepository extends BaseRepository {
     public AccountModel createAccount(String login, String password)
     {
               //todo create Account in database
-              return new AccountModel();
+              return new AccountModel(-1,-1,"");
     }
 
     public void updateAccount(AccountModel accountModel)
@@ -71,13 +71,71 @@ public class AccountRepository extends BaseRepository {
 
    public AccountModel getAccount(int accountId)
    {
-       AccountModel model = new AccountModel(); //TODO build model from db
-       return model;
+       {
+           Connection c = null;
+           Statement stmt = null;
+           int userModelId = -1;
+           String userName = "";
+           try {
+               System.out.println("begin Account table try block");
+               Class.forName(getClassForName());
+               c = DriverManager.getConnection(getConnectionString());
+               c.setAutoCommit(false);
+               System.out.println("Opened database successfully");
+               stmt = c.createStatement();
+               ResultSet rs = stmt.executeQuery( "SELECT * FROM Account WHERE AccountId = " + accountId + ";" );
+               while ( rs.next() ) {
+                   userModelId = rs.getInt("UserModelId");
+                   userName = rs.getString("UserName");
+                   System.out.println( "UserName = " + userName );
+               }
+               rs.close();
+               stmt.close();
+               c.close();
+           } catch ( Exception e ) {
+               System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+               System.exit(0);
+           }
+           if(!userName.isEmpty())
+           {
+               return new AccountModel(accountId,userModelId,userName );
+           }
+           return null;
+       }
    }
 
     public AccountModel getAccount(String login, String password)
     {
-        AccountModel model = new AccountModel(); //TODO build model from db with login and password
-        return model;
+        Connection c = null;
+        Statement stmt = null;
+        int accountId = -1;
+        int userModelId = -1;
+        String userName = "";
+        try {
+            System.out.println("begin Account table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM Account WHERE UserName = " + login + " and Password = " + password + ";" );
+            while ( rs.next() ) {
+                accountId = rs.getInt("AccountId");
+                userModelId = rs.getInt("UserModelId");
+                userName = rs.getString("UserName");
+                System.out.println( "UserName = " + userName );
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        if(accountId > -1)
+        {
+            return new AccountModel(accountId,userModelId,userName );
+        }
+        return null;
     }
 }
