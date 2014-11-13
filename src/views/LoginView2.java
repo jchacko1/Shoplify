@@ -159,10 +159,10 @@ public class LoginView2 extends JFrame {
         frame.setVisible(true);
         frame.setTitle("Login Page");
         frame.setSize(300,200);
-        AccountModel accountModel = AccountController.getAccountWithLogin("login","password");
-        if(accountModel != null){
-            //the account exists
-        }
+//        AccountModel accountModel = AccountController.getAccountWithLogin("login","password");
+//        if(accountModel != null){
+//            //the account exists
+//        }
     }
 
 }
