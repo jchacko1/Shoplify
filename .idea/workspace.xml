@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/LoginView2.java" afterPath="$PROJECT_DIR$/src/views/LoginView2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/shoplify.db" afterPath="$PROJECT_DIR$/src/DataAccess/shoplify.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -81,21 +81,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginView2.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LoginView2.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/LoginView2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.709282" vertical-offset="1805" max-vertical-offset="2465">
-              <caret line="159" column="57" selection-start-line="159" selection-start-column="37" selection-end-line="159" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1805" max-vertical-offset="2465">
+              <caret line="155" column="88" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SQLite -" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SQLite -" pinned="false" current="true" current-in-tab="true">
         <entry file="dbDummy://db-console:/686e0e86/15cf1173-ee81-44d4-be5c-8bf793d5e4ad/">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.724138" vertical-offset="0" max-vertical-offset="646">
-              <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.28922495" vertical-offset="0" max-vertical-offset="646">
+              <caret line="9" column="134" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -310,78 +310,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataAccess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -764,7 +692,7 @@
       <workItem from="1415764930031" duration="47000" />
       <workItem from="1415773234157" duration="225000" />
       <workItem from="1415802299210" duration="3804000" />
-      <workItem from="1415831074762" duration="3698000" />
+      <workItem from="1415831074762" duration="3848000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -830,11 +758,15 @@
       <created>1415837774233</created>
       <updated>1415837774233</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Commented out example of how to login">
+      <created>1415837813820</created>
+      <updated>1415837813820</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111222000" />
+    <option name="totallyTimeSpent" value="111372000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -949,7 +881,8 @@
     <MESSAGE value="Created UserModelDto, wrote code to get User table columns out of db, can now build any user type from db, wrote method to get all the Category names." />
     <MESSAGE value="Added an item and corrected existing Items' CategoryIds. Added comments in Category Enum to help us remember which ID belongs to a Category" />
     <MESSAGE value="Changes to Account Model to include password, more data in database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes to Account Model to include password, more data in database" />
+    <MESSAGE value="Commented out example of how to login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commented out example of how to login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1355,14 +1288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://db-console:/686e0e86/15cf1173-ee81-44d4-be5c-8bf793d5e4ad/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.724138" vertical-offset="0" max-vertical-offset="646">
-          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
@@ -1373,8 +1298,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/LoginView2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.709282" vertical-offset="1805" max-vertical-offset="2465">
-          <caret line="159" column="57" selection-start-line="159" selection-start-column="37" selection-end-line="159" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1805" max-vertical-offset="2465">
+          <caret line="155" column="88" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/686e0e86/15cf1173-ee81-44d4-be5c-8bf793d5e4ad/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28922495" vertical-offset="0" max-vertical-offset="646">
+          <caret line="9" column="134" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
           <folding />
         </state>
       </provider>
