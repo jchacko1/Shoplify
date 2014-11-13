@@ -25,6 +25,7 @@ public class AccountController {
                 accountModel.setUserModel(subscriptionUserModel);
             }
         }
+        Global.currentAccount = accountModel;
         return accountModel;
     }
 

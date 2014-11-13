@@ -13,14 +13,14 @@ public class ItemModel {
     private int shoppingCartItemId;
 
 
-    public ItemModel(int itemId, String itemName, double price, int quantity, String description, Enums.Category category){
+    public ItemModel(int itemId, String itemName, double price, int quantity, String description, Enums.Category category, int shoppingCartItemId){
         this.itemId = itemId;
         this.itemName = itemName;
         this.price = price;
         this.quantity = quantity;
         this.description = description;
         this.category = category;
-        this.shoppingCartItemId = 0;
+        this.shoppingCartItemId = shoppingCartItemId;
     }
 
    public int getShoppingCartItemId() {

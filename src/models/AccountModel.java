@@ -12,11 +12,14 @@ public class  AccountModel {
     private int _userModelId;
     private UserModel _userModel;
     private String _userName;
-    public AccountModel(int accountId, int userModelId, String userName)
+    private String _password;
+
+    public AccountModel(int accountId, int userModelId, String userName, String password)
     {
      _accountId = accountId;
      _userModelId = userModelId;
      _userName = userName;
+     _password = password;
     }
 
     public void setUserModel(UserModel userModel)
