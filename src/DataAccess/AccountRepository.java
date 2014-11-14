@@ -14,10 +14,35 @@ import java.sql.Statement;
 
 public class AccountRepository extends BaseRepository {
 
-    public AccountModel createAccount(String login, String password)
+    public AccountModel createAccount(String userName, String password, int userModelId)
     {
-              //todo create Account in database
-              return new AccountModel(-1,-1,"","");
+        Connection c = null;
+        Statement stmt = null;
+        int accountId = -1;
+        try {
+            System.out.println("begin Account table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "Insert into Account(UserModelId, UserName, Password)values(" + userModelId + "," + userName + "," + password  + ");" );
+            while ( rs.next() ) {
+                accountId = rs.getInt("AccountId");
+                System.out.println( "AccountId = " + accountId );
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        if(accountId > -1)
+        {
+            return new AccountModel(accountId,userModelId,userName,password );
+        }
+        return null;
     }
 
     public void updateAccount(AccountModel accountModel)

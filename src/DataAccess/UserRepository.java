@@ -48,7 +48,7 @@ public class UserRepository extends BaseRepository {
                     lastName = rs.getString("LastName");
                     isAdmin = rs.getInt("IsAdmin");
                     userTypeId = rs.getInt("UserType");
-                    accountId = rs.getInt("AccountID");
+                    accountId = rs.getInt("AccountId");
                     address = rs.getString("Address");
                     phoneNumber = rs.getString("PhoneNumber");
                     dateOfBirth = rs.getString("DateOfBirth");
@@ -74,7 +74,7 @@ public class UserRepository extends BaseRepository {
             {
                 Enums.UserType userType = Enums.UserType.values()[userTypeId];
                 return new UserModelDto(userId,createDate,firstName,lastName,isAdmin == 1,userType,accountId,address,phoneNumber,dateOfBirth,gender,email,subscriptionId,
-                        canEditItems == 1, canEditUsers == 1, canRefundOrders == 1);
+                        canEditItems == 1, canEditUsers == 1, canRefundOrders == 1,securityQuestionId,securityAnswer);
             }
             return null;
         }

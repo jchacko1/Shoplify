@@ -10,9 +10,11 @@ public class RegisteredUserModel extends UserModel {
     private String _dateOfBirth;
     private String _gender;
     private String _email;
+    private int _securityQuestionId;
+    private String _securityAnswer;
 
      public RegisteredUserModel(int userId, String createDate, String firstName, String lastName, boolean isAdmin, Enums.UserType userType, int accountId,
-                                String address, String phoneNumber, String dateOfBirth, String gender, String email){
+                                String address, String phoneNumber, String dateOfBirth, String gender, String email, int securityQuestionId, String securityAnswer){
          super.setUserId(userId);
          super.setCreateDate(createDate);
          super.setFirstName(firstName);
@@ -25,11 +27,23 @@ public class RegisteredUserModel extends UserModel {
          _dateOfBirth = dateOfBirth;
          _gender = gender;
          _email = email;
+         _securityQuestionId = securityQuestionId;
+         _securityAnswer = securityAnswer;
      }
 
     public RegisteredUserModel()
     {
         //
+    }
+
+    public void setSecurityQuestionId(int securityQuestionId)
+    {
+        _securityQuestionId =  securityQuestionId;
+    }
+
+    public void setSecurityAnswer(String securityAnswer)
+    {
+        _securityAnswer =  securityAnswer;
     }
 
     //@precondition: this method has been called

@@ -29,10 +29,10 @@ public class AccountController {
         return accountModel;
     }
 
-    public static void createAccountAndUser(String firstName, String lastName, String login, String password)
+    public static void createAccountAndUser(String firstName, String lastName, String login, String password, String dateOfBirth,String gender, String Address,String email, String phoneNumber, int securityQuestionId, String securityAnswer )
     {
+        AccountModel accountModel = _accountManager.createAccount(login, password,2);
         UserModel userModel = new UserModel(); //todo call UserController to create a new User
-        AccountModel accountModel = _accountManager.createAccount(login, password);
         if(accountModel != null)
         {
             accountModel.setUserModel(userModel);

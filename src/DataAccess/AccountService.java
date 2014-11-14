@@ -36,9 +36,9 @@ public class AccountService {
         return accountModel;
     }
 
-    public AccountModel createAccount(String login, String password)
+    public AccountModel createAccount(String login, String password,int userTypeId)
     {
-        return _accountRepository.createAccount(login, password);
+        return _accountRepository.createAccount(login, password, userTypeId);
     }
 
 }

@@ -11,7 +11,7 @@ public class SubscriptionUserModel extends RegisteredUserModel {
     private int _subscriptionId;
 
     public SubscriptionUserModel(int userId, String createDate, String firstName, String lastName, boolean isAdmin, Enums.UserType userType, int accountId,
-                                 String address, String phoneNumber, String dateOfBirth, String gender, String email, int subscriptionId)
+                                 String address, String phoneNumber, String dateOfBirth, String gender, String email, int subscriptionId, int securityQuestionId, String securityAnswer)
     {
         super.setUserId(userId);
         super.setCreateDate(createDate);
@@ -25,6 +25,8 @@ public class SubscriptionUserModel extends RegisteredUserModel {
         super.setDateOfBirth(dateOfBirth);
         super.setGender(gender);
         super.setEmail(email);
+        super.setSecurityQuestionId(securityQuestionId);
+        super.setSecurityAnswer(securityAnswer);
         _subscriptionId = subscriptionId;
     }
 

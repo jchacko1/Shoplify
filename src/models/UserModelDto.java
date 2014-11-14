@@ -20,12 +20,15 @@ public class UserModelDto {
     public String _email;
     ArrayList<ItemModel> _shoppingList;
     public int _subscriptionId;
+    public int _securityQuestionId;
+    public String _securityAnswer;
     public boolean _canEditItems;
     public boolean _canEditUsers;
     public boolean _canRefundOrders ;
 
     public UserModelDto(int userId, String createDate, String firstName, String lastName, boolean isAdmin, Enums.UserType userType,
-                        int accountId, String address, String phoneNumber, String dateOfBirth, String gender, String email, int subscriptionId, boolean canEditItems, boolean canEditUsers, boolean canRefundOrders)
+                        int accountId, String address, String phoneNumber, String dateOfBirth, String gender, String email, int subscriptionId, boolean canEditItems, boolean canEditUsers, boolean canRefundOrders,
+                        int securityQuestionId, String securityAnswer)
     {
         _userId = userId;
         _createDate = createDate;
@@ -43,6 +46,8 @@ public class UserModelDto {
         _canEditItems = canEditItems;
         _canEditUsers = canEditUsers;
         _canRefundOrders = canRefundOrders;
+        _securityQuestionId = securityQuestionId;
+        _securityAnswer = securityAnswer;
     }
 
     public Enums.UserType getUserType()

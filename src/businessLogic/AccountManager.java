@@ -13,15 +13,11 @@ import java.util.ArrayList;
  */
 public class AccountManager {
     private AccountService _accountService = new AccountService();
-    //private ItemController _itemController = new ItemController();
-    //private UserController _userController = new UserController();
 
     public AccountManager()
     {
 
     }
-
-
 
     public AccountModel getAccountWithLogin(String login, String password)
     {
@@ -34,8 +30,8 @@ public class AccountManager {
         return accountModel;
     }
 
-    public AccountModel createAccount(String login, String password)
+    public AccountModel createAccount(String login, String password, int userTypeId)
     {
-        return _accountService.createAccount(login, password);
+        return _accountService.createAccount(login, password, userTypeId);
     }
 }

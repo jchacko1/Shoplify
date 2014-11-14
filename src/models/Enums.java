@@ -5,10 +5,10 @@ package models;
  */
 public class Enums {
     public enum UserType {
-        ADMIN,
-        REGISTERED,
-        GUEST,
-        SUBSCRIPTION
+        GUEST,             //UserTypeId 1
+        REGISTERED,        //UserTypeId 2
+        SUBSCRIPTION,      //UserTypeId 3
+        ADMIN              //UserTypeId 4
     }
 
     public enum DiscountType {

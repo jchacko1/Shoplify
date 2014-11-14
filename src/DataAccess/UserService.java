@@ -29,13 +29,13 @@ public class UserService {
         else if(userModelDto.getUserType() == Enums.UserType.REGISTERED)
         {
             return new RegisteredUserModel(userModelDto._userId,userModelDto._createDate,userModelDto._firstName,userModelDto._lastName,userModelDto._isAdmin,userModelDto._userType,userModelDto._accountId,userModelDto._address,
-                    userModelDto._phoneNumber, userModelDto._dateOfBirth,userModelDto._gender,userModelDto._email);
+                    userModelDto._phoneNumber, userModelDto._dateOfBirth,userModelDto._gender,userModelDto._email, userModelDto._securityQuestionId, userModelDto._securityAnswer);
         }
         else if(userModelDto.getUserType() == Enums.UserType.SUBSCRIPTION)
         {
             ArrayList<ItemModel> shoppingList = ItemController.getShoppingList(userModelDto._subscriptionId);
             SubscriptionUserModel subscriptionUserModel = new SubscriptionUserModel(userModelDto._userId,userModelDto._createDate,userModelDto._firstName,userModelDto._lastName,userModelDto._isAdmin,userModelDto._userType,userModelDto._accountId,userModelDto._address,
-                    userModelDto._phoneNumber, userModelDto._dateOfBirth,userModelDto._gender,userModelDto._email,userModelDto._subscriptionId);
+                    userModelDto._phoneNumber, userModelDto._dateOfBirth,userModelDto._gender,userModelDto._email,userModelDto._subscriptionId, userModelDto._securityQuestionId, userModelDto._securityAnswer);
             subscriptionUserModel.setShoppingList(shoppingList);
             return subscriptionUserModel;
         }
