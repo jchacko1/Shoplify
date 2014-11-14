@@ -42,4 +42,6 @@ public class ItemManager {
         return _itemService.getItems(orderId);
     }
 
+    public ItemModel[] getImages(int imageId){ return _itemService.getImages(imageId); }
+
 }

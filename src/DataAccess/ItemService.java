@@ -45,4 +45,6 @@ public class ItemService {
         return _itemRepository.getItems(orderId);
     }
 
+    public ItemModel[] getImages(int imageId) { return  _itemRepository.getImages(imageId); }
+
 }

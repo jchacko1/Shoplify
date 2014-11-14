@@ -3,6 +3,8 @@ package models;
 /**
  * Created by jmarquez on 10/20/2014.
  */
+
+//TODO: ItemModel match with itemImage?
 public class ItemModel {
     private int itemId;
     private String itemName;
@@ -11,6 +13,12 @@ public class ItemModel {
     private String description;
     private Enums.Category category;
     private int shoppingCartItemId;
+
+    //item image match
+    private int imageId;
+    private String[] imageNames;
+    private String imageName;
+
 
 
     public ItemModel(int itemId, String itemName, double price, int quantity, String description, Enums.Category category, int shoppingCartItemId){
@@ -21,7 +29,51 @@ public class ItemModel {
         this.description = description;
         this.category = category;
         this.shoppingCartItemId = shoppingCartItemId;
+
     }
+
+
+    /**
+     * Get Item with Image
+     * @param itemId
+     * @param itemName
+     * @param price
+     * @param quantity
+     * @param description
+     * @param category
+     * @param shoppingCartItemId
+     * @param imageId
+     * @param imageName
+     */
+    public ItemModel(int itemId, String itemName, double price, int quantity, String description, Enums.Category category, int shoppingCartItemId, int imageId, String imageName){
+        this.itemId = itemId;
+        this.itemName = itemName;
+        this.price = price;
+        this.quantity = quantity;
+        this.description = description;
+        this.category = category;
+        this.shoppingCartItemId = shoppingCartItemId;
+        this.imageId = imageId;
+        this.imageName = imageName;
+    }
+
+
+    /**
+     *
+     * @return item's image id
+     */
+   public int getImageId(){
+       return imageId;
+   }
+
+    /**
+     *
+     * @return item's image name
+     */
+   public String getImageName(){
+       return imageName;
+   }
+
 
    public int getShoppingCartItemId() {
         return shoppingCartItemId;
@@ -91,6 +143,14 @@ public class ItemModel {
 
     public void setCategory(Enums.Category category){
         this.category = category;
+    }
+
+    public void setImageId(int imageId){
+        this.imageId = imageId;
+    }
+
+    public void setImageName(String imageName){
+        this.imageName = imageName;
     }
 
 }

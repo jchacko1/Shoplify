@@ -96,5 +96,11 @@ public class ItemRepository extends BaseRepository {
         return new ItemModel[]{new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1)};
     }
 
+    public ItemModel[] getImages(int imageId)
+    {
+        //TODO: get an array of Images
+        return new ItemModel[]{new ItemModel(1, "Name", 0.00,5,"Description", Enums.Category.Dairy,-1, 1,"Milk")};
+    }
+
 
 }
