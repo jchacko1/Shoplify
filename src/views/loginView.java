@@ -205,6 +205,7 @@ public class loginView extends javax.swing.JFrame {
         String username = jTextField1.getText();
         String password = jPasswordField1.getText();
         AccountModel accountModel = AccountController.getAccountWithLogin(username,password);
+
         if (accountModel != null) {
             signinPromptView frame = new signinPromptView();
             frame.setVisible(true);
@@ -213,6 +214,14 @@ public class loginView extends javax.swing.JFrame {
             jLabel3.setText("Invalid Username or Password");
             jLabel3.setForeground(Color.red);
         }
+
+
+        //if(AccountController.createAccountAndUser())
+        //{
+            //account creation worked
+       // }else {
+            //account creation DIDNT work
+       // }
 
     }
 
