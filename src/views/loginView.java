@@ -16,9 +16,7 @@ import java.awt.Color;
  */
 public class loginView extends javax.swing.JFrame {
 
-    /**
-     * Creates new form loginView
-     */
+
     public loginView() {
         initComponents();
     }
@@ -203,6 +201,7 @@ public class loginView extends javax.swing.JFrame {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+
         String username = jTextField1.getText();
         String password = jPasswordField1.getText();
         AccountModel accountModel = AccountController.getAccountWithLogin(username,password);
@@ -216,6 +215,7 @@ public class loginView extends javax.swing.JFrame {
         }
 
     }
+
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
