@@ -4,9 +4,15 @@
  * and open the template in the editor.
  */
 package views;
-import controllers.ItemController;
-import models.ItemModel;
 
+
+
+import controllers.ImageController;
+import controllers.ItemController;
+import models.Enums;
+import models.ItemModel;
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 
 /**
@@ -444,8 +450,17 @@ public class homepageView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:    // TODO add your handling code here:
-        ArrayList<ItemModel> itemLists= ItemController.getItems();
+        ArrayList<ItemModel> itemsList = ItemController.getItems();
+        jPanel4.setLayout(new GridLayout(0,3));
+        JButton itemlist1 = null;
+        for(ItemModel item: itemsList) {
+            if (item.getCategory() == Enums.Category.Meat) {
+                itemlist1 = new JButton();
+                itemlist1.setIcon(new javax.swing.ImageIcon(getClass().getResource(item.getImagePath()))); // NOI18N
+                itemlist1.setName(String.valueOf(item.getItemID()));
+                jPanel4.add(itemlist1);
+            }
+        }
         jPanel4.setVisible(true);
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);
@@ -454,10 +469,11 @@ public class homepageView extends javax.swing.JFrame {
         jPanel9.setVisible(false);
         jPanel10.setVisible(false);
         jPanel11.setVisible(false);
+
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -537,6 +553,17 @@ public class homepageView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        ArrayList<ItemModel> itemsList = ItemController.getItems();
+        jPanel10.setLayout(new GridLayout(0,3));
+        JButton itemlist1 = null;
+        for(ItemModel item: itemsList) {
+            if (item.getCategory() == Enums.Category.Bread) {
+                itemlist1 = new JButton();
+                itemlist1.setIcon(new ImageIcon(item.getImagePath())); // NOI18N
+                itemlist1.setName(String.valueOf(item.getItemID()));
+                jPanel10.add(itemlist1);
+            }
+        }
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);
