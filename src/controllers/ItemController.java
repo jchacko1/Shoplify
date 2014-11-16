@@ -12,10 +12,12 @@ import java.util.ArrayList;
 public class ItemController {
     private static ItemManager _itemManager = new ItemManager();
 
-    public static ItemModel getItem(int itemId)
+    /*public static ItemModel getItem(int itemId)
     {
         return _itemManager.getItem(itemId);
-    }
+    }*/
+
+   // public static ArrayList<ItemModel> getItems() { return _itemManager.getItems(); }
 
     public static ArrayList<ItemModel> getShoppingList(int subscriptionId)
     {
@@ -26,9 +28,20 @@ public class ItemController {
         return null;
     }
 
-    public static ItemModel[] getItems(int orderId)
+
+  /*  public static ItemModel[] getItems(int orderId)
     {
         return _itemManager.getItems(orderId);
+    }*/
+
+    /**
+     *
+     * select * from "item" , create a new itemModel, return an ArrayList of item
+     * @return ItemModel arraylist
+     */
+    public static ArrayList<ItemModel> getItems(){
+
+        return _itemManager.getItems();
     }
 
 

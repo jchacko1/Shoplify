@@ -24,8 +24,8 @@ public class AccountController {
                 subscriptionUserModel.setShoppingList(ItemController.getShoppingList(subscriptionUserModel.getSubscriptionId()));
                 accountModel.setUserModel(subscriptionUserModel);
             }
-            Global.currentAccount = accountModel;
         }
+        Global.currentAccount = accountModel;
         return accountModel;
     }
 

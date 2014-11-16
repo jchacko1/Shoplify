@@ -17,8 +17,9 @@ public class ItemRepository extends BaseRepository {
         double price = 0.0;
         int quantity = -1;
         String description = "";
-        int categoryId = -1;
+        int categoryId = 1;
         int shoppingCartItemId = -1;
+        String imagePath = null;
         Connection c = null;
         Statement stmt = null;
 
@@ -50,7 +51,7 @@ public class ItemRepository extends BaseRepository {
         System.out.println("Operation done successfully");
         if(itemName != null)
         {
-            return new ItemModel(itemId,itemName,price,quantity,description, Enums.Category.values()[categoryId],shoppingCartItemId);  //todo need to get the item from the database
+            return new ItemModel(itemId,itemName,price,quantity,description, Enums.Category.values()[categoryId],shoppingCartItemId,imagePath);  //todo need to get the item from the database
         }
         return null;
     }
@@ -61,9 +62,9 @@ public class ItemRepository extends BaseRepository {
         //todo the "shopping list" needs to come from the database
 
         ArrayList<ItemModel> shoppingList = new ArrayList<ItemModel>();
-        shoppingList.add(new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1));
-        shoppingList.add(new ItemModel(2,"Name",0.00,5,"Description", Enums.Category.Bread,-1));
-        shoppingList.add(new ItemModel(3,"Name",0.00,5,"Description", Enums.Category.Bread,-1));
+        shoppingList.add(new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
+        shoppingList.add(new ItemModel(2,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
+        shoppingList.add(new ItemModel(3,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
         return shoppingList;
     }
 
@@ -80,9 +81,9 @@ public class ItemRepository extends BaseRepository {
     public ArrayList<ItemModel> getOrderItemsHistory(int userId)
     {
         //todo read from the database all items placed by a userId, in OrderItems table
-        ItemModel modelOne = new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1);
-        ItemModel modelTwo = new ItemModel(2,"Name",0.00,5,"Description", Enums.Category.Bread,-1);
-        ItemModel modelThree = new ItemModel(3,"Name",0.00,5,"Description", Enums.Category.Bread,-1);
+        ItemModel modelOne = new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1,null);
+        ItemModel modelTwo = new ItemModel(2,"Name",0.00,5,"Description", Enums.Category.Bread,-1,null);
+        ItemModel modelThree = new ItemModel(3,"Name",0.00,5,"Description", Enums.Category.Bread,-1,null);
         ArrayList<ItemModel> items = new ArrayList<ItemModel>();
         items.add(modelOne);
         items.add(modelTwo);
@@ -90,10 +91,65 @@ public class ItemRepository extends BaseRepository {
         return items;
     }
 
-    public ItemModel[] getItems(int orderId)
+
+    /**
+     * Get items from DB and return an arraylist
+     * @return
+     */
+    public ArrayList<ItemModel> getItems()
     {
-        //todo get an array of items
-        return new ItemModel[]{new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1)};
+        //todo get an ArrayList of items
+        ArrayList<ItemModel> items = new ArrayList<ItemModel>();
+
+        String itemName = "";
+        double price = 0.0;
+        int quantity = -1;
+        String description = "";
+        Enums.Category category;
+        int shoppingCartItemId = -1;
+        String imagePath = null;
+        int itemId = 0;
+
+        Connection c = null;
+        Statement stmt = null;
+
+        try {
+            System.out.println("begin Item table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM Item ");
+            while ( rs.next() ) {
+                itemId = rs.getInt("ItemId");
+                itemName = rs.getString("ItemName");
+                price = rs.getDouble("price");
+                quantity = rs.getInt("Quantity");
+                description = rs.getString("Description");
+                category = (Enums.Category.values()[rs.getInt("Category")]);
+                shoppingCartItemId = rs.getInt("ShoppingCartItemId");
+                imagePath = rs.getString("ImagePath");
+
+                //Add items from into list;
+
+                items.add(new ItemModel(itemId,itemName,price,quantity,description,category,shoppingCartItemId,imagePath));
+                System.out.println( "ItemName = " + itemName );
+                System.out.println("ArrayList size is =" + items.size());
+
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+        //return null;
+       // return new ItemModel[]{new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1)};
+        return items;
     }
 
     public ItemModel[] getImages(int imageId)

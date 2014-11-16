@@ -5,6 +5,10 @@
  */
 package views;
 
+import controllers.AccountController;
+import global.Global;
+import models.AccountModel;
+
 /**
  *
  * @author ART
@@ -32,11 +36,18 @@ public class signinPromptView extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
+        AccountModel accountModel = Global.currentAccount; //AccountController.getAccountWithLogin(username,password);
+
+        String userFirstName = accountModel.getUserModel().getFirstName();
+
+        String userLastName = accountModel.getUserModel().getLastName();
+
+        //jLabel2.setText(userFirstName + userLastName);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Welcome");
+        jLabel1.setText("Welcome " + userFirstName + " " + userLastName);
 
-        jLabel2.setText("Username");
 
         jButton1.setText("OK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
