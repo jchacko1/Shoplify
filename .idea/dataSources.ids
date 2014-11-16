@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="SQLite -" uuid="b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e">
+  <data-source source="LOCAL" name="SQLite -" uuid="b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e">
     <database-info product="SQLite" version="3.7.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
     <schema name="" catalog=""/>
@@ -102,6 +102,7 @@
       <column name="DiscountAmount" sqlType="REAL" precision="2000000000" scale="10" nullable="true" jdbcType="6"/>
       <column name="IsSubscriptionOrder" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
       <column name="ShippingFee" sqlType="REAL" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <column name="LoggedInUser" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
       <primary-key columns="OrderId"/>
       <foreign-key name="#FAKE_UserOrder_1" columns="UserId" ref-table="User" ref-schema="" ref-catalog="" ref-columns="UserId" update-rule="3" delete-rule="3" deferrability="1"/>
     </table>

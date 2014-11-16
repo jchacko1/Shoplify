@@ -24,8 +24,8 @@ public class OrderService {
         return _orderRepository.getOrderIds(userId);
     }
 
-    public void testSql() throws ClassNotFoundException {
-        _orderRepository.testSql();
+    public OrderModel createOrder(double orderTotal, double subTotal, double tax, int userId, double discountAmount, int isSubscriptionOrder, double shippingFee) throws ClassNotFoundException {
+        return _orderRepository.createOrder(orderTotal,subTotal,tax,userId,discountAmount,isSubscriptionOrder,shippingFee);
     }
 
 }
