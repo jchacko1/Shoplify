@@ -47,7 +47,9 @@ public class ItemService {
 
 
     public ArrayList<ItemModel> getItems(){
+
         return _itemRepository.getItems();
+
     }
 
     public ItemModel[] getImages(int imageId) { return  _itemRepository.getImages(imageId); }
