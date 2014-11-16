@@ -5,6 +5,9 @@
  */
 package views;
 
+import controllers.AccountController;
+import models.AccountModel;
+
 import java.awt.Color;
 
 /**
@@ -202,8 +205,8 @@ public class loginView extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         String username = jTextField1.getText();
         String password = jPasswordField1.getText();
-
-        if (true) {
+        AccountModel accountModel = AccountController.getAccountWithLogin(username,password);
+        if (accountModel != null) {
             signinPromptView frame = new signinPromptView();
             frame.setVisible(true);
             dispose();
