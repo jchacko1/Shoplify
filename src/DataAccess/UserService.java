@@ -20,7 +20,6 @@ public class UserService {
     public UserModel getUser(int userId)
     {
         UserModelDto userModelDto = _userRepository.getUser(userId);
-        RegisteredUserModel registeredUserModel = new RegisteredUserModel();
 
        if(userModelDto.getUserType() == Enums.UserType.GUEST)
         {
@@ -47,9 +46,9 @@ public class UserService {
         return null;
     }
 
-    public UserModel createUser(String firstName, String lastName, String userType)
+    public RegisteredUserModel createRegisteredUser(String firstName, String lastName, String dateOfBirth,String gender,int accountId, String address,String email, String phoneNumber, int securityQuestionId, String securityAnswer)
     {
-        return _userRepository.createUser(firstName,lastName,userType);
+        return _userRepository.createRegisteredUser(firstName, lastName,dateOfBirth,gender,accountId,address,email, phoneNumber,securityQuestionId,securityAnswer);
     }
 
     public int createNewSubscription(int userId)

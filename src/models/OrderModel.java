@@ -11,7 +11,7 @@ public class OrderModel {
     private double _subTotal;
     private double _tax;
     private double _taxPercentage = 0.1;
-    private int _loggedInUserId; //saved as 'LoggedInUser' in the Order database
+    private int _loggedInUserId; //saved as 'LoggedInUser' in the UserOrder database
     private double _discountAmount;
     private boolean _isSubscriptionOrder;
     public ShoppingCartModel _shoppingCart;
@@ -20,6 +20,18 @@ public class OrderModel {
     public OrderModel()
     {
         _shoppingCart = new ShoppingCartModel();
+    }
+
+    public OrderModel(int orderId, double orderTotal, double subTotal, double tax, int loggedInUserId,double discountAmount, boolean isSubscriptionOrder, double shippingFee)
+    {
+       _orderId = orderId;
+        _orderTotal = orderTotal;
+        _subTotal = subTotal;
+        _tax = tax;
+        _loggedInUserId = loggedInUserId;
+       _discountAmount = discountAmount;
+       _isSubscriptionOrder = isSubscriptionOrder;
+       _shippingFee = shippingFee;
     }
 
     public double getShippingFee()

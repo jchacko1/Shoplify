@@ -1,11 +1,11 @@
 package DataAccess;
 
-import models.AccountModel;
-import models.Enums;
-import models.UserModel;
-import models.UserModelDto;
+import models.*;
 
 import java.sql.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 /**
  * Created by jmarquez on 11/2/2014.
@@ -80,11 +80,44 @@ public class UserRepository extends BaseRepository {
         }
     }
 
-    public UserModel createUser(String firstName, String lastName, String userType)
+    public RegisteredUserModel createRegisteredUser(String firstName, String lastName, String dateOfBirth,String gender,int accountId, String address,String email, String phoneNumber, int securityQuestionId, String securityAnswer)
     {
         //TODO insert the UserModel into the database
-        UserModel userModel = new UserModel();
-         return userModel;
+        {
+            Connection c = null;
+            Statement stmt = null;
+            int userId = -1;
+            try {
+                System.out.println("begin create User table try block");
+                Class.forName(getClassForName());
+                c = DriverManager.getConnection(getConnectionString());
+                c.setAutoCommit(false);
+                System.out.println("Opened database successfully");
+                stmt = c.createStatement();
+                ResultSet rs = stmt.executeQuery("Insert into User(FirstName,LastName,IsAdmin,UserType,AccountId,Address,PhoneNumber,DateOfBirth,Gender,Email,ShoppingListId,SubscriptionId,CanEditItems,CanEditUsers,CanRefundOrders,SecurityQuestionId,SecurityAnswer)"
+                        + "values(" + firstName + "," + "lastName" + "," + 0 + "," + 2 + "," + accountId + "," + address + "," + phoneNumber + "," + dateOfBirth + "," + gender + "," + email + "," + -1 + "," + -1 + "," + 0 + "," + 0 + "," + 0 + "," + securityQuestionId + "," + securityAnswer + ");");
+//                while ( rs.next() ) {
+//                    rs.
+//                    System.out.println( "FirstName = " + firstName );
+//                }
+                userId = rs.getInt("UserId");
+                System.out.println( "userId = " + userId );
+                //rs.getRowId("");
+                rs.close();
+                stmt.close();
+                c.close();
+            } catch ( Exception e ) {
+                System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+                System.exit(0);
+            }
+            if(userId > -1)
+            {
+                DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
+                Calendar calobj = Calendar.getInstance();
+             return new RegisteredUserModel(userId, df.format(calobj.getTime()),firstName,lastName,false,Enums.UserType.values()[2],accountId,address,phoneNumber,dateOfBirth,gender,email,securityQuestionId,securityAnswer);
+            }
+            return null;
+        }
     }
 
     public int createNewSubscription(int userId)

@@ -29,13 +29,13 @@ public class AccountController {
         return accountModel;
     }
 
-    public static void createAccountAndUser(String firstName, String lastName, String login, String password, String dateOfBirth,String gender, String Address,String email, String phoneNumber, int securityQuestionId, String securityAnswer )
+    public static void createAccountAndUser(String login, String password, String firstName, String lastName,  String dateOfBirth,String gender, String address,String email, String phoneNumber, int securityQuestionId, String securityAnswer)
     {
         AccountModel accountModel = _accountManager.createAccount(login, password,2);
-        UserModel userModel = new UserModel(); //todo call UserController to create a new User
+        RegisteredUserModel registeredUserModel = UserController.createRegisteredUser(firstName, lastName, dateOfBirth, gender,accountModel.getAccountId(), address, email,  phoneNumber, securityQuestionId,  securityAnswer); //todo call UserController to create a new User
         if(accountModel != null)
         {
-            accountModel.setUserModel(userModel);
+            accountModel.setUserModel(registeredUserModel);
             Global.currentAccount = accountModel;
         }
     }

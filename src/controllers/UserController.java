@@ -3,10 +3,7 @@ package controllers;
 import businessLogic.ItemManager;
 import businessLogic.UserManager;
 import global.Global;
-import models.Enums;
-import models.ItemModel;
-import models.SubscriptionUserModel;
-import models.UserModel;
+import models.*;
 
 import java.util.ArrayList;
 
@@ -22,9 +19,9 @@ public class UserController {
         return _userManager.getUser(userId);
     }
 
-    public static UserModel createUser(String firstname, String lastname, String userType)
+    public static RegisteredUserModel createRegisteredUser(String firstName, String lastName, String dateOfBirth,String gender,int accountId, String address,String email, String phoneNumber, int securityQuestionId, String securityAnswer)
     {
-        return _userManager.createUser(firstname, lastname, userType);
+        return _userManager.createRegisteredUser(firstName,lastName,dateOfBirth,gender,accountId,address,email,phoneNumber,securityQuestionId,securityAnswer);
     }
 
     public static int createNewSubscription(int userId)
