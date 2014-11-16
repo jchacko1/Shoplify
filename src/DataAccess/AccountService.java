@@ -31,7 +31,7 @@ public class AccountService {
         if(accountModel != null)
         {
             //set the user on the account
-            accountModel.setUserModel(UserController.getUser(accountModel.getUserId()));
+            accountModel.setUserModel(UserController.getUser(accountModel.getAccountUserModelId()));
         }
         return accountModel;
     }
