@@ -69,8 +69,6 @@ public class ShoppingCartManager {
 
     public void updateTotals(ShoppingCartModel shoppingCart)
     {
-        //update the subTotal after adding an item to the cart
-        shoppingCart.setSubtotal();
         //update all the prices on the order
         Global.currentOrder.updateAllPriceTotals();
     }

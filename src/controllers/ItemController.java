@@ -12,10 +12,10 @@ import java.util.ArrayList;
 public class ItemController {
     private static ItemManager _itemManager = new ItemManager();
 
-    /*public static ItemModel getItem(int itemId)
+    public static ItemModel getItem(int itemId)
     {
         return _itemManager.getItem(itemId);
-    }*/
+    }
 
    // public static ArrayList<ItemModel> getItems() { return _itemManager.getItems(); }
 

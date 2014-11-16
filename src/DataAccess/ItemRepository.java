@@ -19,12 +19,12 @@ public class ItemRepository extends BaseRepository {
         String description = "";
         int categoryId = 1;
         int shoppingCartItemId = -1;
-        String imagePath = null;
+        String imagePath = "";
         Connection c = null;
         Statement stmt = null;
 
         try {
-            System.out.println("begin Item table try block");
+            System.out.println("begin Get Item table try block");
             Class.forName(getClassForName());
             c = DriverManager.getConnection(getConnectionString());
             c.setAutoCommit(false);
@@ -39,6 +39,7 @@ public class ItemRepository extends BaseRepository {
                 description = rs.getString("Description");
                 categoryId = rs.getInt("CategoryId");
                 shoppingCartItemId = rs.getInt("ShoppingCartItemId");
+                imagePath = rs.getString("ItemPath");
                 System.out.println( "ItemName = " + itemName );
             }
             rs.close();

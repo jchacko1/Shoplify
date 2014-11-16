@@ -29,15 +29,16 @@ public class AccountController {
         return accountModel;
     }
 
-    public static void createAccountAndUser(String login, String password, String firstName, String lastName,  String dateOfBirth,String gender, String address,String email, String phoneNumber, int securityQuestionId, String securityAnswer)
+    public static boolean createAccountAndUser(String login, String password, String firstName, String lastName,  String dateOfBirth,String gender, String address,String email, String phoneNumber, int securityQuestionId, String securityAnswer)
     {
         AccountModel accountModel = _accountManager.createAccount(login, password,2);
         RegisteredUserModel registeredUserModel = UserController.createRegisteredUser(firstName, lastName, dateOfBirth, gender,accountModel.getAccountId(), address, email,  phoneNumber, securityQuestionId,  securityAnswer); //todo call UserController to create a new User
-        if(accountModel != null)
+        if(accountModel != null && registeredUserModel != null)
         {
             accountModel.setUserModel(registeredUserModel);
-            Global.currentAccount = accountModel;
+            return true;
         }
+        return false;
     }
 
 }
