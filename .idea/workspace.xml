@@ -5,18 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/AccountView2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/CategoriesView2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/CheckoutView2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/ForgetPasswordView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/HistoryView2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/Homepage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/HomepageView2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/LoginView2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/RegistrationView2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/ReminderListView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/ShoppingCartView2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/SubscriptionView2.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -189,10 +177,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="homepageView.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Views/homepageView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20231214" vertical-offset="0" max-vertical-offset="3150">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/ImageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28195488" vertical-offset="0" max-vertical-offset="532">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -358,7 +356,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Bread" />
+              <option name="myItemId" value="Meat" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -471,7 +469,7 @@
       <recent name="C:\MyApps\Github\Shoplify\src\views" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Homepage">
+  <component name="RunManager" selected="Application.homepageView">
     <configuration default="false" name="AccountView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="AccountView" />
@@ -554,6 +552,28 @@
       <RunnerSettings RunnerId="Cover" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Cover" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="homepageView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="shoplify.Views.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="shoplify.Views.homepageView" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Shoplify" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -800,18 +820,20 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.AccountView" />
       <item index="1" class="java.lang.String" itemvalue="Application.LoginView2" />
       <item index="2" class="java.lang.String" itemvalue="Application.AccountView (1)" />
       <item index="3" class="java.lang.String" itemvalue="Application.Homepage" />
+      <item index="4" class="java.lang.String" itemvalue="Application.homepageView" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Homepage" />
-        <item index="1" class="java.lang.String" itemvalue="Application.AccountView (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.LoginView2" />
-        <item index="3" class="java.lang.String" itemvalue="Application.AccountView" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.homepageView" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Homepage" />
+        <item index="2" class="java.lang.String" itemvalue="Application.AccountView (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Application.LoginView2" />
+        <item index="4" class="java.lang.String" itemvalue="Application.AccountView" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -871,7 +893,7 @@
       <workItem from="1416029207266" duration="655000" />
       <workItem from="1416080862189" duration="17000" />
       <workItem from="1416160275696" duration="51000" />
-      <workItem from="1416161562926" duration="3705000" />
+      <workItem from="1416161562926" duration="3874000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1005,11 +1027,17 @@
       <option name="project" value="LOCAL" />
       <updated>1416164676814</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Compete views">
+      <created>1416165287296</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1416165287296</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124668000" />
+    <option name="totallyTimeSpent" value="124837000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1101,7 +1129,8 @@
     <MESSAGE value="Commented out example of how to login" />
     <MESSAGE value="homepage" />
     <MESSAGE value="added the image path column" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the image path column" />
+    <MESSAGE value="Compete views" />
+    <option name="LAST_COMMIT_MESSAGE" value="Compete views" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1446,6 +1475,16 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/ImageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="dbDummy://dbtable:/7dccd33f/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Item">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
@@ -1457,13 +1496,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/ImageController.java">
+    <entry file="file://$PROJECT_DIR$/src/Views/homepageView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28195488" vertical-offset="0" max-vertical-offset="532">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.20231214" vertical-offset="0" max-vertical-offset="3150">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
