@@ -5,27 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Dairy Product/Berry-mixed Yogurt.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Dairy Product/Cocio's Chocolate Milk.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Dairy Product/Country Maid Skimmed Milk.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Dairy Product/Pressed Lemoa Cheese.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Dairy Product/Tuscan Whole Milk.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Desserts/Carrot Cake.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Desserts/Double Chocolatechip Cookies.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Desserts/Gingerbread Cookies.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Desserts/Hershy's Milk Choclate Bar.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Desserts/Red Velvet Cupcake.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Drink/Duff Beer.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Drink/Mott's Apple Juice.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Drink/Native Forest Organic Coconut Milk.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Drink/Rockstar Energy Drink.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Drink/Simply Orange Juice pulp free.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Drink/Starbucks Refreshers- Orange Melon.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Meat/David's Kosher Beef.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Meat/Hickory Smoked Bacon.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Meat/Rainbow Trout Fillet.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pics/Meat/Steak Cuts.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Dairy Product/Berry_mixed_Yogurt.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Desserts/Carrot_Cake.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Dairy Product/Cocio's_Chocolate Milk.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Dairy Product/Country_Maid_Skimmed_Milk.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Meat/David's_Kosher_Beef.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Desserts/Double_Chocolatechip_Cookies.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Drink/Duff_Beer.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Desserts/Gingerbread_Cookies.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Desserts/Hershy's_Milk_Choclate_Bar.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Meat/Hickory_Smoked_Bacon.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Drink/Mott's_Apple_Juice.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Drink/Native_Forest_Organic Coconut_Milk.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Dairy Product/Pressed_Lemoa_Cheese.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Meat/Rainbow_Trout_Fillet.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Desserts/Red_Velvet_Cupcake.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Drink/Rockstar_Energy_Drink.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Drink/Simply_Orange_Juice_pulp free.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Drink/Starbucks_Refreshers_Orange_Melon.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Meat/Steak_Cuts.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pics/Dairy Product/Tuscan_Whole_Milk.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -50,7 +49,7 @@
     </SUITE>
   </component>
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -401,61 +400,7 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataAccess" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="pics" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1075,7 +1020,7 @@
       <workItem from="1416161562926" duration="3082000" />
       <workItem from="1416164934368" duration="4448000" />
       <workItem from="1416169984690" duration="10000" />
-      <workItem from="1416177368627" duration="937000" />
+      <workItem from="1416177368627" duration="1057000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1165,11 +1110,15 @@
       <created>1416177692045</created>
       <updated>1416177692045</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Rename images">
+      <created>1416178578659</created>
+      <updated>1416178578659</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129440000" />
+    <option name="totallyTimeSpent" value="129560000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1200,7 +1149,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30794165" sideWeight="0.50142044" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359308" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18806647" sideWeight="0.4971591" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18806647" sideWeight="0.4971591" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1214,7 +1163,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3297587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14879154" sideWeight="0.49930266" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14879154" sideWeight="0.49930266" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18854673" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.2898975" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" x="686" y="194" width="396" height="507" />
@@ -1261,7 +1210,8 @@
     <MESSAGE value="Commented out example of how to login" />
     <MESSAGE value="homepage" />
     <MESSAGE value="Homepage View is able to get the whole list of Items" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homepage View is able to get the whole list of Items" />
+    <MESSAGE value="Rename images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename images" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
