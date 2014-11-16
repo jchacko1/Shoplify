@@ -1,5 +1,7 @@
 package models;
 
+import java.util.ArrayList;
+
 /**
  * Created by jmarquez on 10/20/2014.
  */
@@ -18,10 +20,12 @@ public class ItemModel {
     private int imageId;
     private String[] imageNames;
     private String imageName;
+    private String imagePath;
+
+    private ArrayList<ItemModel> itemsList;
 
 
-
-    public ItemModel(int itemId, String itemName, double price, int quantity, String description, Enums.Category category, int shoppingCartItemId){
+    public ItemModel(int itemId, String itemName, double price, int quantity, String description, Enums.Category category, int shoppingCartItemId, String imagePath){
         this.itemId = itemId;
         this.itemName = itemName;
         this.price = price;
@@ -29,6 +33,7 @@ public class ItemModel {
         this.description = description;
         this.category = category;
         this.shoppingCartItemId = shoppingCartItemId;
+        this.imagePath = imagePath;
 
     }
 
@@ -55,6 +60,15 @@ public class ItemModel {
         this.shoppingCartItemId = shoppingCartItemId;
         this.imageId = imageId;
         this.imageName = imageName;
+    }
+
+
+    /**
+     * Get image path
+     * @return
+     */
+    public String getImagePath(){
+        return imagePath;
     }
 
 
@@ -118,6 +132,22 @@ public class ItemModel {
 //    public Category getCategory(){
 //        return category;
 //    }
+
+    /**
+     * Get the list of item
+     * @return
+     */
+    public ArrayList<ItemModel> getItemsList(){
+        return itemsList;
+    }
+
+    /**
+     * Set items list to an arraylist
+     * @param itemsList
+     */
+    public void setItemsList(ArrayList<ItemModel> itemsList){
+        this.itemsList = itemsList;
+    }
 
 
 

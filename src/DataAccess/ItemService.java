@@ -40,9 +40,14 @@ public class ItemService {
         return _itemRepository.getOrderItemsHistory(userId);
     }
 
-    public ItemModel[] getItems(int orderId)
+  /*  public ItemModel[] getItems(int orderId)
     {
         return _itemRepository.getItems(orderId);
+    }*/
+
+
+    public ArrayList<ItemModel> getItems(){
+        return _itemRepository.getItems();
     }
 
     public ItemModel[] getImages(int imageId) { return  _itemRepository.getImages(imageId); }

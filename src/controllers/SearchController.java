@@ -14,7 +14,7 @@ public class SearchController {
     private static ItemService _itemService = new ItemService();
 
     public static void enterItemToSearch(SearchModel search, int itemId){
-        ItemModel itemModel = new ItemModel(itemId, "",0.0,-1,"", Enums.Category.Bread,-1);
+        ItemModel itemModel = new ItemModel(itemId, "",0.0,-1,"", Enums.Category.Bread,-1, null);
         _searchManager.enterItemToSearch(search, itemModel);
     }
 
