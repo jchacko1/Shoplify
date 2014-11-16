@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package views;
+import controllers.ItemController;
+import models.ItemModel;
+
+import java.util.ArrayList;
 
 /**
  *
@@ -441,6 +445,7 @@ public class homepageView extends javax.swing.JFrame {
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:    // TODO add your handling code here:
+        ArrayList<ItemModel> itemLists= ItemController.getItems();
         jPanel4.setVisible(true);
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);

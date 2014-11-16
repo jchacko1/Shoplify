@@ -5,10 +5,10 @@ package models;
  */
 public class Enums {
     public enum UserType {
-        GUEST,             //UserTypeId 1
-        REGISTERED,        //UserTypeId 2
-        SUBSCRIPTION,      //UserTypeId 3
-        ADMIN              //UserTypeId 4
+        GUEST,             //UserTypeId 0
+        REGISTERED,        //UserTypeId 1
+        SUBSCRIPTION,      //UserTypeId 2
+        ADMIN              //UserTypeId 3
     }
 
     public enum DiscountType {
@@ -25,13 +25,13 @@ public class Enums {
 
 
     public enum Category {
-        Meat,                      //CategoryId 1
-        Dairy,                     //CategoryId 2
-        Fruit,                     //CategoryId 3
-        Vegetables,                //CategoryId 4
-        Drink,                     //CategoryId 5
-        Dessert,                   //CategoryId 6
-        Bread                      //CategoryId 7
+        Meat,                      //CategoryId 0
+        Dairy,                     //CategoryId 1
+        Fruit,                     //CategoryId 2
+        Vegetables,                //CategoryId 3
+        Drink,                     //CategoryId 4
+        Dessert,                   //CategoryId 5
+        Bread                      //CategoryId 6
     }
 
 

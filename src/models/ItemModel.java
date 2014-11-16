@@ -37,6 +37,28 @@ public class ItemModel {
 
     }
 
+    /**
+     * constructor w/o category id
+     * @param itemId
+     * @param itemName
+     * @param price
+     * @param quantity
+     * @param description
+     * @param shoppingCartItemId
+     * @param imagePath
+     */
+    public ItemModel(int itemId, String itemName, double price, int quantity, String description, int shoppingCartItemId, String imagePath){
+        this.itemId = itemId;
+        this.itemName = itemName;
+        this.price = price;
+        this.quantity = quantity;
+        this.description = description;
+        //this.category = category;
+        this.shoppingCartItemId = shoppingCartItemId;
+        this.imagePath = imagePath;
+
+    }
+
 
     /**
      * Get Item with Image
