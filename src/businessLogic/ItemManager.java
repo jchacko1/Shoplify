@@ -12,10 +12,10 @@ import java.util.ArrayList;
 public class ItemManager {
     private ItemService _itemService = new ItemService();
 
-   /* public ItemModel getItem(int itemId)
+    public ItemModel getItem(int itemId)
     {
         return _itemService.getItem(itemId);
-    }*/
+    }
 
     public ArrayList<ItemModel> getShoppingList(int subscriptionId)
     {

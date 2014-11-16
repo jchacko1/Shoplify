@@ -17,7 +17,6 @@ public class ShoppingCartModel {
     //private int shoppingCartId;
     //private int orderId;
     private ArrayList<ItemModel> _items;
-    private double _subtotal;
     private int quantity;
 
     //@precondition: none
@@ -42,10 +41,17 @@ public class ShoppingCartModel {
         }
     }
 
+
+    //TODO lets keep subtotal on the order
     //@precondition: none
 //@postcondition: displays the subtotal cost of all items in the shopping cart
-    public double getSubtotal(){
-          return _subtotal;
+    //public double getSubtotal(){
+   //       return _subtotal;
+    //}
+
+    public ArrayList<ItemModel> getItems()
+    {
+        return _items;
     }
 
     public ItemModel getDiscountItem(int discountItemId)
@@ -58,17 +64,6 @@ public class ShoppingCartModel {
             }
         }
         return null;
-    }
-
-    //call this after adding an item to the ShoppingCart
-    public void setSubtotal()
-    {
-        double newSubtotal = 0.0;
-        for(ItemModel item : _items)
-        {
-            newSubtotal += item.getPrice();
-        }
-       _subtotal = newSubtotal;
     }
 
     //@precondition: user inputs quantity

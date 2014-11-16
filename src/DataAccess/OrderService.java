@@ -14,9 +14,9 @@ public class OrderService {
         _orderRepository = new OrderRepository();
     }
 
-    public int submitOrder(OrderModel order)
+    public void submitOrder(OrderModel order)
     {
-                 return _orderRepository.submitOrder(order);
+                _orderRepository.submitOrder(order);
     }
 
     public int[] getOrderIds(int userId)
@@ -28,4 +28,13 @@ public class OrderService {
         return _orderRepository.createOrder(orderTotal,subTotal,tax,userId,discountAmount,isSubscriptionOrder,shippingFee);
     }
 
+    public void addItemToOrder(int orderId,int itemId)
+    {
+        _orderRepository.addItemToOrder(orderId,itemId);
+    }
+
+    public void updateOrder(OrderModel order)
+    {
+        _orderRepository.updateOrder(order);
+    }
 }

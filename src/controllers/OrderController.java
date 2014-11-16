@@ -15,21 +15,21 @@ public class OrderController {
         return  orderModel;
     }
 
-    public static int submitOrder()
+    public static void submitOrder(OrderModel order)
     {
-        return _orderManager.submitOrder();
+         _orderManager.submitOrder(order);
     }
 
-    public static void updateOrder() {
-
+    public static void updateOrder(OrderModel order) {
+              _orderManager.updateOrder(order);
     }
 
-    public static void addItemToOrder()
-    {
-//        if(Global.currentOrder == null)
-//        {
-//            createOrder();
-//        }
+    public static void addItemToOrder(int itemId) throws ClassNotFoundException {
+        if(Global.currentOrder == null)
+        {
+            Global.currentOrder = createOrder();
+        }
+        _orderManager.addItemToOrder(Global.currentOrder.getOrderId(),itemId);
     }
 
     public static int[] getOrderIds(int userId)

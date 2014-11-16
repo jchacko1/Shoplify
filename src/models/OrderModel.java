@@ -64,9 +64,15 @@ public class OrderModel {
         _orderTotal = _subTotal + _tax - _discountAmount;
     }
 
-    public void setSubTotal()
-    {
-        _subTotal = _shoppingCart.getSubtotal();
+    public void setSubTotal(){
+        {
+            double newSubtotal = 0.0;
+            for(ItemModel item : _shoppingCart.getItems())
+            {
+                newSubtotal += item.getPrice();
+            }
+            _subTotal = newSubtotal;
+        }
     }
 
     public double getSubTotal()
@@ -81,6 +87,11 @@ public class OrderModel {
     public void setTax()
     {
         _tax = _taxPercentage * _subTotal;
+    }
+
+    public int getOrderId()
+    {
+        return _orderId;
     }
 
     public void updateAllPriceTotals()
