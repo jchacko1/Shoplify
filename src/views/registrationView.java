@@ -5,6 +5,8 @@
  */
 package views;
 
+import models.SecurityQuestionsModel;
+
 /**
  *
  * @author ART
@@ -26,6 +28,9 @@ public class registrationView extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
+        SecurityQuestionsModel securityQuestionsModel = new SecurityQuestionsModel();
+        int securityQuestionId = securityQuestionsModel.getSecurityId("the text of the security question");
 
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
         jSeparator1 = new javax.swing.JSeparator();
