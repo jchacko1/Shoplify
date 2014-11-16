@@ -27,6 +27,11 @@ public class  AccountModel {
         this._userModel = userModel;
     }
 
+    public int getAccountId()
+    {
+        return _accountId;
+    }
+
     public UserModel getUserModel()
     {
         return _userModel;
