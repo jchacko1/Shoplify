@@ -5,9 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/DataAccess/shoplify.db" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Bread/Bagel.jpg" afterPath="$PROJECT_DIR$/src/pics/Bread/Bagel.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Bread/Baguette.jpg" afterPath="$PROJECT_DIR$/src/pics/Bread/Baguette.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Bread/Corn Bread.jpg" afterPath="$PROJECT_DIR$/src/pics/Bread/Corn Bread.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Bread/Croissants.jpg" afterPath="$PROJECT_DIR$/src/pics/Bread/Croissants.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Bread/White Bread.jpg" afterPath="$PROJECT_DIR$/src/pics/Bread/White Bread.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Bread/Whole What Loaf.jpg" afterPath="$PROJECT_DIR$/src/pics/Bread/Whole What Loaf.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Dairy Product/Berry-mixed Yogurt.jpg" afterPath="$PROJECT_DIR$/src/pics/Dairy Product/Berry-mixed Yogurt.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Dairy Product/Butter.jpg" afterPath="$PROJECT_DIR$/src/pics/Dairy Product/Butter.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Dairy Product/Cocio's Chocolate Milk.jpg" afterPath="$PROJECT_DIR$/src/pics/Dairy Product/Cocio's Chocolate Milk.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Dairy Product/Country Maid Skimmed Milk.jpg" afterPath="$PROJECT_DIR$/src/pics/Dairy Product/Country Maid Skimmed Milk.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Dairy Product/Pressed Lemoa Cheese.jpg" afterPath="$PROJECT_DIR$/src/pics/Dairy Product/Pressed Lemoa Cheese.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Dairy Product/Tuscan Whole Milk.jpg" afterPath="$PROJECT_DIR$/src/pics/Dairy Product/Tuscan Whole Milk.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Desserts/Carrot Cake.jpg" afterPath="$PROJECT_DIR$/src/pics/Desserts/Carrot Cake.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Desserts/Double Chocolatechip Cookies.jpg" afterPath="$PROJECT_DIR$/src/pics/Desserts/Double Chocolatechip Cookies.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Desserts/Gingerbread Cookies.jpg" afterPath="$PROJECT_DIR$/src/pics/Desserts/Gingerbread Cookies.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Desserts/Hershy's Milk Choclate Bar.jpg" afterPath="$PROJECT_DIR$/src/pics/Desserts/Hershy's Milk Choclate Bar.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Desserts/Hershy's Peanutbuttercup Icecream.jpg" afterPath="$PROJECT_DIR$/src/pics/Desserts/Hershy's Peanutbuttercup Icecream.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Desserts/Red Velvet Cupcake.jpg" afterPath="$PROJECT_DIR$/src/pics/Desserts/Red Velvet Cupcake.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Drink/Duff Beer.jpg" afterPath="$PROJECT_DIR$/src/pics/Drink/Duff Beer.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Drink/Mott's Apple Juice.jpg" afterPath="$PROJECT_DIR$/src/pics/Drink/Mott's Apple Juice.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Drink/Native Forest Organic Coconut Milk.jpg" afterPath="$PROJECT_DIR$/src/pics/Drink/Native Forest Organic Coconut Milk.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Drink/Rockstar Energy Drink.jpg" afterPath="$PROJECT_DIR$/src/pics/Drink/Rockstar Energy Drink.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Drink/Simply Orange Juice pulp free.jpg" afterPath="$PROJECT_DIR$/src/pics/Drink/Simply Orange Juice pulp free.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Drink/Starbucks Refreshers- Orange Melon.jpg" afterPath="$PROJECT_DIR$/src/pics/Drink/Starbucks Refreshers- Orange Melon.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Fruit/Blueberry.jpg" afterPath="$PROJECT_DIR$/src/pics/Fruit/Blueberry.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Fruit/Cherry.jpg" afterPath="$PROJECT_DIR$/src/pics/Fruit/Cherry.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Fruit/Green Apple.jpg" afterPath="$PROJECT_DIR$/src/pics/Fruit/Green Apple.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Fruit/Lemon.jpg" afterPath="$PROJECT_DIR$/src/pics/Fruit/Lemon.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Fruit/Orange.jpg" afterPath="$PROJECT_DIR$/src/pics/Fruit/Orange.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Fruit/Raspberry.jpg" afterPath="$PROJECT_DIR$/src/pics/Fruit/Raspberry.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Meat/David's Kosher Beef.jpg" afterPath="$PROJECT_DIR$/src/pics/Meat/David's Kosher Beef.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Meat/Hickory Smoked Bacon.jpg" afterPath="$PROJECT_DIR$/src/pics/Meat/Hickory Smoked Bacon.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Meat/Rainbow Trout Fillet.jpg" afterPath="$PROJECT_DIR$/src/pics/Meat/Rainbow Trout Fillet.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Meat/Sausage.jpg" afterPath="$PROJECT_DIR$/src/pics/Meat/Sausage.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Meat/Shrimp.jpg" afterPath="$PROJECT_DIR$/src/pics/Meat/Shrimp.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Meat/Steak Cuts.jpg" afterPath="$PROJECT_DIR$/src/pics/Meat/Steak Cuts.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Vegetable/Broccoli.jpg" afterPath="$PROJECT_DIR$/src/pics/Vegetable/Broccoli.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Vegetable/Cabbages.jpg" afterPath="$PROJECT_DIR$/src/pics/Vegetable/Cabbages.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Vegetable/Carrot.jpg" afterPath="$PROJECT_DIR$/src/pics/Vegetable/Carrot.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Vegetable/Celery.jpg" afterPath="$PROJECT_DIR$/src/pics/Vegetable/Celery.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Vegetable/Green Beans.jpg" afterPath="$PROJECT_DIR$/src/pics/Vegetable/Green Beans.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Shopify Product Images/Vegetable/Onions.jpg" afterPath="$PROJECT_DIR$/src/pics/Vegetable/Onions.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -115,13 +154,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SQLite -" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SQLite -" pinned="false" current-in-tab="false">
         <entry file="dbDummy://db-console:/7dccd33f/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="503">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bagel.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pics/Bread/Bagel.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Baguette.jpg" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pics/Bread/Baguette.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -131,61 +184,6 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="675">
               <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1440" max-vertical-offset="1620">
-              <caret line="100" column="38" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/ItemModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1935">
-              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-              <folding>
-                <element signature="e#1712#1713#0" expanded="false" />
-                <element signature="e#1740#1741#0" expanded="false" />
-                <element signature="e#1830#1831#0" expanded="false" />
-                <element signature="e#1860#1861#0" expanded="false" />
-                <element signature="e#1902#1903#0" expanded="false" />
-                <element signature="e#1943#1944#0" expanded="false" />
-                <element signature="e#1996#1997#0" expanded="false" />
-                <element signature="e#2035#2036#0" expanded="false" />
-                <element signature="e#2133#2134#0" expanded="false" />
-                <element signature="e#2162#2163#0" expanded="false" />
-                <element signature="e#2259#2260#0" expanded="false" />
-                <element signature="e#2290#2291#0" expanded="false" />
-                <element signature="e#2390#2391#0" expanded="false" />
-                <element signature="e#2418#2419#0" expanded="false" />
-                <element signature="e#2521#2522#0" expanded="false" />
-                <element signature="e#2552#2553#0" expanded="false" />
-                <element signature="e#2589#2590#0" expanded="false" />
-                <element signature="e#2623#2624#0" expanded="false" />
-                <element signature="e#2738#2739#0" expanded="false" />
-                <element signature="e#2774#2775#0" expanded="false" />
-                <element signature="e#2817#2818#0" expanded="false" />
-                <element signature="e#2857#2858#0" expanded="false" />
-                <element signature="e#2898#2899#0" expanded="false" />
-                <element signature="e#2932#2933#0" expanded="false" />
-                <element signature="e#2976#2977#0" expanded="false" />
-                <element signature="e#3016#3017#0" expanded="false" />
-                <element signature="e#3069#3070#0" expanded="false" />
-                <element signature="e#3115#3116#0" expanded="false" />
-                <element signature="e#3170#3171#0" expanded="false" />
-                <element signature="e#3210#3211#0" expanded="false" />
-                <element signature="e#3252#3253#0" expanded="false" />
-                <element signature="e#3290#3291#0" expanded="false" />
-                <element signature="e#3339#3340#0" expanded="false" />
-                <element signature="e#3381#3382#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -393,6 +391,24 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shoplify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shoplify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -465,6 +481,7 @@
       <recent name="C:\MyApps\Github\Shoplify\buildGUI" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pics" />
       <recent name="$PROJECT_DIR$/src/views" />
       <recent name="C:\Users\ARTY\Documents\GitHub\Shoplify\src\views" />
       <recent name="C:\MyApps\Github\Shoplify\src\views" />
@@ -870,7 +887,7 @@
       <workItem from="1416029207266" duration="655000" />
       <workItem from="1416080862189" duration="17000" />
       <workItem from="1416160275696" duration="51000" />
-      <workItem from="1416161562926" duration="1589000" />
+      <workItem from="1416161562926" duration="1984000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -986,11 +1003,17 @@
       <option name="project" value="LOCAL" />
       <updated>1416162256396</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="homepage">
+      <created>1416163164205</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1416163164205</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122552000" />
+    <option name="totallyTimeSpent" value="122947000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1014,7 +1037,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18854673" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1037,7 +1060,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3297587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19985358" sideWeight="0.49930266" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19985358" sideWeight="0.49930266" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14263804" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1094,22 +1117,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="952">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1700" max-vertical-offset="1904">
-          <caret line="100" column="38" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/ItemModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="2788">
@@ -1582,6 +1589,16 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pics/Bread/Bagel.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pics/Bread/Baguette.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
