@@ -11,6 +11,8 @@ import java.util.ArrayList;
  */
 public class ItemRepository extends BaseRepository {
 
+    private static final int size = Enums.Category.values().length;
+
     public ItemModel getItem(int itemId)
     {
         String itemName = "";
@@ -52,7 +54,7 @@ public class ItemRepository extends BaseRepository {
         System.out.println("Operation done successfully");
         if(itemName != null)
         {
-            return new ItemModel(itemId,itemName,price,quantity,description, Enums.Category.values()[categoryId],shoppingCartItemId,imagePath);  //todo need to get the item from the database
+            return new ItemModel(itemId,itemName,price,quantity,description, Enums.Category.values()[size],shoppingCartItemId,imagePath);  //todo need to get the item from the database
         }
         return null;
     }
@@ -106,7 +108,8 @@ public class ItemRepository extends BaseRepository {
         double price = 0.0;
         int quantity = -1;
         String description = "";
-        Enums.Category category;
+        //Enums.Category category;
+        int category;
         int shoppingCartItemId = -1;
         String imagePath = null;
         int itemId = 0;
@@ -122,22 +125,28 @@ public class ItemRepository extends BaseRepository {
             System.out.println("Opened database successfully");
 
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "SELECT * FROM Item ");
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM Item;");
             while ( rs.next() ) {
                 itemId = rs.getInt("ItemId");
+
                 itemName = rs.getString("ItemName");
-                price = rs.getDouble("price");
+                price = rs.getDouble("Price");
                 quantity = rs.getInt("Quantity");
                 description = rs.getString("Description");
-                category = (Enums.Category.values()[rs.getInt("Category")]);
+               // System.out.print("Description");
+                //category = (Enums.Category.values()[rs.getInt("CategoryId")]);
+                category = rs.getInt("CategoryId");
                 shoppingCartItemId = rs.getInt("ShoppingCartItemId");
                 imagePath = rs.getString("ImagePath");
 
                 //Add items from into list;
+                System.out.println( "ItemName = " + itemName + "ItemId = " + itemId + "Price = " + price + "Quantity = " + quantity + "Description = " + description + "Category" + category + "Shopping Cart Item id = "+ shoppingCartItemId + "Image path = " + imagePath );
+                System.out.println("ArrayList size  = " + items.size() + "Category Id = " + category);
+                ItemModel itemModel = new ItemModel(itemId,itemName,price,quantity,description,Enums.Category.values()[category],shoppingCartItemId,imagePath);
+                items.add(itemModel);
 
-                items.add(new ItemModel(itemId,itemName,price,quantity,description,category,shoppingCartItemId,imagePath));
-                System.out.println( "ItemName = " + itemName );
-                System.out.println("ArrayList size is =" + items.size());
+
+               // System.out.println("ArrayList size is =" + items.size());
 
             }
             rs.close();
