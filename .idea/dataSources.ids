@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="SQLite -" uuid="15cf1173-ee81-44d4-be5c-8bf793d5e4ad">
-    <database-info product="SQLite" version="3.6.23.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="pure"/>
+  <data-source name="SQLite -" uuid="b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e">
+    <database-info product="SQLite" version="3.7.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
     <schema name="" catalog=""/>
     <table name="Account" schema="" catalog="" type="TABLE">
-      <column name="AccountId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
-      <column name="UserModelId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="AccountId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="UserModelId" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
       <column name="UserName" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
       <column name="Password" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
       <primary-key columns="AccountId"/>
@@ -29,6 +29,8 @@
       <column name="CategoryId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
       <column name="ShoppingCartItemId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
       <primary-key columns="ItemId"/>
+      <exported-key name="#FAKE_ShoppingListItems_2" table="ShoppingListItems" schema="" catalog="" columns="ItemId"/>
+      <exported-key name="#FAKE_SubscriptionItem_1" table="SubscriptionItem" schema="" catalog="" columns="ItemId"/>
     </table>
     <table name="Report" schema="" catalog="" type="TABLE">
       <column name="ReportId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
@@ -38,45 +40,69 @@
       <primary-key columns="ReportId"/>
     </table>
     <table name="ShoppingList" schema="" catalog="" type="TABLE">
-      <column name="ShoppingListId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="ShoppingListId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="UserId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
       <primary-key columns="ShoppingListId"/>
+      <foreign-key name="#FAKE_ShoppingList_1" columns="UserId" ref-table="User" ref-schema="" ref-catalog="" ref-columns="UserId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <exported-key name="#FAKE_ShoppingListItems_1" table="ShoppingListItems" schema="" catalog="" columns="ShoppingListId"/>
     </table>
     <table name="ShoppingListItems" schema="" catalog="" type="TABLE">
-      <column name="ShoppingListId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
-      <column name="ItemId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="ShoppingListId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="ItemId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <foreign-key name="#FAKE_ShoppingListItems_1" columns="ShoppingListId" ref-table="ShoppingList" ref-schema="" ref-catalog="" ref-columns="ShoppingListId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_ShoppingListItems_2" columns="ItemId" ref-table="Item" ref-schema="" ref-catalog="" ref-columns="ItemId" update-rule="3" delete-rule="3" deferrability="1"/>
+    </table>
+    <table name="Subscription" schema="" catalog="" type="TABLE">
+      <column name="SubscriptionId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="UserId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="ShipDate" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="Enabled" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <primary-key columns="SubscriptionId"/>
+      <foreign-key name="#FAKE_Subscription_1" columns="UserId" ref-table="User" ref-schema="" ref-catalog="" ref-columns="UserId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <exported-key name="#FAKE_SubscriptionItem_2" table="SubscriptionItem" schema="" catalog="" columns="SubscriptionId"/>
+    </table>
+    <table name="SubscriptionItem" schema="" catalog="" type="TABLE">
+      <column name="SubscriptionId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="ItemId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <foreign-key name="#FAKE_SubscriptionItem_1" columns="ItemId" ref-table="Item" ref-schema="" ref-catalog="" ref-columns="ItemId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="#FAKE_SubscriptionItem_2" columns="SubscriptionId" ref-table="Subscription" ref-schema="" ref-catalog="" ref-columns="SubscriptionId" update-rule="3" delete-rule="3" deferrability="1"/>
     </table>
     <table name="User" schema="" catalog="" type="TABLE">
-      <column name="UserId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
-      <column name="CreateDate" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="UserId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="CreateDate" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
       <column name="FirstName" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
       <column name="LastName" sqlType="TEXT" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
       <column name="IsAdmin" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
       <column name="UserType" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
-      <column name="AccountID" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="AccountId" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
       <column name="Address" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
       <column name="PhoneNumber" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
       <column name="DateOfBirth" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
       <column name="Gender" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
       <column name="Email" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
-      <column name="ShoppingListId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
-      <column name="SubscriptionId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
-      <column name="CanEditItems" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
-      <column name="CanEditUsers" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
-      <column name="CanRefundOrders" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
-      <column name="SecurityQuestionId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="ShoppingListId" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="SubscriptionId" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="CanEditItems" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="CanEditUsers" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="CanRefundOrders" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="SecurityQuestionId" sqlType="" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
       <column name="SecurityAnswer" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
       <primary-key columns="UserId"/>
+      <exported-key name="#FAKE_ShoppingList_1" table="ShoppingList" schema="" catalog="" columns="UserId"/>
+      <exported-key name="#FAKE_Subscription_1" table="Subscription" schema="" catalog="" columns="UserId"/>
+      <exported-key name="#FAKE_UserOrder_1" table="UserOrder" schema="" catalog="" columns="UserId"/>
     </table>
     <table name="UserOrder" schema="" catalog="" type="TABLE">
-      <column name="OrderId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
-      <column name="OrderTotal" sqlType="DOUBLE" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
-      <column name="Subtotal" sqlType="DOUBLE" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
-      <column name="Tax" sqlType="DOUBLE" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
-      <column name="LoggedInUser" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
-      <column name="DiscountAmount" sqlType="DOUBLE" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
-      <column name="IsSubscriptionOrder" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
-      <column name="ShippingFee" sqlType="DOUBLE" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <column name="OrderId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="OrderTotal" sqlType="REAL" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <column name="Subtotal" sqlType="REAL" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <column name="Tax" sqlType="REAL" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
+      <column name="UserId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="DiscountAmount" sqlType="REAL" precision="2000000000" scale="10" nullable="true" jdbcType="6"/>
+      <column name="IsSubscriptionOrder" sqlType="INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="ShippingFee" sqlType="REAL" precision="2000000000" scale="10" nullable="false" jdbcType="6"/>
       <primary-key columns="OrderId"/>
+      <foreign-key name="#FAKE_UserOrder_1" columns="UserId" ref-table="User" ref-schema="" ref-catalog="" ref-columns="UserId" update-rule="3" delete-rule="3" deferrability="1"/>
     </table>
   </data-source>
 </component>
