@@ -151,9 +151,9 @@ public class ItemModel {
         return description;
     }
 
-//    public Category getCategory(){
-//        return category;
-//    }
+    public Enums.Category getCategory(){
+        return category;
+    }
 
     /**
      * Get the list of item
