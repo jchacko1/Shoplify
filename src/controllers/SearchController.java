@@ -1,10 +1,13 @@
 package controllers;
 
 import DataAccess.ItemService;
+import businessLogic.ItemManager;
 import businessLogic.SearchManager;
 import models.Enums;
 import models.ItemModel;
 import models.SearchModel;
+
+import java.util.ArrayList;
 
 /**
  * Created by KellyAnn on 11/9/14.
@@ -12,10 +15,37 @@ import models.SearchModel;
 public class SearchController {
     private static SearchManager _searchManager = new SearchManager();
     private static ItemService _itemService = new ItemService();
+    private static ItemManager _itemManager = new ItemManager();
 
     public static void enterItemToSearch(SearchModel search, int itemId){
         ItemModel itemModel = new ItemModel(itemId, "",0.0,-1,"", Enums.Category.Bread,-1, null);
         _searchManager.enterItemToSearch(search, itemModel);
+    }
+
+
+    //TODO: Do we need to cast the itemModel to searchModel? 11/17/2014
+   /* public static SearchModel getItem(int itemId) {
+        return _itemManager.getItem(itemId);
+    }*/
+
+    /**
+     * Get item lists from ItemModel
+     * @return
+     */
+    public static ArrayList<ItemModel> getItems(){
+        return _itemManager.getItems();
+    }
+
+    /**
+     * Get Category name and return an ArrayList
+     * @return
+     */
+    public static ArrayList<String> getCategoryNames(){
+        ArrayList<String> categoryNames = new ArrayList<String>();
+        for (Enums.UserType userType : Enums.UserType.values()) {
+            categoryNames.add(userType.toString());
+        }
+        return categoryNames;
     }
 
     /**
