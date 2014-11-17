@@ -97,7 +97,7 @@ public class UserRepository extends BaseRepository {
                 System.out.println("Opened database successfully");
                 stmt = c.createStatement();
                  stmt.executeUpdate("Insert into User(CreateDate,FirstName,LastName,IsAdmin,UserType,AccountId,Address,PhoneNumber,DateOfBirth,Gender,Email,ShoppingListId,SubscriptionId,CanEditItems,CanEditUsers,CanRefundOrders,SecurityQuestionId,SecurityAnswer)"
-                        + "values(" + "'" + date + "'" + "," + '"' + firstName + '"' + "," + '"' + "lastName" + '"' + "," + 0 + "," + 2 + "," + accountId + "," + '"' + address + '"' + "," + '"' + phoneNumber + '"' + "," + '"' + dateOfBirth + '"' + "," + '"' + gender + '"' + "," + '"' + email + '"' + "," + -1 + "," + -1 + "," + 0 + "," + 0 + "," + 0 + "," + securityQuestionId + "," + '"' + securityAnswer + '"' + ");");
+                        + "values(" + "'" + date + "'" + "," + '"' + firstName + '"' + "," + '"' + lastName + '"' + "," + 0 + "," + 2 + "," + accountId + "," + '"' + address + '"' + "," + '"' + phoneNumber + '"' + "," + '"' + dateOfBirth + '"' + "," + '"' + gender + '"' + "," + '"' + email + '"' + "," + -1 + "," + -1 + "," + 0 + "," + 0 + "," + 0 + "," + securityQuestionId + "," + '"' + securityAnswer + '"' + ");");
                 ResultSet rs = stmt.executeQuery("SELECT last_insert_rowid()");
                 while ( rs.next() ) {
                     userId = rs.getInt(1);
