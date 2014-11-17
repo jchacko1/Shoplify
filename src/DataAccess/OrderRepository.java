@@ -1,8 +1,11 @@
 package DataAccess;
 
+import controllers.ItemController;
+import models.ItemModel;
 import models.OrderModel;
 
 import java.sql.*;
+import java.util.ArrayList;
 //import java.sql.Connection;
 //import java.sql.DriverManager;
 //import java.sql.ResultSet;
@@ -126,5 +129,35 @@ public class OrderRepository extends BaseRepository {
             System.exit(0);
         }
         System.out.println("Operation done successfully");
+    }
+
+    public  ArrayList<ItemModel> getItemsOnOrder(int orderId)
+    {
+        ArrayList<ItemModel> items = new ArrayList<ItemModel>();
+        Connection c = null;
+        Statement stmt = null;
+        int itemId = -1;
+        try {
+            System.out.println("begin get OrderItems for order table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "Select * OrderItems where OrderId = " + String.valueOf(orderId) + ";");
+           while ( rs.next() ) {
+               itemId  = rs.getInt("ItemId");
+                System.out.println( "Item = " + itemId );
+               items.add(ItemController.getItem(itemId));
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+        return items;
     }
 }
