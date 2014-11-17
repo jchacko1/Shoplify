@@ -20,18 +20,19 @@ public class AccountRepository extends BaseRepository {
         Statement stmt = null;
         int accountId = -1;
         try {
-            System.out.println("begin Account table try block");
+            System.out.println("begin create Account table try block");
             Class.forName(getClassForName());
             c = DriverManager.getConnection(getConnectionString());
-            c.setAutoCommit(false);
+            c.setAutoCommit(true);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "Insert into Account(UserModelId, UserName, Password)values(" + userModelId + "," + userName + "," + password  + ");" );
+            String query = "Insert into Account(UserModelId, UserName, Password)values(" + '"' + userModelId + '"' + "," + '"'  + userName + '"' + "," + '"' + password + '"' + ");";
+            accountId = stmt.executeUpdate(query);
+            ResultSet rs = stmt.executeQuery("SELECT last_insert_rowid()");
             while ( rs.next() ) {
-                accountId = rs.getInt("AccountId");
-                System.out.println( "AccountId = " + accountId );
+                accountId = rs.getInt(1);
             }
-            rs.close();
+            System.out.println("AccountId is:" + accountId);
             stmt.close();
             c.close();
         } catch ( Exception e ) {
@@ -43,6 +44,30 @@ public class AccountRepository extends BaseRepository {
             return new AccountModel(accountId,userModelId,userName,password );
         }
         return null;
+    }
+
+    public void updateUserIdOnAccount(int accountId, int userId)
+    {
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin create Account table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(true);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            //String query = "select max(accountid) from account";
+            //accountId = stmt.executeUpdate(query);
+            System.out.println("Last AccountId is:" + accountId);
+            String query = "Update Account set UserModelId = " + userId + " where AccountId = " + accountId + ";";
+            stmt.executeUpdate(query);
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
     }
 
     public void updateAccount(AccountModel accountModel)
@@ -59,7 +84,7 @@ public class AccountRepository extends BaseRepository {
            String userName = "";
            String password = "";
            try {
-               System.out.println("begin Account table try block");
+               System.out.println("begin get Account by id table try block");
                Class.forName(getClassForName());
                c = DriverManager.getConnection(getConnectionString());
                c.setAutoCommit(false);
@@ -94,7 +119,7 @@ public class AccountRepository extends BaseRepository {
         int accountId = -1;
         int userModelId = -1;
         try {
-            System.out.println("begin Account table try block");
+            System.out.println("begin get Account by login and password table try block");
             Class.forName(getClassForName());
             c = DriverManager.getConnection(getConnectionString());
             c.setAutoCommit(false);

@@ -34,4 +34,9 @@ public class AccountManager {
     {
         return _accountService.createAccount(login, password, userTypeId);
     }
+
+    public void updateUserIdOnAccount(int accountId, int userId)
+    {
+        _accountService.updateUserIdOnAccount(accountId, userId);
+    }
 }
