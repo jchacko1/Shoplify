@@ -101,7 +101,6 @@ public class ItemRepository extends BaseRepository {
      */
     public ArrayList<ItemModel> getItems()
     {
-        //todo get an ArrayList of items
         ArrayList<ItemModel> items = new ArrayList<ItemModel>();
 
         String itemName = "";

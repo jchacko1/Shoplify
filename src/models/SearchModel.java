@@ -1,6 +1,5 @@
 package models;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -8,18 +7,39 @@ import java.util.ArrayList;
  */
 public class SearchModel {
 
-    private ArrayList<ItemModel> itemsList;
+    private ArrayList<SearchModel> resultList;
     private int itemId;
     private String itemName;
     private Enums.Category category;
+    private String searchStr;
 
 
-
-    public SearchModel(int itemId, String itemName, Enums.Category category, ArrayList<ItemModel> itemsList) {
+    /**
+     * Search model will take user search string
+     * @param itemId
+     * @param itemName
+     * @param category
+     * @param resultList
+     */
+    public SearchModel(int itemId, String itemName, Enums.Category category, ArrayList<SearchModel> resultList) {
        this.itemId = itemId;
        this.itemName = itemName;
-       this.itemsList = itemsList;
+       this.resultList = resultList;
        this.category = category;
+    }
+
+    /**
+     * get user input search string and result list
+     * @param searchStr
+     * @param resultList
+     */
+    public SearchModel(String searchStr, ArrayList<SearchModel> resultList){
+        this.searchStr = searchStr;
+        this.resultList = resultList;
+    }
+
+    public String getSearchStr(){
+        return searchStr;
     }
 
     public int getItemId(){
@@ -30,12 +50,16 @@ public class SearchModel {
         return itemName;
     }
 
-    public ArrayList<ItemModel> getItemsList(){
-        return itemsList;
+    public ArrayList<SearchModel> getResultList(){
+        return resultList;
     }
 
-    public void setItemsList(ArrayList<ItemModel> itemsList){
-        this.itemsList = itemsList;
+    public void setSearchStr(String searchStr){
+        this.searchStr = searchStr;
+    }
+
+    public void setItemsList(ArrayList<SearchModel> resultList){
+        this.resultList = resultList;
     }
 
     public void setItemId(int itemId){

@@ -48,10 +48,10 @@
       <primary-key columns="ReportId"/>
     </table>
     <table name="ReturnOrder" schema="" catalog="" type="TABLE">
-      <column name="ReturnId" sqlType="INTEGER INT" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
-      <column name="OrderId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
-      <primary-key columns="ReturnId"/>
-      <foreign-key name="#FAKE_ReturnOrder_1" columns="OrderId" ref-table="UserOrder" ref-schema="" ref-catalog="" ref-columns="OrderId" update-rule="3" delete-rule="3" deferrability="1"/>
+      <column name="returnId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="userId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="document" sqlType="VARCHAR(512)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="returnId,userId"/>
     </table>
     <table name="ShoppingList" schema="" catalog="" type="TABLE">
       <column name="ShoppingListId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
@@ -119,7 +119,6 @@
       <primary-key columns="OrderId"/>
       <foreign-key name="#FAKE_UserOrder_1" columns="UserId" ref-table="User" ref-schema="" ref-catalog="" ref-columns="UserId" update-rule="3" delete-rule="3" deferrability="1"/>
       <exported-key name="#FAKE_OrderItems_2" table="OrderItems" schema="" catalog="" columns="OrderId"/>
-      <exported-key name="#FAKE_ReturnOrder_1" table="ReturnOrder" schema="" catalog="" columns="OrderId"/>
     </table>
   </data-source>
 </component>
