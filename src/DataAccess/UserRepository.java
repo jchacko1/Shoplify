@@ -82,28 +82,27 @@ public class UserRepository extends BaseRepository {
 
     public RegisteredUserModel createRegisteredUser(String firstName, String lastName, String dateOfBirth,String gender,int accountId, String address,String email, String phoneNumber, int securityQuestionId, String securityAnswer)
     {
-        //TODO insert the UserModel into the database
         {
             Connection c = null;
             Statement stmt = null;
+            DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
+            Calendar calobj = Calendar.getInstance();
             int userId = -1;
             try {
-                System.out.println("begin create User table try block");
+                System.out.println("begin create Registered User table try block");
                 Class.forName(getClassForName());
                 c = DriverManager.getConnection(getConnectionString());
-                c.setAutoCommit(false);
+                c.setAutoCommit(true);
+                String date =   String.valueOf(df.format(calobj.getTime()));
                 System.out.println("Opened database successfully");
                 stmt = c.createStatement();
-                ResultSet rs = stmt.executeQuery("Insert into User(FirstName,LastName,IsAdmin,UserType,AccountId,Address,PhoneNumber,DateOfBirth,Gender,Email,ShoppingListId,SubscriptionId,CanEditItems,CanEditUsers,CanRefundOrders,SecurityQuestionId,SecurityAnswer)"
-                        + "values(" + firstName + "," + "lastName" + "," + 0 + "," + 2 + "," + accountId + "," + address + "," + phoneNumber + "," + dateOfBirth + "," + gender + "," + email + "," + -1 + "," + -1 + "," + 0 + "," + 0 + "," + 0 + "," + securityQuestionId + "," + securityAnswer + ");");
-//                while ( rs.next() ) {
-//                    rs.
-//                    System.out.println( "FirstName = " + firstName );
-//                }
-                userId = rs.getInt("UserId");
+                 stmt.executeUpdate("Insert into User(CreateDate,FirstName,LastName,IsAdmin,UserType,AccountId,Address,PhoneNumber,DateOfBirth,Gender,Email,ShoppingListId,SubscriptionId,CanEditItems,CanEditUsers,CanRefundOrders,SecurityQuestionId,SecurityAnswer)"
+                        + "values(" + "'" + date + "'" + "," + '"' + firstName + '"' + "," + '"' + lastName + '"' + "," + 0 + "," + 2 + "," + accountId + "," + '"' + address + '"' + "," + '"' + phoneNumber + '"' + "," + '"' + dateOfBirth + '"' + "," + '"' + gender + '"' + "," + '"' + email + '"' + "," + -1 + "," + -1 + "," + 0 + "," + 0 + "," + 0 + "," + securityQuestionId + "," + '"' + securityAnswer + '"' + ");");
+                ResultSet rs = stmt.executeQuery("SELECT last_insert_rowid()");
+                while ( rs.next() ) {
+                    userId = rs.getInt(1);
+                }
                 System.out.println( "userId = " + userId );
-                //rs.getRowId("");
-                rs.close();
                 stmt.close();
                 c.close();
             } catch ( Exception e ) {
@@ -112,8 +111,7 @@ public class UserRepository extends BaseRepository {
             }
             if(userId > -1)
             {
-                DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
-                Calendar calobj = Calendar.getInstance();
+             System.out.println("Log: Creating RegisteredUserModel for Return");
              return new RegisteredUserModel(userId, df.format(calobj.getTime()),firstName,lastName,false,Enums.UserType.values()[2],accountId,address,phoneNumber,dateOfBirth,gender,email,securityQuestionId,securityAnswer);
             }
             return null;

@@ -31,14 +31,21 @@ public class AccountController {
 
     public static boolean createAccountAndUser(String login, String password, String firstName, String lastName,  String dateOfBirth,String gender, String address,String email, String phoneNumber, int securityQuestionId, String securityAnswer)
     {
-        AccountModel accountModel = _accountManager.createAccount(login, password,2);
+        AccountModel accountModel = _accountManager.createAccount(login, password,-1);
         RegisteredUserModel registeredUserModel = UserController.createRegisteredUser(firstName, lastName, dateOfBirth, gender,accountModel.getAccountId(), address, email,  phoneNumber, securityQuestionId,  securityAnswer); //todo call UserController to create a new User
         if(accountModel != null && registeredUserModel != null)
         {
             accountModel.setUserModel(registeredUserModel);
+            updateUserIdOnAccount(accountModel.getAccountId(), registeredUserModel.getUserId());
+            System.out.println("Log: createAccountAndUser done!");
             return true;
         }
         return false;
+    }
+
+    public static void updateUserIdOnAccount(int accountId, int userId)
+    {
+        _accountManager.updateUserIdOnAccount(accountId, userId);
     }
 
 }

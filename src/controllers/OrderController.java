@@ -2,7 +2,10 @@ package controllers;
 
 import businessLogic.OrderManager;
 import global.Global;
+import models.ItemModel;
 import models.OrderModel;
+
+import java.util.ArrayList;
 
 /**
  * Created by jmarquez on 11/5/2014.
@@ -30,6 +33,11 @@ public class OrderController {
             Global.currentOrder = createOrder();
         }
         _orderManager.addItemToOrder(Global.currentOrder.getOrderId(),itemId);
+    }
+
+    public static ArrayList<ItemModel> getItemsOnOrder(int orderId)
+    {
+        return _orderManager.getItemsOnOrder(orderId);
     }
 
     public static int[] getOrderIds(int userId)

@@ -1,7 +1,10 @@
 package DataAccess;
 
 import businessLogic.OrderManager;
+import models.ItemModel;
 import models.OrderModel;
+
+import java.util.ArrayList;
 
 /**
  * Created by jmarquez on 11/5/2014.
@@ -36,5 +39,10 @@ public class OrderService {
     public void updateOrder(OrderModel order)
     {
         _orderRepository.updateOrder(order);
+    }
+
+    public ArrayList<ItemModel> getItemsOnOrder(int orderId)
+    {
+        return _orderRepository.getItemsOnOrder(orderId);
     }
 }

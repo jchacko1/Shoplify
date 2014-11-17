@@ -6,6 +6,8 @@ import global.Global;
 import models.ItemModel;
 import models.OrderModel;
 
+import java.util.ArrayList;
+
 /**
  * Created by jmarquez on 11/5/2014.
  */
@@ -40,6 +42,11 @@ public class OrderManager {
         Global.currentOrder._shoppingCart.addItem(itemToAdd);
         Global.currentOrder.updateAllPriceTotals();
         updateOrder(Global.currentOrder);
+    }
+
+    public  ArrayList<ItemModel> getItemsOnOrder(int orderId)
+    {
+        return _orderService.getItemsOnOrder(orderId);
     }
 
     public void updateOrder(OrderModel order)
