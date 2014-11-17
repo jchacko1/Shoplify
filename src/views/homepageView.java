@@ -11,8 +11,14 @@ import controllers.ImageController;
 import controllers.ItemController;
 import models.Enums;
 import models.ItemModel;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.text.html.HTML;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -449,16 +455,58 @@ public class homepageView extends javax.swing.JFrame {
         frame.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt){//GEN-FIRST:event_jButton13ActionPerformed
         ArrayList<ItemModel> itemsList = ItemController.getItems();
         jPanel4.setLayout(new GridLayout(0,3));
         JButton itemlist1 = null;
+        JPanel itemPanel =null;
+        JLabel itemLabel =null;
+        ImageIcon imageIcon = null;
+//        for(int )
         for(ItemModel item: itemsList) {
             if (item.getCategory() == Enums.Category.Meat) {
+
+                itemPanel = new JPanel();
+                itemPanel.setLayout(new GridBagLayout());
+                GridBagConstraints c = new GridBagConstraints();
                 itemlist1 = new JButton();
-                itemlist1.setIcon(new javax.swing.ImageIcon(getClass().getResource(item.getImagePath()))); // NOI18N
+                itemLabel = new JLabel("<html>" + item.getName() + "<br>" + item.getPrice()+ "</html>");
+
+
+
+                imageIcon = new ImageIcon(item.getImagePath()); // load the image to a imageIcon
+                Image image = imageIcon.getImage(); // transform it
+                Image Image = null;
+                try {
+                    Image = ImageIO.read(getClass().getResource(item.getImagePath()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Image newimg = Image.getScaledInstance(120, 120,  Image.SCALE_FAST); // scale it the smooth way
+                imageIcon = new ImageIcon(newimg);  // transform it back
+                itemlist1.setIcon(imageIcon); // NOI18N
                 itemlist1.setName(String.valueOf(item.getItemID()));
-                jPanel4.add(itemlist1);
+                itemlist1.setBorder(null);
+                itemlist1.setBorderPainted(false);
+                itemlist1.setContentAreaFilled(false);
+                itemlist1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+
+                c.fill = GridBagConstraints.BOTH;
+                c.ipady = 40;      //make this component tall
+                c.weightx = 0.0;
+                c.gridwidth = 3;
+                c.gridx = 0;
+                c.gridy = 0;
+                itemPanel.add(itemlist1, c);
+
+                c.fill = GridBagConstraints.CENTER;
+                c.weightx = 0.0;
+                c.gridx = 0;
+                c.gridy = 1;
+                itemPanel.add(itemLabel, c);
+                jPanel4.add(itemPanel);
+
+
             }
         }
         jPanel4.setVisible(true);
@@ -477,6 +525,48 @@ public class homepageView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        ArrayList<ItemModel> itemsList = ItemController.getItems();
+        jPanel5.setLayout(new GridLayout(0,3));
+        JButton itemlist1 = null;
+        JPanel itemPanel =null;
+        JLabel itemLabel =null;
+        for(ItemModel item: itemsList) {
+            if (item.getCategory() == Enums.Category.Bread) {
+
+                itemPanel = new JPanel();
+                itemPanel.setLayout(new GridBagLayout());
+                GridBagConstraints c = new GridBagConstraints();
+                itemlist1 = new JButton();
+                itemLabel = new JLabel("<html>" + item.getName() + "<br>" + item.getPrice()+ "</html>");
+
+                ImageIcon imageIcon = new ImageIcon(item.getImagePath()); // load the image to a imageIcon
+                Image image = imageIcon.getImage(); // transform it
+                Image newimg = image.getScaledInstance(120, 120,  Image.SCALE_FAST); // scale it the smooth way
+                imageIcon = new ImageIcon(newimg);  // transform it back
+                itemlist1.setIcon(imageIcon); // NOI18N
+                itemlist1.setName(String.valueOf(item.getItemID()));
+                itemlist1.setBorder(null);
+                itemlist1.setBorderPainted(false);
+                itemlist1.setContentAreaFilled(false);
+                itemlist1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+                c.fill = GridBagConstraints.BOTH;
+                c.ipady = 40;      //make this component tall
+                c.weightx = 0.0;
+                c.gridwidth = 3;
+                c.gridx = 0;
+                c.gridy = 0;
+                itemPanel.add(itemlist1, c);
+
+                c.fill = GridBagConstraints.CENTER;
+                c.weightx = 0.0;
+                c.gridx = 0;
+                c.gridy = 1;
+                itemPanel.add(itemLabel, c);
+                jPanel5.add(itemPanel);
+
+
+            }
+        }
         jPanel4.setVisible(false);
         jPanel5.setVisible(true);
         jPanel6.setVisible(false);
@@ -498,6 +588,48 @@ public class homepageView extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        ArrayList<ItemModel> itemsList = ItemController.getItems();
+        jPanel11.setLayout(new GridLayout(0,3));
+        JButton itemlist1 = null;
+        JPanel itemPanel =null;
+        JLabel itemLabel =null;
+        for(ItemModel item: itemsList) {
+            if (item.getCategory() == Enums.Category.Bread) {
+
+                itemPanel = new JPanel();
+                itemPanel.setLayout(new GridBagLayout());
+                GridBagConstraints c = new GridBagConstraints();
+                itemlist1 = new JButton();
+                itemLabel = new JLabel("<html>" + item.getName() + "<br>" + item.getPrice()+ "</html>");
+
+                ImageIcon imageIcon = new ImageIcon(item.getImagePath()); // load the image to a imageIcon
+                Image image = imageIcon.getImage(); // transform it
+                Image newimg = image.getScaledInstance(120, 120,  Image.SCALE_FAST); // scale it the smooth way
+                imageIcon = new ImageIcon(newimg);  // transform it back
+                itemlist1.setIcon(imageIcon); // NOI18N
+                itemlist1.setName(String.valueOf(item.getItemID()));
+                itemlist1.setBorder(null);
+                itemlist1.setBorderPainted(false);
+                itemlist1.setContentAreaFilled(false);
+                itemlist1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+                c.fill = GridBagConstraints.BOTH;
+                c.ipady = 40;      //make this component tall
+                c.weightx = 0.0;
+                c.gridwidth = 3;
+                c.gridx = 0;
+                c.gridy = 0;
+                itemPanel.add(itemlist1, c);
+
+                c.fill = GridBagConstraints.CENTER;
+                c.weightx = 0.0;
+                c.gridx = 0;
+                c.gridy = 1;
+                itemPanel.add(itemLabel, c);
+                jPanel11.add(itemPanel);
+
+
+            }
+        }
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);
@@ -509,6 +641,48 @@ public class homepageView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        ArrayList<ItemModel> itemsList = ItemController.getItems();
+        jPanel6.setLayout(new GridLayout(0,3));
+        JButton itemlist1 = null;
+        JPanel itemPanel =null;
+        JLabel itemLabel =null;
+        for(ItemModel item: itemsList) {
+            if (item.getCategory() == Enums.Category.Bread) {
+
+                itemPanel = new JPanel();
+                itemPanel.setLayout(new GridBagLayout());
+                GridBagConstraints c = new GridBagConstraints();
+                itemlist1 = new JButton();
+                itemLabel = new JLabel("<html>" + item.getName() + "<br>" + item.getPrice()+ "</html>");
+
+                ImageIcon imageIcon = new ImageIcon(item.getImagePath()); // load the image to a imageIcon
+                Image image = imageIcon.getImage(); // transform it
+                Image newimg = image.getScaledInstance(120, 120,  Image.SCALE_FAST); // scale it the smooth way
+                imageIcon = new ImageIcon(newimg);  // transform it back
+                itemlist1.setIcon(imageIcon); // NOI18N
+                itemlist1.setName(String.valueOf(item.getItemID()));
+                itemlist1.setBorder(null);
+                itemlist1.setBorderPainted(false);
+                itemlist1.setContentAreaFilled(false);
+                itemlist1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+                c.fill = GridBagConstraints.BOTH;
+                c.ipady = 40;      //make this component tall
+                c.weightx = 0.0;
+                c.gridwidth = 3;
+                c.gridx = 0;
+                c.gridy = 0;
+                itemPanel.add(itemlist1, c);
+
+                c.fill = GridBagConstraints.CENTER;
+                c.weightx = 0.0;
+                c.gridx = 0;
+                c.gridy = 1;
+                itemPanel.add(itemLabel, c);
+                jPanel6.add(itemPanel);
+
+
+            }
+        }
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
         jPanel6.setVisible(true);
@@ -520,6 +694,48 @@ public class homepageView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        ArrayList<ItemModel> itemsList = ItemController.getItems();
+        jPanel7.setLayout(new GridLayout(0,3));
+        JButton itemlist1 = null;
+        JPanel itemPanel =null;
+        JLabel itemLabel =null;
+        for(ItemModel item: itemsList) {
+            if (item.getCategory() == Enums.Category.Bread) {
+
+                itemPanel = new JPanel();
+                itemPanel.setLayout(new GridBagLayout());
+                GridBagConstraints c = new GridBagConstraints();
+                itemlist1 = new JButton();
+                itemLabel = new JLabel("<html>" + item.getName() + "<br>" + item.getPrice()+ "</html>");
+
+                ImageIcon imageIcon = new ImageIcon(item.getImagePath()); // load the image to a imageIcon
+                Image image = imageIcon.getImage(); // transform it
+                Image newimg = image.getScaledInstance(120, 120,  Image.SCALE_FAST); // scale it the smooth way
+                imageIcon = new ImageIcon(newimg);  // transform it back
+                itemlist1.setIcon(imageIcon); // NOI18N
+                itemlist1.setName(String.valueOf(item.getItemID()));
+                itemlist1.setBorder(null);
+                itemlist1.setBorderPainted(false);
+                itemlist1.setContentAreaFilled(false);
+                itemlist1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+                c.fill = GridBagConstraints.BOTH;
+                c.ipady = 40;      //make this component tall
+                c.weightx = 0.0;
+                c.gridwidth = 3;
+                c.gridx = 0;
+                c.gridy = 0;
+                itemPanel.add(itemlist1, c);
+
+                c.fill = GridBagConstraints.CENTER;
+                c.weightx = 0.0;
+                c.gridx = 0;
+                c.gridy = 1;
+                itemPanel.add(itemLabel, c);
+                jPanel7.add(itemPanel);
+
+
+            }
+        }
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);
@@ -531,6 +747,48 @@ public class homepageView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        ArrayList<ItemModel> itemsList = ItemController.getItems();
+        jPanel8.setLayout(new GridLayout(0,3));
+        JButton itemlist1 = null;
+        JPanel itemPanel =null;
+        JLabel itemLabel =null;
+        for(ItemModel item: itemsList) {
+            if (item.getCategory() == Enums.Category.Bread) {
+
+                itemPanel = new JPanel();
+                itemPanel.setLayout(new GridBagLayout());
+                GridBagConstraints c = new GridBagConstraints();
+                itemlist1 = new JButton();
+                itemLabel = new JLabel("<html>" + item.getName() + "<br>" + item.getPrice()+ "</html>");
+
+                ImageIcon imageIcon = new ImageIcon(item.getImagePath()); // load the image to a imageIcon
+                Image image = imageIcon.getImage(); // transform it
+                Image newimg = image.getScaledInstance(120, 120,  Image.SCALE_FAST); // scale it the smooth way
+                imageIcon = new ImageIcon(newimg);  // transform it back
+                itemlist1.setIcon(imageIcon); // NOI18N
+                itemlist1.setName(String.valueOf(item.getItemID()));
+                itemlist1.setBorder(null);
+                itemlist1.setBorderPainted(false);
+                itemlist1.setContentAreaFilled(false);
+                itemlist1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+                c.fill = GridBagConstraints.BOTH;
+                c.ipady = 40;      //make this component tall
+                c.weightx = 0.0;
+                c.gridwidth = 3;
+                c.gridx = 0;
+                c.gridy = 0;
+                itemPanel.add(itemlist1, c);
+
+                c.fill = GridBagConstraints.CENTER;
+                c.weightx = 0.0;
+                c.gridx = 0;
+                c.gridy = 1;
+                itemPanel.add(itemLabel, c);
+                jPanel8.add(itemPanel);
+
+
+            }
+        }
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);
@@ -542,6 +800,48 @@ public class homepageView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        ArrayList<ItemModel> itemsList = ItemController.getItems();
+        jPanel9.setLayout(new GridLayout(0,3));
+        JButton itemlist1 = null;
+        JPanel itemPanel =null;
+        JLabel itemLabel =null;
+        for(ItemModel item: itemsList) {
+            if (item.getCategory() == Enums.Category.Bread) {
+
+                itemPanel = new JPanel();
+                itemPanel.setLayout(new GridBagLayout());
+                GridBagConstraints c = new GridBagConstraints();
+                itemlist1 = new JButton();
+                itemLabel = new JLabel("<html>" + item.getName() + "<br>" + item.getPrice()+ "</html>");
+
+                ImageIcon imageIcon = new ImageIcon(item.getImagePath()); // load the image to a imageIcon
+                Image image = imageIcon.getImage(); // transform it
+                Image newimg = image.getScaledInstance(120, 120,  Image.SCALE_FAST); // scale it the smooth way
+                imageIcon = new ImageIcon(newimg);  // transform it back
+                itemlist1.setIcon(imageIcon); // NOI18N
+                itemlist1.setName(String.valueOf(item.getItemID()));
+                itemlist1.setBorder(null);
+                itemlist1.setBorderPainted(false);
+                itemlist1.setContentAreaFilled(false);
+                itemlist1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+                c.fill = GridBagConstraints.BOTH;
+                c.ipady = 40;      //make this component tall
+                c.weightx = 0.0;
+                c.gridwidth = 3;
+                c.gridx = 0;
+                c.gridy = 0;
+                itemPanel.add(itemlist1, c);
+
+                c.fill = GridBagConstraints.CENTER;
+                c.weightx = 0.0;
+                c.gridx = 0;
+                c.gridy = 1;
+                itemPanel.add(itemLabel, c);
+                jPanel9.add(itemPanel);
+
+
+            }
+        }
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);
@@ -556,12 +856,46 @@ public class homepageView extends javax.swing.JFrame {
         ArrayList<ItemModel> itemsList = ItemController.getItems();
         jPanel10.setLayout(new GridLayout(0,3));
         JButton itemlist1 = null;
+        JPanel itemPanel =null;
+        JLabel itemLabel =null;
         for(ItemModel item: itemsList) {
             if (item.getCategory() == Enums.Category.Bread) {
+
+                itemPanel = new JPanel();
+                itemPanel.setLayout(new GridBagLayout());
+                GridBagConstraints c = new GridBagConstraints();
                 itemlist1 = new JButton();
-                itemlist1.setIcon(new ImageIcon(item.getImagePath())); // NOI18N
+                itemLabel = new JLabel("<html>" + item.getName() + "<br>" + item.getPrice()+ "</html>");
+
+                String imagePath = item.getImagePath();
+                ImageIcon imageIcon = new ImageIcon(item.getImagePath()); // load the image to a imageIcon
+                Image image = imageIcon.getImage(); // transform it
+                Image newimg = image.getScaledInstance(120, 120,  Image.SCALE_FAST); // scale it the smooth way
+                imageIcon = new ImageIcon(newimg);  // transform it back
+
+                itemlist1.setIcon(imageIcon); // NOI18N
                 itemlist1.setName(String.valueOf(item.getItemID()));
-                jPanel10.add(itemlist1);
+                itemlist1.setBorder(null);
+                itemlist1.setBorderPainted(false);
+                itemlist1.setContentAreaFilled(false);
+                itemlist1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+
+                c.fill = GridBagConstraints.BOTH;
+                c.ipady = 40;      //make this component tall
+                c.weightx = 0.0;
+                c.gridwidth = 3;
+                c.gridx = 0;
+                c.gridy = 0;
+                itemPanel.add(itemlist1, c);
+
+                c.fill = GridBagConstraints.CENTER;
+                c.weightx = 0.0;
+                c.gridx = 0;
+                c.gridy = 1;
+                itemPanel.add(itemLabel, c);
+                jPanel10.add(itemPanel);
+
+
             }
         }
         jPanel4.setVisible(false);
@@ -573,6 +907,15 @@ public class homepageView extends javax.swing.JFrame {
         jPanel10.setVisible(true);
         jPanel11.setVisible(false);
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private Image getScaledImage(Image srcImg, int w, int h){
+        BufferedImage resizedImg = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2 = resizedImg.createGraphics();
+        g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+        g2.drawImage(srcImg, 0, 0, w, h, null);
+        g2.dispose();
+        return resizedImg;
+    }
 
     /**
      * @param args the command line arguments
