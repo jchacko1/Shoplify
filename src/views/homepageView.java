@@ -9,6 +9,7 @@ package views;
 
 import controllers.ImageController;
 import controllers.ItemController;
+import DataAccess.*;
 import models.Enums;
 import models.ItemModel;
 
@@ -461,8 +462,6 @@ public class homepageView extends javax.swing.JFrame {
         JButton itemlist1 = null;
         JPanel itemPanel =null;
         JLabel itemLabel =null;
-        ImageIcon imageIcon = null;
-//        for(int )
         for(ItemModel item: itemsList) {
             if (item.getCategory() == Enums.Category.Meat) {
 
@@ -472,17 +471,9 @@ public class homepageView extends javax.swing.JFrame {
                 itemlist1 = new JButton();
                 itemLabel = new JLabel("<html>" + item.getName() + "<br>" + item.getPrice()+ "</html>");
 
-
-
-                imageIcon = new ImageIcon(item.getImagePath()); // load the image to a imageIcon
+                ImageIcon imageIcon = new ImageIcon(item.getImagePath()); // load the image to a imageIcon
                 Image image = imageIcon.getImage(); // transform it
-                Image Image = null;
-                try {
-                    Image = ImageIO.read(getClass().getResource(item.getImagePath()));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                Image newimg = Image.getScaledInstance(120, 120,  Image.SCALE_FAST); // scale it the smooth way
+                Image newimg = image.getScaledInstance(120, 120,  Image.SCALE_FAST); // scale it the smooth way
                 imageIcon = new ImageIcon(newimg);  // transform it back
                 itemlist1.setIcon(imageIcon); // NOI18N
                 itemlist1.setName(String.valueOf(item.getItemID()));
@@ -531,7 +522,7 @@ public class homepageView extends javax.swing.JFrame {
         JPanel itemPanel =null;
         JLabel itemLabel =null;
         for(ItemModel item: itemsList) {
-            if (item.getCategory() == Enums.Category.Bread) {
+            if (item.getCategory() == Enums.Category.Dairy) {
 
                 itemPanel = new JPanel();
                 itemPanel.setLayout(new GridBagLayout());
@@ -549,6 +540,7 @@ public class homepageView extends javax.swing.JFrame {
                 itemlist1.setBorderPainted(false);
                 itemlist1.setContentAreaFilled(false);
                 itemlist1.setMargin(new java.awt.Insets(0, 0, 0, 0));
+
                 c.fill = GridBagConstraints.BOTH;
                 c.ipady = 40;      //make this component tall
                 c.weightx = 0.0;
@@ -588,48 +580,7 @@ public class homepageView extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        ArrayList<ItemModel> itemsList = ItemController.getItems();
-        jPanel11.setLayout(new GridLayout(0,3));
-        JButton itemlist1 = null;
-        JPanel itemPanel =null;
-        JLabel itemLabel =null;
-        for(ItemModel item: itemsList) {
-            if (item.getCategory() == Enums.Category.Bread) {
 
-                itemPanel = new JPanel();
-                itemPanel.setLayout(new GridBagLayout());
-                GridBagConstraints c = new GridBagConstraints();
-                itemlist1 = new JButton();
-                itemLabel = new JLabel("<html>" + item.getName() + "<br>" + item.getPrice()+ "</html>");
-
-                ImageIcon imageIcon = new ImageIcon(item.getImagePath()); // load the image to a imageIcon
-                Image image = imageIcon.getImage(); // transform it
-                Image newimg = image.getScaledInstance(120, 120,  Image.SCALE_FAST); // scale it the smooth way
-                imageIcon = new ImageIcon(newimg);  // transform it back
-                itemlist1.setIcon(imageIcon); // NOI18N
-                itemlist1.setName(String.valueOf(item.getItemID()));
-                itemlist1.setBorder(null);
-                itemlist1.setBorderPainted(false);
-                itemlist1.setContentAreaFilled(false);
-                itemlist1.setMargin(new java.awt.Insets(0, 0, 0, 0));
-                c.fill = GridBagConstraints.BOTH;
-                c.ipady = 40;      //make this component tall
-                c.weightx = 0.0;
-                c.gridwidth = 3;
-                c.gridx = 0;
-                c.gridy = 0;
-                itemPanel.add(itemlist1, c);
-
-                c.fill = GridBagConstraints.CENTER;
-                c.weightx = 0.0;
-                c.gridx = 0;
-                c.gridy = 1;
-                itemPanel.add(itemLabel, c);
-                jPanel11.add(itemPanel);
-
-
-            }
-        }
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);
@@ -647,7 +598,7 @@ public class homepageView extends javax.swing.JFrame {
         JPanel itemPanel =null;
         JLabel itemLabel =null;
         for(ItemModel item: itemsList) {
-            if (item.getCategory() == Enums.Category.Bread) {
+            if (item.getCategory() == Enums.Category.Fruit) {
 
                 itemPanel = new JPanel();
                 itemPanel.setLayout(new GridBagLayout());
@@ -700,7 +651,7 @@ public class homepageView extends javax.swing.JFrame {
         JPanel itemPanel =null;
         JLabel itemLabel =null;
         for(ItemModel item: itemsList) {
-            if (item.getCategory() == Enums.Category.Bread) {
+            if (item.getCategory() == Enums.Category.Vegetables) {
 
                 itemPanel = new JPanel();
                 itemPanel.setLayout(new GridBagLayout());
@@ -753,7 +704,7 @@ public class homepageView extends javax.swing.JFrame {
         JPanel itemPanel =null;
         JLabel itemLabel =null;
         for(ItemModel item: itemsList) {
-            if (item.getCategory() == Enums.Category.Bread) {
+            if (item.getCategory() == Enums.Category.Drink) {
 
                 itemPanel = new JPanel();
                 itemPanel.setLayout(new GridBagLayout());
@@ -806,7 +757,7 @@ public class homepageView extends javax.swing.JFrame {
         JPanel itemPanel =null;
         JLabel itemLabel =null;
         for(ItemModel item: itemsList) {
-            if (item.getCategory() == Enums.Category.Bread) {
+            if (item.getCategory() == Enums.Category.Dessert) {
 
                 itemPanel = new JPanel();
                 itemPanel.setLayout(new GridBagLayout());
