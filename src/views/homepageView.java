@@ -527,13 +527,16 @@ public class homepageView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String searchString = jTextField1.getText();
-        ArrayList<ItemModel> searchList = SearchController.enterItemToSearch(searchString);
+        //String searchString = jTextField1.getText();
+        ArrayList<ItemModel> searchList = SearchController.enterItemToSearch("bread");
+
+
         jPanel2.setLayout(new GridLayout(0,3));
         JButton itemlist1 = null;
         JPanel itemPanel =null;
         JLabel itemLabel =null;
         for(ItemModel search: searchList) {
+                //System.out.println(search); -- only print out the address
                 itemPanel = new JPanel();
                 itemPanel.setLayout(new GridBagLayout());
                 GridBagConstraints c = new GridBagConstraints();
@@ -545,7 +548,7 @@ public class homepageView extends javax.swing.JFrame {
                 Image newimg = image.getScaledInstance(120, 120,  Image.SCALE_FAST); // scale it the smooth way
                 imageIcon = new ImageIcon(newimg);  // transform it back
                 itemlist1.setIcon(imageIcon); // NOI18N
-                itemlist1.setName(String.valueOf(search.getItemID()));
+                itemlist1.setName(String.valueOf(search.getName()));
                 itemlist1.setBorder(null);
                 itemlist1.setBorderPainted(false);
                 itemlist1.setContentAreaFilled(false);

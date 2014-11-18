@@ -110,7 +110,11 @@ public class subscriptionCartView extends javax.swing.JFrame {
         jButton3.setText("Normal Cart");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                try {
+                    jButton3ActionPerformed(evt);
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -153,7 +157,7 @@ public class subscriptionCartView extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) throws ClassNotFoundException {//GEN-FIRST:event_jButton3ActionPerformed
         shoppingCartView frame = new shoppingCartView();
         frame.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
