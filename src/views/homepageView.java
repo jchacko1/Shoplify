@@ -425,7 +425,7 @@ public class homepageView extends javax.swing.JFrame {
                     //System.out.println(button.toString());
                     System.out.println(i);
                     try {
-                        OrderController.addItemToOrder(1);
+                        OrderController.addItemToOrder(i);
                     } catch (ClassNotFoundException e1) {
                         e1.printStackTrace();
                     }
@@ -525,7 +525,7 @@ public class homepageView extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String searchString = jTextField1.getText();
         ArrayList<ItemModel> searchList = SearchController.enterItemToSearch(searchString);
-        jPanel5.setLayout(new GridLayout(0,3));
+        jPanel2.setLayout(new GridLayout(0,3));
         JButton itemlist1 = null;
         JPanel itemPanel =null;
         JLabel itemLabel =null;
@@ -560,9 +560,10 @@ public class homepageView extends javax.swing.JFrame {
                 c.gridx = 0;
                 c.gridy = 1;
                 itemPanel.add(itemLabel, c);
-                jPanel5.add(itemPanel);
+                jPanel2.add(itemPanel);
 
         }
+        jPanel2.setVisible(true);
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);
