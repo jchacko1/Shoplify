@@ -154,17 +154,17 @@
       <file leaf-file-name="AccountRepository.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DataAccess/AccountRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5196232" vertical-offset="2644" max-vertical-offset="3366">
-              <caret line="181" column="39" selection-start-line="181" selection-start-column="39" selection-end-line="181" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.35949764" vertical-offset="2508" max-vertical-offset="3315">
+              <caret line="167" column="36" selection-start-line="167" selection-start-column="36" selection-end-line="167" selection-end-column="36" />
               <folding>
-                <marker date="1416331239331" expanded="true" signature="848:998" placeholder="Insert into ..." />
-                <marker date="1416331239331" expanded="true" signature="1099:1125" placeholder="SELECT last_..." />
-                <marker date="1416331239331" expanded="true" signature="2321:2387" placeholder="Update Accou..." />
-                <marker date="1416331239331" expanded="true" signature="3370:3410" placeholder="SELECT * FRO..Account..." />
-                <marker date="1416331239331" expanded="true" signature="4893:4996" placeholder="SELECT * FRO..Account..." />
-                <marker date="1416331239331" expanded="true" signature="6317:6383" placeholder="SELECT * FRO..Account..." />
-                <marker date="1416331239331" expanded="true" signature="6317:6379" placeholder="SELECT * FRO..Account..." />
-                <marker date="1416331239331" expanded="true" signature="6317:6379" placeholder="SELECT * FRO..Account..." />
+                <marker date="1416333537108" expanded="true" signature="848:998" placeholder="Insert into ..." />
+                <marker date="1416333537108" expanded="true" signature="1099:1125" placeholder="SELECT last_..." />
+                <marker date="1416333537108" expanded="true" signature="2321:2387" placeholder="Update Accou..." />
+                <marker date="1416333537108" expanded="true" signature="3370:3410" placeholder="SELECT * FRO..Account..." />
+                <marker date="1416333537108" expanded="true" signature="4893:4996" placeholder="SELECT * FRO..Account..." />
+                <marker date="1416333537108" expanded="true" signature="6317:6383" placeholder="SELECT * FRO..Account..." />
+                <marker date="1416333537108" expanded="true" signature="6317:6379" placeholder="SELECT * FRO..Account..." />
+                <marker date="1416333537108" expanded="true" signature="6317:6379" placeholder="SELECT * FRO..Account..." />
               </folding>
             </state>
           </provider>
@@ -917,7 +917,7 @@
       <workItem from="1416280830066" duration="1436000" />
       <workItem from="1416282444416" duration="3035000" />
       <workItem from="1416317674133" duration="2419000" />
-      <workItem from="1416330850770" duration="389000" />
+      <workItem from="1416330850770" duration="1085000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1043,11 +1043,15 @@
       <created>1416281650769</created>
       <updated>1416281650769</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Refactored code to try to figure out if more than one Account exists for a username">
+      <created>1416331261102</created>
+      <updated>1416331261102</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159236000" />
+    <option name="totallyTimeSpent" value="159932000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1175,11 +1179,20 @@
     <MESSAGE value="Code to insert users and orders" />
     <MESSAGE value="Debugged adding item to order, creating order, and getting items on an order" />
     <MESSAGE value="Refactored names of Global variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored names of Global variables" />
+    <MESSAGE value="Refactored code to try to figure out if more than one Account exists for a username" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored code to try to figure out if more than one Account exists for a username" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DataAccess/AccountRepository.java</url>
+          <line>166</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1569,17 +1582,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataAccess/AccountRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5196232" vertical-offset="2644" max-vertical-offset="3366">
-          <caret line="181" column="39" selection-start-line="181" selection-start-column="39" selection-end-line="181" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.35949764" vertical-offset="2508" max-vertical-offset="3315">
+          <caret line="167" column="36" selection-start-line="167" selection-start-column="36" selection-end-line="167" selection-end-column="36" />
           <folding>
-            <marker date="1416331239331" expanded="true" signature="848:998" placeholder="Insert into ..." />
-            <marker date="1416331239331" expanded="true" signature="1099:1125" placeholder="SELECT last_..." />
-            <marker date="1416331239331" expanded="true" signature="2321:2387" placeholder="Update Accou..." />
-            <marker date="1416331239331" expanded="true" signature="3370:3410" placeholder="SELECT * FRO..Account..." />
-            <marker date="1416331239331" expanded="true" signature="4893:4996" placeholder="SELECT * FRO..Account..." />
-            <marker date="1416331239331" expanded="true" signature="6317:6383" placeholder="SELECT * FRO..Account..." />
-            <marker date="1416331239331" expanded="true" signature="6317:6379" placeholder="SELECT * FRO..Account..." />
-            <marker date="1416331239331" expanded="true" signature="6317:6379" placeholder="SELECT * FRO..Account..." />
+            <marker date="1416333537108" expanded="true" signature="848:998" placeholder="Insert into ..." />
+            <marker date="1416333537108" expanded="true" signature="1099:1125" placeholder="SELECT last_..." />
+            <marker date="1416333537108" expanded="true" signature="2321:2387" placeholder="Update Accou..." />
+            <marker date="1416333537108" expanded="true" signature="3370:3410" placeholder="SELECT * FRO..Account..." />
+            <marker date="1416333537108" expanded="true" signature="4893:4996" placeholder="SELECT * FRO..Account..." />
+            <marker date="1416333537108" expanded="true" signature="6317:6383" placeholder="SELECT * FRO..Account..." />
+            <marker date="1416333537108" expanded="true" signature="6317:6379" placeholder="SELECT * FRO..Account..." />
+            <marker date="1416333537108" expanded="true" signature="6317:6379" placeholder="SELECT * FRO..Account..." />
           </folding>
         </state>
       </provider>

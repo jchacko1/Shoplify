@@ -163,12 +163,9 @@ public class AccountRepository extends BaseRepository {
             stmt = c.createStatement();
             ResultSet rs = stmt.executeQuery( "SELECT * FROM Account WHERE UserName = " + '"' + userName + '"' +  ";" );
             int rowCount = rs.getRow();
-
-            //if(size == 1)
-            //{
                 //todo move this code up so we can use this for validation
                 while ( rs.next()) {
-                    if(rowCount == 1)
+                    if(rowCount == 0)
                     {
                         accountId = rs.getInt("AccountId");
                         userModelId = rs.getInt("UserModelId");
