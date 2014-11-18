@@ -195,7 +195,7 @@ public class subscriptionCartView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) throws ClassNotFoundException {//GEN-FIRST:event_jButton3ActionPerformed
-        shoppingCartView frame = new shoppingCartView();
+       shoppingCartView frame = new shoppingCartView();
         frame.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 

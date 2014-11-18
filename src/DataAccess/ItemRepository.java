@@ -140,8 +140,8 @@ public class ItemRepository extends BaseRepository {
                 imagePath = rs.getString("ImagePath");
 
                 //Add items from into list;
-                System.out.println( "ItemName = " + itemName + "ItemId = " + itemId + "Price = " + price + "Quantity = " + quantity + "Description = " + description + "Category" + category + "Shopping Cart Item id = "+ shoppingCartItemId + "Image path = " + imagePath );
-                System.out.println("ArrayList size  = " + items.size() + "Category Id = " + category);
+               // System.out.println( "ItemName = " + itemName + "ItemId = " + itemId + "Price = " + price + "Quantity = " + quantity + "Description = " + description + "Category" + category + "Shopping Cart Item id = "+ shoppingCartItemId + "Image path = " + imagePath );
+               // System.out.println("ArrayList size  = " + items.size() + "Category Id = " + category);
                 ItemModel itemModel = new ItemModel(itemId,itemName,price,quantity,description,Enums.Category.values()[category],shoppingCartItemId,imagePath);
                 items.add(itemModel);
 

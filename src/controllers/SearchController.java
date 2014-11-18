@@ -18,7 +18,7 @@ public class SearchController {
     private static ItemManager _itemManager = new ItemManager();
 
     public static ArrayList<ItemModel> enterItemToSearch(String searchStr){
-        ArrayList<ItemModel> items = _searchManager.enterItemToSearch(searchStr);
+       // ArrayList<ItemModel> items = _searchManager.enterItemToSearch(searchStr);
         return  _searchManager.enterItemToSearch(searchStr);
     }
 
