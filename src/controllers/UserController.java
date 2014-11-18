@@ -16,7 +16,8 @@ public class UserController {
 
     public static models.UserModel getUser(int userId)
     {
-        return _userManager.getUser(userId);
+        return
+                _userManager.getUser(userId);
     }
 
     public static RegisteredUserModel createRegisteredUser(String firstName, String lastName, String dateOfBirth,String gender,int accountId, String address,String email, String phoneNumber, int securityQuestionId, String securityAnswer)

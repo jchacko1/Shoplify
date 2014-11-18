@@ -45,7 +45,7 @@ public class AccountManager {
     {   AccountModel accountModel =  _accountService.getAccountFromUserName(userName);
         if(accountModel != null)
         {
-            UserModel userModel = UserController.getUser(accountModel.getUserId());
+            UserModel userModel = UserController.getUser(accountModel.getAccountUserModelId());
             RegisteredUserModel registeredUserModel = null;
             if(userModel.getUserType() == Enums.UserType.REGISTERED || userModel.getUserType() == Enums.UserType.SUBSCRIPTION)
             {
