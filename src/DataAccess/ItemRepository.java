@@ -11,6 +11,7 @@ import java.util.ArrayList;
  */
 public class ItemRepository extends BaseRepository {
 
+    //todo remove this if we dont need it anymore
     private static final int size = Enums.Category.values().length;
 
     public ItemModel getItem(int itemId)
@@ -41,7 +42,7 @@ public class ItemRepository extends BaseRepository {
                 description = rs.getString("Description");
                 categoryId = rs.getInt("CategoryId");
                 shoppingCartItemId = rs.getInt("ShoppingCartItemId");
-                imagePath = rs.getString("ItemPath");
+                imagePath = rs.getString("ImagePath");
                 System.out.println( "ItemName = " + itemName );
             }
             rs.close();
@@ -54,7 +55,7 @@ public class ItemRepository extends BaseRepository {
         System.out.println("Operation done successfully");
         if(itemName != null)
         {
-            return new ItemModel(itemId,itemName,price,quantity,description, Enums.Category.values()[size],shoppingCartItemId,imagePath);  //todo need to get the item from the database
+            return new ItemModel(itemId,itemName,price,quantity,description, Enums.Category.values()[categoryId],shoppingCartItemId,imagePath);  //todo need to get the item from the database
         }
         return null;
     }

@@ -14,6 +14,11 @@ public class OrderController {
     private static OrderManager _orderManager = new OrderManager();
 
     public static OrderModel createOrder() throws ClassNotFoundException {
+        if(Global.currentAccount == null)
+        {
+            //todo remove this code
+            Global.currentAccount = AccountController.getAccountWithLogin("BholaRules","ImpossibleExams");
+        }
         OrderModel orderModel = _orderManager.createOrder(0.00,0.00,0.00,Global.currentAccount.getUserId(),0.00,0,0.00);
         return  orderModel;
     }
