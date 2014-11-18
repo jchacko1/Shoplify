@@ -527,8 +527,8 @@ public class homepageView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //String searchString = jTextField1.getText();
-        ArrayList<ItemModel> searchList = SearchController.enterItemToSearch("bread");
+        String searchString = jTextField1.getText();
+        ArrayList<ItemModel> searchList = SearchController.enterItemToSearch(searchString);
 
 
         jPanel2.setLayout(new GridLayout(0,3));
@@ -541,9 +541,13 @@ public class homepageView extends javax.swing.JFrame {
                 itemPanel.setLayout(new GridBagLayout());
                 GridBagConstraints c = new GridBagConstraints();
                 itemlist1 = new JButton();
+
                 itemLabel = new JLabel("<html>" + search.getName() + "<br>" + search.getPrice()+ "</html>");
-                System.out.println(search.getImageName());
+                System.out.println(search.getName());
+
                 ImageIcon imageIcon = new ImageIcon(search.getImagePath()); // load the image to a imageIcon
+                System.out.println(search.getImagePath());
+
                 Image image = imageIcon.getImage(); // transform it
                 Image newimg = image.getScaledInstance(120, 120,  Image.SCALE_FAST); // scale it the smooth way
                 imageIcon = new ImageIcon(newimg);  // transform it back
@@ -570,6 +574,7 @@ public class homepageView extends javax.swing.JFrame {
                 jPanel2.add(itemPanel);
 
         }
+
         jPanel2.setVisible(true);
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
