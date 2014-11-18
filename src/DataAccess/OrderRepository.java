@@ -40,9 +40,8 @@ public class OrderRepository extends BaseRepository {
             c.setAutoCommit(true);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            stmt.executeUpdate( "INSERT INTO UserOrder(OrderTotal,Subtotal,Tax,UserId,DiscountAmount,IsSubscriptionOrder,ShippingFee) values(" + orderTotal + "," + subTotal + "," + tax + "," + userId + "," +discountAmount + "," +isSubscriptionOrder + "," + shippingFee  );
-            //ResultSet rs = stmt.executeUpdate( "INSERT INTO UserOrder(OrderTotal,Subtotal,Tax,UserId,DiscountAmount,IsSubscriptionOrder,ShippingFee) values(" + orderTotal + "," + subTotal + "," + tax + "," + userId + "," +discountAmount + "," +isSubscriptionOrder + "," + shippingFee  );
-            ResultSet rs = stmt.executeQuery("SELECT last_insert_rowid()");
+            stmt.executeUpdate( "INSERT INTO UserOrder(OrderTotal,Subtotal,Tax,UserId,DiscountAmount,IsSubscriptionOrder,ShippingFee) values(" + orderTotal + "," + subTotal + "," + tax + "," + userId + "," +discountAmount + "," +isSubscriptionOrder + "," + shippingFee + ");"  );
+            ResultSet rs = stmt.executeQuery("select max(orderid) from userorder");
             while ( rs.next() ) {
                 orderId = rs.getInt(1);
             }
@@ -68,28 +67,15 @@ public class OrderRepository extends BaseRepository {
         Connection c = null;
         Statement stmt = null;
         try {
-            System.out.println("begin Order create table try block");
+            System.out.println("begin add Item to Order table try block");
             Class.forName(getClassForName());
             c = DriverManager.getConnection(getConnectionString());
             c.setAutoCommit(true);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "INSERT INTO OrderItems(OrderId, ItemID) values(" + orderId + "," + itemId + ");");
-            while ( rs.next() ) {
-                //String  name = rs.getString("name");
-//                int age  = rs.getInt("age");
-//                String  address = rs.getString("address");
-//                float salary = rs.getFloat("salary");
-//                System.out.println( "NAME = " + name );
-//                System.out.println( "AGE = " + age );
-//                System.out.println( "ADDRESS = " + address );
-//                System.out.println( "SALARY = " + salary );
-//                System.out.println();
-            }
-            rs.close();
+            stmt.executeUpdate( "INSERT INTO OrderItems(OrderId, ItemID) values(" + orderId + "," + itemId + ");");
             stmt.close();
             c.close();
-
         } catch ( Exception e ) {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
             System.exit(0);
@@ -144,7 +130,7 @@ public class OrderRepository extends BaseRepository {
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "Select * OrderItems where OrderId = " + String.valueOf(orderId) + ";");
+            ResultSet rs = stmt.executeQuery( "Select * from OrderItems where OrderId = " + String.valueOf(orderId) + ";");
            while ( rs.next() ) {
                itemId  = rs.getInt("ItemId");
                 System.out.println( "Item = " + itemId );

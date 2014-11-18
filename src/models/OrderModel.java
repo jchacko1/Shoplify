@@ -32,6 +32,7 @@ public class OrderModel {
        _discountAmount = discountAmount;
        _isSubscriptionOrder = isSubscriptionOrder;
        _shippingFee = shippingFee;
+        _shoppingCart = new ShoppingCartModel();
     }
 
     public double getShippingFee()

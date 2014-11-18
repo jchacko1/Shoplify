@@ -124,9 +124,9 @@ public class AccountRepository extends BaseRepository {
             c = DriverManager.getConnection(getConnectionString());
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
-            String query =    "SELECT * FROM Account WHERE UserName = "+ '"' + login + '"' + " and Password = " + password + ";";
+            String query =    "SELECT * FROM Account WHERE UserName = "+ '"' + login + '"' + " and Password = " + '"' + password + '"' + ";";
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "SELECT * FROM Account WHERE UserName = " + '"' + login + '"' + " and Password = " + password + ";" );
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM Account WHERE UserName = " + '"' + login + '"' + " and Password = " + '"' + password + '"' + ";" );
             while ( rs.next() ) {
                 accountId = rs.getInt("AccountId");
                 userModelId = rs.getInt("UserModelId");

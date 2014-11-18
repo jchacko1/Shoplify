@@ -31,7 +31,7 @@ public class shoppingCartView extends javax.swing.JFrame {
         for(ItemModel item : itemsOnOrder) {
             //JLabel itemName = new JLabel(item.getName());
             //JLabel itemPrice = new JLabel(String.valueOf(item.getPrice()));
-
+            System.out.println("Item in Cart is: " + item.getName());
         }
 
     }
@@ -308,7 +308,11 @@ public class shoppingCartView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new shoppingCartView().setVisible(true);
+                try {
+                    new shoppingCartView().setVisible(true);
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
