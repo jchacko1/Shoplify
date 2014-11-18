@@ -9,6 +9,10 @@ import controllers.OrderController;
 import global.Global;
 import models.ItemModel;
 
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.util.*;
 
 /**
@@ -20,18 +24,14 @@ public class shoppingCartView extends javax.swing.JFrame {
     /**
      * Creates new form shoppingCartView
      */
+
+
+
+
     public shoppingCartView() throws ClassNotFoundException {
         initComponents();
 
-        OrderController.addItemToOrder(1);
 
-        ArrayList<ItemModel> itemsOnOrder =  OrderController.getItemsOnOrder(Global.CURRENT_ORDER.getOrderId());
-
-        for(ItemModel item : itemsOnOrder) {
-            //JLabel itemName = new JLabel(item.getName());
-            //JLabel itemPrice = new JLabel(String.valueOf(item.getPrice()));
-            System.out.println("Item in Cart is: " + item.getName());
-        }
 
     }
 
@@ -43,7 +43,7 @@ public class shoppingCartView extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents() throws ClassNotFoundException {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -67,54 +67,66 @@ public class shoppingCartView extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Shopping Cart"));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
+        OrderController.addItemToOrder(1);
+        OrderController.addItemToOrder(2);
+        OrderController.addItemToOrder(3);
+        OrderController.addItemToOrder(4);
+        OrderController.addItemToOrder(5);
+        OrderController.addItemToOrder(6);
+        OrderController.addItemToOrder(7);
+        OrderController.addItemToOrder(8);
+        OrderController.addItemToOrder(9);
+        OrderController.addItemToOrder(10);
+        OrderController.addItemToOrder(11);
+        OrderController.addItemToOrder(12);
+        OrderController.addItemToOrder(13);
+        OrderController.addItemToOrder(14);
+        OrderController.addItemToOrder(15);
+        OrderController.addItemToOrder(16);
+        OrderController.addItemToOrder(17);
+        OrderController.addItemToOrder(18);
+        OrderController.addItemToOrder(19);
+        OrderController.addItemToOrder(20);
+        OrderController.addItemToOrder(21);
+        OrderController.addItemToOrder(22);
+        OrderController.addItemToOrder(23);
+        OrderController.addItemToOrder(24);
+        OrderController.addItemToOrder(25);
+        OrderController.addItemToOrder(26);
+        OrderController.addItemToOrder(27);
+        OrderController.addItemToOrder(28);
+        OrderController.addItemToOrder(29);
+        OrderController.addItemToOrder(30);
 
-            },
-            new String [] {
-                "Item Name", "Price"
+        DefaultTableModel dtm = new DefaultTableModel(){
 
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                //all cells false
+                return false;
             }
+        };
+
+        String header[] = new String[]{"Item Name", "Price ($)"};
+
+        dtm.setColumnIdentifiers(header);
+        jTable1.setModel(dtm);
+
+        jTable1.getTableHeader().setReorderingAllowed(false);
+
+        ArrayList<ItemModel> itemsOnOrder =  OrderController.getItemsOnOrder(Global.CURRENT_ORDER.getOrderId());
+
+        for(ItemModel item : itemsOnOrder) {
+
+            //System.out.println("Item in Cart is: " + item.getName());
+
+                dtm.addRow(new Object[]{item.getName(), item.getPrice()});
+
+        }
 
 
 
-        ));
+
 
         jScrollPane2.setViewportView(jTable1);
 
@@ -140,7 +152,9 @@ public class shoppingCartView extends javax.swing.JFrame {
 
         jLabel2.setText("Subtotal:");
 
-        jLabel3.setText("$ Value");
+        String subOrderTotal = Double.toString(Global.CURRENT_ORDER.getSubTotal());
+
+        jLabel3.setText(subOrderTotal);
 
         jButton1.setText("Submit");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -151,11 +165,13 @@ public class shoppingCartView extends javax.swing.JFrame {
 
         jLabel4.setText("Tax:");
 
-        jLabel5.setText("$ Value");
+        String tax = Double.toString(Global.CURRENT_ORDER.getTax());
+        jLabel5.setText(tax);
 
         jLabel6.setText("Total:");
 
-        jLabel7.setText("$ Value");
+        String orderTotal = Double.toString(Global.CURRENT_ORDER.getOrderTotal());
+        jLabel7.setText(orderTotal);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -214,6 +230,11 @@ public class shoppingCartView extends javax.swing.JFrame {
         );
 
         jButton2.setText("Checkout");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Close");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -268,6 +289,11 @@ public class shoppingCartView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        checkoutView frame = new checkoutView();
+        frame.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -275,6 +301,7 @@ public class shoppingCartView extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         subscriptionCartView frame = new subscriptionCartView();
         frame.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
