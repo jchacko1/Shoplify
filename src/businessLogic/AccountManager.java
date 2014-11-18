@@ -2,6 +2,7 @@ package businessLogic;
 
 import DataAccess.AccountService;
 import DataAccess.ItemService;
+import controllers.AccountController;
 import controllers.ItemController;
 import controllers.UserController;
 import models.*;
@@ -45,7 +46,6 @@ public class AccountManager {
         if(accountModel != null)
         {
             UserModel userModel = UserController.getUser(accountModel.getUserId());
-            //todo probably dont need to cast into subscription since registered users have a password
             RegisteredUserModel registeredUserModel = null;
             if(userModel.getUserType() == Enums.UserType.REGISTERED || userModel.getUserType() == Enums.UserType.SUBSCRIPTION)
             {
