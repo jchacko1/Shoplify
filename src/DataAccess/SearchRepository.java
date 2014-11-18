@@ -14,14 +14,18 @@ import java.util.*;
 public class SearchRepository extends BaseRepository{
 
 
-  public ArrayList<SearchModel> getItems(){
+  public ArrayList<SearchModel> getSearchResult(String searchStr){
 
     ArrayList<SearchModel> items = new ArrayList<SearchModel>();
     String itemName ="";
     //Enums.Category category;
     int category;
     int itemId = 0;
-    String searchStr = "";
+
+    if(searchStr == itemName.substring(0,itemName.length())){
+
+    }
+
 
     Connection c = null;
     Statement stmt = null;
@@ -34,7 +38,7 @@ public class SearchRepository extends BaseRepository{
         System.out.println("Opened database successfully");
 
         stmt = c.createStatement();
-        ResultSet rs = stmt.executeQuery( "SELECT * FROM Item;");
+        ResultSet rs = stmt.executeQuery( "SELECT ItemId FROM Item;");
         while ( rs.next() ) {
 
             //TODO: keep search string or item name?

@@ -1,6 +1,7 @@
 package businessLogic;
 
 import DataAccess.ItemService;
+import controllers.ItemController;
 import global.Global;
 import models.Enums;
 import models.ItemModel;
@@ -30,10 +31,22 @@ public class SearchManager {
 
     /**
      * Enter the the itemName into search field
-     * @param searchModel
-     * @param itemModel
+     * @param searchStr
      */
-    public void enterItemToSearch(SearchModel searchModel,ItemModel itemModel) {
+    public ArrayList<ItemModel> enterItemToSearch(String searchStr) {
+        ArrayList<ItemModel> items = ItemController.getItems();
+        ArrayList<ItemModel> resultSet = new ArrayList<ItemModel>();
+        //String searchString = searchModel.getSearchStr().toLowerCase();
 
+        for(ItemModel item : items)
+        {
+            int index = item.getName().toLowerCase().indexOf(searchStr);
+            //add the item if we find the searchString in its name
+            if (item.getName().toLowerCase().indexOf(searchStr) > -1)
+            {
+             resultSet.add(item);
+            }
+        }
+        return resultSet;
     }
 }
