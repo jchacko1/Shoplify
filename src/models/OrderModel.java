@@ -1,5 +1,7 @@
 package models;
 
+import businessLogic.Utilities;
+
 import java.util.List;
 
 /**
@@ -25,13 +27,13 @@ public class OrderModel {
     public OrderModel(int orderId, double orderTotal, double subTotal, double tax, int loggedInUserId,double discountAmount, boolean isSubscriptionOrder, double shippingFee)
     {
        _orderId = orderId;
-        _orderTotal = orderTotal;
-        _subTotal = subTotal;
-        _tax = tax;
+        _orderTotal = Utilities.round(orderTotal, 2);
+        _subTotal = Utilities.round(subTotal, 2);
+        _tax = Utilities.round(tax, 2);
         _loggedInUserId = loggedInUserId;
-       _discountAmount = discountAmount;
+       _discountAmount = Utilities.round(discountAmount, 2);
        _isSubscriptionOrder = isSubscriptionOrder;
-       _shippingFee = shippingFee;
+       _shippingFee = Utilities.round(shippingFee, 2);
         _shoppingCart = new ShoppingCartModel();
     }
 
@@ -42,7 +44,7 @@ public class OrderModel {
 
     public void setShippingFee(double shippingFee)
     {
-       _shippingFee = shippingFee;
+       _shippingFee = Utilities.round(shippingFee, 2);
     }
 
     public double getDiscount()
@@ -52,7 +54,7 @@ public class OrderModel {
 
     public void setDiscount(double discountAmount)
     {
-        _discountAmount = discountAmount;
+        _discountAmount = Utilities.round(discountAmount, 2);
     }
 
     public double getOrderTotal()
@@ -62,7 +64,7 @@ public class OrderModel {
 
     public void setOrderTotal()
     {
-        _orderTotal = _subTotal + _tax - _discountAmount;
+       Utilities.round(_orderTotal = _subTotal + _tax - _discountAmount, 2);
     }
 
     public void setSubTotal(){
@@ -72,7 +74,7 @@ public class OrderModel {
             {
                 newSubtotal += item.getPrice();
             }
-            _subTotal = newSubtotal;
+            _subTotal = Utilities.round(newSubtotal, 2);;
         }
     }
 
@@ -87,7 +89,7 @@ public class OrderModel {
 
     public void setTax()
     {
-        _tax = _taxPercentage * _subTotal;
+       Utilities.round( _tax = _taxPercentage * _subTotal, 2);
     }
 
     public int getOrderId()

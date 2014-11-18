@@ -1,5 +1,7 @@
 package models;
 
+import businessLogic.Utilities;
+
 import java.util.ArrayList;
 
 /**
@@ -28,7 +30,7 @@ public class ItemModel {
     public ItemModel(int itemId, String itemName, double price, int quantity, String description, Enums.Category category, int shoppingCartItemId, String imagePath){
         this.itemId = itemId;
         this.itemName = itemName;
-        this.price = price;
+        this.price = Utilities.round(price, 2);;
         this.quantity = quantity;
         this.description = description;
         this.category = category;
@@ -50,7 +52,7 @@ public class ItemModel {
     public ItemModel(int itemId, String itemName, double price, int quantity, String description, int shoppingCartItemId, String imagePath){
         this.itemId = itemId;
         this.itemName = itemName;
-        this.price = price;
+        this.price = Utilities.round(price, 2);;
         this.quantity = quantity;
         this.description = description;
         //this.category = category;
@@ -75,7 +77,7 @@ public class ItemModel {
     public ItemModel(int itemId, String itemName, double price, int quantity, String description, Enums.Category category, int shoppingCartItemId, int imageId, String imageName){
         this.itemId = itemId;
         this.itemName = itemName;
-        this.price = price;
+        this.price = Utilities.round(price, 2);;
         this.quantity = quantity;
         this.description = description;
         this.category = category;
@@ -182,7 +184,7 @@ public class ItemModel {
     }
 
     public void setPrice(double price){
-        this.price = price;
+        this.price = Utilities.round(price, 2);;
     }
 
     public void setQuantity(int quantity){
