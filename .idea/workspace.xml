@@ -6,14 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/shoplify.db" afterPath="$PROJECT_DIR$/src/DataAccess/shoplify.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/AccountRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/AccountRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/ItemRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/ItemRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/AccountController.java" afterPath="$PROJECT_DIR$/src/controllers/AccountController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/global/Global.java" afterPath="$PROJECT_DIR$/src/global/Global.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/OrderController.java" afterPath="$PROJECT_DIR$/src/controllers/OrderController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/OrderModel.java" afterPath="$PROJECT_DIR$/src/models/OrderModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/OrderRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/OrderRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/homepageView.java" afterPath="$PROJECT_DIR$/src/views/homepageView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessLogic/OrderManager.java" afterPath="$PROJECT_DIR$/src/businessLogic/OrderManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/ReportRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/ReportRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessLogic/ShoppingCartManager.java" afterPath="$PROJECT_DIR$/src/businessLogic/ShoppingCartManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/UserController.java" afterPath="$PROJECT_DIR$/src/controllers/UserController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/shoppingCartView.java" afterPath="$PROJECT_DIR$/src/views/shoppingCartView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/subscriptionCartView.java" afterPath="$PROJECT_DIR$/src/views/subscriptionCartView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/signinPromptView.java" afterPath="$PROJECT_DIR$/src/views/signinPromptView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -93,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/src/businessLogic/OrderManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="799">
-              <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+              <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -115,14 +116,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shoppingCartView.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="shoppingCartView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/shoppingCartView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28282827" vertical-offset="257" max-vertical-offset="5559">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="5542">
+              <caret line="41" column="62" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Global.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/global/Global.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2520593" vertical-offset="0" max-vertical-offset="607">
+              <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -233,6 +244,7 @@
         <option value="$PROJECT_DIR$/src/DataAccess/OrderRepository.java" />
         <option value="db-console:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/" />
         <option value="$PROJECT_DIR$/src/views/shoppingCartView.java" />
+        <option value="$PROJECT_DIR$/src/global/Global.java" />
       </list>
     </option>
   </component>
@@ -310,10 +322,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -348,20 +356,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shoplify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -911,7 +905,7 @@
       <workItem from="1416166904020" duration="10085000" />
       <workItem from="1416192130310" duration="3239000" />
       <workItem from="1416195597434" duration="7834000" />
-      <workItem from="1416269957562" duration="2128000" />
+      <workItem from="1416269957562" duration="4109000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1025,11 +1019,15 @@
       <created>1416197213410</created>
       <updated>1416197213410</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Debugged adding item to order, creating order, and getting items on an order">
+      <created>1416272122936</created>
+      <updated>1416272122936</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148933000" />
+    <option name="totallyTimeSpent" value="150914000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1155,7 +1153,8 @@
     <MESSAGE value="Commented out example of how to login" />
     <MESSAGE value="homepage" />
     <MESSAGE value="Code to insert users and orders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code to insert users and orders" />
+    <MESSAGE value="Debugged adding item to order, creating order, and getting items on an order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debugged adding item to order, creating order, and getting items on an order" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1413,14 +1412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/global/Global.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/ItemModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="2625">
@@ -1553,7 +1544,7 @@
     <entry file="file://$PROJECT_DIR$/src/businessLogic/OrderManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="799">
-          <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+          <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -1568,11 +1559,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/shoppingCartView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28282827" vertical-offset="257" max-vertical-offset="5559">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="5542">
+          <caret line="41" column="62" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/global/Global.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2520593" vertical-offset="0" max-vertical-offset="607">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>

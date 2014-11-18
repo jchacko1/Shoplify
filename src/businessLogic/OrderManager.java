@@ -17,7 +17,7 @@ public class OrderManager {
         public void submitOrder(OrderModel order)
         {
             //remove the order from the Session so we can start a new order
-            Global.currentOrder = null;
+            Global.CURRENT_ORDER = null;
 
             //todo dont need to do anything to the database unless we add a column that shows the OrderStatus (completed, pending, etc)
               _orderService.submitOrder(order);
@@ -39,9 +39,9 @@ public class OrderManager {
 
         //update the current order in the Global session and in the database
         ItemModel itemToAdd = ItemController.getItem(itemId);
-        Global.currentOrder._shoppingCart.addItem(itemToAdd);
-        Global.currentOrder.updateAllPriceTotals();
-        updateOrder(Global.currentOrder);
+        Global.CURRENT_ORDER._shoppingCart.addItem(itemToAdd);
+        Global.CURRENT_ORDER.updateAllPriceTotals();
+        updateOrder(Global.CURRENT_ORDER);
     }
 
     public  ArrayList<ItemModel> getItemsOnOrder(int orderId)

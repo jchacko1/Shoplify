@@ -14,12 +14,12 @@ public class OrderController {
     private static OrderManager _orderManager = new OrderManager();
 
     public static OrderModel createOrder() throws ClassNotFoundException {
-        if(Global.currentAccount == null)
+        if(Global.CURRENT_ACCOUNT == null)
         {
             //todo remove this code
-            Global.currentAccount = AccountController.getAccountWithLogin("BholaRules","ImpossibleExams");
+            Global.CURRENT_ACCOUNT = AccountController.getAccountWithLogin("BholaRules","ImpossibleExams");
         }
-        OrderModel orderModel = _orderManager.createOrder(0.00,0.00,0.00,Global.currentAccount.getUserId(),0.00,0,0.00);
+        OrderModel orderModel = _orderManager.createOrder(0.00,0.00,0.00,Global.CURRENT_ACCOUNT.getUserId(),0.00,0,0.00);
         return  orderModel;
     }
 
@@ -33,11 +33,11 @@ public class OrderController {
     }
 
     public static void addItemToOrder(int itemId) throws ClassNotFoundException {
-        if(Global.currentOrder == null)
+        if(Global.CURRENT_ORDER == null)
         {
-            Global.currentOrder = createOrder();
+            Global.CURRENT_ORDER = createOrder();
         }
-        _orderManager.addItemToOrder(Global.currentOrder.getOrderId(),itemId);
+        _orderManager.addItemToOrder(Global.CURRENT_ORDER.getOrderId(),itemId);
     }
 
     public static ArrayList<ItemModel> getItemsOnOrder(int orderId)

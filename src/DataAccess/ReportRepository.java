@@ -26,7 +26,7 @@ public class ReportRepository extends BaseRepository {
     public ReportModel checkAdminUser() {
         ReportModel model = new ReportModel();
 
-        if(Global.currentAccount.getUserModel().getUserType() == Enums.UserType.ADMIN)
+        if(Global.CURRENT_ACCOUNT.getUserModel().getUserType() == Enums.UserType.ADMIN)
         {
             //your code here
 

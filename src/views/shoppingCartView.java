@@ -9,7 +9,6 @@ import controllers.OrderController;
 import global.Global;
 import models.ItemModel;
 
-import javax.swing.*;
 import java.util.*;
 
 /**
@@ -26,7 +25,7 @@ public class shoppingCartView extends javax.swing.JFrame {
 
         OrderController.addItemToOrder(1);
 
-        ArrayList<ItemModel> itemsOnOrder =  OrderController.getItemsOnOrder(Global.currentOrder.getOrderId());
+        ArrayList<ItemModel> itemsOnOrder =  OrderController.getItemsOnOrder(Global.CURRENT_ORDER.getOrderId());
 
         for(ItemModel item : itemsOnOrder) {
             //JLabel itemName = new JLabel(item.getName());

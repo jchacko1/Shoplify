@@ -4,8 +4,6 @@ import businessLogic.AccountManager;
 import global.Global;
 import models.*;
 
-import java.util.ArrayList;
-
 /**
  * Created by jmarquez on 11/2/2014.
  */
@@ -25,7 +23,7 @@ public class AccountController {
                 accountModel.setUserModel(subscriptionUserModel);
             }
         }
-        Global.currentAccount = accountModel;
+        Global.CURRENT_ACCOUNT = accountModel;
         return accountModel;
     }
 

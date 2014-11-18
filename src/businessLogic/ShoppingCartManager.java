@@ -52,17 +52,17 @@ public class ShoppingCartManager {
                 }
                 break;
             case OFFORDER:
-                amountToDiscountOffOrder = isDiscountInPercent? Global.currentOrder.getOrderTotal() * discountAmountValue : Global.currentOrder.getOrderTotal() - discountAmountValue;
+                amountToDiscountOffOrder = isDiscountInPercent? Global.CURRENT_ORDER.getOrderTotal() * discountAmountValue : Global.CURRENT_ORDER.getOrderTotal() - discountAmountValue;
                 orderEligibleForDiscount = true;
                 break;
             case FREESHIPPING:
-                amountToDiscountOffOrder = Global.currentOrder.getShippingFee();
+                amountToDiscountOffOrder = Global.CURRENT_ORDER.getShippingFee();
                 orderEligibleForDiscount = true;
                 break;
         }
         if(orderEligibleForDiscount) {
-            Global.currentOrder.setDiscount(amountToDiscountOffOrder);
-            Global.currentOrder.updateAllPriceTotals();
+            Global.CURRENT_ORDER.setDiscount(amountToDiscountOffOrder);
+            Global.CURRENT_ORDER.updateAllPriceTotals();
         }
         return orderEligibleForDiscount;
     }
@@ -70,6 +70,6 @@ public class ShoppingCartManager {
     public void updateTotals(ShoppingCartModel shoppingCart)
     {
         //update all the prices on the order
-        Global.currentOrder.updateAllPriceTotals();
+        Global.CURRENT_ORDER.updateAllPriceTotals();
     }
 }

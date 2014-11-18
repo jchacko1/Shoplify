@@ -5,7 +5,6 @@
  */
 package views;
 
-import controllers.AccountController;
 import global.Global;
 import models.AccountModel;
 
@@ -36,7 +35,7 @@ public class signinPromptView extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
-        AccountModel accountModel = Global.currentAccount; //AccountController.getAccountWithLogin(username,password);
+        AccountModel accountModel = Global.CURRENT_ACCOUNT; //AccountController.getAccountWithLogin(username,password);
 
         String userFirstName = accountModel.getUserModel().getFirstName();
 

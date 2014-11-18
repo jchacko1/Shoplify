@@ -43,12 +43,12 @@ public class UserController {
                 _itemManager.addItemToShoppingList(itemId, subscriptionId);
             }
 
-            if(Global.currentAccount.getUserModel().getUserId() == userId)
+            if(Global.CURRENT_ACCOUNT.getUserModel().getUserId() == userId)
             {
                 //update the current User with the changes in this method
                 subscriptionUserModel.setSubscriptionId(subscriptionId);
                 subscriptionUserModel.setShoppingList(ItemController.getShoppingList(subscriptionId));
-                Global.currentAccount.setUserModel(subscriptionUserModel);
+                Global.CURRENT_ACCOUNT.setUserModel(subscriptionUserModel);
             }
         }
     }
@@ -68,11 +68,11 @@ public class UserController {
                 return;
             }
 
-            if(Global.currentAccount.getUserModel().getUserId() == userId)
+            if(Global.CURRENT_ACCOUNT.getUserModel().getUserId() == userId)
             {
                 //update the current User with the changes in this method
                 subscriptionUserModel.setShoppingList(ItemController.getShoppingList(subscriptionId));
-                Global.currentAccount.setUserModel(subscriptionUserModel);
+                Global.CURRENT_ACCOUNT.setUserModel(subscriptionUserModel);
             }
         }
     }
@@ -82,7 +82,7 @@ public class UserController {
                      if(userId < 0)
                          {
                              //get the current User
-                             return _itemManager.getOrderItemsHistory(Global.currentAccount.getUserId());
+                             return _itemManager.getOrderItemsHistory(Global.CURRENT_ACCOUNT.getUserId());
                          }
                      else
                          {
