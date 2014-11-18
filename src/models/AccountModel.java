@@ -42,6 +42,11 @@ public class  AccountModel {
         return _userModelId;
     }
 
+    public String getPassword()
+    {
+        return _password;
+    }
+
     //@precondition: the method has been called
     //@postcondition: returns user account’s history
     public String getHistory() {
