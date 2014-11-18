@@ -67,6 +67,8 @@ public class shoppingCartView extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Shopping Cart"));
 
+        /*
+
         OrderController.addItemToOrder(1);
         OrderController.addItemToOrder(2);
         OrderController.addItemToOrder(3);
@@ -97,6 +99,8 @@ public class shoppingCartView extends javax.swing.JFrame {
         OrderController.addItemToOrder(28);
         OrderController.addItemToOrder(29);
         OrderController.addItemToOrder(30);
+
+        */
 
         DefaultTableModel dtm = new DefaultTableModel(){
 
