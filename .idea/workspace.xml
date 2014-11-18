@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/passwordPromptView.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/forgetPasswordView.java" afterPath="$PROJECT_DIR$/src/views/forgetPasswordView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/shoplify.db" afterPath="$PROJECT_DIR$/src/DataAccess/shoplify.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/registrationView.java" afterPath="$PROJECT_DIR$/src/views/registrationView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -85,28 +85,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="forgetPasswordView.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/forgetPasswordView.java">
+      <file leaf-file-name="registrationView.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/registrationView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="7.0100503" vertical-offset="0" max-vertical-offset="3885">
-              <caret line="186" column="14" selection-start-line="186" selection-start-column="14" selection-end-line="186" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#12975#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#493#494#0" expanded="true" />
-                <element signature="e#525#526#0" expanded="true" />
-                <element signature="e#746#776#0" expanded="true" />
-                <element signature="e#1694#1878#0" expanded="true" />
-                <element signature="e#1867#1868#0" expanded="true" />
-                <element signature="e#1920#2104#0" expanded="true" />
-                <element signature="e#2093#2094#0" expanded="true" />
-                <element signature="e#6283#6464#0" expanded="true" />
-                <element signature="e#6453#6454#0" expanded="true" />
-                <element signature="e#6539#6720#0" expanded="true" />
-                <element signature="e#6709#6710#0" expanded="true" />
-                <element signature="e#12365#12496#0" expanded="true" />
-                <element signature="e#12485#12486#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="6.6909547" vertical-offset="2002" max-vertical-offset="6165">
+              <caret line="365" column="9" selection-start-line="365" selection-start-column="9" selection-end-line="365" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,15 +119,15 @@
         <option value="$PROJECT_DIR$/src/views/signinPromptView.java" />
         <option value="$PROJECT_DIR$/src/views/loginView.java" />
         <option value="$PROJECT_DIR$/src/models/SecurityQuestionsModel.java" />
-        <option value="$PROJECT_DIR$/src/views/registrationView.java" />
         <option value="dbtable:/17ed7fbf/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Item" />
         <option value="$PROJECT_DIR$/src/views/homepageView.java" />
         <option value="$PROJECT_DIR$/src/views/subscriptionCartView.java" />
         <option value="$PROJECT_DIR$/src/views/shoppingCartView.java" />
-        <option value="dbtable:/17ed7fbf/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Account" />
         <option value="dbtable:/17ed7fbf/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..User" />
         <option value="$PROJECT_DIR$/src/views/passwordPromptView.java" />
         <option value="$PROJECT_DIR$/src/views/forgetPasswordView.java" />
+        <option value="dbtable:/17ed7fbf/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Account" />
+        <option value="$PROJECT_DIR$/src/views/registrationView.java" />
       </list>
     </option>
   </component>
@@ -503,7 +487,7 @@
       </UpdatedFiles>
     </UpdateInfo>
   </component>
-  <component name="RunManager" selected="Application.forgetPasswordView">
+  <component name="RunManager" selected="Application.registrationView">
     <configuration default="false" name="registrationView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -570,28 +554,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="subscriptionCartView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="views.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="views.subscriptionCartView" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Shoplify" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="forgetPasswordView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -619,6 +581,28 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Cover" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="loginView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="views.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="views.loginView" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Shoplify" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -860,16 +844,16 @@
       <item index="0" class="java.lang.String" itemvalue="Application.registrationView" />
       <item index="1" class="java.lang.String" itemvalue="Application.shoppingCartView" />
       <item index="2" class="java.lang.String" itemvalue="Application.homepageView" />
-      <item index="3" class="java.lang.String" itemvalue="Application.subscriptionCartView" />
-      <item index="4" class="java.lang.String" itemvalue="Application.forgetPasswordView" />
+      <item index="3" class="java.lang.String" itemvalue="Application.forgetPasswordView" />
+      <item index="4" class="java.lang.String" itemvalue="Application.loginView" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.forgetPasswordView" />
-        <item index="1" class="java.lang.String" itemvalue="Application.registrationView" />
-        <item index="2" class="java.lang.String" itemvalue="Application.homepageView" />
-        <item index="3" class="java.lang.String" itemvalue="Application.shoppingCartView" />
-        <item index="4" class="java.lang.String" itemvalue="Application.subscriptionCartView" />
+        <item index="0" class="java.lang.String" itemvalue="Application.registrationView" />
+        <item index="1" class="java.lang.String" itemvalue="Application.loginView" />
+        <item index="2" class="java.lang.String" itemvalue="Application.forgetPasswordView" />
+        <item index="3" class="java.lang.String" itemvalue="Application.homepageView" />
+        <item index="4" class="java.lang.String" itemvalue="Application.shoppingCartView" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -937,7 +921,7 @@
       <workItem from="1416272878257" duration="4487000" />
       <workItem from="1416279335262" duration="3643000" />
       <workItem from="1416323961467" duration="4209000" />
-      <workItem from="1416333243325" duration="3942000" />
+      <workItem from="1416333243325" duration="4878000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1071,11 +1055,15 @@
       <created>1416329056353</created>
       <updated>1416329056353</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="change something">
+      <created>1416337390695</created>
+      <updated>1416337390695</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166038000" />
+    <option name="totallyTimeSpent" value="166974000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1106,7 +1094,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18659128" sideWeight="0.5032258" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359308" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18659128" sideWeight="0.4967742" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18659128" sideWeight="0.4967742" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1510,32 +1498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/loginView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2209" max-vertical-offset="3750">
-          <caret line="177" column="13" selection-start-line="177" selection-start-column="13" selection-end-line="177" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/registrationView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="994" max-vertical-offset="6060">
-          <caret line="117" column="149" selection-start-line="117" selection-start-column="149" selection-end-line="117" selection-end-column="183" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/17ed7fbf/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Account">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/AccountModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2736" max-vertical-offset="3390">
@@ -1591,7 +1553,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/forgetPasswordView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.0100503" vertical-offset="0" max-vertical-offset="3885">
+        <state vertical-scroll-proportion="-107.30769" vertical-offset="0" max-vertical-offset="3885">
           <caret line="186" column="14" selection-start-line="186" selection-start-column="14" selection-end-line="186" selection-end-column="14" />
           <folding>
             <element signature="e#0#12975#0" expanded="true" />
@@ -1610,6 +1572,33 @@
             <element signature="e#12365#12496#0" expanded="true" />
             <element signature="e#12485#12486#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/loginView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.09434" vertical-offset="0" max-vertical-offset="3750">
+          <caret line="177" column="13" selection-start-line="177" selection-start-column="13" selection-end-line="177" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/17ed7fbf/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Account">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/registrationView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.6909547" vertical-offset="2002" max-vertical-offset="6165">
+          <caret line="365" column="9" selection-start-line="365" selection-start-column="9" selection-end-line="365" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>

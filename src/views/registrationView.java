@@ -352,13 +352,20 @@ public class registrationView extends javax.swing.JFrame {
         int securityQuestionId = securityQuestionsModel.getSecurityId(securityQuestion);
 
 
+        if (!jTextField1.getText().equals("") && !jTextField2.getText().equals("")
+        && !jTextField10.getText().equals("") && !jTextField11.getText().equals("")
+        && !jTextField12.getText().equals("") && !jTextField13.getText().equals("")
+        && !jTextField14.getText().equals("") && !jPasswordField1.getText().equals("")
+        && !jTextArea1.getText().equals("") ) {
 
-        if (AccountController.createAccountAndUser(username, password, firstname, lastname, DOB, gender, address, email, phone, securityQuestionId, securityAnswer)) {
-            signupPromptView frame = new signupPromptView();
-            frame.setVisible(true);
-            dispose();
+            if (AccountController.createAccountAndUser(username, password, firstname, lastname, DOB, gender, address, email, phone, securityQuestionId, securityAnswer)) {
+                signupPromptView frame = new signupPromptView();
+                frame.setVisible(true);
+                dispose();
+            }
+        }
 
-        } else {
+        else {
             signupFailView frame = new signupFailView();
             frame.setVisible(true);
         }
