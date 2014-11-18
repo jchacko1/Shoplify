@@ -162,29 +162,26 @@ public class AccountRepository extends BaseRepository {
             String query =    "SELECT * FROM Account WHERE UserName = "+ '"' + userName + '"' + ";";
             stmt = c.createStatement();
             ResultSet rs = stmt.executeQuery( "SELECT * FROM Account WHERE UserName = " + '"' + userName + '"' +  ";" );
-            int size = 0;
-            try {
-                rs.last();
-                size = rs.getRow();
-                rs.beforeFirst();
-            }
-            catch(Exception ex) {
-                size = 0;
-            }
-            if(size == 1)
-            {
+            int rowCount = rs.getRow();
+
+            //if(size == 1)
+            //{
                 //todo move this code up so we can use this for validation
-                while ( rs.next() ) {
-                    accountId = rs.getInt("AccountId");
-                    userModelId = rs.getInt("UserModelId");
-                    password = rs.getString("Password");
-                    System.out.println( "Found one Account by UserName, AccountId = " + accountId );
-                }
-            }
-            else
-            {
-                System.out.println( "We have more than one Account with the same user name! Returning null" );
-            }
+                while ( rs.next()) {
+                    if(rowCount == 1)
+                    {
+                        accountId = rs.getInt("AccountId");
+                        userModelId = rs.getInt("UserModelId");
+                        password = rs.getString("Password");
+                        System.out.println( "Found one Account by UserName, AccountId = " + accountId );
+                        rowCount++;
+                    }
+                    else
+                    {
+                        System.out.println( "We have more than one Account with the same user name! Returning null" );
+                        accountId = -1;
+                    }
+              }
             rs.close();
             stmt.close();
             c.close();
