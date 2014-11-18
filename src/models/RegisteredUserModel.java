@@ -41,11 +41,20 @@ public class RegisteredUserModel extends UserModel {
         _securityQuestionId =  securityQuestionId;
     }
 
+    public int getSecurityQuestionId()
+    {
+        return _securityQuestionId;
+    }
+
     public void setSecurityAnswer(String securityAnswer)
     {
         _securityAnswer =  securityAnswer;
     }
 
+    public String getSecurityAnswer()
+    {
+        return _securityAnswer;
+    }
     //@precondition: this method has been called
     //@postcondition: the user’s address is set
      public void setAddress(String address) {

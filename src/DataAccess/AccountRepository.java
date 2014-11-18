@@ -146,5 +146,56 @@ public class AccountRepository extends BaseRepository {
         return null;
     }
 
-
+    public AccountModel getAccountFromUserName(String userName)
+    {
+        Connection c = null;
+        Statement stmt = null;
+        int accountId = -1;
+        int userModelId = -1;
+        String password = "";
+        try {
+            System.out.println("begin get Account by UserName try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            String query =    "SELECT * FROM Account WHERE UserName = "+ '"' + userName + '"' + ";";
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM Account WHERE UserName = " + '"' + userName + '"' +  ";" );
+            int size = 0;
+            try {
+                rs.last();
+                size = rs.getRow();
+                rs.beforeFirst();
+            }
+            catch(Exception ex) {
+                size = 0;
+            }
+            if(size == 1)
+            {
+                //todo move this code up so we can use this for validation
+                while ( rs.next() ) {
+                    accountId = rs.getInt("AccountId");
+                    userModelId = rs.getInt("UserModelId");
+                    password = rs.getString("Password");
+                    System.out.println( "Found one Account by UserName, AccountId = " + accountId );
+                }
+            }
+            else
+            {
+                System.out.println( "We have more than one Account with the same user name! Returning null" );
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        if(accountId > -1)
+        {
+            return new AccountModel(accountId,userModelId,userName, password );
+        }
+        return null;
+    }
 }

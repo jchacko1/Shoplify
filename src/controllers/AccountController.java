@@ -29,6 +29,7 @@ public class AccountController {
 
     public static boolean createAccountAndUser(String login, String password, String firstName, String lastName,  String dateOfBirth,String gender, String address,String email, String phoneNumber, int securityQuestionId, String securityAnswer)
     {
+        //todo write logic to not insert a duplicate UserName
         AccountModel accountModel = _accountManager.createAccount(login, password,-1);
         RegisteredUserModel registeredUserModel = UserController.createRegisteredUser(firstName, lastName, dateOfBirth, gender,accountModel.getAccountId(), address, email,  phoneNumber, securityQuestionId,  securityAnswer); //todo call UserController to create a new User
         if(accountModel != null && registeredUserModel != null)
@@ -46,4 +47,8 @@ public class AccountController {
         _accountManager.updateUserIdOnAccount(accountId, userId);
     }
 
+    public static AccountModel getAccountFromSecurityQuestion(String userName, int securityQuestionId, String securityQuestionAnswer)
+    {
+        return _accountManager.getAccountFromSecurityQuestion(userName, securityQuestionId, securityQuestionAnswer);
+    }
 }

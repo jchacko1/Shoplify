@@ -45,4 +45,10 @@ public class AccountService {
     {
         _accountRepository.updateUserIdOnAccount(accountId, userId);
     }
+
+    public AccountModel getAccountFromUserName(String userName)
+    {
+        return _accountRepository.getAccountFromUserName(userName);
+    }
+
 }
