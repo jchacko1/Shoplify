@@ -5,6 +5,9 @@
  */
 package views;
 
+import controllers.AccountController;
+import models.AccountModel;
+
 /**
  *
  * @author ART
@@ -14,6 +17,9 @@ public class forgetPasswordView extends javax.swing.JFrame {
     /**
      * Creates new form ForgetPasswordView
      */
+
+    int questionID = 0;
+
     public forgetPasswordView() {
         initComponents();
     }
@@ -129,9 +135,41 @@ public class forgetPasswordView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    public void getQuestionID() {
+
+        String combobox = jComboBox1.getSelectedItem().toString();
+
+        if (combobox.equals("What is your pet's name?")) {
+            questionID = 1;
+
+        } else if (combobox.equals("What is the name of your High School?")) {
+            questionID = 2;
+        } else {
+            questionID = 3;
+        }
+
+    }
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        passwordPromptView frame = new passwordPromptView();
-        frame.setVisible(true);
+
+        getQuestionID();
+
+        AccountModel accountModel = AccountController.getAccountFromSecurityQuestion(jTextField1.getText(), questionID, jTextField2.getText());
+
+        if(accountModel != null && accountModel.getUserModel() != null)
+        {
+            //get the password off of the userModel, then display it
+            passwordPromptView frame = new passwordPromptView();
+            frame.setVisible(true);
+        }
+        else {
+            //we could not verify the user's credentials
+         }
+
+        System.out.println(jTextField1.getText());
+        System.out.println(jTextField2.getText());
+        System.out.println(questionID);
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
