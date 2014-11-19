@@ -188,6 +188,7 @@ public class loginView extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         dispose();
+
     }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {

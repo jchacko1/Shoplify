@@ -668,7 +668,7 @@ public class homepageView extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         loginView frame = new loginView();
         frame.setVisible(true);
-        dispose();
+        //dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt){//GEN-FIRST:event_jButton13ActionPerformed

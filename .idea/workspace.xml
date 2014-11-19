@@ -4,12 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/src/controllers/ItemController.java" line="33" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="stuff">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/shoplify.db" afterPath="$PROJECT_DIR$/src/DataAccess/shoplify.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/accountView.java" afterPath="$PROJECT_DIR$/src/views/accountView.java" />
+    <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/homepageView.java" afterPath="$PROJECT_DIR$/src/views/homepageView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/homepageView2.java" afterPath="$PROJECT_DIR$/src/views/homepageView2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/signinPromptView.java" afterPath="$PROJECT_DIR$/src/views/signinPromptView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/loginView.java" afterPath="$PROJECT_DIR$/src/views/loginView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -88,9 +86,12 @@
       <file leaf-file-name="homepageView.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1492205" vertical-offset="8529" max-vertical-offset="15975">
-              <caret line="676" column="46" selection-start-line="676" selection-start-column="46" selection-end-line="676" selection-end-column="46" />
-              <folding />
+            <state vertical-scroll-proportion="-0.021276595" vertical-offset="9024" max-vertical-offset="16035">
+              <caret line="670" column="20" selection-start-line="670" selection-start-column="20" selection-end-line="670" selection-end-column="20" />
+              <folding>
+                <element signature="e#8741#8922#0" expanded="true" />
+                <element signature="e#8911#8912#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,10 +111,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/views/homepageView2.java" />
         <option value="$PROJECT_DIR$/src/views/signinPromptView.java" />
-        <option value="$PROJECT_DIR$/src/views/homepageView.java" />
         <option value="$PROJECT_DIR$/src/views/accountView.java" />
+        <option value="$PROJECT_DIR$/src/views/homepageView.java" />
+        <option value="$PROJECT_DIR$/src/views/loginView.java" />
+        <option value="$PROJECT_DIR$/src/views/homepageView2.java" />
       </list>
     </option>
   </component>
@@ -739,7 +741,7 @@
       <workItem from="1416415216156" duration="36000" />
       <workItem from="1416415519799" duration="4584000" />
       <workItem from="1416420173567" duration="2399000" />
-      <workItem from="1416423192377" duration="4253000" />
+      <workItem from="1416423192377" duration="5281000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -885,11 +887,15 @@
       <created>1416426613425</created>
       <updated>1416426613425</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="stuff">
+      <created>1416428040652</created>
+      <updated>1416428040652</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175134000" />
+    <option name="totallyTimeSpent" value="176162000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1361,33 +1367,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/loginView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5106383" vertical-offset="2484" max-vertical-offset="3810">
-          <caret line="211" column="22" selection-start-line="211" selection-start-column="22" selection-end-line="211" selection-end-column="22" />
-          <folding>
-            <element signature="e#5398#5579#0" expanded="true" />
-            <element signature="e#5568#5569#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/signinPromptView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4142539" vertical-offset="1269" max-vertical-offset="2175">
           <caret line="108" column="11" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/homepageView2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4142539" vertical-offset="9204" max-vertical-offset="16410">
-          <caret line="677" column="18" selection-start-line="677" selection-start-column="18" selection-end-line="677" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#52182#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1399,11 +1383,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/loginView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7037862" vertical-offset="2009" max-vertical-offset="3795">
+          <caret line="188" column="74" selection-start-line="188" selection-start-column="74" selection-end-line="188" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/homepageView2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5144766" vertical-offset="9159" max-vertical-offset="16410">
+          <caret line="677" column="0" selection-start-line="677" selection-start-column="0" selection-end-line="677" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#52164#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1492205" vertical-offset="8529" max-vertical-offset="15975">
-          <caret line="676" column="46" selection-start-line="676" selection-start-column="46" selection-end-line="676" selection-end-column="46" />
-          <folding />
+        <state vertical-scroll-proportion="-0.021276595" vertical-offset="9024" max-vertical-offset="16035">
+          <caret line="670" column="20" selection-start-line="670" selection-start-column="20" selection-end-line="670" selection-end-column="20" />
+          <folding>
+            <element signature="e#8741#8922#0" expanded="true" />
+            <element signature="e#8911#8912#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
