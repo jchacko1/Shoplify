@@ -16,6 +16,10 @@ public class accountView extends javax.swing.JFrame {
     /**
      * Creates new form accountView
      */
+
+
+    homepageView2 homepageFrame;
+
     public accountView() {
         initComponents();
         jPasswordField1.setEditable(false);
@@ -572,9 +576,11 @@ public class accountView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-
         AccountController.logoutUser();
         dispose();
+
+        System.exit(0);
+
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
