@@ -490,8 +490,7 @@ public class accountView extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         dispose();
-        homepageView2 frame = new homepageView2();
-        frame.setVisible(true);
+
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
@@ -573,8 +572,7 @@ public class accountView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        homepageView frame = new homepageView();
-        frame.setVisible(true);
+
         AccountController.logoutUser();
         dispose();
     }//GEN-LAST:event_jButton14ActionPerformed
