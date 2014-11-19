@@ -41,6 +41,7 @@ public class signinPromptView extends javax.swing.JFrame {
 
         String userLastName = accountModel.getUserModel().getLastName();
 
+
         //jLabel2.setText(userFirstName + userLastName);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
