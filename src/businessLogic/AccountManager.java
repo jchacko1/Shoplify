@@ -5,6 +5,7 @@ import DataAccess.ItemService;
 import controllers.AccountController;
 import controllers.ItemController;
 import controllers.UserController;
+import global.Global;
 import models.*;
 
 import java.util.ArrayList;
@@ -69,5 +70,10 @@ public class AccountManager {
             }
         }
         return accountModel;
+    }
+
+    public void logoutUser()
+    {
+        Global.CURRENT_ACCOUNT = null;
     }
 }

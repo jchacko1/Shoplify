@@ -51,4 +51,9 @@ public class AccountController {
     {
         return _accountManager.getAccountFromSecurityQuestion(userName, securityQuestionId, securityQuestionAnswer);
     }
+
+    public static void logoutUser()
+    {
+       _accountManager.logoutUser();
+    }
 }
