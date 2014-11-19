@@ -186,7 +186,7 @@ public class forgetPasswordView extends javax.swing.JFrame {
         }
         else {
             //we could not verify the user's credentials
-            jLabel2.setText("Wrong Username or Security Question/Password");
+            jLabel2.setText("Wrong Username or Security Question/Answer");
             jLabel2.setForeground(Color.RED);
         }
 

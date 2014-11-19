@@ -345,7 +345,7 @@ public class registrationView extends javax.swing.JFrame {
         String address = jTextArea1.getText();
         String email = jTextField10.getText();
         String phone = jTextField11.getText();
-        String securityQuestion = jComboBox2.getSelectedItem().toString();
+        String securityQuestion = jComboBox1.getSelectedItem().toString();
         String securityAnswer = jTextField12.getText();
 
         SecurityQuestionsModel securityQuestionsModel = new SecurityQuestionsModel();
