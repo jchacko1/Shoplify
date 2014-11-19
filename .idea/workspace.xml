@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/accountView.java" afterPath="$PROJECT_DIR$/src/views/accountView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/shoplify.db" afterPath="$PROJECT_DIR$/src/DataAccess/shoplify.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/homepageView.form" afterPath="$PROJECT_DIR$/src/views/homepageView.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/homepageView.java" afterPath="$PROJECT_DIR$/src/views/homepageView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/homepageView2.java" afterPath="$PROJECT_DIR$/src/views/homepageView2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +39,19 @@
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_TOOLBAR" value="true" />
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="DebuggerManager">
     <breakpoint_any converted="true">
@@ -72,8 +90,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
+    <ui_properties converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -81,28 +99,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="homepageView.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="homepageView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61702126" vertical-offset="8754" max-vertical-offset="16035">
-              <caret line="670" column="20" selection-start-line="670" selection-start-column="20" selection-end-line="670" selection-end-column="20" />
-              <folding>
-                <element signature="e#8741#8922#0" expanded="true" />
-                <element signature="e#8911#8912#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="accountView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/accountView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1538463" vertical-offset="6894" max-vertical-offset="8415">
-              <caret line="576" column="18" selection-start-line="576" selection-start-column="18" selection-end-line="576" selection-end-column="18" />
-              <folding>
-                <element signature="e#22246#22428#0" expanded="true" />
-                <element signature="e#22417#22418#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="4.1892524" vertical-offset="11452" max-vertical-offset="13410">
+              <caret line="1312" column="35" selection-start-line="1312" selection-start-column="35" selection-end-line="1312" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,13 +122,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/views/signinPromptView.java" />
-        <option value="$PROJECT_DIR$/src/views/homepageView.java" />
-        <option value="$PROJECT_DIR$/src/views/loginView.java" />
         <option value="$PROJECT_DIR$/src/views/homepageView2.java" />
-        <option value="$PROJECT_DIR$/src/views/accountView.java" />
       </list>
     </option>
   </component>
@@ -138,9 +136,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="773" />
+    <option name="y" value="24" />
+    <option name="width" value="1366" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -170,8 +168,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -278,6 +274,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -583,6 +581,7 @@
     </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
+        <option name="executionName" />
         <option name="externalProjectPath" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
@@ -698,6 +697,7 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="" />
       <created>1413510369166</created>
+      <option name="number" value="Default" />
       <updated>1413510369166</updated>
       <workItem from="1413551882514" duration="17000" />
       <workItem from="1413551936771" duration="13000" />
@@ -753,164 +753,241 @@
       <workItem from="1416415519799" duration="4584000" />
       <workItem from="1416420173567" duration="2399000" />
       <workItem from="1416423192377" duration="6109000" />
+      <workItem from="1416430100194" duration="525000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
       <updated>1413895792104</updated>
     </task>
     <task id="LOCAL-00002" summary="Added businessLogic folder, ShoppingCartController and ShoppingCartManager to handle a Shopping Cart&#10; &#10; New functionality in dataAccess classes&#10; &#10; Added Global.java as a way for us to store global variables. We can look at replacing this with something else that can act as an Order session.&#10; &#10; Changed OrderModel Items collection from an Array to a List so we can add and delete Items more easily.">
       <created>1414124108023</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
       <updated>1414124108023</updated>
     </task>
     <task id="LOCAL-00003" summary="Some refactoring of the Models, setting up Controller to Manager workflow for shoppingCart">
       <created>1414961212981</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
       <updated>1414961212981</updated>
     </task>
     <task id="LOCAL-00004" summary="Setting up code to delete an item, more code for accounts and users">
       <created>1414969231002</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
       <updated>1414969231002</updated>
     </task>
     <task id="LOCAL-00005" summary="Code for Discounts">
       <created>1414987624755</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
       <updated>1414987624755</updated>
     </task>
     <task id="LOCAL-00006" summary="Added code for Shopping List, creating Users. Created SubscriptionUserModel.">
       <created>1415202436529</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
       <updated>1415202436529</updated>
     </task>
     <task id="LOCAL-00007" summary="Added code for Shopping List, creating Users. Created SubscriptionUserModel.">
       <created>1415246063848</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
       <updated>1415246063848</updated>
     </task>
     <task id="LOCAL-00008" summary="Updating Report code from Kelly's files">
       <created>1415566996704</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
       <updated>1415566996704</updated>
     </task>
     <task id="LOCAL-00009" summary="Created SecurityQuestionsModel. Stubbed out code to get an array of Items, and get an array of OrderIds">
       <created>1415568353355</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
       <updated>1415568353355</updated>
     </task>
     <task id="LOCAL-00010" summary="Added an order record to Order table">
       <created>1415569550409</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
       <updated>1415569550409</updated>
     </task>
     <task id="LOCAL-00011" summary="Added an order record to Order table">
       <created>1415656604304</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
       <updated>1415656604304</updated>
     </task>
     <task id="LOCAL-00012" summary="Added an order record to Order table">
       <created>1415656671256</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
       <updated>1415656671256</updated>
     </task>
     <task id="LOCAL-00013" summary="Renamed &quot;Order&quot; table to &quot;UserOrder&quot;">
       <created>1415657797754</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
       <updated>1415657797754</updated>
     </task>
     <task id="LOCAL-00014" summary="Created UserModelDto, wrote code to get User table columns out of db, can now build any user type from db, wrote method to get all the Category names.">
       <created>1415764727359</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
       <updated>1415764727359</updated>
     </task>
     <task id="LOCAL-00015" summary="Added an item and corrected existing Items' CategoryIds. Added comments in Category Enum to help us remember which ID belongs to a Category">
       <created>1415833131040</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
       <updated>1415833131040</updated>
     </task>
     <task id="LOCAL-00016" summary="Changes to Account Model to include password, more data in database">
       <created>1415837774233</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
       <updated>1415837774233</updated>
     </task>
     <task id="LOCAL-00017" summary="Commented out example of how to login">
       <created>1415837813820</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
       <updated>1415837813820</updated>
     </task>
     <task id="LOCAL-00018" summary="homepage">
       <created>1416162138057</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
       <updated>1416162138057</updated>
     </task>
     <task id="LOCAL-00019" summary="homepage">
       <created>1416162256396</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
       <updated>1416162256396</updated>
     </task>
     <task id="LOCAL-00020" summary="homepage">
       <created>1416163164205</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
       <updated>1416163164205</updated>
     </task>
     <task id="LOCAL-00021" summary="homepage">
       <created>1416163551462</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
       <updated>1416163551462</updated>
     </task>
     <task id="LOCAL-00022" summary="Code to insert users and orders">
       <created>1416166449937</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
       <updated>1416166449937</updated>
     </task>
     <task id="LOCAL-00023" summary="Code to insert users and orders">
       <created>1416167484007</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
       <updated>1416167484007</updated>
     </task>
     <task id="LOCAL-00024" summary="Code to insert users and orders">
       <created>1416167781115</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
       <updated>1416167781115</updated>
     </task>
     <task id="LOCAL-00025" summary="Code to insert users and orders">
       <created>1416169391278</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
       <updated>1416169391278</updated>
     </task>
     <task id="LOCAL-00026" summary="Code to insert users and orders">
       <created>1416179874135</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
       <updated>1416179874135</updated>
     </task>
     <task id="LOCAL-00027" summary="Code to insert users and orders">
       <created>1416192880110</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
       <updated>1416192880110</updated>
     </task>
     <task id="LOCAL-00028" summary="Code to insert users and orders">
       <created>1416197213410</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
       <updated>1416197213410</updated>
     </task>
     <task id="LOCAL-00029" summary="Debugged adding item to order, creating order, and getting items on an order">
       <created>1416272122936</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
       <updated>1416272122936</updated>
     </task>
     <task id="LOCAL-00030" summary="Refactored names of Global variables">
       <created>1416279465561</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
       <updated>1416279465561</updated>
     </task>
     <task id="LOCAL-00031" summary="Refactored names of Global variables">
       <created>1416281650769</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
       <updated>1416281650769</updated>
     </task>
     <task id="LOCAL-00032" summary="Refactored code to try to figure out if more than one Account exists for a username">
       <created>1416331261102</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
       <updated>1416331261102</updated>
     </task>
     <task id="LOCAL-00033" summary="More refactors for checking if more than one Account has been found in the database">
       <created>1416333577163</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
       <updated>1416333577163</updated>
     </task>
     <task id="LOCAL-00034" summary="Used different getter when trying to build UserModel for ForgotMyPassword functionality">
       <created>1416334049046</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
       <updated>1416334049046</updated>
     </task>
     <task id="LOCAL-00035" summary="Added getter for getting Account password">
       <created>1416334243864</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
       <updated>1416334243864</updated>
     </task>
     <task id="LOCAL-00036" summary="stuff">
       <created>1416426613425</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
       <updated>1416426613425</updated>
     </task>
     <task id="LOCAL-00037" summary="stuff">
       <created>1416428040652</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
       <updated>1416428040652</updated>
     </task>
     <task id="LOCAL-00038" summary="stuff">
       <created>1416429188569</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
       <updated>1416429188569</updated>
     </task>
     <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176990000" />
+    <option name="totallyTimeSpent" value="177515000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -933,15 +1010,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="773" extended-state="6" />
+    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18820679" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18659128" sideWeight="0.50152904" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359308" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15105008" sideWeight="0.4969419" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18659128" sideWeight="0.50152904" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15080526" sideWeight="0.4969419" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32869378" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -949,15 +1027,14 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5006974" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28899083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3601757" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35889572" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" x="254" y="269" width="857" height="230" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5006974" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3297587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16720517" sideWeight="0.49930266" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28257686" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18820679" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1669107" sideWeight="0.49930266" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2822086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.2898975" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" x="686" y="194" width="396" height="507" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1024,19 +1101,13 @@
       </breakpoints>
       <option name="time" value="19" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/sqlite-jdbc-3.8.5-pre1.jar!/org/sqlite/SQLiteJDBCLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.14" vertical-offset="3990" max-vertical-offset="4590">
-          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataAccess/ReportService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.87383175" vertical-offset="34" max-vertical-offset="697">
@@ -1365,36 +1436,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/homepageView2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23385301" vertical-offset="600" max-vertical-offset="16410">
-          <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#52164#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/views/homepageView.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/accountView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1538463" vertical-offset="6894" max-vertical-offset="8415">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2145" max-vertical-offset="3180">
           <caret line="576" column="18" selection-start-line="576" selection-start-column="18" selection-end-line="576" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/homepageView2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33167082" vertical-offset="15422" max-vertical-offset="18900">
+          <caret line="1087" column="39" selection-start-line="1087" selection-start-column="39" selection-end-line="1087" selection-end-column="39" />
           <folding>
-            <element signature="e#22246#22428#0" expanded="true" />
-            <element signature="e#22417#22418#0" expanded="true" />
+            <element signature="e#0#55367#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1433#1522#0" expanded="true" />
+            <element signature="e#8160#8311#0" expanded="true" />
+            <element signature="e#8310#8311#0" expanded="true" />
+            <element signature="e#52328#52415#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61702126" vertical-offset="8754" max-vertical-offset="16035">
-          <caret line="670" column="20" selection-start-line="670" selection-start-column="20" selection-end-line="670" selection-end-column="20" />
-          <folding>
-            <element signature="e#8741#8922#0" expanded="true" />
-            <element signature="e#8911#8912#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="4.1892524" vertical-offset="11452" max-vertical-offset="13410">
+          <caret line="1312" column="35" selection-start-line="1312" selection-start-column="35" selection-end-line="1312" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1499,4 +1573,3 @@
     </states>
   </component>
 </project>
-
