@@ -35,7 +35,7 @@ public class ItemRepository extends BaseRepository {
             System.out.println("Opened database successfully");
 
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "SELECT * FROM Item where ItemId = " + itemId );
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM Item where ItemId = " + '"' + itemId + '"');
             while ( rs.next() ) {
                 itemName = rs.getString("ItemName");
                 price = rs.getDouble("price");
@@ -79,7 +79,7 @@ public class ItemRepository extends BaseRepository {
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "Select * from ShoppingList where UserId = " + String.valueOf(userId) + ";");
+            ResultSet rs = stmt.executeQuery( "Select * from ShoppingList where UserId = " + '"' + String.valueOf(userId) + '"' + ";");
             while ( rs.next() ) {
                 userId  = rs.getInt("UserId");
                 System.out.println( "UserId = " + userId );
@@ -109,7 +109,7 @@ public class ItemRepository extends BaseRepository {
             c.setAutoCommit(true);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            stmt.executeUpdate( "INSERT INTO ShoppingListItems(ShoppingListId, ItemId) values(" + ShoppingListId + "," + "Item Id" + ItemId + ");");
+            stmt.executeUpdate( "INSERT INTO ShoppingListItems(ShoppingListId, ItemId) values(" + '"' + ShoppingListId + '"' + "," + '"' + ItemId + '"' + ");");
             stmt.close();
             c.close();
         } catch ( Exception e ) {
@@ -141,7 +141,7 @@ public class ItemRepository extends BaseRepository {
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "Select * from OrderItems where orderId = " + String.valueOf(orderId) + ";");
+            ResultSet rs = stmt.executeQuery( "Select * from OrderItems where orderId = " + '"' +  String.valueOf(orderId) + '"' + ";");
             while ( rs.next() ) {
                 orderId  = rs.getInt("OrderId");
                 itemId = rs.getInt("ItemID");
@@ -274,7 +274,7 @@ public class ItemRepository extends BaseRepository {
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "Select * from SubscriptionItem where SubscriptionId = " + String.valueOf(subscriptionId) + ";");
+            ResultSet rs = stmt.executeQuery( "Select * from SubscriptionItem where SubscriptionId = " + '"' + String.valueOf(subscriptionId) + '"' + ";");
             while ( rs.next() ) {
                 ItemModel item = ItemController.getItem(rs.getInt("SubscriptionId"));
                 item.setQuantity(rs.getInt("Quantity"));
@@ -302,7 +302,7 @@ public class ItemRepository extends BaseRepository {
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            stmt.executeUpdate( "Insert Into SubscriptionItem(SubscriptionId, ItemId, Quantity) VALUES(= " + subscriptionId + "," + itemId + "," + quantity + ");");
+            stmt.executeUpdate( "Insert Into SubscriptionItem(SubscriptionId, ItemId, Quantity) VALUES(= " + '"' + subscriptionId + '"' + "," + '"' + itemId + '"' + "," + '"' + quantity + '"' + ");");
             stmt.close();
             c.close();
         } catch ( Exception e ) {
@@ -323,7 +323,7 @@ public class ItemRepository extends BaseRepository {
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            stmt.executeUpdate( "Update SubscriptionItem set quantity = " + quantity + "where SubscriptionId = " + subscriptionId + "and ItemId = " + itemId + ";");
+            stmt.executeUpdate( "Update SubscriptionItem set quantity = " + '"' + quantity + '"' + " where SubscriptionId = " + '"' + subscriptionId + '"' + " and ItemId = " + '"' + itemId + '"' + ";");
             stmt.close();
             c.close();
         } catch ( Exception e ) {
@@ -344,7 +344,7 @@ public class ItemRepository extends BaseRepository {
                 c.setAutoCommit(false);
                 System.out.println("Opened database successfully");
                 stmt = c.createStatement();
-                stmt.executeUpdate( "Delete From SubscriptionItem where SubscriptionId = " + subscriptionId + "and ItemId = " + itemId + ";");
+                stmt.executeUpdate( "Delete From SubscriptionItem where SubscriptionId = " + '"' + subscriptionId + '"' + "and ItemId = " + '"' + itemId + '"' + ";");
                 stmt.close();
                 c.close();
             } catch ( Exception e ) {
@@ -367,7 +367,7 @@ public class ItemRepository extends BaseRepository {
             System.out.println("Opened database successfully");
 
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "SELECT * FROM ItemDetails where ItemId = " + itemId +";");
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM ItemDetails where ItemId = " + '"' + itemId + '"' +";");
             while ( rs.next() ) {
                 itemDetailsModel = new ItemDetailsModel(rs.getString("ItemIngredients"),rs.getInt("ItemCalories"),rs.getInt("ItemWeight"), rs.getString("ItemExpirationDate"), rs.getInt("IsItemReturnable") == 1);
             }
@@ -393,7 +393,7 @@ public class ItemRepository extends BaseRepository {
             c.setAutoCommit(true);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            String query = "Update Item set Price  = " + price + " where ItemId = " + itemId + ";";
+            String query = "Update Item set Price  = " + '"' + price + '"' + " where ItemId = " +  '"' + itemId + ";";
             stmt.executeUpdate(query);
             stmt.close();
             c.close();
@@ -414,7 +414,7 @@ public class ItemRepository extends BaseRepository {
             c.setAutoCommit(true);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            String query = "Update Item set Quantity = 0 where ItemId = " + itemId + ";";
+            String query = "Update Item set Quantity = 0 where ItemId = " + '"' + itemId + '"' + ";";
             stmt.executeUpdate(query);
             stmt.close();
             c.close();

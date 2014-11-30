@@ -49,7 +49,7 @@ public class OrderRepository extends BaseRepository {
             System.out.println("Opened database successfully");
 
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "SELECT * FROM UserOrder where OrderId = " + orderId );
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM UserOrder where OrderId = " + '"' + orderId  + '"');
             while ( rs.next() ) {
                 /*itemName = rs.getString("ItemName");
                 price = rs.getDouble("price");
@@ -261,7 +261,7 @@ public class OrderRepository extends BaseRepository {
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "Select * from OrderItems where OrderId = " + String.valueOf(orderId) + ";");
+            ResultSet rs = stmt.executeQuery( "Select * from OrderItems where OrderId = " + '"' + String.valueOf(orderId) + '"' + ";");
            while ( rs.next() ) {
                itemId  = rs.getInt("ItemId");
                System.out.println( "Item = " + itemId );
@@ -297,7 +297,7 @@ public class OrderRepository extends BaseRepository {
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            stmt.execute("Delete from OrderItems where OrderId = " + String.valueOf(orderId) + "and ItemID = " + String.valueOf(itemId) + "and ShoppingCartItemId = " + String.valueOf(shoppingCartItemId) + ";");
+            stmt.execute("Delete from OrderItems where OrderId = " + '"' + String.valueOf(orderId) + '"' + "and ItemID = " + '"' + String.valueOf(itemId) + '"' + "and ShoppingCartItemId = " + '"' + String.valueOf(shoppingCartItemId) + '"' + ";");
             stmt.close();
             c.close();
         } catch ( Exception e ) {
@@ -320,7 +320,7 @@ public class OrderRepository extends BaseRepository {
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "Select OrderId from UserOrder where UserId = " + String.valueOf(userId) + ";");
+            ResultSet rs = stmt.executeQuery( "Select OrderId from UserOrder where UserId = " + '"' + String.valueOf(userId) + '"' + ";");
             while ( rs.next() ) {
                 orderId  = rs.getInt("OrderId");
                 System.out.println( "OrderId = " + orderId );

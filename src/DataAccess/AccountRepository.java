@@ -61,7 +61,7 @@ public class AccountRepository extends BaseRepository {
             //String query = "select max(accountid) from account";
             //accountId = stmt.executeUpdate(query);
             System.out.println("Last AccountId is:" + accountId);
-            String query = "Update Account set UserModelId = " + userId + " where AccountId = " + accountId + ";";
+            String query = "Update Account set UserModelId = " + '"' + userId + '"' + " where AccountId = " + '"' + accountId + '"' + ";";
             stmt.executeUpdate(query);
             stmt.close();
             c.close();
@@ -91,7 +91,7 @@ public class AccountRepository extends BaseRepository {
                c.setAutoCommit(false);
                System.out.println("Opened database successfully");
                stmt = c.createStatement();
-               ResultSet rs = stmt.executeQuery( "SELECT * FROM Account WHERE AccountId = " + accountId + ";" );
+               ResultSet rs = stmt.executeQuery( "SELECT * FROM Account WHERE AccountId = " + '"' + accountId + '"' + ";" );
                while ( rs.next() ) {
                    userModelId = rs.getInt("UserModelId");
                    userName = rs.getString("UserName");
@@ -244,7 +244,7 @@ public class AccountRepository extends BaseRepository {
             //String query = "select max(accountid) from account";
             //accountId = stmt.executeUpdate(query);
             //System.out.println("Last AccountId is:" + accountId);
-            String query = "Update Subscription set ShipDate = " + "''" + shipDate + "'" + ", Enabled=" + isEnabled + " where SubscriptionId = " + subscriptionUserModel.getSubscriptionId() + ";";
+            String query = "Update Subscription set ShipDate = " + '"' + shipDate + '"' + ", Enabled=" + '"' + isEnabled + '"' + " where SubscriptionId = " + '"' + subscriptionUserModel.getSubscriptionId() + '"' + ";";
             stmt.executeUpdate(query);
             stmt.close();
             c.close();
@@ -266,7 +266,7 @@ public class AccountRepository extends BaseRepository {
             c.setAutoCommit(true);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            String query = "Insert into SavedPaymentInformation(UserId, CreditCardType,CardholdersName,CreditCardNumber,ExpirationDate,Cvs)values(" + '"' + userId + '"' + "," + '"'  + creditCardType + '"' + "," + '"' + cardHoldersName + '"' + creditCardNumber + '"' + expirationDate + '"' + cvs + '"' + ");";
+            String query = "Insert into SavedPaymentInformation(UserId, CreditCardType,CardholdersName,CreditCardNumber,ExpirationDate,Cvs)values(" + '"' + userId + '"' + "," + '"'  + creditCardType + '"' + "," + '"' + cardHoldersName + '"' + "," + '"' + creditCardNumber + '"' + "," + '"' + expirationDate + '"' + "," + '"' + cvs + '"' + ");";
             stmt.executeUpdate(query);
             stmt.close();
             c.close();
@@ -294,7 +294,7 @@ public class AccountRepository extends BaseRepository {
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "SELECT * FROM SavedPaymentInformation WHERE UserId = " + "''" + userId + "'" + ";");
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM SavedPaymentInformation WHERE UserId = " + '"' + userId + '"' + ";");
             while ( rs.next() ) {
                 creditCardType = rs.getString("CreditCardType");
                 cardHoldersName = rs.getString("CardholdersName");

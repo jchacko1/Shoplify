@@ -128,6 +128,7 @@ public class OrderManager {
                      itemExistsOnOrder = true;
                  }
             }
+
             if(itemExistsOnOrder)
             {
                 discountAmount = discountModel.getIsDiscountInPercent() ? Global.CURRENT_ORDER.getSubTotal() * discountModel.getDiscountAmount() * -1 : discountModel.getDiscountAmount();
@@ -140,7 +141,6 @@ public class OrderManager {
             {
                 return "Discount item does not exist on order!";
             }
-
         }
         else if(discountModel.getDiscountType() == Enums.DiscountType.FREESHIPPING)
         {

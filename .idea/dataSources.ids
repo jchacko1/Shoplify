@@ -47,6 +47,8 @@
     <table name="OrderItems" schema="" catalog="" type="TABLE">
       <column name="OrderId" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
       <column name="ItemID" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="ShoppingCartItemId" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="Quantity" sqlType="INT" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
       <foreign-key name="#FAKE_OrderItems_1" columns="ItemID" ref-table="Item" ref-schema="" ref-catalog="" ref-columns="ItemID" update-rule="3" delete-rule="3" deferrability="1"/>
       <foreign-key name="#FAKE_OrderItems_2" columns="OrderId" ref-table="UserOrder" ref-schema="" ref-catalog="" ref-columns="OrderId" update-rule="3" delete-rule="3" deferrability="1"/>
     </table>
