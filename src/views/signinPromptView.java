@@ -105,6 +105,7 @@ public class signinPromptView extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         homepageView2 frame = new homepageView2();
+        homepageView homepageView = new homepageView();
         frame.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

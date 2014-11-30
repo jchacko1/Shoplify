@@ -6,17 +6,55 @@ package models;
  */
 public class ReturnModel {
 
-    private int _accountId;
+    private int _userId;
+    private int _orderId;
+    private int _itemId;
+    private int _returnId;
+    private double _orderTotal;
+    private boolean _isSubscriptionOrder;
     private UserModel _userModel;
-    private String username;
-    private String password;
     private String requestDateTime;
     private String responseDateTime;
     private String returnMsg;
-    private String returnId;
 
-    public ReturnModel(){
+    public ReturnModel(int returnId, int orderId, double orderTotal,int userId,boolean isSubscriptionOrder){
+        this._returnId = returnId;
+        this._orderId = orderId;
+        this._orderTotal = orderTotal;
+        this._userId = userId;
+        this._isSubscriptionOrder = isSubscriptionOrder;
+    }
 
+    public int getReturnId(){
+        return _returnId;
+    }
+
+    public void setReturnId(int returnId){
+        this._returnId = returnId;
+    }
+
+    public int getUserId(){
+        return _userId;
+    }
+
+    public void setUserId(int userId){
+        this._userId = userId;
+    }
+
+    public int getOrderId(){
+        return _orderId;
+    }
+
+    public void setOrderId(int orderId){
+        this._orderId = orderId;
+    }
+
+    public int getItemId(){
+        return _itemId;
+    }
+
+    public void setItemId(int itemId){
+        this._itemId = itemId;
     }
 
     public String getRequestDateTime(){
@@ -35,13 +73,6 @@ public class ReturnModel {
         this.responseDateTime = value;
     }
 
-    public String getReturnId(){
-        return returnId;
-    }
-
-    public void setReturnId(String value){
-        this.returnId = value;
-    }
 
     public String getReturnMsg(){
         return returnMsg;
@@ -50,8 +81,6 @@ public class ReturnModel {
     public void setReturnMsg(String value){
         this.returnMsg = value;
     }
-
-
 
 
     //TODO:Get the return form from file?
@@ -63,11 +92,5 @@ public class ReturnModel {
         return;
     }
 
-    //@precondition: 1) this method has been called
-    //2) has to be an admin
-    //@postcondition: returns other user’s history
-    public void getOtherHistory() {
-
-    }
 
 }

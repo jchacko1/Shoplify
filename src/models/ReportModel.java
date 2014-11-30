@@ -11,6 +11,7 @@ public class ReportModel {
 
     private String reportId;
     private String reportName;
+
     private int userId;
     private String createDate;
     private int subscriptionId;

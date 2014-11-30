@@ -17,6 +17,11 @@ public class OrderService {
         _orderRepository = new OrderRepository();
     }
 
+    public OrderModel getOrder(int orderId)
+    {
+        return _orderRepository.getOrder(orderId);
+    }
+
     public void submitOrder(OrderModel order)
     {
                 _orderRepository.submitOrder(order);

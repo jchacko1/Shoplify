@@ -1,6 +1,7 @@
 package DataAccess;
 
 import controllers.ItemController;
+import models.Enums;
 import models.ItemModel;
 import models.OrderModel;
 
@@ -16,6 +17,67 @@ import java.util.ArrayList;
  * Created by jmarquez on 11/5/2014.
  */
 public class OrderRepository extends BaseRepository {
+
+    public OrderModel getOrder(int orderId)
+    {
+        String orderName = "";
+        double orderTotal = 0.0;
+        double subTotal = 0.0;
+        double tax = 0.0;
+        double discountAmount = 0.0;
+        boolean isSubscriptionOrder = false;
+        double shippingFee = 0.0;
+        int loggedInUserId = 0;
+        //int quantity = -1;
+       // String description = "";
+       // int categoryId = 1;
+      //  int shoppingCartItemId = -1;
+        //String imagePath = "";
+        Connection c = null;
+        Statement stmt = null;
+
+        try {
+            System.out.println("begin Get Order table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM UserOrder where OrderId = " + orderId );
+            while ( rs.next() ) {
+                /*itemName = rs.getString("ItemName");
+                price = rs.getDouble("price");
+                quantity = rs.getInt("Quantity");
+                description = rs.getString("Description");
+                categoryId = rs.getInt("CategoryId");
+                shoppingCartItemId = rs.getInt("ShoppingCartItemId");
+                imagePath = rs.getString("ImagePath");*/
+
+                orderTotal = rs.getDouble("OrderTotal");
+                subTotal = rs.getDouble("Subtotal");
+                tax = rs.getDouble("Tax");
+                discountAmount = rs.getDouble("DiscountAmount");
+                isSubscriptionOrder = rs.getBoolean("IsSubscriptionOrder"); //TODO: use getBoolean or getInt?
+                shippingFee = rs.getDouble("ShippingFee");
+                loggedInUserId = rs.getInt("LoggedInUser");
+
+                System.out.println( "OrderName = " + orderName );
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+        if(orderName != null)
+        {
+            return new OrderModel(orderId, orderTotal,subTotal,tax,loggedInUserId, discountAmount,isSubscriptionOrder,shippingFee);
+        }
+        return null;
+    }
 
     public void submitOrder(OrderModel order)
     {

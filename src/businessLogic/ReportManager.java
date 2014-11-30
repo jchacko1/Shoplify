@@ -1,8 +1,10 @@
 package businessLogic;
 
 //TODO: create ReportService inside DataAccess
+import DataAccess.ItemService;
 import DataAccess.ReportService;
 import controllers.ReportController;
+import models.ItemModel;
 import models.ReportModel;
 import models.UserModel;
 import controllers.UserController;
@@ -14,10 +16,10 @@ import controllers.UserController;
 public class ReportManager {
     private ReportService _reportService = new ReportService();
     //private ReportController _reportController = new ReportController();
+    private ItemService _itemService = new ItemService();
 
-    public ReportManager()
-    {
-
+    public ItemModel getItem(int itemId){
+        return _itemService.getItem(itemId);
     }
 
 

@@ -13,6 +13,11 @@ import java.util.ArrayList;
 public class OrderController {
     private static OrderManager _orderManager = new OrderManager();
 
+    public static OrderModel getOrder(int orderId)
+    {
+        return _orderManager.getOrder(orderId);
+    }
+
     public static OrderModel createOrder() throws ClassNotFoundException {
         if(Global.CURRENT_ACCOUNT == null)
         {

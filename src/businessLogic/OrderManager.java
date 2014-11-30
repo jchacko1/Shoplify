@@ -14,6 +14,11 @@ import java.util.ArrayList;
 public class OrderManager {
     private OrderService _orderService = new OrderService();
 
+    public OrderModel getOrder(int orderId)
+    {
+        return _orderService.getOrder(orderId);
+    }
+
         public void submitOrder(OrderModel order)
         {
             //remove the order from the Session so we can start a new order
