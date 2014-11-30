@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/historyView.java" afterPath="$PROJECT_DIR$/src/views/historyView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/homepageView.java" afterPath="$PROJECT_DIR$/src/views/homepageView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/loginView.java" afterPath="$PROJECT_DIR$/src/views/loginView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/shoppingCartView.java" afterPath="$PROJECT_DIR$/src/views/shoppingCartView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -83,30 +81,7 @@
     <favorites_list name="Shoplify" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="homepageView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="16777" max-vertical-offset="18525">
-              <caret line="1100" column="13" selection-start-line="1100" selection-start-column="13" selection-end-line="1100" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loginView.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/loginView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11157895" vertical-offset="682" max-vertical-offset="4035">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -160,8 +135,8 @@
         <option value="$PROJECT_DIR$/src/DataAccess/AdminService.java" />
         <option value="$PROJECT_DIR$/src/controllers/AdminController.java" />
         <option value="$PROJECT_DIR$/src/controllers/UserController.java" />
-        <option value="$PROJECT_DIR$/src/views/shoppingCartView.java" />
         <option value="$PROJECT_DIR$/src/views/homepageView.java" />
+        <option value="$PROJECT_DIR$/src/views/shoppingCartView.java" />
         <option value="$PROJECT_DIR$/src/views/loginView.java" />
       </list>
     </option>
@@ -925,7 +900,7 @@
       <workItem from="1416434785193" duration="183000" />
       <workItem from="1416533953308" duration="20000" />
       <workItem from="1417325282032" duration="12498000" />
-      <workItem from="1417372820305" duration="3746000" />
+      <workItem from="1417372820305" duration="4222000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1091,11 +1066,15 @@
       <created>1417334591357</created>
       <updated>1417334591357</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="guest login">
+      <created>1417377425351</created>
+      <updated>1417377425351</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197104000" />
+    <option name="totallyTimeSpent" value="197580000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1119,7 +1098,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="5" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18820679" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1143,7 +1122,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3297587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18578352" sideWeight="0.49930266" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20644216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20644216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.2898975" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" x="686" y="194" width="396" height="507" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1204,7 +1183,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Some refactoring of the Models, setting up Controller to Manager workflow" />
     <MESSAGE value="Some refactoring of the Models, setting up Controller to Manager workflow for shoppingCart" />
     <MESSAGE value="Setting up code to delete an item, more code for accounts and users" />
     <MESSAGE value="Code for Discounts" />
@@ -1229,7 +1207,8 @@
     <MESSAGE value="stuff" />
     <MESSAGE value="Return order related, Report related files and add a new table (ReturnOrder) into DB" />
     <MESSAGE value="Reminder list related files (need to figure should we create a ReminderListRepo or not), current addItem/deleteItem to reminder list is in ItemRepo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reminder list related files (need to figure should we create a ReminderListRepo or not), current addItem/deleteItem to reminder list is in ItemRepo" />
+    <MESSAGE value="guest login" />
+    <option name="LAST_COMMIT_MESSAGE" value="guest login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1295,13 +1274,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/registrationView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8584337" vertical-offset="5175" max-vertical-offset="6945">
-          <caret line="370" column="9" selection-start-line="370" selection-start-column="9" selection-end-line="370" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1594,6 +1566,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/loginView.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/shoppingCartView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4311377" vertical-offset="1464" max-vertical-offset="5595">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="e#3392#3877#0" expanded="true" />
+            <element signature="e#3791#3792#0" expanded="true" />
+            <element signature="e#5677#5858#0" expanded="true" />
+            <element signature="e#5847#5848#0" expanded="true" />
+            <element signature="e#10073#10254#0" expanded="true" />
+            <element signature="e#10243#10244#0" expanded="true" />
+            <element signature="e#10328#10509#0" expanded="true" />
+            <element signature="e#10498#10499#0" expanded="true" />
+            <element signature="e#10595#10776#0" expanded="true" />
+            <element signature="e#10765#10766#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/signinPromptView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1455" max-vertical-offset="2190">
@@ -1602,43 +1598,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/shoppingCartView.java">
+    <entry file="file://$PROJECT_DIR$/src/views/loginView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="669" max-vertical-offset="5595">
-          <caret line="114" column="23" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.2994012" vertical-offset="2955" max-vertical-offset="4065">
+          <caret line="241" column="28" selection-start-line="241" selection-start-column="28" selection-end-line="241" selection-end-column="28" />
           <folding>
-            <element signature="e#5678#5859#0" expanded="true" />
-            <element signature="e#5848#5849#0" expanded="true" />
-            <element signature="e#10074#10255#0" expanded="true" />
-            <element signature="e#10244#10245#0" expanded="true" />
-            <element signature="e#10329#10510#0" expanded="true" />
-            <element signature="e#10499#10500#0" expanded="true" />
-            <element signature="e#10596#10777#0" expanded="true" />
-            <element signature="e#10766#10767#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/loginView.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
+    <entry file="file://$PROJECT_DIR$/src/views/registrationView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="16777" max-vertical-offset="18525">
-          <caret line="1100" column="13" selection-start-line="1100" selection-start-column="13" selection-end-line="1100" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.6506986" vertical-offset="4414" max-vertical-offset="6165">
+          <caret line="370" column="9" selection-start-line="370" selection-start-column="9" selection-end-line="370" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/loginView.java">
+    <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11157895" vertical-offset="682" max-vertical-offset="4035">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-0.16766468" vertical-offset="17214" max-vertical-offset="18525">
+          <caret line="1221" column="43" selection-start-line="1221" selection-start-column="43" selection-end-line="1221" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>

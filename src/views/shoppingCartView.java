@@ -118,9 +118,9 @@ public class shoppingCartView extends javax.swing.JFrame {
                 return false;
             }
 
-            public void setValueAt(int row, int col) {
+           // public void setValueAt(int row, int col) {
 
-            }
+            //}
         };
 
         String header[] = new String[]{"Item Name", "Price ($)", "Quantity"};
@@ -136,7 +136,7 @@ public class shoppingCartView extends javax.swing.JFrame {
 
             //System.out.println("Item in Cart is: " + item.getName());
 
-                dtm.addRow(new Object[]{item.getName(), item.getPrice(), "1"});
+                dtm.addRow(new Object[]{item.getName(), item.getPrice()});
 
         }
 
