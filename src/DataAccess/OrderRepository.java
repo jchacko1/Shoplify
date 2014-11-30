@@ -32,6 +32,7 @@ public class OrderRepository extends BaseRepository {
         boolean isSubscriptionOrder = false;
         double shippingFee = 0.0;
         int loggedInUserId = 0;
+        String orderDate = "";
         //int quantity = -1;
        // String description = "";
        // int categoryId = 1;
@@ -65,7 +66,7 @@ public class OrderRepository extends BaseRepository {
                 isSubscriptionOrder = rs.getBoolean("IsSubscriptionOrder"); //TODO: use getBoolean or getInt?
                 shippingFee = rs.getDouble("ShippingFee");
                 loggedInUserId = rs.getInt("LoggedInUser");
-
+                orderDate = rs.getString("OrderDate");
                 System.out.println( "OrderName = " + orderName );
             }
             rs.close();
@@ -78,7 +79,7 @@ public class OrderRepository extends BaseRepository {
         System.out.println("Operation done successfully");
         if(orderName != null)
         {
-            return new OrderModel(orderId, orderTotal,subTotal,tax,loggedInUserId, discountAmount,isSubscriptionOrder,shippingFee);
+            return new OrderModel(orderId, orderTotal,subTotal,tax,loggedInUserId, discountAmount,isSubscriptionOrder,shippingFee,orderDate);
         }
         return null;
     }

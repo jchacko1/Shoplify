@@ -434,7 +434,9 @@ public class homepageView2 extends javax.swing.JFrame {
 //                    System.out.print("!!!!!!Button " + buttons[i].getName() + " pressed!!!!!1");
                     System.out.println(i);
                     try {
-                        OrderController.addItemToOrder(btNum);
+                        //todo pass in quantity!
+                        int quantity = 1;
+                        OrderController.addItemToOrder(btNum, quantity);
                     } catch (ClassNotFoundException e1) {
                         e1.printStackTrace();
                     }
@@ -460,7 +462,9 @@ public class homepageView2 extends javax.swing.JFrame {
 //                    System.out.print("!!!!!!Button " + buttons[i].getName() + " pressed!!!!!1");
                     System.out.println(i);
                     try {
-                        OrderController.addItemToOrder(btNum);
+                        //todo pass in quantity!
+                        int quantity = 1;
+                        OrderController.addItemToOrder(btNum, quantity);
                     } catch (ClassNotFoundException e1) {
                         e1.printStackTrace();
                     }

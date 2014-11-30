@@ -39,8 +39,8 @@ public class OrderController {
          _orderManager.submitOrder(order, firstName, lastName, address, city, state,zipCode,country,phoneNumber,email,creditCardType,cardHoldersName,creditCardNumber,expirationDate,cvs);
     }
 
-    public static void updateOrder() {
-              _orderManager.updateOrder();
+    public static void updateOrder(OrderModel orderModel) {
+              _orderManager.updateOrder(orderModel);
     }
 
     public static Boolean addItemToOrder(int itemId, int quantity) throws ClassNotFoundException {
@@ -51,8 +51,8 @@ public class OrderController {
         return _orderManager.addItemToOrder(Global.CURRENT_ORDER.getOrderId(),itemId, quantity);
     }
 
-    public static void deleteItemFromOrder(int itemId, int shoppingCartItemId) throws ClassNotFoundException {
-        _orderManager.deleteItemFromOrder(Global.CURRENT_ORDER.getOrderId(),itemId, shoppingCartItemId);
+    public static void deleteItemOnOrder(int itemId, int shoppingCartItemId) throws ClassNotFoundException {
+        _orderManager.deleteItemOnOrder(Global.CURRENT_ORDER.getOrderId(),itemId, shoppingCartItemId);
     }
 
     public static boolean editItemOnOrder(int itemId, int shoppingCartItemId, int quantity) throws ClassNotFoundException {

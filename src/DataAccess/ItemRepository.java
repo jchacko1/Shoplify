@@ -3,13 +3,12 @@ package DataAccess;
 import controllers.ItemController;
 import controllers.OrderController;
 import controllers.ReminderController;
-import models.Enums;
-import models.ItemModel;
-import models.OrderModel;
-import models.ReminderModel;
+import models.*;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by jmarquez on 11/2/2014.
@@ -131,15 +130,6 @@ public class ItemRepository extends BaseRepository {
     //TODO: we need userId or orderId?
     public ArrayList<ItemModel> getOrderItemsHistory(int orderId)
     {
-        //todo read from the database all items placed by a userId, in OrderItems table
-        ItemModel modelOne = new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1,null);
-        ItemModel modelTwo = new ItemModel(2,"Name",0.00,5,"Description", Enums.Category.Bread,-1,null);
-        ItemModel modelThree = new ItemModel(3,"Name",0.00,5,"Description", Enums.Category.Bread,-1,null);
-        /*ArrayList<ItemModel> items = new ArrayList<ItemModel>();
-        items.add(modelOne);
-        items.add(modelTwo);
-        items.add(modelThree);*/
-
         ArrayList<ItemModel> items = new ArrayList<ItemModel>();
         Connection c = null;
         Statement stmt = null;
@@ -236,11 +226,160 @@ public class ItemRepository extends BaseRepository {
         return items;
     }
 
-  /*  public ItemModel[] getImages(int imageId)
+    public Set<Integer> getItemIdsByOrderIds( ArrayList<Integer> orderIds)
     {
-        //TODO: get an array of Images
-        return new ItemModel[]{new ItemModel(1, "Name", 0.00,5,"Description", Enums.Category.Dairy,-1, 1,"Milk")};
+        ArrayList<Integer> itemIds = new ArrayList<Integer>();
+        int itemId = -1;
+        Connection c = null;
+        Statement stmt = null;
+        for(int orderId : orderIds)
+        {
+            try {
+                System.out.println("begin Get OrderItems by OrderIds table try block");
+                Class.forName(getClassForName());
+                c = DriverManager.getConnection(getConnectionString());
+                c.setAutoCommit(false);
+                System.out.println("Opened database successfully");
+
+                stmt = c.createStatement();
+                ResultSet rs = stmt.executeQuery( "SELECT * FROM OrderItems where orderid = " + "'" + orderId +"'" + ";");
+                while ( rs.next() ) {
+                    itemId = rs.getInt("ItemId");
+                    itemIds.add(itemId);
+                }
+                rs.close();
+                stmt.close();
+                c.close();
+            } catch ( Exception e ) {
+                System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+                System.exit(0);
+            }
+            System.out.println("One loop of getting Items by OrderId done successfully");
+        }
+
+        Set<Integer> uniqueItemIds = new HashSet<Integer>(itemIds);
+        return uniqueItemIds;
     }
-    */
+
+    public ArrayList<ItemModel> getItemsOnSubscription(int subscriptionId)
+    {
+        ArrayList<ItemModel> items = new ArrayList<ItemModel>();
+        Connection c = null;
+        Statement stmt = null;
+        int itemId = 0;
+        try {
+            System.out.println("begin get Items on Subscription for items table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "Select * from SubscriptionItem where SubscriptionId = " + String.valueOf(subscriptionId) + ";");
+            while ( rs.next() ) {
+                ItemModel item = ItemController.getItem(rs.getInt("SubscriptionId"));
+                item.setQuantity(rs.getInt("Quantity"));
+                items.add(item);
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+        return items;
+    }
+
+    public void addItemToSubscription(int itemId, int quantity, int subscriptionId)
+    {
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin get OrderItems for items table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            stmt.executeUpdate( "Insert Into SubscriptionItem(SubscriptionId, ItemId, Quantity) VALUES(= " + subscriptionId + "," + itemId + "," + quantity + ");");
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+    }
+
+    public void editItemInSubscription(int itemId, int quantity, int subscriptionId )
+    {
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin edit item on Subscription try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            stmt.executeUpdate( "Update SubscriptionItem set quantity = " + quantity + "where SubscriptionId = " + subscriptionId + "and ItemId = " + itemId + ";");
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+    }
+
+    public void deleteItemInSubscription(int itemId, int subscriptionId)
+    {
+            Connection c = null;
+            Statement stmt = null;
+            try {
+                System.out.println("begin delete item on subscription try block");
+                Class.forName(getClassForName());
+                c = DriverManager.getConnection(getConnectionString());
+                c.setAutoCommit(false);
+                System.out.println("Opened database successfully");
+                stmt = c.createStatement();
+                stmt.executeUpdate( "Delete From SubscriptionItem where SubscriptionId = " + subscriptionId + "and ItemId = " + itemId + ";");
+                stmt.close();
+                c.close();
+            } catch ( Exception e ) {
+                System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+                System.exit(0);
+            }
+            System.out.println("Operation done successfully");
+    }
+
+    public ItemDetailsModel getItemDetails(int itemId)
+    {
+        Connection c = null;
+        Statement stmt = null;
+        ItemDetailsModel itemDetailsModel = null;
+        try {
+            System.out.println("begin get Item Details try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM ItemDetails where ItemId = " + itemId +";");
+            while ( rs.next() ) {
+                itemDetailsModel = new ItemDetailsModel(rs.getString("ItemIngredients"),rs.getInt("ItemCalories"),rs.getInt("ItemWeight"), rs.getString("ItemExpirationDate"), rs.getInt("IsItemReturnable") == 1);
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+        return itemDetailsModel;
+    }
 
 }

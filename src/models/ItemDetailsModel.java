@@ -19,4 +19,29 @@ public class ItemDetailsModel {
         _itemExpirationDate = itemExpirationDate;
         _isItemReturnable = isItemReturnable;
     }
+
+    public String getItemIngredients()
+    {
+        return _itemIngredients;
+    }
+
+    public String getItemCalories()
+    {
+        return Integer.toString(_itemCalories);
+    }
+
+    public String getItemWeight()
+    {
+        return Integer.toString(_itemWeight);
+    }
+
+    public String getItemExpirationDate()
+    {
+        return _itemExpirationDate;
+    }
+
+    public String getIsItemReturnable()
+    {
+        return _isItemReturnable? "True" : "False";
+    }
 }

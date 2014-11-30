@@ -114,8 +114,8 @@ public class ItemManager {
         _itemService.deleteItemInSubscription(itemId, subscriptionId);
     }
 
-    public ItemDetailsModel getItemDetails(int itemID)
+    public ItemDetailsModel getItemDetails(int itemId)
     {
-        return _itemService.getItemDetails(itemID);
+        return _itemService.getItemDetails(itemId);
     }
 }

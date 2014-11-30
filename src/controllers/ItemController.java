@@ -61,4 +61,34 @@ public class ItemController {
         }
         return categoryNames;
     }
+
+    public static ArrayList<ItemModel> getItemsByUserId(int userId)
+    {
+       return _itemManager.getItemsByUserId(userId);
+    }
+
+    public static ArrayList<ItemModel> getItemsOnSubscription(int subscriptionId)
+    {
+       return _itemManager.getItemsOnSubscription(subscriptionId);
+    }
+
+    public static String addItemToSubscription(int itemId, int quantity, int subscriptionId )
+    {
+         return _itemManager.addItemToSubscription(itemId, quantity,subscriptionId);
+    }
+
+    public static void editItemInSubscription(int itemId, int quantity, int subscriptionId )
+    {
+         _itemManager.editItemInSubscription(itemId, quantity,subscriptionId);
+    }
+
+    public static void deleteItemInSubscription(int itemId, int subscriptionId)
+    {
+           _itemManager.deleteItemInSubscription(itemId, subscriptionId);
+    }
+
+    public static ItemDetailsModel getItemDetails(int itemId)
+    {
+        return _itemManager.getItemDetails(itemId);
+    }
 }

@@ -21,6 +21,7 @@ public class OrderModel {
     public ShoppingCartModel _shoppingCart;
     private double _shippingFee;
     private String _orderDate;
+    private String _discountCode;
 
     //properties set when an order is submitted
     String _firstNameOnOrder;
@@ -153,6 +154,16 @@ public class OrderModel {
        Utilities.round(_orderTotal = _subTotal + _tax - _discountAmount, 2);
     }
 
+    public String getDiscountCode()
+    {
+        return _discountCode;
+    }
+
+    public void setDiscountCode(String discountCode)
+    {
+       _discountCode = discountCode;
+    }
+
     public void setSubTotal(){
         {
             double newSubtotal = 0.0;
@@ -171,7 +182,7 @@ public class OrderModel {
 
     public void setShippingFee()
     {
-        if(getSubTotal() >= 50.00)
+        if(getSubTotal() >= 50.00 || Global.CURRENT_ORDER.getDiscountCode() == "FreeShipping")
         {
             _shippingFee = 0;
         }
