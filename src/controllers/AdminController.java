@@ -14,4 +14,18 @@ public class AdminController {
         return _adminManager.getAdmin(adminId);
     }
 
+    public static void adjustPriceOnItem(int itemId, double price)
+    {
+        _adminManager.adjustPriceOnItem(itemId, price);
+    }
+
+    public static void deleteItem(int itemId)
+    {
+        _adminManager.deleteItem(itemId);
+    }
+
+    public static void addItem(String itemName, double price, int quantity, String description, int categoryId, int shoppingCartItemId)
+    {
+        _adminManager.addItem(itemName, price, quantity, description,categoryId,shoppingCartItemId);
+    }
 }

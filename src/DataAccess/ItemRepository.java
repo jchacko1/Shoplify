@@ -382,4 +382,97 @@ public class ItemRepository extends BaseRepository {
         return itemDetailsModel;
     }
 
+    public void adjustPriceOnItem(int itemId, double price)
+    {
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin update Item price try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(true);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            String query = "Update Item set Price  = " + price + " where ItemId = " + itemId + ";";
+            stmt.executeUpdate(query);
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+    }
+
+    public void deleteItem(int itemId)
+    {
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin update Item price try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(true);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            String query = "Update Item set Quantity = 0 where ItemId = " + itemId + ";";
+            stmt.executeUpdate(query);
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+    }
+
+    public void addItem(int itemId, String itemName, double price, int quantity, String description, int categoryId, int shoppingCartItemId, String imagePath)
+    {
+        Connection c = null;
+        Statement stmt = null;
+        int accountId = -1;
+        try {
+            System.out.println("begin insert Item into Item table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(true);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            String query = "Insert into Item(ItemId, ItemName, Price, Quantity,Description,CategoryId,ShoppingCartItemId,ImagePath)values(" + '"' + itemId + '"' + "," + '"'  + itemName + '"' + "," + '"' + price + '"' + "," + '"' + quantity + '"' + "," + '"' +
+            description + '"' + "," + '"' + categoryId + '"' + ',' + '"' + shoppingCartItemId + '"' + "," + '"' + imagePath + '"' + ");";
+            stmt.executeUpdate(query);
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+    }
+
+    public int getHighestPrimaryKey()
+    {
+        Connection c = null;
+        Statement stmt = null;
+        int highestPrimaryKey = -1;
+        try {
+            System.out.println("begin get highest primary key from Item table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "select max(ItemId) from Item ;");
+            while ( rs.next() ) {
+                highestPrimaryKey = rs.getInt("max(ItemId)");
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+        return highestPrimaryKey;
+    }
+
 }
