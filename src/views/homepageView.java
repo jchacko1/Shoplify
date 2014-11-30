@@ -7,26 +7,17 @@ package views;
 
 
 
-import controllers.ImageController;
 import controllers.ItemController;
-import DataAccess.*;
 import controllers.OrderController;
 import controllers.SearchController;
-import global.Global;
-import models.AccountModel;
 import models.Enums;
 import models.ItemModel;
-import models.SearchModel;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.text.html.HTML;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 
 /**
