@@ -4,6 +4,7 @@ import DataAccess.UserRepository;
 import DataAccess.UserService;
 import models.Enums;
 import models.RegisteredUserModel;
+import models.SubscriptionUserModel;
 import models.UserModel;
 
 /**
@@ -29,5 +30,21 @@ public class UserManager {
     public int createNewSubscription(int userId)
     {
         return _userService.createNewSubscription(userId);
+    }
+
+    public UserModel getGuestUser()
+    {
+        UserModel guestUser = new UserModel(-1,Utilities.getCurrentDate(),"Guest","User",false, Enums.UserType.GUEST,-1);
+        return guestUser;
+    }
+
+    public boolean updateRegisteredUser(RegisteredUserModel registeredUserModel)
+    {
+            return _userService.updateRegisteredUser(registeredUserModel);
+    }
+
+    public boolean updateSubscriptionUser(SubscriptionUserModel subscriptionUserModel)
+    {
+        return _userService.updateSubscriptionUser(subscriptionUserModel);
     }
 }

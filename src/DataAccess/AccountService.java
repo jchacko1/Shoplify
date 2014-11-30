@@ -2,6 +2,11 @@ package DataAccess;
 
 import controllers.UserController;
 import models.AccountModel;
+import models.SavedPaymentInformationModel;
+import models.SubscriptionUserModel;
+import models.UserModel;
+
+import java.util.ArrayList;
 
 /**
  * Created by jmarquez on 10/18/2014.
@@ -51,4 +56,23 @@ public class AccountService {
         return _accountRepository.getAccountFromUserName(userName);
     }
 
+    public boolean createSubscription(String shipDate, boolean enabled, SubscriptionUserModel subscriptionUserModel)
+    {
+        return _accountRepository.createSubscription(shipDate, enabled, subscriptionUserModel);
+    }
+
+    public boolean updateSubscription(String shipDate, boolean enabled,SubscriptionUserModel subscriptionUserModel)
+    {
+        return _accountRepository.updateSubscription(shipDate,enabled,subscriptionUserModel);
+    }
+
+    public void insertSavedPaymentInformationModel(int userId, String creditCardType, String cardHoldersName, String creditCardNumber, String expirationDate, String cvs)
+    {
+        _accountRepository.insertSavedPaymentInformationModel(userId, creditCardType, cardHoldersName, creditCardNumber, expirationDate,cvs);
+    }
+
+    public ArrayList<SavedPaymentInformationModel> getSavedPayments(int userId)
+    {
+        return _accountRepository.getSavedPayments(userId);
+    }
 }

@@ -62,4 +62,9 @@ public class SubscriptionUserModel extends RegisteredUserModel {
     {
         _subscriptionId = subscriptionId;
     }
+
+    public void setSubscriptionUserType()
+    {
+        super.setUserType(Enums.UserType.SUBSCRIPTION);
+    }
 }

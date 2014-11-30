@@ -35,10 +35,20 @@ public class ShoppingCartModel {
    //@postcondition: deletes item to the shopping cart
     public void deleteItem(ItemModel item){
         for(ItemModel itemToDelete : _items)
-        if(itemToDelete.getShoppingCartItemId() == item.getShoppingCartItemId())
+        if(itemToDelete.getShoppingCartItemId() == item.getShoppingCartItemId() && itemToDelete.getItemID() == item.getItemID())
         {
             _items.remove(itemToDelete);
+            return;
         }
+    }
+
+    public void editItem(ItemModel item){
+        for(ItemModel itemToEdit : _items)
+            if(itemToEdit.getShoppingCartItemId() == item.getShoppingCartItemId() && itemToEdit.getItemID() == item.getItemID())
+            {
+                itemToEdit.setQuantity(item.getQuantity());
+                return;
+            }
     }
 
 

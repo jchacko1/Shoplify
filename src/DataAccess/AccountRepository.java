@@ -3,13 +3,14 @@ package DataAccess;
 /**
  * Created by jmarquez on 10/18/2014.
  */
-import models.AccountModel;
+import models.*;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 
 public class AccountRepository extends BaseRepository {
@@ -191,5 +192,125 @@ public class AccountRepository extends BaseRepository {
             return new AccountModel(accountId,userModelId,userName, password );
         }
         return null;
+    }
+
+    public boolean createSubscription(String shipDate, boolean enabled, SubscriptionUserModel subscriptionUserModel)
+    {
+        Connection c = null;
+        Statement stmt = null;
+        int userId = subscriptionUserModel.getUserId();
+        int isEnabled = enabled? 1 : 0;
+        int subscriptionId = -1;
+        try {
+            System.out.println("begin create Subscription table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(true);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            String query = "Insert into Subscription(UserId, ShipDate, Enabled)values(" + '"' + userId + '"' + "," + '"'  + shipDate + '"' + "," + '"' + isEnabled + '"' + ");";
+            //subscriptionId = stmt.executeUpdate(query);
+            ResultSet rs = stmt.executeQuery("SELECT last_insert_rowid()");
+            while ( rs.next() ) {
+                subscriptionId = rs.getInt(1);
+            }
+            System.out.println("AccountId is:" + subscriptionId);
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        if(subscriptionId > -1)
+        {
+            subscriptionUserModel.setSubscriptionId(subscriptionId);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean updateSubscription(String shipDate, boolean enabled, SubscriptionUserModel subscriptionUserModel)
+    {
+        int isEnabled = enabled? 1 : 0;
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin update Subscription User table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(true);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            //String query = "select max(accountid) from account";
+            //accountId = stmt.executeUpdate(query);
+            //System.out.println("Last AccountId is:" + accountId);
+            String query = "Update Subscription set ShipDate = " + "''" + shipDate + "'" + ", Enabled=" + isEnabled + " where SubscriptionId = " + subscriptionUserModel.getSubscriptionId() + ";";
+            stmt.executeUpdate(query);
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        return true;
+    }
+
+    public void insertSavedPaymentInformationModel(int userId, String creditCardType, String cardHoldersName, String creditCardNumber, String expirationDate, String cvs)
+    {
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin insert SavedPaymentInformation table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(true);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            String query = "Insert into SavedPaymentInformation(UserId, CreditCardType,CardholdersName,CreditCardNumber,ExpirationDate,Cvs)values(" + '"' + userId + '"' + "," + '"'  + creditCardType + '"' + "," + '"' + cardHoldersName + '"' + creditCardNumber + '"' + expirationDate + '"' + cvs + '"' + ");";
+            stmt.executeUpdate(query);
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+    }
+
+    public ArrayList<SavedPaymentInformationModel> getSavedPayments(int userId)
+    {
+        ArrayList<SavedPaymentInformationModel> savedPayments = new ArrayList<SavedPaymentInformationModel>();
+        String creditCardType;
+        String cardHoldersName;
+        String creditCardNumber;
+        String expirationDate;
+        String cvs;
+        Connection c = null;
+        Statement stmt = null;
+
+        try {
+            System.out.println("begin get SavedPaymentInformations for User try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM SavedPaymentInformation WHERE UserId = " + "''" + userId + "'" + ";");
+            while ( rs.next() ) {
+                creditCardType = rs.getString("CreditCardType");
+                cardHoldersName = rs.getString("CardholdersName");
+                creditCardNumber = rs.getString("CreditCardNumber");
+                expirationDate = rs.getString("ExpirationDate");
+                cvs = rs.getString("Cvs");
+                SavedPaymentInformationModel savedPaymentInformationModel = new SavedPaymentInformationModel(creditCardType,cardHoldersName,creditCardNumber,expirationDate,cvs);
+                savedPayments.add(savedPaymentInformationModel);}
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+        return savedPayments;
     }
 }

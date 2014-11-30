@@ -42,8 +42,13 @@ public class AccountManager {
         _accountService.updateUserIdOnAccount(accountId, userId);
     }
 
+    public AccountModel getAccountFromUserName(String userName)
+    {
+        return _accountService.getAccountFromUserName(userName);
+    }
+
     public AccountModel getAccountFromSecurityQuestion(String userName, int securityQuestionId, String securityQuestionAnswer)
-    {   AccountModel accountModel =  _accountService.getAccountFromUserName(userName);
+    {   AccountModel accountModel =  getAccountFromUserName(userName);
         if(accountModel != null)
         {
             UserModel userModel = UserController.getUser(accountModel.getAccountUserModelId());
@@ -75,5 +80,44 @@ public class AccountManager {
     public void logoutUser()
     {
         Global.CURRENT_ACCOUNT = null;
+        Global.CURRENT_ORDER = null;
+    }
+
+    public AccountModel getGuestAccount()
+    {
+        AccountModel guestAccount = new AccountModel(-1,-1,"Guest","Password");
+        return guestAccount;
+    }
+
+    public boolean createSubscription(String shipDate, boolean enabled, SubscriptionUserModel subscriptionUserModel)
+    {
+        return _accountService.createSubscription(shipDate, enabled, subscriptionUserModel);
+    }
+
+    public boolean updateSubscription(String shipDate, boolean enabled,SubscriptionUserModel subscriptionUserModel)
+    {
+        return _accountService.updateSubscription(shipDate,enabled,subscriptionUserModel);
+    }
+
+    public void insertSavedPaymentInformationModel(int userId, String creditCardType, String cardHoldersName, String creditCardNumber, String expirationDate, String cvs)
+    {
+        ArrayList<SavedPaymentInformationModel> savedPaymentInformationModels = _accountService.getSavedPayments(userId);
+        boolean hasCreditCardAlreadyBeenSaved = false;
+        for(SavedPaymentInformationModel savedPaymentInformationModel : savedPaymentInformationModels)
+        {
+            if(savedPaymentInformationModel.getCreditCardNumber() == creditCardNumber.trim())
+            {
+                hasCreditCardAlreadyBeenSaved = true;
+            }
+        }
+        if(!hasCreditCardAlreadyBeenSaved)
+        {
+            _accountService.insertSavedPaymentInformationModel(userId, creditCardType, cardHoldersName, creditCardNumber.trim(), expirationDate.trim(),cvs);
+        }
+    }
+
+    public ArrayList<SavedPaymentInformationModel> getSavedPayments(int userId)
+    {
+        return _accountService.getSavedPayments(userId);
     }
 }

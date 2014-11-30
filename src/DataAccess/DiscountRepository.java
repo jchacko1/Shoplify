@@ -2,6 +2,7 @@ package DataAccess;
 
 import java.sql.*;
 import models.DiscountModel;
+import models.Enums;
 
 import java.sql.Connection;
 
@@ -10,59 +11,51 @@ import java.sql.Connection;
  */
 public class DiscountRepository extends BaseRepository {
 
-    public DiscountModel getDiscountModel(String promoCode)
+
+    public DiscountModel getDiscount(String discountCode)
     {
-        if(true)
-        {
-         //todo get Discount from database, using the promoCode
-         DiscountModel discountModel = new DiscountModel();
-         return discountModel;
+        Connection c = null;
+        Statement stmt = null;
+        int discountId = -1;
+        double discountAmount = 0.00;
+        boolean isDiscountInPercent = false;
+        Enums.DiscountType discountType = null;
+        int itemIdToDiscount = -1;
+
+        try {
+            System.out.println("begin get OrderIds by UserId order table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "Select * from Discount where DiscountCode = " + "'" + discountCode + "'" + ";");
+            while ( rs.next() ) {
+                discountId  = rs.getInt("DiscountId");
+                System.out.println( "DiscountId = " + discountId );
+                discountAmount =  rs.getDouble("DiscountAmount");
+                isDiscountInPercent = rs.getBoolean("IsDiscountInPercent");
+                discountType = Enums.DiscountType.valueOf(rs.getString("DiscountType"));
+                itemIdToDiscount =  rs.getInt("ItemIdToDiscount");
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
         }
-        else
+        System.out.println("Operation done successfully");
+        if(discountId > -1)
         {
-            return null;
+            return new DiscountModel(discountId,discountCode,discountAmount,isDiscountInPercent,discountType,itemIdToDiscount);
         }
+        return null;
     }
 
     public int[] getDiscountIds(int discountId)
     {
         //TODO: get and array of discountIds
         return new int[]{1,2,3};
-    }
-
-    /**
-     * Test Discount DB syndication
-     * @throws ClassNotFoundException
-     */
-    public void testSql() throws ClassNotFoundException {
-        Connection c = null;
-        Statement stmt = null;
-
-        try{
-            System.out.println("Begin Discount table try block");
-            Class.forName(getClassForName());
-            c = DriverManager.getConnection(getConnectionString());
-            c.setAutoCommit(false);
-            System.out.println("Opened Discount database successfully");
-
-            stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM Discount;");
-
-            while(rs.next()) {
-                int id = rs.getInt("DiscountId");
-                System.out.println("ID = " + id);
-            }
-
-            rs.close();
-            stmt.close();
-            c.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-            System.exit(0);
-        }
-
-        System.out.println("Discount DB Operation done successfully");
-
     }
 }

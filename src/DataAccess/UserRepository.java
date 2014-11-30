@@ -124,39 +124,61 @@ public class UserRepository extends BaseRepository {
         return subscriptionId;
     }
 
-    /**
-     * Test User DB syndication
-     * @throws ClassNotFoundException
-     */
-    public void testSql() throws ClassNotFoundException {
+    public boolean updateRegisteredUser(RegisteredUserModel registeredUserModel)
+    {
         Connection c = null;
         Statement stmt = null;
-
-        try{
-            System.out.println("Begin User table try block");
+        try {
+            System.out.println("begin update Registered User table try block");
             Class.forName(getClassForName());
             c = DriverManager.getConnection(getConnectionString());
-            c.setAutoCommit(false);
-            System.out.println("Opened User database successfully");
-
+            c.setAutoCommit(true);
+            System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM User;");
-
-            while(rs.next()) {
-                int id = rs.getInt("UserId");
-                System.out.println("ID = " + id);
-            }
-
-            rs.close();
+            //String query = "select max(accountid) from account";
+            //accountId = stmt.executeUpdate(query);
+            //System.out.println("Last AccountId is:" + accountId);
+            String query = "Update User set FirstName = " + "'" + registeredUserModel.getFirstName() + "'" + ",LastName = " + "'" + registeredUserModel.getLastName() + "'" + ", isAdmin = " + registeredUserModel.getIsAdmin() + ", UserType = " + registeredUserModel.getUserTypeId()
+             + ", Address = "  + "'" + registeredUserModel.getAddress() + "'" + ", PhoneNumber = " + "'" + registeredUserModel.getPhoneNumber() + "'" +
+            ", DateOfBirth = " + "'" + registeredUserModel.getDateOfBirth() + "'" + ", Gender = " + "'" + registeredUserModel.getGender() + "'" + ", Email = " + "'" + registeredUserModel.getEmail() + "'" +
+            ", SecurityQuestionId = " + "'" + registeredUserModel.getSecurityQuestionId() + "'" + ",SecurityAnswer = " + "'" + registeredUserModel.getSecurityAnswer() + "'" +  " where UserId = " + registeredUserModel.getUserId() + ";";
+            stmt.executeUpdate(query);
             stmt.close();
             c.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch ( Exception e ) {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
             System.exit(0);
         }
-
-        System.out.println("User DB Operation done successfully");
-
+        return true;
     }
+
+    public boolean updateSubscriptionUser(SubscriptionUserModel subscriptionUserModel)
+    {
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin update Subscription User table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(true);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            //String query = "select max(accountid) from account";
+            //accountId = stmt.executeUpdate(query);
+            //System.out.println("Last AccountId is:" + accountId);
+            String query = "Update User set FirstName = " + "'" + subscriptionUserModel.getFirstName() + "'" + ",LastName = " + "'" + subscriptionUserModel.getLastName() + "'" + ", isAdmin = " + subscriptionUserModel.getIsAdmin() + ", UserType = " + subscriptionUserModel.getUserTypeId()
+                    + ", Address = "  + "'" + subscriptionUserModel.getAddress() + "'" + ", PhoneNumber = " + "'" + subscriptionUserModel.getPhoneNumber() + "'" +
+                    ", DateOfBirth = " + "'" + subscriptionUserModel.getDateOfBirth() + "'" + ", Gender = " + "'" + subscriptionUserModel.getGender() + "'" + ", Email = " + "'" + subscriptionUserModel.getEmail() + "'" +
+                    ", SecurityQuestionId = " + "'" + subscriptionUserModel.getSecurityQuestionId() + "'" + ",SecurityAnswer = " + "'" + subscriptionUserModel.getSecurityAnswer() + "'" +
+                   "SubscriptionId = " + subscriptionUserModel.getSubscriptionId() + " where UserId = " + subscriptionUserModel.getUserId() + ";";
+            stmt.executeUpdate(query);
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        return true;
+    }
+
 }

@@ -61,4 +61,14 @@ public class UserService {
     {
         return _userRepository.createNewSubscription(userId);
     }
+
+    public boolean updateRegisteredUser(RegisteredUserModel registeredUserModel)
+    {
+        return _userRepository.updateRegisteredUser(registeredUserModel);
+    }
+
+    public boolean updateSubscriptionUser(SubscriptionUserModel subscriptionUserModel)
+    {
+        return _userRepository.updateSubscriptionUser(subscriptionUserModel);
+    }
 }

@@ -25,6 +25,22 @@ public class UserController {
         return _userManager.createRegisteredUser(firstName,lastName,dateOfBirth,gender,accountId,address,email,phoneNumber,securityQuestionId,securityAnswer);
     }
 
+    public static boolean updateUser(UserModel userModel)
+    {
+        if(userModel.getUserType() == Enums.UserType.REGISTERED)
+        {
+            RegisteredUserModel registeredUserModel = (RegisteredUserModel)userModel;
+            return _userManager.updateRegisteredUser(registeredUserModel);
+        }
+
+        if(userModel.getUserType() == Enums.UserType.SUBSCRIPTION)
+        {
+            SubscriptionUserModel subscriptionUserModel = (SubscriptionUserModel)userModel;
+            return _userManager.updateSubscriptionUser(subscriptionUserModel);
+        }
+        return false;
+    }
+
     public static int createNewSubscription(int userId)
     {
         return _userManager.createNewSubscription(userId);
@@ -105,7 +121,12 @@ public class UserController {
         }
         //TODO: add checkemail and checkLogin method inside userModel?
         return true;
+    }
 
+    public static UserModel getGuestUser()
+    {
+        UserModel guestUser = _userManager.getGuestUser();
+        return guestUser;
     }
 
     public static boolean checkLogin(String login){

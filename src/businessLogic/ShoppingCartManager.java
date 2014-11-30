@@ -38,7 +38,7 @@ public class ShoppingCartManager {
     public boolean applyDiscount(ShoppingCartModel shoppingCart, DiscountModel discountModel)
     {
         Enums.DiscountType discountType = discountModel.getDiscountType();
-        boolean isDiscountInPercent = discountModel.isDiscountInPercent();
+        boolean isDiscountInPercent = discountModel.getIsDiscountInPercent();
         double discountAmountValue = discountModel.getDiscountAmount();
         double amountToDiscountOffOrder = 0.0;
         boolean orderEligibleForDiscount = false;

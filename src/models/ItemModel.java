@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 
 //TODO: ItemModel match with itemImage?
-public class ItemModel {
+public class ItemModel implements Comparable<ItemModel> {
     private int itemId;
     private String itemName;
     private double price;
@@ -30,7 +30,7 @@ public class ItemModel {
     public ItemModel(int itemId, String itemName, double price, int quantity, String description, Enums.Category category, int shoppingCartItemId, String imagePath){
         this.itemId = itemId;
         this.itemName = itemName;
-        this.price = Utilities.round(price, 2);;
+        this.price = Utilities.round(price, 2);
         this.quantity = quantity;
         this.description = description;
         this.category = category;
@@ -39,28 +39,15 @@ public class ItemModel {
 
     }
 
-    /**
-     * constructor w/o category id
-     * @param itemId
-     * @param itemName
-     * @param price
-     * @param quantity
-     * @param description
-     * @param shoppingCartItemId
-     * @param imagePath
-     */
-    public ItemModel(int itemId, String itemName, double price, int quantity, String description, int shoppingCartItemId, String imagePath){
-        this.itemId = itemId;
-        this.itemName = itemName;
-        this.price = Utilities.round(price, 2);;
-        this.quantity = quantity;
-        this.description = description;
-        //this.category = category;
-        this.shoppingCartItemId = shoppingCartItemId;
-        this.imagePath = imagePath;
+    @Override
+    public int compareTo(ItemModel comparestu) {
+        int compareage=((ItemModel)comparestu).getShoppingCartItemId();
+        /* For Ascending order*/
+        return this.shoppingCartItemId-compareage;
 
+        /* For Descending order do like this */
+        //return compareage-this.studentage;
     }
-
 
     /**
      * Get Item with Image

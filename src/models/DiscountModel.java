@@ -1,5 +1,7 @@
 package models;
 
+import global.Global;
+
 /**
  * Created by jmarquez on 11/2/2014.
  */
@@ -41,8 +43,13 @@ public class DiscountModel {
         return _discountType;
     }
 
-    public boolean isDiscountInPercent()
+    public boolean getIsDiscountInPercent()
     {
         return _isDiscountInPercent;
+    }
+
+    public double getFormattedDiscountedAmount()
+    {
+      return _isDiscountInPercent ? Global.CURRENT_ORDER.getSubTotal() * _discountAmount * -1 : _discountAmount * -1;
     }
 }

@@ -1,6 +1,7 @@
 package DataAccess;
 
 import businessLogic.OrderManager;
+import models.DiscountModel;
 import models.ItemModel;
 import models.OrderModel;
 
@@ -36,9 +37,21 @@ public class OrderService {
         return _orderRepository.createOrder(orderTotal,subTotal,tax,userId,discountAmount,isSubscriptionOrder,shippingFee);
     }
 
-    public void addItemToOrder(int orderId,int itemId)
+    public void addItemToOrder(int orderId,int itemId, int quantity)
     {
-        _orderRepository.addItemToOrder(orderId,itemId);
+                 int shoppingCartItemId = _orderRepository.getMaxShoppingCartItemIdOnOrder(orderId);
+                if(shoppingCartItemId > -1)
+                {
+                    //increment by one
+                    shoppingCartItemId++;
+                    _orderRepository.addItemToOrder(orderId,itemId, shoppingCartItemId, quantity);
+                }
+                else
+                {
+                    //this is the first item on the order
+                    _orderRepository.addItemToOrder(orderId,itemId, 1, quantity);
+                }
+
     }
 
     public void updateOrder(OrderModel order)
@@ -49,5 +62,20 @@ public class OrderService {
     public ArrayList<ItemModel> getItemsOnOrder(int orderId)
     {
         return _orderRepository.getItemsOnOrder(orderId);
+    }
+
+    public void deleteItemOnOrder(int orderId,int itemId,int shoppingCartItemId)
+    {
+        _orderRepository.deleteItemOnOrder(orderId, itemId, shoppingCartItemId);
+    }
+
+    public void editItemOnOrder(int orderId,int itemId,int shoppingCartItemId, int quantity)
+    {
+        _orderRepository.editItemOnOrder(orderId, itemId, shoppingCartItemId, quantity);
+    }
+
+    public ArrayList<Integer> getOrderIdsByUserId(int userId)
+    {
+        return _orderRepository.getOrderIdsByUserId(userId);
     }
 }

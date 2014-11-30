@@ -19,7 +19,6 @@ public class UserModel {
     private Enums.UserType _userType;
     private int _accountId;
 
-
     public UserModel()
     {
         //return new UserModel();
@@ -79,6 +78,33 @@ public class UserModel {
         return _userType;
     }
 
+    public int getUserTypeId()
+    {
+        if(_userType == Enums.UserType.GUEST)
+        {
+            return 0;
+        }
+        else if (_userType == Enums.UserType.REGISTERED)
+        {
+            return 1;
+        }
+        else if (_userType == Enums.UserType.SUBSCRIPTION)
+        {
+            return 2;
+        }
+        else if(_userType == Enums.UserType.ADMIN)
+        {
+            return 3;
+        }
+        //should never hit this part of the code
+        return -1;
+    }
+
+
+    public int getAccountId()
+    {
+        return _accountId;
+    }
     public String getFirstName()
     {
         return _firstName;

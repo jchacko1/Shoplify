@@ -103,6 +103,11 @@ public class RegisteredUserModel extends UserModel {
 
     public String getGender() { return _gender;  }
 
+    public String getEmail()
+    {
+        return _email;
+    }
+
 
 }
 
