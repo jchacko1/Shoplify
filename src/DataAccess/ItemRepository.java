@@ -458,7 +458,6 @@ public class ItemRepository extends BaseRepository {
             c = DriverManager.getConnection(getConnectionString());
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
-
             stmt = c.createStatement();
             ResultSet rs = stmt.executeQuery( "select max(ItemId) from Item ;");
             while ( rs.next() ) {

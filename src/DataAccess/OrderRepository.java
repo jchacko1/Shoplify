@@ -129,7 +129,7 @@ public class OrderRepository extends BaseRepository {
             c.setAutoCommit(true);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            stmt.executeUpdate( "INSERT INTO UserOrder(OrderTotal,Subtotal,Tax,UserId,DiscountAmount,IsSubscriptionOrder,ShippingFee, OrderDate) values(" + orderTotal + "," + subTotal + "," + tax + "," + userId + "," +discountAmount + "," +isSubscriptionOrder + "," + shippingFee + "," + date + ");"  );
+            stmt.executeUpdate( "INSERT INTO UserOrder(OrderTotal,Subtotal,Tax,UserId,DiscountAmount,IsSubscriptionOrder,ShippingFee, OrderDate) values(" + '"' + orderTotal + '"' + "," + '"' + subTotal + '"' + "," + '"' + tax + '"' + "," + '"' + userId + '"' + "," + '"' + discountAmount + '"' + "," + '"' + isSubscriptionOrder + '"' + "," + '"' + shippingFee + '"' + "," + '"' + date + '"' + ");"  );
             ResultSet rs = stmt.executeQuery("select max(orderid) from userorder");
             while ( rs.next() ) {
                 orderId = rs.getInt(1);
@@ -187,7 +187,7 @@ public class OrderRepository extends BaseRepository {
             stmt = c.createStatement();
             ResultSet rs = stmt.executeQuery( "Select max(ShoppingCartItemId) from OrderItems where OrderId = " + String.valueOf(orderId) + ";");
             while ( rs.next() ) {
-                shoppingCartItemId  = rs.getInt("ItemId");
+                shoppingCartItemId  = rs.getInt("max(ShoppingCartItemId)");
                 System.out.println("ShoppingCartItemId = " + shoppingCartItemId);
             }
             rs.close();
@@ -234,20 +234,8 @@ public class OrderRepository extends BaseRepository {
             c.setAutoCommit(true);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            int resultId = stmt.executeUpdate( "Update UserOrder set OrderTotal = " + String.valueOf(order.getOrderTotal()) + ",Subtotal = " + String.valueOf(order.getSubTotal()) + ",Tax = " + String.valueOf(order.getTax()) +
-               ",DiscountAmount = " + String.valueOf(order.getDiscount()) + ",ShippingFee = " + String.valueOf(order.getShippingFee()) + ",OrderDate = " + String.valueOf(order.getOrderDate())  + " where OrderId = " + String.valueOf(order.getOrderId()) + ";");
-      //      while ( rs.next() ) {
-                //String  name = rs.getString("name");
-//                int age  = rs.getInt("age");
-//                String  address = rs.getString("address");
-//                float salary = rs.getFloat("salary");
-//                System.out.println( "NAME = " + name );
-//                System.out.println( "AGE = " + age );
-//                System.out.println( "ADDRESS = " + address );
-//                System.out.println( "SALARY = " + salary );
-//                System.out.println();
-            //}
-            //rs.close();
+            stmt.executeUpdate( "Update UserOrder set OrderTotal = " + '"' + String.valueOf(order.getOrderTotal()) + '"' + ",Subtotal = " + '"' + String.valueOf(order.getSubTotal()) + '"'  + ",Tax = " + '"' + String.valueOf(order.getTax()) + '"' +
+               ",DiscountAmount = " + '"' + String.valueOf(order.getDiscount()) + '"' + ",ShippingFee = " + '"' + String.valueOf(order.getShippingFee()) + '"' + ",OrderDate = " + '"' + String.valueOf(order.getOrderDate()) + '"' + " where OrderId = " + '"' + String.valueOf(order.getOrderId()) + '"' + ";");
             stmt.close();
             c.close();
         } catch ( Exception e ) {

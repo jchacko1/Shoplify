@@ -59,14 +59,18 @@ public class OrderManager {
 
     public boolean addItemToOrder(int orderId,int itemId, int quantity)
     {
+        ItemModel itemToAdd = ItemController.getItem(itemId);
+
         //insert into the OrderItems table
         _orderService.addItemToOrder(orderId,itemId,quantity);
 
         //update the current order in the Global session and in the database
-        ItemModel itemToAdd = ItemController.getItem(itemId);
         Global.CURRENT_ORDER._shoppingCart.addItem(itemToAdd);
+        System.out.println("Item added to cart, need to update prices");
         Global.CURRENT_ORDER.updateAllPriceTotals();
+        System.out.println("Price Totals updated");
         updateOrder(Global.CURRENT_ORDER);
+        System.out.println("Order updated");
         return true;
     }
 
