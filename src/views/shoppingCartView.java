@@ -105,13 +105,25 @@ public class shoppingCartView extends javax.swing.JFrame {
         DefaultTableModel dtm = new DefaultTableModel(){
 
             @Override
-            public boolean isCellEditable(int row, int column) {
-                //all cells false
+            public boolean isCellEditable(int row, int col) {
+                switch (col) {
+                    case 0:
+                        return false;
+                    case 1:
+                        return false;
+                    case 2:
+                        return true;
+
+                }
                 return false;
             }
+
+           // public void setValueAt(int row, int col) {
+
+            //}
         };
 
-        String header[] = new String[]{"Item Name", "Price ($)"};
+        String header[] = new String[]{"Item Name", "Price ($)", "Quantity"};
 
         dtm.setColumnIdentifiers(header);
         jTable1.setModel(dtm);
