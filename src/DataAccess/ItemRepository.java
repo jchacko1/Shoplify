@@ -82,6 +82,28 @@ public class ItemRepository extends BaseRepository {
         //todo delete item from ShoppingList table
     }
 
+    public ArrayList<ItemModel> getReminderList(int reminderId)
+    {
+        //todo get a "reminder list based on subscriptionId
+        //todo the "reminder list" needs to come from the database
+
+        ArrayList<ItemModel> reminderList = new ArrayList<ItemModel>();
+        reminderList.add(new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
+        reminderList.add(new ItemModel(2,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
+        reminderList.add(new ItemModel(3,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
+        return reminderList;
+    }
+
+    public void addItemToReminderList(int itemId, int reminderId)
+    {
+        //todo insert item into ReminderList table
+    }
+
+    public void deleteItemFromReminderList(int itemId, int reminderId)
+    {
+        //todo delete item from ReminderList table
+    }
+
     public ArrayList<ItemModel> getOrderItemsHistory(int userId)
     {
         //todo read from the database all items placed by a userId, in OrderItems table
