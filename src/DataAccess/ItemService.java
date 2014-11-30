@@ -20,9 +20,11 @@ public class ItemService {
         return _itemRepository.getItem(itemId);
     }
 
-    public ArrayList<ItemModel> getShoppingList(int subscriptionId)
+
+    public ArrayList<ItemModel> getShoppingList(int userId)
     {
-        return _itemRepository.getShoppingList(subscriptionId);
+       // return _itemRepository.getShoppingList(userId);
+        return null;
     }
 
     public void addItemToShoppingList(int itemId, int subscriptionId)
@@ -52,6 +54,6 @@ public class ItemService {
 
     }
 
-    public ItemModel[] getImages(int imageId) { return  _itemRepository.getImages(imageId); }
+    //public ItemModel[] getImages(int imageId) { return  _itemRepository.getImages(imageId); }
 
 }

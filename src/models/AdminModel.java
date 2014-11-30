@@ -7,7 +7,6 @@ import java.util.Date;
  */
 public class AdminModel {
 
-    private static final long serialVerionUID = 345678909876545678L;
     private Integer addAccount;
     private String loginName;
     private String password;

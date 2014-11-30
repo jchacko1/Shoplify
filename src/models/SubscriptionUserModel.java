@@ -7,7 +7,8 @@ import java.util.ArrayList;
  */
 public class SubscriptionUserModel extends RegisteredUserModel {
 
-    ArrayList<ItemModel> _shoppingList;
+    ArrayList<ItemModel> _shoppingListByItem;
+    ArrayList<UserModel> _shoppingListByUser;
     private int _subscriptionId;
 
     public SubscriptionUserModel(int userId, String createDate, String firstName, String lastName, boolean isAdmin, Enums.UserType userType, int accountId,
@@ -35,14 +36,21 @@ public class SubscriptionUserModel extends RegisteredUserModel {
         //
     }
 
-    public ArrayList<ItemModel> getShoppingList()
+    public ArrayList<ItemModel> getShoppingListByItem()
     {
-        return _shoppingList;
+        return _shoppingListByItem;
     }
 
-    public void setShoppingList(ArrayList<ItemModel> shoppingList)
+    public ArrayList<UserModel> getShoppingListByUser() { return _shoppingListByUser; }
+
+    public void setShoppingListByUser(ArrayList<UserModel> shoppingList)
     {
-        _shoppingList = shoppingList;
+        _shoppingListByUser = shoppingList;
+    }
+
+    public void setShoppingListByItem(ArrayList<ItemModel> shoppingList)
+    {
+        _shoppingListByItem = shoppingList;
     }
 
     public int getSubscriptionId()

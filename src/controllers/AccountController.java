@@ -19,7 +19,8 @@ public class AccountController {
             SubscriptionUserModel subscriptionUserModel = (SubscriptionUserModel)accountModel.getUserModel();
             if(subscriptionUserModel.getSubscriptionId() > 0)
             {
-                subscriptionUserModel.setShoppingList(ItemController.getShoppingList(subscriptionUserModel.getSubscriptionId()));
+
+                subscriptionUserModel.setShoppingListByItem(ItemController.getShoppingListByItem(subscriptionUserModel.getSubscriptionId()));
                 accountModel.setUserModel(subscriptionUserModel);
             }
         }

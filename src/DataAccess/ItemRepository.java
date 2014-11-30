@@ -1,7 +1,12 @@
 package DataAccess;
 
+import controllers.ItemController;
+import controllers.OrderController;
+import controllers.ReminderController;
 import models.Enums;
 import models.ItemModel;
+import models.OrderModel;
+import models.ReminderModel;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -10,9 +15,6 @@ import java.util.ArrayList;
  * Created by jmarquez on 11/2/2014.
  */
 public class ItemRepository extends BaseRepository {
-
-    //todo remove this if we dont need it anymore
-    private static final int size = Enums.Category.values().length;
 
     public ItemModel getItem(int itemId)
     {
@@ -60,60 +62,110 @@ public class ItemRepository extends BaseRepository {
         return null;
     }
 
-    public ArrayList<ItemModel> getShoppingList(int subscriptionId)
+    public ArrayList<ReminderModel> getShoppingList(int userId)
     {
-        //todo get a "shopping list based on subscriptionId
-        //todo the "shopping list" needs to come from the database
+        //TODO get a "shopping list based on userId
 
-        ArrayList<ItemModel> shoppingList = new ArrayList<ItemModel>();
-        shoppingList.add(new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
+        ArrayList<ReminderModel> shoppingList = new ArrayList<ReminderModel>();
+       /* shoppingList.add(new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
         shoppingList.add(new ItemModel(2,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
-        shoppingList.add(new ItemModel(3,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
+        shoppingList.add(new ItemModel(3,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));*/
+
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin get ShoppingList table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "Select * from ShoppingList where UserId = " + String.valueOf(userId) + ";");
+            while ( rs.next() ) {
+                userId  = rs.getInt("UserId");
+                System.out.println( "UserId = " + userId );
+                //shoppingList.add(ReminderController);
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+        //return orders;
+
         return shoppingList;
     }
 
-    public void addItemToShoppingList(int itemId, int subscriptionId)
+    public void addItemToShoppingList(int ItemId, int ShoppingListId)
     {
-        //todo insert item into ShoppingList table
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin add Item to ShoppingListItems table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(true);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            stmt.executeUpdate( "INSERT INTO ShoppingListItems(ShoppingListId, ItemId) values(" + ShoppingListId + "," + "Item Id" + ItemId + ");");
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+
     }
 
-    public void deleteItemFromShoppingList(int itemId, int subscriptionId)
+    //TODO: how can we delete item from shoppingListItems table?
+    public void deleteItemFromShoppingList(int itemId, int shoppingListId)
     {
-        //todo delete item from ShoppingList table
+
     }
 
-    public ArrayList<ItemModel> getReminderList(int reminderId)
-    {
-        //todo get a "reminder list based on subscriptionId
-        //todo the "reminder list" needs to come from the database
 
-        ArrayList<ItemModel> reminderList = new ArrayList<ItemModel>();
-        reminderList.add(new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
-        reminderList.add(new ItemModel(2,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
-        reminderList.add(new ItemModel(3,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
-        return reminderList;
-    }
-
-    public void addItemToReminderList(int itemId, int reminderId)
-    {
-        //todo insert item into ReminderList table
-    }
-
-    public void deleteItemFromReminderList(int itemId, int reminderId)
-    {
-        //todo delete item from ReminderList table
-    }
-
-    public ArrayList<ItemModel> getOrderItemsHistory(int userId)
+    //TODO: we need userId or orderId?
+    public ArrayList<ItemModel> getOrderItemsHistory(int orderId)
     {
         //todo read from the database all items placed by a userId, in OrderItems table
         ItemModel modelOne = new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1,null);
         ItemModel modelTwo = new ItemModel(2,"Name",0.00,5,"Description", Enums.Category.Bread,-1,null);
         ItemModel modelThree = new ItemModel(3,"Name",0.00,5,"Description", Enums.Category.Bread,-1,null);
-        ArrayList<ItemModel> items = new ArrayList<ItemModel>();
+        /*ArrayList<ItemModel> items = new ArrayList<ItemModel>();
         items.add(modelOne);
         items.add(modelTwo);
-        items.add(modelThree);
+        items.add(modelThree);*/
+
+        ArrayList<ItemModel> items = new ArrayList<ItemModel>();
+        Connection c = null;
+        Statement stmt = null;
+        int itemId = 0;
+        try {
+            System.out.println("begin get OrderItems for items table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "Select * from OrderItems where orderId = " + String.valueOf(orderId) + ";");
+            while ( rs.next() ) {
+                orderId  = rs.getInt("OrderId");
+                itemId = rs.getInt("ItemID");
+                System.out.println( "Order = " + orderId + "Item = " + itemId);
+                items.add(ItemController.getItem(itemId));
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
         return items;
     }
 
@@ -184,11 +236,11 @@ public class ItemRepository extends BaseRepository {
         return items;
     }
 
-    public ItemModel[] getImages(int imageId)
+  /*  public ItemModel[] getImages(int imageId)
     {
         //TODO: get an array of Images
         return new ItemModel[]{new ItemModel(1, "Name", 0.00,5,"Description", Enums.Category.Dairy,-1, 1,"Milk")};
     }
-
+    */
 
 }

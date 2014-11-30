@@ -36,6 +36,7 @@ public class reminderListView extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Reminder List", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12))); // NOI18N
 
+        //TODO: get list from backend
         jList1.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "item1", "item2", "item3", "item4", "item5", "item6", "item7", "item8", "item9", "item10", "item11", "item12" };
             public int getSize() { return strings.length; }

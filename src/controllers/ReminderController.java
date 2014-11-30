@@ -22,5 +22,7 @@ public class ReminderController {
         reminderList.add(reminder);
     }
 
+   // public static ReminderModel get
+
 
 }

@@ -1,6 +1,7 @@
 package DataAccess;
 
 import controllers.ItemController;
+import controllers.UserController;
 import models.*;
 
 import java.util.ArrayList;
@@ -32,10 +33,15 @@ public class UserService {
         }
         else if(userModelDto.getUserType() == Enums.UserType.SUBSCRIPTION)
         {
-            ArrayList<ItemModel> shoppingList = ItemController.getShoppingList(userModelDto._subscriptionId);
+            //ArrayList<ItemModel> shoppingList = ItemController.getShoppingList(userModelDto._subscriptionId);
+
+            //TODO:Where is this shoppingListId from --> getShoppingListByUser
+            ArrayList<UserModel> shoppingListByUser = ItemController.getShoppingListByUser(userId);
+
             SubscriptionUserModel subscriptionUserModel = new SubscriptionUserModel(userModelDto._userId,userModelDto._createDate,userModelDto._firstName,userModelDto._lastName,userModelDto._isAdmin,userModelDto._userType,userModelDto._accountId,userModelDto._address,
                     userModelDto._phoneNumber, userModelDto._dateOfBirth,userModelDto._gender,userModelDto._email,userModelDto._subscriptionId, userModelDto._securityQuestionId, userModelDto._securityAnswer);
-            subscriptionUserModel.setShoppingList(shoppingList);
+            subscriptionUserModel.setShoppingListByUser(shoppingListByUser);
+
             return subscriptionUserModel;
         }
         else if(userModelDto.getUserType() == Enums.UserType.ADMIN)

@@ -17,6 +17,10 @@ public class UserManager {
         return _userService.getUser(userId);
     }
 
+    public UserModel getShoppingListByUser(int userId){
+        return _userService.getUser(userId);
+    }
+
     public RegisteredUserModel createRegisteredUser(String firstName, String lastName, String dateOfBirth,String gender,int accountId, String address,String email, String phoneNumber, int securityQuestionId, String securityAnswer)
     {
         return _userService.createRegisteredUser(firstName, lastName,dateOfBirth,gender,accountId, address,email, phoneNumber,securityQuestionId,securityAnswer);

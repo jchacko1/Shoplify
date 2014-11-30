@@ -1,6 +1,7 @@
 package controllers;
 
 import businessLogic.ItemManager;
+import businessLogic.UserManager;
 import global.Global;
 import models.*;
 
@@ -11,6 +12,7 @@ import java.util.ArrayList;
  */
 public class ItemController {
     private static ItemManager _itemManager = new ItemManager();
+    private static UserManager _userManager = new UserManager();
 
     public static ItemModel getItem(int itemId)
     {
@@ -19,15 +21,22 @@ public class ItemController {
 
    // public static ArrayList<ItemModel> getItems() { return _itemManager.getItems(); }
 
-    public static ArrayList<ItemModel> getShoppingList(int subscriptionId)
+    public static ArrayList<UserModel> getShoppingListByUser(int userId)
     {
-        if(subscriptionId > 0)
+        if(userId > 0)
         {
-            return _itemManager.getShoppingList(subscriptionId);
+            //return _userManager.getShoppingListByUser(userId);
         }
         return null;
     }
 
+
+    public static ArrayList<ItemModel> getShoppingListByItem(int shoppingListId){
+        if(shoppingListId > 0) {
+            return _itemManager.getShoppingList(shoppingListId);
+        }
+        return null;
+    }
 
   /*  public static ItemModel[] getItems(int orderId)
     {

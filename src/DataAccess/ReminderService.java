@@ -19,19 +19,19 @@ public class ReminderService {
 
     public ArrayList<ItemModel> getReminderList(int reminderId){
        if(reminderId > 0) {
-           return _itemRepository.getReminderList(reminderId);
+           //return _itemRepository.getShoppingList(reminderId);
        }
        return null;
     }
 
     public void addItemToReminderList(int itemId, int reminderId)
     {
-        _itemRepository.addItemToReminderList(itemId, reminderId);
+        _itemRepository.addItemToShoppingList(itemId, reminderId);
     }
 
     public void deleteItemFromReminderList(int itemId, int reminderId)
     {
-        _itemRepository.deleteItemFromReminderList(itemId,reminderId);
+        _itemRepository.deleteItemFromShoppingList(itemId,reminderId);
     }
 
 }

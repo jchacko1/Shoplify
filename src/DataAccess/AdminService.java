@@ -1,6 +1,7 @@
 package DataAccess;
 
 import models.AdminModel;
+import models.UserModelDto;
 
 /**
  * Created by KellyAnn on 11/10/14.
@@ -20,6 +21,13 @@ public class AdminService {
     public void updateInfo(AdminModel model) {
 
     }
+
+    public AdminModel getAdmin(int adminId) {
+        //TODO: getAdmin from UserRepo? Since UserModelDto already has boolean type check isAdmin or not?
+        return null;
+    }
+
+
 
     public AdminModel getModel(String userId){
         return null;

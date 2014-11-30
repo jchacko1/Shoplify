@@ -12,9 +12,9 @@ public class ImageController {
 
     private static ItemManager _itemManager = new ItemManager();
 
-    public static ItemModel[] getImages(int imageId){
+    /*public static ItemModel[] getImages(int imageId){
         return _itemManager.getImages(imageId);
-    }
+    }*/
 
     public static ArrayList<String> getCategoryNames(){
         ArrayList<String> categoryNames = new ArrayList<String>();

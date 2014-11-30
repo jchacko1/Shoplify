@@ -11,6 +11,8 @@ package views;
  */
 public class checkoutView extends javax.swing.JFrame {
 
+    //TODO: Need add button listener for 'save payment' and 'place order' button
+
     /**
      * Creates new form checkoutView
      */

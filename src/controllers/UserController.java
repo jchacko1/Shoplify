@@ -48,7 +48,7 @@ public class UserController {
             {
                 //update the current User with the changes in this method
                 subscriptionUserModel.setSubscriptionId(subscriptionId);
-                subscriptionUserModel.setShoppingList(ItemController.getShoppingList(subscriptionId));
+                subscriptionUserModel.setShoppingListByItem(ItemController.getShoppingListByItem(subscriptionId));
                 Global.CURRENT_ACCOUNT.setUserModel(subscriptionUserModel);
             }
         }
@@ -72,7 +72,7 @@ public class UserController {
             if(Global.CURRENT_ACCOUNT.getUserModel().getUserId() == userId)
             {
                 //update the current User with the changes in this method
-                subscriptionUserModel.setShoppingList(ItemController.getShoppingList(subscriptionId));
+                subscriptionUserModel.setShoppingListByItem(ItemController.getShoppingListByItem(subscriptionId));
                 Global.CURRENT_ACCOUNT.setUserModel(subscriptionUserModel);
             }
         }
@@ -90,6 +90,7 @@ public class UserController {
                              return _itemManager.getOrderItemsHistory(userId);
                          }
     }
+
 
     public static boolean isValidUser(UserModel userModel){
 

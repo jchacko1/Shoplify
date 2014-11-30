@@ -17,9 +17,9 @@ public class ItemManager {
         return _itemService.getItem(itemId);
     }
 
-    public ArrayList<ItemModel> getShoppingList(int subscriptionId)
+    public ArrayList<ItemModel> getShoppingList(int shoppingListId)
     {
-        return _itemService.getShoppingList(subscriptionId);
+        return _itemService.getShoppingList(shoppingListId);
     }
 
     public void addItemToShoppingList(int itemId, int subscriptionId)
@@ -51,7 +51,7 @@ public class ItemManager {
         return _itemService.getItems();
     }
 
-    public ItemModel[] getImages(int imageId){ return _itemService.getImages(imageId); }
+   // public ItemModel[] getImages(int imageId){ return _itemService.getImages(imageId); }
 
     /*public ArrayList<ItemModel> getItems() {
         return items;
