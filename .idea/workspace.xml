@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/AccountRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/AccountRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/ItemController.java" afterPath="$PROJECT_DIR$/src/controllers/ItemController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/ItemRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/ItemRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessLogic/OrderManager.java" afterPath="$PROJECT_DIR$/src/businessLogic/OrderManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/OrderRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/OrderRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/shoplify.db" afterPath="$PROJECT_DIR$/src/DataAccess/shoplify.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -86,19 +81,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ItemController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/ItemController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="992" max-vertical-offset="1530">
-              <caret line="92" column="8" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-              <folding>
-                <element signature="e#2544#2545#0" expanded="true" />
-                <element signature="e#2602#2603#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SQLite -" pinned="false" current="false" current-in-tab="false">
         <entry file="dbDummy://db-console:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/">
           <provider selected="true" editor-type-id="text-editor">
@@ -111,7 +93,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Discount" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Discount" pinned="false" current="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Discount">
           <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
             <state />
@@ -119,6 +101,16 @@
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderModel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/OrderModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2331" max-vertical-offset="3400">
+              <caret line="285" column="78" selection-start-line="285" selection-start-column="69" selection-end-line="285" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -137,8 +129,21 @@
       <file leaf-file-name="OrderController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="823" max-vertical-offset="1377">
-              <caret line="80" column="52" selection-start-line="80" selection-start-column="52" selection-end-line="80" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="568" max-vertical-offset="1377">
+              <caret line="55" column="140" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemDetails" pinned="false" current="true" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..ItemDetails">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -248,38 +253,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountRepository.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataAccess/AccountRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4692" max-vertical-offset="5355">
-              <caret line="296" column="122" selection-start-line="296" selection-start-column="122" selection-end-line="296" selection-end-column="122" />
-              <folding>
-                <marker date="1417381057119" expanded="true" signature="865:1015" placeholder="Insert into ..." />
-                <marker date="1417381057119" expanded="true" signature="1116:1142" placeholder="SELECT last_..." />
-                <marker date="1417381057119" expanded="true" signature="2338:2446" placeholder="Update Accou..." />
-                <marker date="1417381057119" expanded="true" signature="2338:2440" placeholder="Update Accou..." />
-                <marker date="1417381057119" expanded="true" signature="2338:2416" placeholder="Update Accou..." />
-                <marker date="1417381057119" expanded="true" signature="3411:3451" placeholder="SELECT * FRO..Account..." />
-                <marker date="1417381057119" expanded="true" signature="3411:3481" placeholder="SELECT * FRO..Account..." />
-                <marker date="1417381057119" expanded="true" signature="3411:3475" placeholder="SELECT * FRO..Account..." />
-                <marker date="1417381057119" expanded="true" signature="4946:5049" placeholder="SELECT * FRO..Account..." />
-                <marker date="1417381057119" expanded="true" signature="6370:6432" placeholder="SELECT * FRO..Account..." />
-                <marker date="1417381057119" expanded="true" signature="8567:8593" placeholder="SELECT last_..." />
-                <marker date="1417381057119" expanded="true" signature="9924:10003" placeholder="Update Subsc..." />
-                <marker date="1417381057119" expanded="true" signature="9924:10112" placeholder="Update Subsc..." />
-                <marker date="1417381057119" expanded="true" signature="9924:10050" placeholder="Update Subsc..." />
-                <marker date="1417381057119" expanded="true" signature="9924:10106" placeholder="Update Subsc..." />
-                <marker date="1417381057119" expanded="true" signature="11004:11318" placeholder="Insert into ..." />
-                <marker date="1417381057119" expanded="true" signature="11004:11317" placeholder="Insert into ..." />
-                <marker date="1417381057119" expanded="true" signature="11004:11299" placeholder="Insert into ..." />
-                <marker date="1417381057119" expanded="true" signature="11004:11227" placeholder="Insert into ..." />
-                <marker date="1417381057119" expanded="true" signature="12379:12459" placeholder="SELECT * FRO..SavedPaymentInformation..." />
-                <marker date="1417381057119" expanded="true" signature="12379:12453" placeholder="SELECT * FRO..SavedPaymentInformation..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DiscountRepository.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataAccess/DiscountRepository.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -353,6 +326,7 @@
         <option value="dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Discount" />
         <option value="db-console:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/" />
         <option value="$PROJECT_DIR$/src/businessLogic/OrderManager.java" />
+        <option value="dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..ItemDetails" />
       </list>
     </option>
   </component>
@@ -1059,7 +1033,7 @@
       <workItem from="1416533953308" duration="20000" />
       <workItem from="1417325282032" duration="12498000" />
       <workItem from="1417369563094" duration="9098000" />
-      <workItem from="1417378735395" duration="3106000" />
+      <workItem from="1417378735395" duration="4392000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1233,11 +1207,15 @@
       <created>1417380563654</created>
       <updated>1417380563654</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Pre-emptive SQL changes, and adding some discounts">
+      <created>1417381865375</created>
+      <updated>1417381865375</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205562000" />
+    <option name="totallyTimeSpent" value="206848000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1263,7 +1241,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.55783784" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42162162" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1346,7 +1324,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Setting up code to delete an item, more code for accounts and users" />
     <MESSAGE value="Code for Discounts" />
     <MESSAGE value="Added code for Shopping List, creating Users. Created SubscriptionUserModel." />
     <MESSAGE value="More attempts at checking in code. Previous commits added the OrderController and associated classes, functionality for getting ItemHistory, and functionality for adding an item to a Shopping List" />
@@ -1371,7 +1348,8 @@
     <MESSAGE value="Reminder list related files (need to figure should we create a ReminderListRepo or not), current addItem/deleteItem to reminder list is in ItemRepo" />
     <MESSAGE value="Functionality for quantity, subscriptions, getting extra item data, and probably a lot more stuff" />
     <MESSAGE value="Sql bug fixes for adding an item to an order" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sql bug fixes for adding an item to an order" />
+    <MESSAGE value="Pre-emptive SQL changes, and adding some discounts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pre-emptive SQL changes, and adding some discounts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1383,11 +1361,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/views/homepageView.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/accountView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4" vertical-offset="6825" max-vertical-offset="8445">
@@ -1727,14 +1700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/OrderModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2331" max-vertical-offset="3400">
-          <caret line="312" column="16" selection-start-line="312" selection-start-column="16" selection-end-line="312" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataAccess/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="1088">
@@ -1762,27 +1727,27 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="4692" max-vertical-offset="5355">
           <caret line="296" column="122" selection-start-line="296" selection-start-column="122" selection-end-line="296" selection-end-column="122" />
           <folding>
-            <marker date="1417381057119" expanded="true" signature="865:1015" placeholder="Insert into ..." />
-            <marker date="1417381057119" expanded="true" signature="1116:1142" placeholder="SELECT last_..." />
-            <marker date="1417381057119" expanded="true" signature="2338:2446" placeholder="Update Accou..." />
-            <marker date="1417381057119" expanded="true" signature="2338:2440" placeholder="Update Accou..." />
-            <marker date="1417381057119" expanded="true" signature="2338:2416" placeholder="Update Accou..." />
-            <marker date="1417381057119" expanded="true" signature="3411:3451" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417381057119" expanded="true" signature="3411:3481" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417381057119" expanded="true" signature="3411:3475" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417381057119" expanded="true" signature="4946:5049" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417381057119" expanded="true" signature="6370:6432" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417381057119" expanded="true" signature="8567:8593" placeholder="SELECT last_..." />
-            <marker date="1417381057119" expanded="true" signature="9924:10003" placeholder="Update Subsc..." />
-            <marker date="1417381057119" expanded="true" signature="9924:10112" placeholder="Update Subsc..." />
-            <marker date="1417381057119" expanded="true" signature="9924:10050" placeholder="Update Subsc..." />
-            <marker date="1417381057119" expanded="true" signature="9924:10106" placeholder="Update Subsc..." />
-            <marker date="1417381057119" expanded="true" signature="11004:11318" placeholder="Insert into ..." />
-            <marker date="1417381057119" expanded="true" signature="11004:11317" placeholder="Insert into ..." />
-            <marker date="1417381057119" expanded="true" signature="11004:11299" placeholder="Insert into ..." />
-            <marker date="1417381057119" expanded="true" signature="11004:11227" placeholder="Insert into ..." />
-            <marker date="1417381057119" expanded="true" signature="12379:12459" placeholder="SELECT * FRO..SavedPaymentInformation..." />
-            <marker date="1417381057119" expanded="true" signature="12379:12453" placeholder="SELECT * FRO..SavedPaymentInformation..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT last_..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Update Accou..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Update Accou..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Update Accou..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Account..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Account..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Account..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Account..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Account..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT last_..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Update Subsc..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Update Subsc..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Update Subsc..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Update Subsc..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..SavedPaymentInformation..." />
+            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..SavedPaymentInformation..." />
           </folding>
         </state>
       </provider>
@@ -1894,14 +1859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="823" max-vertical-offset="1377">
-          <caret line="80" column="52" selection-start-line="80" selection-start-column="52" selection-end-line="80" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/businessLogic/OrderManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1972" max-vertical-offset="2329">
@@ -1922,6 +1879,33 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Discount">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/OrderModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2331" max-vertical-offset="3400">
+          <caret line="285" column="78" selection-start-line="285" selection-start-column="69" selection-end-line="285" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="568" max-vertical-offset="1377">
+          <caret line="55" column="140" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..ItemDetails">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
       </provider>
