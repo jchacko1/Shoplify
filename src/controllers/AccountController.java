@@ -91,7 +91,12 @@ public class AccountController {
        _accountManager.logoutUser();
     }
 
-    public static String createSubscription(String shipDate, boolean enabled, UserModel userModel)
+    public static String getSubscriptionDate(int subscriptionId)
+    {
+        return  _accountManager.getSubscriptionDate(subscriptionId);
+    }
+
+    public static String createSubscription(String shipDate,  UserModel userModel)
     {
         if(userModel.getUserType() == Enums.UserType.REGISTERED || userModel.getUserType() == Enums.UserType.SUBSCRIPTION)
         {
@@ -103,12 +108,12 @@ public class AccountController {
                }
 
             //create subscription
-            if(_accountManager.createSubscription(shipDate, enabled, subscriptionUserModel))
+            if(_accountManager.createSubscription(shipDate, true, subscriptionUserModel))
             {
                 //Set the user to a Subscription user, in case the User was originally a Registered User
                 subscriptionUserModel.setSubscriptionUserType();
 
-                //Update the user in the database with the new SubsriptionId and possibly a new UserType
+                //Update the user in the database with the new SubscriptionId and possibly a new UserType
                 UserController.updateUser(subscriptionUserModel);
 
                 return "Subscription created!";

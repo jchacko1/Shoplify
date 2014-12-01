@@ -75,4 +75,9 @@ public class AccountService {
     {
         return _accountRepository.getSavedPayments(userId);
     }
+
+    public String getSubscriptionDate(int subscriptionId)
+    {
+      return  _accountRepository.getSubscriptionDate(subscriptionId);
+    }
 }
