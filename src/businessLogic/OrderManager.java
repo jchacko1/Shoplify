@@ -44,8 +44,6 @@ public class OrderManager {
 
             //remove the order from the Session so we can start a new order
             Global.CURRENT_ORDER = null;
-
-
         }
 
     public int[] getOrderIds(int userId)

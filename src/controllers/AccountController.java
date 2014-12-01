@@ -1,6 +1,7 @@
 package controllers;
 
 import businessLogic.AccountManager;
+import businessLogic.Utilities;
 import global.Global;
 import models.*;
 
@@ -32,17 +33,29 @@ public class AccountController {
 
     public static boolean createAccountAndUser(String login, String password, String firstName, String lastName,  String dateOfBirth,String gender, String address,String email, String phoneNumber, int securityQuestionId, String securityAnswer)
     {
-        //todo write logic to not insert a duplicate UserName
-        AccountModel accountModel = _accountManager.createAccount(login, password,-1);
-        RegisteredUserModel registeredUserModel = UserController.createRegisteredUser(firstName, lastName, dateOfBirth, gender,accountModel.getAccountId(), address, email,  phoneNumber, securityQuestionId,  securityAnswer); //todo call UserController to create a new User
-        if(accountModel != null && registeredUserModel != null)
+        if(Utilities.isNotNullOrEmpty(login) && Utilities.isNotNullOrEmpty(password) && Utilities.isNotNullOrEmpty(firstName) && Utilities.isNotNullOrEmpty(lastName) && Utilities.isNotNullOrEmpty(dateOfBirth) && Utilities.isNotNullOrEmpty(gender) && Utilities.isNotNullOrEmpty(address) && Utilities.isNotNullOrEmpty(email)
+                && Utilities.isNotNullOrEmpty(phoneNumber) && Utilities.isNotNullOrEmpty(securityAnswer))
         {
-            accountModel.setUserModel(registeredUserModel);
-            updateUserIdOnAccount(accountModel.getAccountId(), registeredUserModel.getUserId());
-            System.out.println("Log: createAccountAndUser done!");
-            return true;
+            //todo write logic to not insert a duplicate UserName
+            AccountModel accountModel = _accountManager.createAccount(login, password,-1);
+            RegisteredUserModel registeredUserModel = UserController.createRegisteredUser(firstName, lastName, dateOfBirth, gender,accountModel.getAccountId(), address, email,  phoneNumber, securityQuestionId,  securityAnswer); //todo call UserController to create a new User
+            if(accountModel != null && registeredUserModel != null)
+            {
+                accountModel.setUserModel(registeredUserModel);
+                updateUserIdOnAccount(accountModel.getAccountId(), registeredUserModel.getUserId());
+                return true;
+            }
+            else
+            {
+                //could not create Account or User
+                return false;
+            }
         }
-        return false;
+        else
+        {
+            //User did not fill out all required fills
+            return false;
+        }
     }
 
     public static void updateUserIdOnAccount(int accountId, int userId)
