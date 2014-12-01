@@ -6,6 +6,7 @@
 package views;
 
 import controllers.AccountController;
+import controllers.OrderController;
 import global.Global;
 import models.ItemModel;
 import models.SavedPaymentInformationModel;
@@ -295,6 +296,27 @@ public class checkoutView extends javax.swing.JFrame {
         );
 
         jButton2.setText("Place Order");
+        jButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                if (OrderController.submitOrder(Global.CURRENT_ORDER, jTextField1.getText(), jTextField2.getText(), jTextField3.getText(), jTextField4.getText(), jTextField5.getText(), jTextField6.getText(), jTextField7.getText(), jTextField8.getText(), jTextField9.getText(),
+                jComboBox1.getSelectedItem().toString(), jTextField10.getText(), jTextField11.getText(), jTextField12.getText(), jTextField13.getText())) {
+
+                    orderPrompt frame = new orderPrompt();
+                    frame.setVisible(true);
+
+                } else {
+
+                    orderFailPrompt frame = new orderFailPrompt();
+                    frame.setVisible(true);
+
+                }
+
+
+
+            }
+        });
 
         jButton3.setText("Cancel");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
