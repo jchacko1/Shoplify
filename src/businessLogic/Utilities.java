@@ -23,7 +23,7 @@ public class Utilities {
 
     public static int getRandomNumber()
     {
-          return random.nextInt();
+        return random.nextInt();
     }
 
     public static double round(double value, int places) {
@@ -32,6 +32,11 @@ public class Utilities {
         BigDecimal bd = new BigDecimal(value);
         bd = bd.setScale(places, RoundingMode.HALF_UP);
         return bd.doubleValue();
+    }
+
+    public static boolean isNotNullOrEmpty(String stringToTest)
+    {
+        return stringToTest != null && stringToTest.trim().length() > 0;
     }
 
 }
