@@ -369,7 +369,13 @@ public class ItemRepository extends BaseRepository {
             stmt = c.createStatement();
             ResultSet rs = stmt.executeQuery( "SELECT * FROM ItemDetails where ItemId = " + '"' + itemId + '"' +";");
             while ( rs.next() ) {
-                itemDetailsModel = new ItemDetailsModel(rs.getString("ItemIngredients"),rs.getInt("ItemCalories"),rs.getInt("ItemWeight"), rs.getString("ItemExpirationDate"), rs.getInt("IsItemReturnable") == 1);
+                String itemIngredients = rs.getString("ItemIngredients");
+                System.out.println("ItemIngredients are: " + itemIngredients);
+                int itemCalories = rs.getInt("ItemCalories");
+                int itemWeight = rs.getInt("ItemWeight");
+                String itemExpirationDate = rs.getString("ItemExpirationDate");
+                boolean isItemReturnable = rs.getBoolean("IsItemReturnable");
+                itemDetailsModel = new ItemDetailsModel(itemIngredients,itemCalories,itemWeight,itemExpirationDate,isItemReturnable);
             }
             rs.close();
             stmt.close();
