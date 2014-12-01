@@ -74,8 +74,8 @@ public class OrderManager {
         return true;
     }
 
-    public  void deleteItemOnOrder(int orderId, int itemId, int shoppingCartItemId) throws ClassNotFoundException {
-        _orderService.deleteItemOnOrder(orderId, itemId, shoppingCartItemId);
+    public  void deleteItemOnOrder(int orderId, int itemId) throws ClassNotFoundException {
+        _orderService.deleteItemOnOrder(orderId, itemId);
         Global.CURRENT_ORDER.updateAllPriceTotals();
         updateOrder(Global.CURRENT_ORDER);
     }

@@ -68,8 +68,8 @@ public class OrderController {
         }
     }
 
-    public static void deleteItemOnOrder(int itemId, int shoppingCartItemId) throws ClassNotFoundException {
-        _orderManager.deleteItemOnOrder(Global.CURRENT_ORDER.getOrderId(),itemId, shoppingCartItemId);
+    public static void deleteItemOnOrder(int itemId) throws ClassNotFoundException {
+        _orderManager.deleteItemOnOrder(Global.CURRENT_ORDER.getOrderId(),itemId);
     }
 
     public static boolean editItemOnOrder(int itemId, int shoppingCartItemId, int quantity) throws ClassNotFoundException {

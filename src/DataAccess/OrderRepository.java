@@ -286,7 +286,7 @@ public class OrderRepository extends BaseRepository {
         return items;
     }
 
-    public void deleteItemOnOrder(int orderId,int itemId,int shoppingCartItemId)
+    public void deleteItemOnOrder(int orderId,int itemId)
     {
         Connection c = null;
         Statement stmt = null;
@@ -297,7 +297,7 @@ public class OrderRepository extends BaseRepository {
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            stmt.execute("Delete from OrderItems where OrderId = " + '"' + String.valueOf(orderId) + '"' + "and ItemID = " + '"' + String.valueOf(itemId) + '"' + "and ShoppingCartItemId = " + '"' + String.valueOf(shoppingCartItemId) + '"' + ";");
+            stmt.executeUpdate("Delete from OrderItems where OrderId = " + '"' + String.valueOf(orderId) + '"' + "and ItemID = " + '"' + String.valueOf(itemId) + '"'  + ";");
             stmt.close();
             c.close();
         } catch ( Exception e ) {

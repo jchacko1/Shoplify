@@ -64,9 +64,9 @@ public class OrderService {
         return _orderRepository.getItemsOnOrder(orderId);
     }
 
-    public void deleteItemOnOrder(int orderId,int itemId,int shoppingCartItemId)
+    public void deleteItemOnOrder(int orderId,int itemId)
     {
-        _orderRepository.deleteItemOnOrder(orderId, itemId, shoppingCartItemId);
+        _orderRepository.deleteItemOnOrder(orderId, itemId);
     }
 
     public void editItemOnOrder(int orderId,int itemId,int shoppingCartItemId, int quantity)
