@@ -313,4 +313,30 @@ public class AccountRepository extends BaseRepository {
         System.out.println("Operation done successfully");
         return savedPayments;
     }
+
+    public String getSubscriptionDate(int subscriptionId)
+    {
+        Connection c = null;
+        Statement stmt = null;
+        String subscriptionDate = "";
+        try {
+            System.out.println("begin get Subscription Shipping Date try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM Subscription WHERE SubscriptionId = " + '"' + subscriptionId + '"' +  ";" );
+            while ( rs.next()) {
+                subscriptionDate = rs.getString("ShipDate");
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        return subscriptionDate;
+    }
 }

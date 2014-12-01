@@ -120,4 +120,9 @@ public class AccountManager {
     {
         return _accountService.getSavedPayments(userId);
     }
+
+    public String getSubscriptionDate(int subscriptionId)
+    {
+       return _accountService.getSubscriptionDate(subscriptionId);
+    }
 }
