@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/OrderController.java" afterPath="$PROJECT_DIR$/src/controllers/OrderController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessLogic/Utilities.java" afterPath="$PROJECT_DIR$/src/businessLogic/Utilities.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/AccountController.java" afterPath="$PROJECT_DIR$/src/controllers/AccountController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessLogic/OrderManager.java" afterPath="$PROJECT_DIR$/src/businessLogic/OrderManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -92,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountController.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AccountController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1509" max-vertical-offset="2210">
-              <caret line="115" column="23" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.7332382" vertical-offset="336" max-vertical-offset="2414">
+              <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -126,16 +126,16 @@
         <entry file="file://$PROJECT_DIR$/src/controllers/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="302" max-vertical-offset="1853">
-              <caret line="42" column="40" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+              <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utilities.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Utilities.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/businessLogic/Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42857143" vertical-offset="17" max-vertical-offset="731">
+            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="731">
               <caret line="24" column="127" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <element signature="e#637#638#0" expanded="true" />
@@ -183,8 +183,8 @@
       <file leaf-file-name="OrderManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/businessLogic/OrderManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="903" max-vertical-offset="2329">
-              <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="2295">
+              <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
               <folding>
                 <element signature="e#532#533#0" expanded="true" />
                 <element signature="e#586#587#0" expanded="true" />
@@ -254,7 +254,6 @@
         <option value="$PROJECT_DIR$/src/businessLogic/ItemManager.java" />
         <option value="$PROJECT_DIR$/src/views/homepageView.java" />
         <option value="$PROJECT_DIR$/src/views/homepageView2.java" />
-        <option value="$PROJECT_DIR$/src/controllers/AccountController.java" />
         <option value="$PROJECT_DIR$/src/businessLogic/AdminManager.java" />
         <option value="$PROJECT_DIR$/src/controllers/AdminController.java" />
         <option value="$PROJECT_DIR$/src/DataAccess/ItemService.java" />
@@ -264,11 +263,12 @@
         <option value="dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Discount" />
         <option value="db-console:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/" />
         <option value="dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..ItemDetails" />
-        <option value="$PROJECT_DIR$/src/businessLogic/OrderManager.java" />
         <option value="$PROJECT_DIR$/src/DataAccess/OrderService.java" />
         <option value="$PROJECT_DIR$/src/DataAccess/OrderRepository.java" />
         <option value="$PROJECT_DIR$/src/controllers/OrderController.java" />
         <option value="$PROJECT_DIR$/src/businessLogic/Utilities.java" />
+        <option value="$PROJECT_DIR$/src/businessLogic/OrderManager.java" />
+        <option value="$PROJECT_DIR$/src/controllers/AccountController.java" />
       </list>
     </option>
   </component>
@@ -995,7 +995,7 @@
       <workItem from="1417369563094" duration="9098000" />
       <workItem from="1417378735395" duration="5023000" />
       <workItem from="1417396585660" duration="1219000" />
-      <workItem from="1417449906570" duration="6093000" />
+      <workItem from="1417449906570" duration="6494000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1185,11 +1185,15 @@
       <created>1417450788776</created>
       <updated>1417450788776</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Added validation for submitting an order">
+      <created>1417471902689</created>
+      <updated>1417471902689</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214844000" />
+    <option name="totallyTimeSpent" value="215245000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1298,7 +1302,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Updating Report code from Kelly's files" />
     <MESSAGE value="Created SecurityQuestionsModel. Stubbed out code to get an array of Items, and get an array of OrderIds" />
     <MESSAGE value="Added an order record to Order table" />
     <MESSAGE value="Renamed &quot;Order&quot; table to &quot;UserOrder&quot;" />
@@ -1323,7 +1326,8 @@
     <MESSAGE value="Added a record to ItemDetails" />
     <MESSAGE value="User can't add an item to an order if the item already exists on the order." />
     <MESSAGE value="Changed the deleteItemOnOrder method to only require ItemId" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the deleteItemOnOrder method to only require ItemId" />
+    <MESSAGE value="Added validation for submitting an order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added validation for submitting an order" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1763,17 +1767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessLogic/OrderManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="903" max-vertical-offset="2329">
-          <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
-          <folding>
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#586#587#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataAccess/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1037">
@@ -1814,29 +1807,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
+    <entry file="file://$PROJECT_DIR$/src/businessLogic/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1509" max-vertical-offset="2210">
-          <caret line="115" column="23" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="731">
+          <caret line="24" column="127" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#637#638#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="302" max-vertical-offset="1853">
-          <caret line="42" column="40" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessLogic/Utilities.java">
+    <entry file="file://$PROJECT_DIR$/src/businessLogic/OrderManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42857143" vertical-offset="17" max-vertical-offset="731">
-          <caret line="24" column="127" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="2295">
+          <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
           <folding>
-            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7332382" vertical-offset="336" max-vertical-offset="2414">
+          <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
