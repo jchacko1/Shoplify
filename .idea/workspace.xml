@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/OrderController.java" afterPath="$PROJECT_DIR$/src/controllers/OrderController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessLogic/OrderManager.java" afterPath="$PROJECT_DIR$/src/businessLogic/OrderManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/OrderRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/OrderRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/OrderService.java" afterPath="$PROJECT_DIR$/src/DataAccess/OrderService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessLogic/Utilities.java" afterPath="$PROJECT_DIR$/src/businessLogic/Utilities.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -94,24 +92,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SQLite -" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/">
+      <file leaf-file-name="AccountController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="267" max-vertical-offset="1122">
-              <caret line="20" column="83" selection-start-line="20" selection-start-column="83" selection-end-line="20" selection-end-column="83" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1509" max-vertical-offset="2210">
+              <caret line="115" column="23" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Discount" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Discount">
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+      <file leaf-file-name="Global.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/global/Global.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -127,22 +122,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Enums.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/Enums.java">
+      <file leaf-file-name="OrderController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="765">
-              <caret line="15" column="15" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="302" max-vertical-offset="1853">
+              <caret line="42" column="40" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/OrderController.java">
+      <file leaf-file-name="Utilities.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/businessLogic/Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="532" max-vertical-offset="1666">
-              <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
-              <folding />
+            <state vertical-scroll-proportion="0.42857143" vertical-offset="17" max-vertical-offset="731">
+              <caret line="24" column="127" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <folding>
+                <element signature="e#637#638#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,10 +157,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderRepository.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="OrderRepository.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataAccess/OrderRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4236984" vertical-offset="4541" max-vertical-offset="5712">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4541" max-vertical-offset="5712">
               <caret line="291" column="64" selection-start-line="291" selection-start-column="30" selection-end-line="291" selection-end-column="30" />
               <folding>
                 <marker date="1417450760943" expanded="true" signature="1511:1574" placeholder="SELECT * FRO..UserOrder..." />
@@ -267,10 +264,11 @@
         <option value="dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Discount" />
         <option value="db-console:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/" />
         <option value="dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..ItemDetails" />
-        <option value="$PROJECT_DIR$/src/controllers/OrderController.java" />
         <option value="$PROJECT_DIR$/src/businessLogic/OrderManager.java" />
         <option value="$PROJECT_DIR$/src/DataAccess/OrderService.java" />
         <option value="$PROJECT_DIR$/src/DataAccess/OrderRepository.java" />
+        <option value="$PROJECT_DIR$/src/controllers/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/businessLogic/Utilities.java" />
       </list>
     </option>
   </component>
@@ -282,10 +280,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1928" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1176" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -422,6 +420,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shoplify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shoplify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -979,7 +995,7 @@
       <workItem from="1417369563094" duration="9098000" />
       <workItem from="1417378735395" duration="5023000" />
       <workItem from="1417396585660" duration="1219000" />
-      <workItem from="1417449906570" duration="860000" />
+      <workItem from="1417449906570" duration="6093000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1165,11 +1181,15 @@
       <created>1417450523249</created>
       <updated>1417450523249</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Changed the deleteItemOnOrder method to only require ItemId">
+      <created>1417450788776</created>
+      <updated>1417450788776</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209611000" />
+    <option name="totallyTimeSpent" value="214844000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1192,7 +1212,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1215,7 +1235,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18496802" sideWeight="0.49930266" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40574163" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17297298" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18820679" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.2898975" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" x="686" y="194" width="396" height="507" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1278,7 +1298,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="More attempts at checking in code. Previous commits added the OrderController and associated classes, functionality for getting ItemHistory, and functionality for adding an item to a Shopping List" />
     <MESSAGE value="Updating Report code from Kelly's files" />
     <MESSAGE value="Created SecurityQuestionsModel. Stubbed out code to get an array of Items, and get an array of OrderIds" />
     <MESSAGE value="Added an order record to Order table" />
@@ -1303,7 +1322,8 @@
     <MESSAGE value="Pre-emptive SQL changes, and adding some discounts" />
     <MESSAGE value="Added a record to ItemDetails" />
     <MESSAGE value="User can't add an item to an order if the item already exists on the order." />
-    <option name="LAST_COMMIT_MESSAGE" value="User can't add an item to an order if the item already exists on the order." />
+    <MESSAGE value="Changed the deleteItemOnOrder method to only require ItemId" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the deleteItemOnOrder method to only require ItemId" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1315,20 +1335,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/views/accountView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4" vertical-offset="6825" max-vertical-offset="8445">
-          <caret line="575" column="31" selection-start-line="575" selection-start-column="31" selection-end-line="575" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/forgetPasswordView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53333336" vertical-offset="3000" max-vertical-offset="3450">
-          <caret line="245" column="30" selection-start-line="245" selection-start-column="24" selection-end-line="245" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/ReportController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
@@ -1411,6 +1417,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1148" max-vertical-offset="1470">
           <caret line="88" column="29" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1600,6 +1607,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1099" max-vertical-offset="2057">
           <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1632,13 +1640,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1448" max-vertical-offset="2125">
           <caret line="126" column="46" selection-start-line="126" selection-start-column="46" selection-end-line="126" selection-end-column="46" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="779" max-vertical-offset="2210">
-          <caret line="79" column="69" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1762,14 +1763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="532" max-vertical-offset="1666">
-          <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/businessLogic/OrderManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="903" max-vertical-offset="2329">
@@ -1794,7 +1787,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataAccess/OrderRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4236984" vertical-offset="4541" max-vertical-offset="5712">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4541" max-vertical-offset="5712">
           <caret line="291" column="64" selection-start-line="291" selection-start-column="30" selection-end-line="291" selection-end-column="30" />
           <folding>
             <marker date="1417450760943" expanded="true" signature="1511:1574" placeholder="SELECT * FRO..UserOrder..." />
@@ -1809,6 +1802,40 @@
             <marker date="1417450760943" expanded="true" signature="13533:13667" placeholder="Delete from ..." />
             <marker date="1417450760943" expanded="true" signature="13533:13665" placeholder="Delete from ..." />
             <marker date="1417450760943" expanded="true" signature="14564:14646" placeholder="Select Order..UserOrder..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/global/Global.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1509" max-vertical-offset="2210">
+          <caret line="115" column="23" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="302" max-vertical-offset="1853">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/businessLogic/Utilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42857143" vertical-offset="17" max-vertical-offset="731">
+          <caret line="24" column="127" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#637#638#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,6 +1,7 @@
 package controllers;
 
 import businessLogic.OrderManager;
+import businessLogic.Utilities;
 import global.Global;
 import models.ItemModel;
 import models.OrderModel;
@@ -33,10 +34,21 @@ public class OrderController {
         return null;
     }
 
-    public static void submitOrder(OrderModel order, String firstName, String lastName, String address, String city, String state, String zipCode, String country, String phoneNumber, String email,
+    public static boolean submitOrder(OrderModel order, String firstName, String lastName, String address, String city, String state, String zipCode, String country, String phoneNumber, String email,
     String creditCardType, String cardHoldersName, String creditCardNumber, String expirationDate, String cvs)
     {
-         _orderManager.submitOrder(order, firstName, lastName, address, city, state,zipCode,country,phoneNumber,email,creditCardType,cardHoldersName,creditCardNumber,expirationDate,cvs);
+        if(Utilities.isNotNullOrEmpty(firstName) && Utilities.isNotNullOrEmpty(lastName) && Utilities.isNotNullOrEmpty(address) && Utilities.isNotNullOrEmpty(city) && Utilities.isNotNullOrEmpty(state) && Utilities.isNotNullOrEmpty(zipCode) && Utilities.isNotNullOrEmpty(country)
+                && Utilities.isNotNullOrEmpty(phoneNumber) && Utilities.isNotNullOrEmpty(email) && Utilities.isNotNullOrEmpty(creditCardType) && Utilities.isNotNullOrEmpty(cardHoldersName) && Utilities.isNotNullOrEmpty(creditCardNumber)
+                && Utilities.isNotNullOrEmpty(expirationDate) && Utilities.isNotNullOrEmpty(cvs))
+        {
+            _orderManager.submitOrder(order, firstName, lastName, address, city, state,zipCode,country,phoneNumber,email,creditCardType,cardHoldersName,creditCardNumber,expirationDate,cvs);
+            return true;
+        }
+        else
+        {
+            //one of the fields is empty
+           return false;
+        }
     }
 
     public static void updateOrder(OrderModel orderModel) {
