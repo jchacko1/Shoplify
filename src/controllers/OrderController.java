@@ -48,7 +48,24 @@ public class OrderController {
         {
             Global.CURRENT_ORDER = createOrder();
         }
-        return _orderManager.addItemToOrder(Global.CURRENT_ORDER.getOrderId(),itemId, quantity);
+        ArrayList<ItemModel> items = _orderManager.getItemsOnOrder(Global.CURRENT_ORDER.getOrderId());
+        boolean itemAlreadyExistsOnOrder = false;
+        for(ItemModel item : items)
+        {
+            if(item.getItemID() == itemId)
+            {
+                itemAlreadyExistsOnOrder = true;
+            }
+        }
+        if(!itemAlreadyExistsOnOrder)
+        {
+            return _orderManager.addItemToOrder(Global.CURRENT_ORDER.getOrderId(),itemId, quantity);
+        }
+        else
+        {
+            //Item could not be added to order, item already exists on order.
+            return false;
+        }
     }
 
     public static void deleteItemOnOrder(int itemId, int shoppingCartItemId) throws ClassNotFoundException {
