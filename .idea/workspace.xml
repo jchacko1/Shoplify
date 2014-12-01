@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/OrderRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/OrderRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/shoplify.db" afterPath="$PROJECT_DIR$/src/DataAccess/shoplify.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -159,7 +159,7 @@
       <file leaf-file-name="OrderRepository.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DataAccess/OrderRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6718973" vertical-offset="1059" max-vertical-offset="5712">
+            <state vertical-scroll-proportion="0.81740373" vertical-offset="957" max-vertical-offset="5712">
               <caret line="100" column="256" selection-start-line="100" selection-start-column="256" selection-end-line="100" selection-end-column="256" />
               <folding>
                 <marker date="1417473584507" expanded="true" signature="1511:1574" placeholder="SELECT * FRO..UserOrder..." />
@@ -998,7 +998,7 @@
       <workItem from="1417369563094" duration="9098000" />
       <workItem from="1417378735395" duration="5023000" />
       <workItem from="1417396585660" duration="1219000" />
-      <workItem from="1417449906570" duration="7036000" />
+      <workItem from="1417449906570" duration="7306000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1196,11 +1196,15 @@
       <created>1417472302016</created>
       <updated>1417472302016</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Fixed bug with SQL that updates a submitted order">
+      <created>1417473616687</created>
+      <updated>1417473616687</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215787000" />
+    <option name="totallyTimeSpent" value="216057000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1224,14 +1228,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18659128" sideWeight="0.50152904" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359308" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14498934" sideWeight="0.4969419" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14498934" sideWeight="0.4969419" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1309,7 +1313,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Added an order record to Order table" />
     <MESSAGE value="Renamed &quot;Order&quot; table to &quot;UserOrder&quot;" />
     <MESSAGE value="Created UserModelDto, wrote code to get User table columns out of db, can now build any user type from db, wrote method to get all the Category names." />
     <MESSAGE value="Added an item and corrected existing Items' CategoryIds. Added comments in Category Enum to help us remember which ID belongs to a Category" />
@@ -1334,7 +1337,8 @@
     <MESSAGE value="Changed the deleteItemOnOrder method to only require ItemId" />
     <MESSAGE value="Added validation for submitting an order" />
     <MESSAGE value="Added validation for creating an Account" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added validation for creating an Account" />
+    <MESSAGE value="Fixed bug with SQL that updates a submitted order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug with SQL that updates a submitted order" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1834,7 +1838,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataAccess/OrderRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6718973" vertical-offset="1059" max-vertical-offset="5712">
+        <state vertical-scroll-proportion="0.81740373" vertical-offset="957" max-vertical-offset="5712">
           <caret line="100" column="256" selection-start-line="100" selection-start-column="256" selection-end-line="100" selection-end-column="256" />
           <folding>
             <marker date="1417473584507" expanded="true" signature="1511:1574" placeholder="SELECT * FRO..UserOrder..." />
