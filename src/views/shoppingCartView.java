@@ -95,7 +95,7 @@ public class shoppingCartView extends javax.swing.JFrame {
 
         */
 
-        DefaultTableModel dtm = new DefaultTableModel(){
+        final DefaultTableModel dtm = new DefaultTableModel(){
 
             @Override
             public boolean isCellEditable(int row, int col) {
@@ -119,8 +119,8 @@ public class shoppingCartView extends javax.swing.JFrame {
             }
 
             @Override
-            public Class<?> getColumnClass(int columnIndex) {
-                return columnIndex == 3 ? Boolean.class : super.getColumnClass(columnIndex);
+            public Class<?> getColumnClass(int col) {
+                return col == 3 ? Boolean.class : String.class;
             }
 
             // public void setValueAt(int row, int col) {
@@ -147,6 +147,20 @@ public class shoppingCartView extends javax.swing.JFrame {
                 column.setPreferredWidth(45);
             }
         }
+
+        jButton5.setText("Update");
+
+        jButton5.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                for (int i = 0; i < dtm.getRowCount(); i++) {
+                    Boolean checked = (Boolean) dtm.getValueAt(i, 3);
+                    if (checked) {
+                        dtm.removeRow(i);
+                        i--;
+                    }
+                }
+            }
+        });
 
         ArrayList<ItemModel> itemsOnOrder =  OrderController.getItemsOnOrder(Global.CURRENT_ORDER.getOrderId());
 
@@ -181,7 +195,8 @@ public class shoppingCartView extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel2);
 
-        jButton5.setText("Update");
+
+
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -358,6 +373,8 @@ public class shoppingCartView extends javax.swing.JFrame {
         frame.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
+
+
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         checkoutView frame = new checkoutView();

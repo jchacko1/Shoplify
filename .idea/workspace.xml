@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/shoplify.db" afterPath="$PROJECT_DIR$/src/DataAccess/shoplify.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/shoppingCartView.form" afterPath="$PROJECT_DIR$/src/views/shoppingCartView.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/shoppingCartView.java" afterPath="$PROJECT_DIR$/src/views/shoppingCartView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -87,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="8505" max-vertical-offset="18525">
-              <caret line="655" column="60" selection-start-line="655" selection-start-column="60" selection-end-line="655" selection-end-column="60" />
+              <caret line="636" column="0" selection-start-line="636" selection-start-column="0" selection-end-line="636" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -96,10 +95,19 @@
       <file leaf-file-name="shoppingCartView.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/shoppingCartView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18367347" vertical-offset="4521" max-vertical-offset="6045">
-              <caret line="330" column="86" selection-start-line="330" selection-start-column="86" selection-end-line="330" selection-end-column="86" />
+            <state vertical-scroll-proportion="0.8538012" vertical-offset="1992" max-vertical-offset="6390">
+              <caret line="166" column="44" selection-start-line="166" selection-start-column="44" selection-end-line="166" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#626#627#0" expanded="true" />
+                <element signature="e#658#659#0" expanded="true" />
+                <element signature="e#879#909#0" expanded="true" />
+                <element signature="e#4018#4019#0" expanded="true" />
+                <element signature="e#4096#4097#0" expanded="true" />
+                <element signature="e#4871#5252#0" expanded="true" />
+                <element signature="e#5241#5242#0" expanded="true" />
+                <element signature="e#13345#13526#0" expanded="true" />
+                <element signature="e#13515#13516#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -775,7 +783,7 @@
       <workItem from="1417394921523" duration="204000" />
       <workItem from="1417395146687" duration="115000" />
       <workItem from="1417395448471" duration="813000" />
-      <workItem from="1417410437478" duration="3622000" />
+      <workItem from="1417410437478" duration="5059000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -957,11 +965,15 @@
       <created>1417395811998</created>
       <updated>1417395811998</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="shoppingcart delete items">
+      <created>1417415172577</created>
+      <updated>1417415172577</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215869000" />
+    <option name="totallyTimeSpent" value="217306000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1070,7 +1082,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Added code for Shopping List, creating Users. Created SubscriptionUserModel." />
     <MESSAGE value="More attempts at checking in code. Previous commits added the OrderController and associated classes, functionality for getting ItemHistory, and functionality for adding an item to a Shopping List" />
     <MESSAGE value="Updating Report code from Kelly's files" />
     <MESSAGE value="Created SecurityQuestionsModel. Stubbed out code to get an array of Items, and get an array of OrderIds" />
@@ -1095,7 +1106,8 @@
     <MESSAGE value="Sql bug fixes for adding an item to an order" />
     <MESSAGE value="Pre-emptive SQL changes, and adding some discounts" />
     <MESSAGE value="Adding Item Details" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Item Details" />
+    <MESSAGE value="shoppingcart delete items" />
+    <option name="LAST_COMMIT_MESSAGE" value="shoppingcart delete items" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1455,17 +1467,26 @@
     <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="8505" max-vertical-offset="18525">
-          <caret line="655" column="60" selection-start-line="655" selection-start-column="60" selection-end-line="655" selection-end-column="60" />
+          <caret line="636" column="0" selection-start-line="636" selection-start-column="0" selection-end-line="636" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/shoppingCartView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18367347" vertical-offset="4521" max-vertical-offset="6045">
-          <caret line="330" column="86" selection-start-line="330" selection-start-column="86" selection-end-line="330" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.8538012" vertical-offset="1992" max-vertical-offset="6390">
+          <caret line="166" column="44" selection-start-line="166" selection-start-column="44" selection-end-line="166" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#879#909#0" expanded="true" />
+            <element signature="e#4018#4019#0" expanded="true" />
+            <element signature="e#4096#4097#0" expanded="true" />
+            <element signature="e#4871#5252#0" expanded="true" />
+            <element signature="e#5241#5242#0" expanded="true" />
+            <element signature="e#13345#13526#0" expanded="true" />
+            <element signature="e#13515#13516#0" expanded="true" />
           </folding>
         </state>
       </provider>
