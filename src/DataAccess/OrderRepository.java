@@ -98,7 +98,7 @@ public class OrderRepository extends BaseRepository {
             stmt.executeUpdate( "Update UserOrder set IsOrderCompleted = 1,Address = " + "'" + order.getAddress() + "'" + ",City = " + "'" +  order.getCity() + "'" + ", State = " + "'" + order.getState() + "'" +
             ", ZipCode = " + "'" + order.getZipCode() + "'" + ", Country = " + "'" + order.getCountry() + "'" + ", PhoneNumber = " + "'" + order.getPhoneNumber() + "'" + ", Email = " + "'" + order.getEmail() + "'" +
             ", CreditCardType = " + "'" + order.getCreditCardType() + "'" + ", CardHoldersName = " + "'" + order.getCardHoldersName() + "'" + ", ExpirationDate = " + "'" + order.getExpirationDate() + "'" +
-            ", Cvs = " + "'" + order.getCvs() + "'" + ", FirstNameOnOrder = " + "'" + order.getFirstNameOnOrder() + "'" + ", LastNameOnOrder = " + "'" + order.getLastNameOnOrder() + "'" + " OrderId = " + String.valueOf(order.getOrderId()) + ";");
+            ", Cvs = " + "'" + order.getCvs() + "'" + ", FirstNameOnOrder = " + "'" + order.getFirstNameOnOrder() + "'" + ", LastNameOnOrder = " + "'" + order.getLastNameOnOrder() + "'" + " where OrderId = " + "'" + String.valueOf(order.getOrderId()) + "'" + ";");
             stmt.close();
             c.close();
         } catch ( Exception e ) {
