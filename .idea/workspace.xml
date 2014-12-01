@@ -4,8 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/controllers/ItemController.java" line="42" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
+    <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="Pre-emptive SQL changes, and adding some discounts">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/shoplify.db" afterPath="$PROJECT_DIR$/src/DataAccess/shoplify.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/shoppingCartView.java" afterPath="$PROJECT_DIR$/src/views/shoppingCartView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -72,8 +73,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -81,185 +82,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SQLite -" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/">
+      <file leaf-file-name="homepageView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5172415" vertical-offset="267" max-vertical-offset="1122">
-              <caret line="20" column="83" selection-start-line="20" selection-start-column="83" selection-end-line="20" selection-end-column="83" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5955" max-vertical-offset="18525">
+              <caret line="478" column="25" selection-start-line="478" selection-start-column="25" selection-end-line="478" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shoppingCartView.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/shoppingCartView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.826087" vertical-offset="4650" max-vertical-offset="6045">
+              <caret line="375" column="0" selection-start-line="375" selection-start-column="0" selection-end-line="375" selection-end-column="0" />
               <folding>
-                <marker date="0" expanded="true" signature="909:944" placeholder="select * fro..item..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Discount" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Discount">
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/OrderModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2331" max-vertical-offset="3400">
-              <caret line="285" column="78" selection-start-line="285" selection-start-column="69" selection-end-line="285" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Enums.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/Enums.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-              <caret line="15" column="15" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/OrderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="568" max-vertical-offset="1377">
-              <caret line="55" column="140" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemDetails" pinned="false" current="true" current-in-tab="true">
-        <entry file="dbDummy://dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..ItemDetails">
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/businessLogic/OrderManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1972" max-vertical-offset="2329">
-              <caret line="142" column="13" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
-              <folding>
-                <element signature="e#3647#3648#0" expanded="true" />
-                <element signature="e#3695#3696#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderRepository.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataAccess/OrderRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5346" max-vertical-offset="5882">
-              <caret line="333" column="29" selection-start-line="333" selection-start-column="27" selection-end-line="333" selection-end-column="27" />
-              <folding>
+                <element signature="e#0#20337#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <marker date="1417381659789" expanded="true" signature="1511:1551" placeholder="SELECT * FRO..UserOrder..." />
-                <marker date="1417381659789" expanded="true" signature="1511:1557" placeholder="SELECT * FRO..UserOrder..." />
-                <marker date="1417381659789" expanded="true" signature="1511:1574" placeholder="SELECT * FRO..UserOrder..." />
-                <marker date="1417381659789" expanded="true" signature="3587:4388" placeholder="Update UserO..." />
-                <marker date="1417381659789" expanded="true" signature="5654:6017" placeholder="INSERT INTO ..." />
-                <marker date="1417381659789" expanded="true" signature="5654:6016" placeholder="INSERT INTO ..." />
-                <marker date="1417381659789" expanded="true" signature="6069:6103" placeholder="select max(o..userorder..." />
-                <marker date="1417381659789" expanded="true" signature="7281:7433" placeholder="INSERT INTO ..." />
-                <marker date="1417381659789" expanded="true" signature="8345:8408" placeholder="Select max(S..OrderItems..." />
-                <marker date="1417381659789" expanded="true" signature="9506:9642" placeholder="Update Order..." />
-                <marker date="1417381659789" expanded="true" signature="10425:10943" placeholder="Update UserO..." />
-                <marker date="1417381659789" expanded="true" signature="10425:10888" placeholder="Update UserO..." />
-                <marker date="1417381659789" expanded="true" signature="10425:10937" placeholder="Update UserO..." />
-                <marker date="1417381659789" expanded="true" signature="11924:11965" placeholder="Select * fro..OrderItems..." />
-                <marker date="1417381659789" expanded="true" signature="11924:11971" placeholder="Select * fro..OrderItems..." />
-                <marker date="1417381659789" expanded="true" signature="11924:12003" placeholder="Select * fro..OrderItems..." />
-                <marker date="1417381659789" expanded="true" signature="13550:13767" placeholder="Delete from ..." />
-                <marker date="1417381659789" expanded="true" signature="13550:13761" placeholder="Delete from ..." />
-                <marker date="1417381659789" expanded="true" signature="13550:13712" placeholder="Delete from ..." />
-                <marker date="1417381659789" expanded="true" signature="14659:14704" placeholder="Select Order..UserOrder..." />
-                <marker date="1417381659789" expanded="true" signature="14659:14747" placeholder="Select Order..UserOrder..." />
-                <marker date="1417381659789" expanded="true" signature="14659:14741" placeholder="Select Order..UserOrder..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemRepository.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7590" max-vertical-offset="8075">
-              <caret line="416" column="94" selection-start-line="416" selection-start-column="94" selection-end-line="416" selection-end-column="94" />
-              <folding>
-                <element signature="e#2345#2360#0" expanded="true" />
-                <element signature="e#5012#5023#0" expanded="true" />
-                <element signature="e#9010#9019#0" expanded="true" />
-                <element signature="e#10209#10218#0" expanded="true" />
-                <element signature="e#10397#10408#0" expanded="true" />
-                <marker date="1417381659795" expanded="true" signature="1048:1082" placeholder="SELECT * FRO..Item..." />
-                <marker date="1417381659795" expanded="true" signature="1048:1088" placeholder="SELECT * FRO..Item..." />
-                <marker date="1417381659795" expanded="true" signature="1048:1104" placeholder="SELECT * FRO..Item..." />
-                <marker date="1417381659795" expanded="true" signature="1048:1103" placeholder="SELECT * FRO..Item..." />
-                <marker date="1417381659795" expanded="true" signature="3127:3169" placeholder="Select * fro..ShoppingList..." />
-                <marker date="1417381659795" expanded="true" signature="3127:3175" placeholder="Select * fro..ShoppingList..." />
-                <marker date="1417381659795" expanded="true" signature="3127:3212" placeholder="Select * fro..ShoppingList..." />
-                <marker date="1417381659795" expanded="true" signature="3127:3206" placeholder="Select * fro..ShoppingList..." />
-                <marker date="1417381659795" expanded="true" signature="4298:4422" placeholder="INSERT INTO ..." />
-                <marker date="1417381659795" expanded="true" signature="4298:4421" placeholder="INSERT INTO ..." />
-                <marker date="1417381659795" expanded="true" signature="4298:4421" placeholder="INSERT INTO ..." />
-                <marker date="1417381659795" expanded="true" signature="5508:5549" placeholder="Select * fro..OrderItems..." />
-                <marker date="1417381659795" expanded="true" signature="5508:5555" placeholder="Select * fro..OrderItems..." />
-                <marker date="1417381659795" expanded="true" signature="5508:5588" placeholder="Select * fro..OrderItems..." />
-                <marker date="1417381659795" expanded="true" signature="7100:7118" placeholder="SELECT * FRO..Item..." />
-                <marker date="1417381659795" expanded="true" signature="9586:9648" placeholder="SELECT * FRO..OrderItems..." />
-                <marker date="1417381659795" expanded="true" signature="10904:10958" placeholder="Select * fro..SubscriptionItem..." />
-                <marker date="1417381659795" expanded="true" signature="10904:11009" placeholder="Select * fro..SubscriptionItem..." />
-                <marker date="1417381659795" expanded="true" signature="10904:11003" placeholder="Select * fro..SubscriptionItem..." />
-                <marker date="1417381659795" expanded="true" signature="12085:12249" placeholder="Insert Into ..." />
-                <marker date="1417381659795" expanded="true" signature="12085:12248" placeholder="Insert Into ..." />
-                <marker date="1417381659795" expanded="true" signature="13052:13191" placeholder="Update Subsc..." />
-                <marker date="1417381659795" expanded="true" signature="13052:13218" placeholder="Update Subsc..." />
-                <marker date="1417381659795" expanded="true" signature="13052:13212" placeholder="Update Subsc..." />
-                <marker date="1417381659795" expanded="true" signature="14050:14149" placeholder="Delete From ..." />
-                <marker date="1417381659795" expanded="true" signature="14050:14176" placeholder="Delete From ..." />
-                <marker date="1417381659795" expanded="true" signature="14050:14170" placeholder="Delete From ..." />
-                <marker date="1417381659795" expanded="true" signature="15032:15073" placeholder="SELECT * FRO..ItemDetails..." />
-                <marker date="1417381659795" expanded="true" signature="15032:15099" placeholder="SELECT * FRO..ItemDetails..." />
-                <marker date="1417381659795" expanded="true" signature="15032:15094" placeholder="SELECT * FRO..ItemDetails..." />
-                <marker date="1417381659795" expanded="true" signature="16179:16267" placeholder="Update Item ..." />
-                <marker date="1417381659795" expanded="true" signature="16179:16245" placeholder="Update Item ..." />
-                <marker date="1417381659795" expanded="true" signature="16179:16245" placeholder="Update Item ..." />
-                <marker date="1417381659795" expanded="true" signature="16179:16210" placeholder="Update Item ..." />
-                <marker date="1417381659795" expanded="true" signature="16179:16252" placeholder="Update Item ..." />
-                <marker date="1417381659795" expanded="true" signature="16988:17032" placeholder="Update Item ..." />
-                <marker date="1417381659795" expanded="true" signature="16988:17038" placeholder="Update Item ..." />
-                <marker date="1417381659795" expanded="true" signature="16988:17059" placeholder="Update Item ..." />
-                <marker date="1417381659795" expanded="true" signature="16988:17053" placeholder="Update Item ..." />
-                <marker date="1417381659795" expanded="true" signature="17938:18304" placeholder="Insert into ..." />
-                <marker date="1417381659795" expanded="true" signature="19103:19131" placeholder="select max(I..Item..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DiscountRepository.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataAccess/DiscountRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1071">
-              <caret line="24" column="117" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-              <folding>
-                <marker date="1417368424823" expanded="true" signature="945:1016" placeholder="Select * fro..Discount..." />
+                <element signature="e#588#589#0" expanded="true" />
+                <element signature="e#620#621#0" expanded="true" />
+                <element signature="e#841#871#0" expanded="true" />
+                <element signature="e#3382#3908#0" expanded="true" />
+                <element signature="e#3821#3822#0" expanded="true" />
+                <element signature="e#7110#7291#0" expanded="true" />
+                <element signature="e#7280#7281#0" expanded="true" />
+                <element signature="e#12984#13165#0" expanded="true" />
+                <element signature="e#13154#13155#0" expanded="true" />
+                <element signature="e#13239#13420#0" expanded="true" />
+                <element signature="e#13409#13410#0" expanded="true" />
+                <element signature="e#13506#13687#0" expanded="true" />
+                <element signature="e#13676#13677#0" expanded="true" />
+                <element signature="e#19311#19440#0" expanded="true" />
+                <element signature="e#19429#19430#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -327,6 +182,7 @@
         <option value="db-console:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/" />
         <option value="$PROJECT_DIR$/src/businessLogic/OrderManager.java" />
         <option value="dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..ItemDetails" />
+        <option value="$PROJECT_DIR$/src/views/shoppingCartView.java" />
       </list>
     </option>
   </component>
@@ -338,10 +194,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="11" />
+    <option name="y" value="30" />
+    <option name="width" value="1280" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -371,7 +227,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -537,6 +392,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -550,7 +406,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="FullScreen" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="recentsLimit" value="5" />
@@ -581,7 +437,7 @@
       <recent name="C:\MyApps\Github\Shoplify\src\views" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.loginView">
+  <component name="RunManager" selected="Application.homepageView">
     <configuration default="false" name="homepageView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -912,6 +768,12 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -932,12 +794,6 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.homepageView" />
       <item index="1" class="java.lang.String" itemvalue="Application.checkoutView" />
@@ -947,11 +803,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.loginView" />
-        <item index="1" class="java.lang.String" itemvalue="Application.accountView" />
-        <item index="2" class="java.lang.String" itemvalue="Application.reminderListView" />
-        <item index="3" class="java.lang.String" itemvalue="Application.checkoutView" />
-        <item index="4" class="java.lang.String" itemvalue="Application.homepageView" />
+        <item index="0" class="java.lang.String" itemvalue="Application.homepageView" />
+        <item index="1" class="java.lang.String" itemvalue="Application.loginView" />
+        <item index="2" class="java.lang.String" itemvalue="Application.accountView" />
+        <item index="3" class="java.lang.String" itemvalue="Application.reminderListView" />
+        <item index="4" class="java.lang.String" itemvalue="Application.checkoutView" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1034,6 +890,7 @@
       <workItem from="1417325282032" duration="12498000" />
       <workItem from="1417369563094" duration="9098000" />
       <workItem from="1417378735395" duration="4392000" />
+      <workItem from="1417392949162" duration="251000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1215,7 +1072,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206848000" />
+    <option name="totallyTimeSpent" value="207099000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1238,17 +1095,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="11" y="30" width="1280" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42162162" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18659128" sideWeight="0.50152904" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32359308" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14498934" sideWeight="0.4969419" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14458804" sideWeight="0.4969419" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1259,29 +1114,31 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24756756" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" x="254" y="269" width="857" height="230" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5006974" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3297587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3297587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18496802" sideWeight="0.49930266" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40648648" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18416801" sideWeight="0.49930266" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43484625" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18820679" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.2898975" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" x="686" y="194" width="396" height="507" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42162162" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18820679" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.104984894" sideWeight="0.4969419" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28899083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.2898975" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" x="686" y="194" width="396" height="507" />
@@ -1304,8 +1161,8 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5006974" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35857144" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5006974" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3297587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1361,6 +1218,40 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6240" max-vertical-offset="7245">
+          <caret line="416" column="94" selection-start-line="416" selection-start-column="94" selection-end-line="416" selection-end-column="94" />
+          <folding>
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Item..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Select * fro..ShoppingList..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Select * fro..OrderItems..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Item..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..OrderItems..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Select * fro..SubscriptionItem..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Insert Into ..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Update Subsc..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Delete From ..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..ItemDetails..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Update Item ..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Update Item ..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="select max(I..Item..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataAccess/DiscountRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1005">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <marker date="1417375529000" expanded="true" signature="-1:-1" placeholder="Select * fro..Discount..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/accountView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4" vertical-offset="6825" max-vertical-offset="8445">
@@ -1386,35 +1277,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8584337" vertical-offset="5175" max-vertical-offset="6945">
           <caret line="370" column="9" selection-start-line="370" selection-start-column="9" selection-end-line="370" selection-end-column="9" />
-          <folding>
-            <element signature="e#734#764#0" expanded="false" />
-            <element signature="e#2847#3031#0" expanded="false" />
-            <element signature="e#3020#3021#0" expanded="false" />
-            <element signature="e#3112#3296#0" expanded="false" />
-            <element signature="e#3285#3286#0" expanded="false" />
-            <element signature="e#3512#3695#0" expanded="false" />
-            <element signature="e#3684#3685#0" expanded="false" />
-            <element signature="e#3814#3999#0" expanded="false" />
-            <element signature="e#3988#3989#0" expanded="false" />
-            <element signature="e#4081#4266#0" expanded="false" />
-            <element signature="e#4255#4256#0" expanded="false" />
-            <element signature="e#4496#4679#0" expanded="false" />
-            <element signature="e#4668#4669#0" expanded="false" />
-            <element signature="e#4803#4988#0" expanded="false" />
-            <element signature="e#4977#4978#0" expanded="false" />
-            <element signature="e#5111#5296#0" expanded="false" />
-            <element signature="e#5285#5286#0" expanded="false" />
-            <element signature="e#5342#5530#0" expanded="false" />
-            <element signature="e#5519#5520#0" expanded="false" />
-            <element signature="e#5621#5806#0" expanded="false" />
-            <element signature="e#5795#5796#0" expanded="false" />
-            <element signature="e#15882#16063#0" expanded="false" />
-            <element signature="e#16052#16053#0" expanded="false" />
-            <element signature="e#16138#16319#0" expanded="false" />
-            <element signature="e#16308#16309#0" expanded="false" />
-            <element signature="e#24866#24995#0" expanded="false" />
-            <element signature="e#24984#24985#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1429,7 +1291,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="600">
           <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1459,7 +1320,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1148" max-vertical-offset="1470">
           <caret line="88" column="29" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1521,9 +1381,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#469#477#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1538,7 +1395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="467" max-vertical-offset="840">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1558,7 +1414,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="952">
           <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1597,7 +1452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="600">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1605,7 +1459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="825">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1621,26 +1474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="901">
           <caret line="44" column="51" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
-          <folding>
-            <element signature="e#681#682#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#910#911#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#1001#1002#0" expanded="true" />
-            <element signature="e#1048#1049#0" expanded="true" />
-            <element signature="e#1106#1107#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6352" max-vertical-offset="20995">
-          <caret line="465" column="70" selection-start-line="465" selection-start-column="70" selection-end-line="465" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1656,7 +1489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1099" max-vertical-offset="2057">
           <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1664,7 +1496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
           <caret line="29" column="7" selection-start-line="29" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1672,7 +1503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
           <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1696,7 +1526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="779" max-vertical-offset="2210">
           <caret line="79" column="69" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1726,135 +1555,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4692" max-vertical-offset="5355">
           <caret line="296" column="122" selection-start-line="296" selection-start-column="122" selection-end-line="296" selection-end-column="122" />
-          <folding>
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT last_..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Update Accou..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Update Accou..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Update Accou..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT last_..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Update Subsc..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Update Subsc..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Update Subsc..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Update Subsc..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..SavedPaymentInformation..." />
-            <marker date="1417381057119" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..SavedPaymentInformation..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataAccess/OrderRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5346" max-vertical-offset="5882">
-          <caret line="333" column="29" selection-start-line="333" selection-start-column="27" selection-end-line="333" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1417381659789" expanded="true" signature="1511:1551" placeholder="SELECT * FRO..UserOrder..." />
-            <marker date="1417381659789" expanded="true" signature="1511:1557" placeholder="SELECT * FRO..UserOrder..." />
-            <marker date="1417381659789" expanded="true" signature="1511:1574" placeholder="SELECT * FRO..UserOrder..." />
-            <marker date="1417381659789" expanded="true" signature="3587:4388" placeholder="Update UserO..." />
-            <marker date="1417381659789" expanded="true" signature="5654:6017" placeholder="INSERT INTO ..." />
-            <marker date="1417381659789" expanded="true" signature="5654:6016" placeholder="INSERT INTO ..." />
-            <marker date="1417381659789" expanded="true" signature="6069:6103" placeholder="select max(o..userorder..." />
-            <marker date="1417381659789" expanded="true" signature="7281:7433" placeholder="INSERT INTO ..." />
-            <marker date="1417381659789" expanded="true" signature="8345:8408" placeholder="Select max(S..OrderItems..." />
-            <marker date="1417381659789" expanded="true" signature="9506:9642" placeholder="Update Order..." />
-            <marker date="1417381659789" expanded="true" signature="10425:10943" placeholder="Update UserO..." />
-            <marker date="1417381659789" expanded="true" signature="10425:10888" placeholder="Update UserO..." />
-            <marker date="1417381659789" expanded="true" signature="10425:10937" placeholder="Update UserO..." />
-            <marker date="1417381659789" expanded="true" signature="11924:11965" placeholder="Select * fro..OrderItems..." />
-            <marker date="1417381659789" expanded="true" signature="11924:11971" placeholder="Select * fro..OrderItems..." />
-            <marker date="1417381659789" expanded="true" signature="11924:12003" placeholder="Select * fro..OrderItems..." />
-            <marker date="1417381659789" expanded="true" signature="13550:13767" placeholder="Delete from ..." />
-            <marker date="1417381659789" expanded="true" signature="13550:13761" placeholder="Delete from ..." />
-            <marker date="1417381659789" expanded="true" signature="13550:13712" placeholder="Delete from ..." />
-            <marker date="1417381659789" expanded="true" signature="14659:14704" placeholder="Select Order..UserOrder..." />
-            <marker date="1417381659789" expanded="true" signature="14659:14747" placeholder="Select Order..UserOrder..." />
-            <marker date="1417381659789" expanded="true" signature="14659:14741" placeholder="Select Order..UserOrder..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataAccess/DiscountRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1071">
-          <caret line="24" column="117" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.1242515" vertical-offset="217" max-vertical-offset="945">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding>
-            <marker date="1417368424823" expanded="true" signature="945:1016" placeholder="Select * fro..Discount..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7590" max-vertical-offset="8075">
-          <caret line="416" column="94" selection-start-line="416" selection-start-column="94" selection-end-line="416" selection-end-column="94" />
-          <folding>
-            <element signature="e#2345#2360#0" expanded="true" />
-            <element signature="e#5012#5023#0" expanded="true" />
-            <element signature="e#9010#9019#0" expanded="true" />
-            <element signature="e#10209#10218#0" expanded="true" />
-            <element signature="e#10397#10408#0" expanded="true" />
-            <marker date="1417381659795" expanded="true" signature="1048:1082" placeholder="SELECT * FRO..Item..." />
-            <marker date="1417381659795" expanded="true" signature="1048:1088" placeholder="SELECT * FRO..Item..." />
-            <marker date="1417381659795" expanded="true" signature="1048:1104" placeholder="SELECT * FRO..Item..." />
-            <marker date="1417381659795" expanded="true" signature="1048:1103" placeholder="SELECT * FRO..Item..." />
-            <marker date="1417381659795" expanded="true" signature="3127:3169" placeholder="Select * fro..ShoppingList..." />
-            <marker date="1417381659795" expanded="true" signature="3127:3175" placeholder="Select * fro..ShoppingList..." />
-            <marker date="1417381659795" expanded="true" signature="3127:3212" placeholder="Select * fro..ShoppingList..." />
-            <marker date="1417381659795" expanded="true" signature="3127:3206" placeholder="Select * fro..ShoppingList..." />
-            <marker date="1417381659795" expanded="true" signature="4298:4422" placeholder="INSERT INTO ..." />
-            <marker date="1417381659795" expanded="true" signature="4298:4421" placeholder="INSERT INTO ..." />
-            <marker date="1417381659795" expanded="true" signature="4298:4421" placeholder="INSERT INTO ..." />
-            <marker date="1417381659795" expanded="true" signature="5508:5549" placeholder="Select * fro..OrderItems..." />
-            <marker date="1417381659795" expanded="true" signature="5508:5555" placeholder="Select * fro..OrderItems..." />
-            <marker date="1417381659795" expanded="true" signature="5508:5588" placeholder="Select * fro..OrderItems..." />
-            <marker date="1417381659795" expanded="true" signature="7100:7118" placeholder="SELECT * FRO..Item..." />
-            <marker date="1417381659795" expanded="true" signature="9586:9648" placeholder="SELECT * FRO..OrderItems..." />
-            <marker date="1417381659795" expanded="true" signature="10904:10958" placeholder="Select * fro..SubscriptionItem..." />
-            <marker date="1417381659795" expanded="true" signature="10904:11009" placeholder="Select * fro..SubscriptionItem..." />
-            <marker date="1417381659795" expanded="true" signature="10904:11003" placeholder="Select * fro..SubscriptionItem..." />
-            <marker date="1417381659795" expanded="true" signature="12085:12249" placeholder="Insert Into ..." />
-            <marker date="1417381659795" expanded="true" signature="12085:12248" placeholder="Insert Into ..." />
-            <marker date="1417381659795" expanded="true" signature="13052:13191" placeholder="Update Subsc..." />
-            <marker date="1417381659795" expanded="true" signature="13052:13218" placeholder="Update Subsc..." />
-            <marker date="1417381659795" expanded="true" signature="13052:13212" placeholder="Update Subsc..." />
-            <marker date="1417381659795" expanded="true" signature="14050:14149" placeholder="Delete From ..." />
-            <marker date="1417381659795" expanded="true" signature="14050:14176" placeholder="Delete From ..." />
-            <marker date="1417381659795" expanded="true" signature="14050:14170" placeholder="Delete From ..." />
-            <marker date="1417381659795" expanded="true" signature="15032:15073" placeholder="SELECT * FRO..ItemDetails..." />
-            <marker date="1417381659795" expanded="true" signature="15032:15099" placeholder="SELECT * FRO..ItemDetails..." />
-            <marker date="1417381659795" expanded="true" signature="15032:15094" placeholder="SELECT * FRO..ItemDetails..." />
-            <marker date="1417381659795" expanded="true" signature="16179:16267" placeholder="Update Item ..." />
-            <marker date="1417381659795" expanded="true" signature="16179:16245" placeholder="Update Item ..." />
-            <marker date="1417381659795" expanded="true" signature="16179:16245" placeholder="Update Item ..." />
-            <marker date="1417381659795" expanded="true" signature="16179:16210" placeholder="Update Item ..." />
-            <marker date="1417381659795" expanded="true" signature="16179:16252" placeholder="Update Item ..." />
-            <marker date="1417381659795" expanded="true" signature="16988:17032" placeholder="Update Item ..." />
-            <marker date="1417381659795" expanded="true" signature="16988:17038" placeholder="Update Item ..." />
-            <marker date="1417381659795" expanded="true" signature="16988:17059" placeholder="Update Item ..." />
-            <marker date="1417381659795" expanded="true" signature="16988:17053" placeholder="Update Item ..." />
-            <marker date="1417381659795" expanded="true" signature="17938:18304" placeholder="Insert into ..." />
-            <marker date="1417381659795" expanded="true" signature="19103:19131" placeholder="select max(I..Item..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5172415" vertical-offset="267" max-vertical-offset="1122">
-          <caret line="20" column="83" selection-start-line="20" selection-start-column="83" selection-end-line="20" selection-end-column="83" />
-          <folding>
-            <marker date="0" expanded="true" signature="909:944" placeholder="select * fro..item..." />
+            <marker date="1417375529000" expanded="true" signature="-1:-1" placeholder="Select * fro..Discount..." />
           </folding>
         </state>
       </provider>
@@ -1863,56 +1572,97 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1972" max-vertical-offset="2329">
           <caret line="142" column="13" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7590" max-vertical-offset="8075">
+          <caret line="416" column="94" selection-start-line="416" selection-start-column="94" selection-end-line="416" selection-end-column="94" />
           <folding>
-            <element signature="e#3647#3648#0" expanded="true" />
-            <element signature="e#3695#3696#0" expanded="true" />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Item..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Select * fro..ShoppingList..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Select * fro..OrderItems..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Item..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..OrderItems..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Select * fro..SubscriptionItem..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Insert Into ..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Update Subsc..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Delete From ..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..ItemDetails..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Update Item ..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Update Item ..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
+            <marker date="1417381978000" expanded="true" signature="-1:-1" placeholder="select max(I..Item..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Enums.java">
+    <entry file="file://$PROJECT_DIR$/src/DataAccess/OrderRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Discount">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/OrderModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2331" max-vertical-offset="3400">
-          <caret line="285" column="78" selection-start-line="285" selection-start-column="69" selection-end-line="285" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.934877" vertical-offset="4199" max-vertical-offset="5040">
+          <caret line="333" column="27" selection-start-line="333" selection-start-column="27" selection-end-line="333" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="568" max-vertical-offset="1377">
-          <caret line="55" column="140" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.43560058" vertical-offset="374" max-vertical-offset="1215">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..ItemDetails">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/src/models/Enums.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31960228" vertical-offset="0" max-vertical-offset="704">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/OrderModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.845152" vertical-offset="419" max-vertical-offset="3000">
+          <caret line="285" column="69" selection-start-line="285" selection-start-column="69" selection-end-line="285" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5955" max-vertical-offset="18525">
+          <caret line="478" column="25" selection-start-line="478" selection-start-column="25" selection-end-line="478" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/shoppingCartView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.826087" vertical-offset="4650" max-vertical-offset="6045">
+          <caret line="375" column="0" selection-start-line="375" selection-start-column="0" selection-end-line="375" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20337#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#841#871#0" expanded="true" />
+            <element signature="e#3382#3908#0" expanded="true" />
+            <element signature="e#3821#3822#0" expanded="true" />
+            <element signature="e#7110#7291#0" expanded="true" />
+            <element signature="e#7280#7281#0" expanded="true" />
+            <element signature="e#12984#13165#0" expanded="true" />
+            <element signature="e#13154#13155#0" expanded="true" />
+            <element signature="e#13239#13420#0" expanded="true" />
+            <element signature="e#13409#13410#0" expanded="true" />
+            <element signature="e#13506#13687#0" expanded="true" />
+            <element signature="e#13676#13677#0" expanded="true" />
+            <element signature="e#19311#19440#0" expanded="true" />
+            <element signature="e#19429#19430#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
