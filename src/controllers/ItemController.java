@@ -82,6 +82,11 @@ public class ItemController {
          _itemManager.editItemInSubscription(itemId, quantity,subscriptionId);
     }
 
+    public static void deleteItemsFromSubscription(int subscriptionId)
+    {
+        _itemManager.deleteItemsFromSubscription(subscriptionId);
+    }
+
     public static void deleteItemInSubscription(int itemId, int subscriptionId)
     {
            _itemManager.deleteItemInSubscription(itemId, subscriptionId);

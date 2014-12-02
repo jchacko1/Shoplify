@@ -4,8 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/src/controllers/ItemController.java" line="42" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="Added method to get the Subscription Shipping Date">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/AccountController.java" afterPath="$PROJECT_DIR$/src/controllers/AccountController.java" />
+    <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/ItemController.java" afterPath="$PROJECT_DIR$/src/controllers/ItemController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessLogic/ItemManager.java" afterPath="$PROJECT_DIR$/src/businessLogic/ItemManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/ItemRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/ItemRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/ItemService.java" afterPath="$PROJECT_DIR$/src/DataAccess/ItemService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -84,8 +87,8 @@
       <file leaf-file-name="ItemController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/ItemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1479">
-              <caret line="64" column="51" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="632" max-vertical-offset="1564">
+              <caret line="84" column="79" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -94,8 +97,8 @@
       <file leaf-file-name="AccountController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36817655" vertical-offset="1808" max-vertical-offset="2669">
-              <caret line="133" column="69" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.13124274" vertical-offset="1145" max-vertical-offset="2669">
+              <caret line="79" column="104" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -114,8 +117,8 @@
       <file leaf-file-name="ItemService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="1972">
-              <caret line="85" column="39" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1114" max-vertical-offset="2057">
+              <caret line="109" column="114" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -144,9 +147,12 @@
       <file leaf-file-name="ItemManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/businessLogic/ItemManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1819">
-              <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1046" max-vertical-offset="1955">
+              <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="124" selection-end-column="5" />
+              <folding>
+                <element signature="e#3556#3557#0" expanded="true" />
+                <element signature="e#3614#3615#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -189,24 +195,26 @@
       <file leaf-file-name="ItemRepository.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5683" max-vertical-offset="8177">
-              <caret line="369" column="87" selection-start-line="369" selection-start-column="47" selection-end-line="369" selection-end-column="87" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="7570" max-vertical-offset="8534">
+              <caret line="482" column="31" selection-start-line="482" selection-start-column="31" selection-end-line="482" selection-end-column="31" />
               <folding>
-                <marker date="1417474696987" expanded="true" signature="1048:1103" placeholder="SELECT * FRO..Item..." />
-                <marker date="1417474696987" expanded="true" signature="3127:3206" placeholder="Select * fro..ShoppingList..." />
-                <marker date="1417474696987" expanded="true" signature="4298:4421" placeholder="INSERT INTO ..." />
-                <marker date="1417474696987" expanded="true" signature="5508:5588" placeholder="Select * fro..OrderItems..." />
-                <marker date="1417474696987" expanded="true" signature="7100:7118" placeholder="SELECT * FRO..Item..." />
-                <marker date="1417474696987" expanded="true" signature="9586:9648" placeholder="SELECT * FRO..OrderItems..." />
-                <marker date="1417474696987" expanded="true" signature="10904:11003" placeholder="Select * fro..SubscriptionItem..." />
-                <marker date="1417474696987" expanded="true" signature="12085:12248" placeholder="Insert Into ..." />
-                <marker date="1417474696987" expanded="true" signature="13052:13212" placeholder="Update Subsc..." />
-                <marker date="1417474696987" expanded="true" signature="14050:14170" placeholder="Delete From ..." />
-                <marker date="1417474696987" expanded="true" signature="15032:15094" placeholder="SELECT * FRO..ItemDetails..." />
-                <marker date="1417474696987" expanded="true" signature="16532:16620" placeholder="Update Item ..." />
-                <marker date="1417474696987" expanded="true" signature="17341:17406" placeholder="Update Item ..." />
-                <marker date="1417474696987" expanded="true" signature="18291:18657" placeholder="Insert into ..." />
-                <marker date="1417474696987" expanded="true" signature="19456:19484" placeholder="select max(I..Item..." />
+                <marker date="1417479446184" expanded="true" signature="1048:1103" placeholder="SELECT * FRO..Item..." />
+                <marker date="1417479446184" expanded="true" signature="3127:3206" placeholder="Select * fro..ShoppingList..." />
+                <marker date="1417479446184" expanded="true" signature="4298:4421" placeholder="INSERT INTO ..." />
+                <marker date="1417479446184" expanded="true" signature="5508:5588" placeholder="Select * fro..OrderItems..." />
+                <marker date="1417479446184" expanded="true" signature="7100:7118" placeholder="SELECT * FRO..Item..." />
+                <marker date="1417479446184" expanded="true" signature="9586:9648" placeholder="SELECT * FRO..OrderItems..." />
+                <marker date="1417479446184" expanded="true" signature="10904:11003" placeholder="Select * fro..SubscriptionItem..." />
+                <marker date="1417479446184" expanded="true" signature="12085:12248" placeholder="Insert Into ..." />
+                <marker date="1417479446184" expanded="true" signature="13052:13212" placeholder="Update Subsc..." />
+                <marker date="1417479446184" expanded="true" signature="14050:14170" placeholder="Delete From ..." />
+                <marker date="1417479446184" expanded="true" signature="15032:15094" placeholder="SELECT * FRO..ItemDetails..." />
+                <marker date="1417479446184" expanded="true" signature="16532:16620" placeholder="Update Item ..." />
+                <marker date="1417479446184" expanded="true" signature="17341:17406" placeholder="Update Item ..." />
+                <marker date="1417479446184" expanded="true" signature="18291:18657" placeholder="Insert into ..." />
+                <marker date="1417479446184" expanded="true" signature="19456:19484" placeholder="select max(I..Item..." />
+                <marker date="1417479446184" expanded="true" signature="20442:20527" placeholder="Delete From ..." />
+                <marker date="1417479446184" expanded="true" signature="20442:20523" placeholder="Delete From ..." />
               </folding>
             </state>
           </provider>
@@ -257,13 +265,10 @@
         <option value="$PROJECT_DIR$/src/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/models/OrderModel.java" />
         <option value="$PROJECT_DIR$/src/models/ItemDetailsModel.java" />
-        <option value="$PROJECT_DIR$/src/businessLogic/ItemManager.java" />
         <option value="$PROJECT_DIR$/src/views/homepageView.java" />
         <option value="$PROJECT_DIR$/src/views/homepageView2.java" />
         <option value="$PROJECT_DIR$/src/businessLogic/AdminManager.java" />
         <option value="$PROJECT_DIR$/src/controllers/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/DataAccess/ItemService.java" />
-        <option value="$PROJECT_DIR$/src/controllers/ItemController.java" />
         <option value="dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Discount" />
         <option value="dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..ItemDetails" />
         <option value="$PROJECT_DIR$/src/DataAccess/OrderService.java" />
@@ -271,12 +276,15 @@
         <option value="$PROJECT_DIR$/src/businessLogic/Utilities.java" />
         <option value="$PROJECT_DIR$/src/businessLogic/OrderManager.java" />
         <option value="$PROJECT_DIR$/src/DataAccess/OrderRepository.java" />
-        <option value="$PROJECT_DIR$/src/DataAccess/ItemRepository.java" />
         <option value="db-console:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/" />
         <option value="$PROJECT_DIR$/src/DataAccess/AccountRepository.java" />
         <option value="$PROJECT_DIR$/src/DataAccess/AccountService.java" />
         <option value="$PROJECT_DIR$/src/businessLogic/AccountManager.java" />
         <option value="$PROJECT_DIR$/src/controllers/AccountController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/ItemController.java" />
+        <option value="$PROJECT_DIR$/src/businessLogic/ItemManager.java" />
+        <option value="$PROJECT_DIR$/src/DataAccess/ItemService.java" />
+        <option value="$PROJECT_DIR$/src/DataAccess/ItemRepository.java" />
       </list>
     </option>
   </component>
@@ -1003,7 +1011,7 @@
       <workItem from="1417369563094" duration="9098000" />
       <workItem from="1417378735395" duration="5023000" />
       <workItem from="1417396585660" duration="1219000" />
-      <workItem from="1417449906570" duration="11485000" />
+      <workItem from="1417449906570" duration="12545000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1217,11 +1225,15 @@
       <created>1417477073778</created>
       <updated>1417477073778</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Changed insertSavedPaymentInformationModel to return a boolean">
+      <created>1417478563606</created>
+      <updated>1417478563606</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220236000" />
+    <option name="totallyTimeSpent" value="221296000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1265,7 +1277,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" x="254" y="269" width="857" height="230" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5006974" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3297587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18496802" sideWeight="0.49930266" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17297298" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1330,7 +1342,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Changes to Account Model to include password, more data in database" />
     <MESSAGE value="Commented out example of how to login" />
     <MESSAGE value="homepage" />
     <MESSAGE value="Code to insert users and orders" />
@@ -1355,7 +1366,8 @@
     <MESSAGE value="Added IsOrderCompleted to UserOrder table" />
     <MESSAGE value="Reworked how we build the ItemDetailsModel, and added some debugging" />
     <MESSAGE value="Added method to get the Subscription Shipping Date" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added method to get the Subscription Shipping Date" />
+    <MESSAGE value="Changed insertSavedPaymentInformationModel to return a boolean" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed insertSavedPaymentInformationModel to return a boolean" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1756,46 +1768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessLogic/ItemManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1819">
-          <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="1972">
-          <caret line="85" column="39" selection-start-line="85" selection-start-column="39" selection-end-line="85" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5683" max-vertical-offset="8177">
-          <caret line="369" column="87" selection-start-line="369" selection-start-column="47" selection-end-line="369" selection-end-column="87" />
-          <folding>
-            <marker date="1417474696987" expanded="true" signature="1048:1103" placeholder="SELECT * FRO..Item..." />
-            <marker date="1417474696987" expanded="true" signature="3127:3206" placeholder="Select * fro..ShoppingList..." />
-            <marker date="1417474696987" expanded="true" signature="4298:4421" placeholder="INSERT INTO ..." />
-            <marker date="1417474696987" expanded="true" signature="5508:5588" placeholder="Select * fro..OrderItems..." />
-            <marker date="1417474696987" expanded="true" signature="7100:7118" placeholder="SELECT * FRO..Item..." />
-            <marker date="1417474696987" expanded="true" signature="9586:9648" placeholder="SELECT * FRO..OrderItems..." />
-            <marker date="1417474696987" expanded="true" signature="10904:11003" placeholder="Select * fro..SubscriptionItem..." />
-            <marker date="1417474696987" expanded="true" signature="12085:12248" placeholder="Insert Into ..." />
-            <marker date="1417474696987" expanded="true" signature="13052:13212" placeholder="Update Subsc..." />
-            <marker date="1417474696987" expanded="true" signature="14050:14170" placeholder="Delete From ..." />
-            <marker date="1417474696987" expanded="true" signature="15032:15094" placeholder="SELECT * FRO..ItemDetails..." />
-            <marker date="1417474696987" expanded="true" signature="16532:16620" placeholder="Update Item ..." />
-            <marker date="1417474696987" expanded="true" signature="17341:17406" placeholder="Update Item ..." />
-            <marker date="1417474696987" expanded="true" signature="18291:18657" placeholder="Insert into ..." />
-            <marker date="1417474696987" expanded="true" signature="19456:19484" placeholder="select max(I..Item..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..ItemDetails">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
@@ -1811,14 +1783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.620689" vertical-offset="294" max-vertical-offset="1139">
           <caret line="32" column="86" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/ItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1479">
-          <caret line="64" column="51" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -1859,10 +1823,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/businessLogic/ItemManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1046" max-vertical-offset="1955">
+          <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="124" selection-end-column="5" />
+          <folding>
+            <element signature="e#3556#3557#0" expanded="true" />
+            <element signature="e#3614#3615#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1114" max-vertical-offset="2057">
+          <caret line="109" column="114" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7570" max-vertical-offset="8534">
+          <caret line="482" column="31" selection-start-line="482" selection-start-column="31" selection-end-line="482" selection-end-column="31" />
+          <folding>
+            <marker date="1417479446184" expanded="true" signature="1048:1103" placeholder="SELECT * FRO..Item..." />
+            <marker date="1417479446184" expanded="true" signature="3127:3206" placeholder="Select * fro..ShoppingList..." />
+            <marker date="1417479446184" expanded="true" signature="4298:4421" placeholder="INSERT INTO ..." />
+            <marker date="1417479446184" expanded="true" signature="5508:5588" placeholder="Select * fro..OrderItems..." />
+            <marker date="1417479446184" expanded="true" signature="7100:7118" placeholder="SELECT * FRO..Item..." />
+            <marker date="1417479446184" expanded="true" signature="9586:9648" placeholder="SELECT * FRO..OrderItems..." />
+            <marker date="1417479446184" expanded="true" signature="10904:11003" placeholder="Select * fro..SubscriptionItem..." />
+            <marker date="1417479446184" expanded="true" signature="12085:12248" placeholder="Insert Into ..." />
+            <marker date="1417479446184" expanded="true" signature="13052:13212" placeholder="Update Subsc..." />
+            <marker date="1417479446184" expanded="true" signature="14050:14170" placeholder="Delete From ..." />
+            <marker date="1417479446184" expanded="true" signature="15032:15094" placeholder="SELECT * FRO..ItemDetails..." />
+            <marker date="1417479446184" expanded="true" signature="16532:16620" placeholder="Update Item ..." />
+            <marker date="1417479446184" expanded="true" signature="17341:17406" placeholder="Update Item ..." />
+            <marker date="1417479446184" expanded="true" signature="18291:18657" placeholder="Insert into ..." />
+            <marker date="1417479446184" expanded="true" signature="19456:19484" placeholder="select max(I..Item..." />
+            <marker date="1417479446184" expanded="true" signature="20442:20527" placeholder="Delete From ..." />
+            <marker date="1417479446184" expanded="true" signature="20442:20523" placeholder="Delete From ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/ItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="632" max-vertical-offset="1564">
+          <caret line="84" column="79" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36817655" vertical-offset="1808" max-vertical-offset="2669">
-          <caret line="133" column="69" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.13124274" vertical-offset="1145" max-vertical-offset="2669">
+          <caret line="79" column="104" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding />
         </state>
       </provider>
