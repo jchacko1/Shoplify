@@ -118,4 +118,9 @@ public class ItemManager {
     {
         return _itemService.getItemDetails(itemId);
     }
+
+    public void deleteItemsFromSubscription(int subscriptionId)
+    {
+        _itemService.deleteItemsFromSubscription(subscriptionId);
+    }
 }

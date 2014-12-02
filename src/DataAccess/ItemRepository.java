@@ -480,4 +480,25 @@ public class ItemRepository extends BaseRepository {
         return highestPrimaryKey;
     }
 
+    public void deleteItemsFromSubscription(int subscriptionId)
+    {
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin delete all items on subscription try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            stmt.executeUpdate( "Delete From SubscriptionItem where SubscriptionId = " + '"' + subscriptionId + '"' + ";");
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+    }
+
 }

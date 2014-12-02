@@ -126,4 +126,9 @@ public class ItemService {
         }
         _itemRepository.addItem(newPrimaryKey,itemName, price, quantity, description,categoryId,shoppingCartItemId, imagePath);
     }
+
+    public void deleteItemsFromSubscription(int subscriptionId)
+    {
+        _itemRepository.deleteItemsFromSubscription(subscriptionId);
+    }
 }
