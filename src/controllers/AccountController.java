@@ -130,14 +130,24 @@ public class AccountController {
         }
     }
 
-    public static boolean updateSubscription(String shipDate, boolean enabled,SubscriptionUserModel subscriptionUserModel)
+    public static boolean updateSubscription(String shipDate, SubscriptionUserModel subscriptionUserModel)
     {
-        return _accountManager.updateSubscription(shipDate,enabled,subscriptionUserModel);
+        return _accountManager.updateSubscription(shipDate,true,subscriptionUserModel);
     }
 
-    public static void insertSavedPaymentInformationModel(int userId, String creditCardType, String cardHoldersName, String creditCardNumber, String expirationDate, String cvs)
+    public static boolean insertSavedPaymentInformationModel(int userId, String creditCardType, String cardHoldersName, String creditCardNumber, String expirationDate, String cvs)
     {
-      _accountManager.insertSavedPaymentInformationModel(userId, creditCardType, cardHoldersName, creditCardNumber, expirationDate,cvs);
+        if(Utilities.isNotNullOrEmpty(creditCardType) && Utilities.isNotNullOrEmpty(cardHoldersName) && Utilities.isNotNullOrEmpty(creditCardNumber) && Utilities.isNotNullOrEmpty(expirationDate) && Utilities.isNotNullOrEmpty(cvs))
+        {
+            _accountManager.insertSavedPaymentInformationModel(userId, creditCardType, cardHoldersName, creditCardNumber, expirationDate,cvs);
+            return true;
+        }
+        else
+        {
+            //user did not enter all the credit card information
+            return false;
+        }
+
     }
 
     public static ArrayList<SavedPaymentInformationModel> getSavedPayments(int userId)

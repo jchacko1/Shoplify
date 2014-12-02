@@ -4,11 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/src/controllers/ItemController.java" line="42" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
+    <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="Added method to get the Subscription Shipping Date">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/AccountController.java" afterPath="$PROJECT_DIR$/src/controllers/AccountController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessLogic/AccountManager.java" afterPath="$PROJECT_DIR$/src/businessLogic/AccountManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/AccountRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/AccountRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/AccountService.java" afterPath="$PROJECT_DIR$/src/DataAccess/AccountService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -97,8 +94,8 @@
       <file leaf-file-name="AccountController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30963665" vertical-offset="1317" max-vertical-offset="2499">
-              <caret line="97" column="76" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.36817655" vertical-offset="1808" max-vertical-offset="2669">
+              <caret line="133" column="69" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -1006,7 +1003,7 @@
       <workItem from="1417369563094" duration="9098000" />
       <workItem from="1417378735395" duration="5023000" />
       <workItem from="1417396585660" duration="1219000" />
-      <workItem from="1417449906570" duration="10090000" />
+      <workItem from="1417449906570" duration="11485000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1216,11 +1213,15 @@
       <created>1417474787976</created>
       <updated>1417474787976</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Added method to get the Subscription Shipping Date">
+      <created>1417477073778</created>
+      <updated>1417477073778</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218841000" />
+    <option name="totallyTimeSpent" value="220236000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1260,7 +1261,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5006974" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28899083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24648649" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24648649" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" x="254" y="269" width="857" height="230" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5006974" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3297587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1329,7 +1330,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Added an item and corrected existing Items' CategoryIds. Added comments in Category Enum to help us remember which ID belongs to a Category" />
     <MESSAGE value="Changes to Account Model to include password, more data in database" />
     <MESSAGE value="Commented out example of how to login" />
     <MESSAGE value="homepage" />
@@ -1354,7 +1354,8 @@
     <MESSAGE value="Fixed bug with SQL that updates a submitted order" />
     <MESSAGE value="Added IsOrderCompleted to UserOrder table" />
     <MESSAGE value="Reworked how we build the ItemDetailsModel, and added some debugging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reworked how we build the ItemDetailsModel, and added some debugging" />
+    <MESSAGE value="Added method to get the Subscription Shipping Date" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added method to get the Subscription Shipping Date" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1860,8 +1861,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30963665" vertical-offset="1317" max-vertical-offset="2499">
-          <caret line="97" column="76" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.36817655" vertical-offset="1808" max-vertical-offset="2669">
+          <caret line="133" column="69" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
           <folding />
         </state>
       </provider>
