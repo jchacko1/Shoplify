@@ -26,6 +26,6 @@ public class AdminController {
 
     public static void addItem(String itemName, double price, int quantity, String description, int categoryId, int shoppingCartItemId)
     {
-        _adminManager.addItem(itemName, price, quantity, description,categoryId,shoppingCartItemId);
+      _adminManager.addItem(itemName, price, quantity, description,categoryId,shoppingCartItemId);
     }
 }

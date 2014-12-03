@@ -29,6 +29,7 @@ public class AdminManager {
 
     public void addItem(String itemName, double price, int quantity, String description, int categoryId, int shoppingCartItemId)
     {
-        _itemService.addItem(itemName, price, quantity, description,categoryId,shoppingCartItemId);
+        int newPrimaryKey = _itemService.addItem(itemName, price, quantity, description,categoryId,shoppingCartItemId);
+        _itemService.addItemDetails(newPrimaryKey,"",-1,-1,"",-1);
     }
 }

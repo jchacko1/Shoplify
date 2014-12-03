@@ -35,5 +35,19 @@ public class AdminUserModel extends SubscriptionUserModel{
 
     }
 
+    public boolean getCanEditItem()
+    {
+        return _canEditItems;
+    }
+
+    public boolean getCanEditUsers()
+    {
+        return _canEditUsers;
+    }
+
+    public boolean getCanRefundOrders()
+    {
+        return _canRefundOrders;
+    }
 
 }

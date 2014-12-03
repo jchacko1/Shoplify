@@ -64,7 +64,7 @@ public class ItemController {
 
     public static ArrayList<ItemModel> getItemsByUserId(int userId)
     {
-       return _itemManager.getItemsByUserId(userId);
+        return _itemManager.getItemsByUserId(userId);
     }
 
     public static ArrayList<ItemModel> getItemsOnSubscription(int subscriptionId)
