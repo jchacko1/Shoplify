@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package views;
+import controllers.ItemController;
 import controllers.OrderController;
 import global.Global;
 import models.ItemModel;
@@ -156,6 +157,7 @@ public class shoppingCartView extends javax.swing.JFrame {
                     Boolean checked = (Boolean) dtm.getValueAt(i, 3);
                     if (checked) {
                         dtm.removeRow(i);
+                        //OrderController.deleteItemOnOrder(itemId, shoppingCartItemId);
                         i--;
                     }
                 }
@@ -379,6 +381,7 @@ public class shoppingCartView extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         checkoutView frame = new checkoutView();
         frame.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

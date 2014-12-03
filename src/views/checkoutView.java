@@ -5,13 +5,23 @@
  */
 package views;
 
+import controllers.AccountController;
+import controllers.OrderController;
+import global.Global;
+import models.ItemModel;
+import models.SavedPaymentInformationModel;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.util.ArrayList;
+
 /**
  *
  * @author ART
  */
 public class checkoutView extends javax.swing.JFrame {
-
-    //TODO: Need add button listener for 'save payment' and 'place order' button
 
     /**
      * Creates new form checkoutView
@@ -54,14 +64,15 @@ public class checkoutView extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField("");
+        jTextField11 = new javax.swing.JTextField("");
+        jTextField12 = new javax.swing.JTextField("");
         jButton1 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
+        jTextField13 = new javax.swing.JTextField("");
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jComboBox2 = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,6 +81,7 @@ public class checkoutView extends javax.swing.JFrame {
         jLabel1.setText("First Name:");
 
         jLabel2.setText("Last Name:");
+
 
         jLabel3.setText("Address:");
 
@@ -210,6 +222,23 @@ public class checkoutView extends javax.swing.JFrame {
         jLabel13.setText("Credit Card Type");
 
         jButton1.setText("Save Payment Information");
+        jButton1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                if (AccountController.insertSavedPaymentInformationModel(Global.CURRENT_ACCOUNT.getUserId(), jComboBox1.getSelectedItem().toString(), jTextField10.getText(), jTextField11.getText(), jTextField12.getText(), jTextField13.getText())) {
+
+
+                    savePrompt frame = new savePrompt();
+                    frame.setVisible(true);
+
+                } else {
+
+                    saveFailPrompt frame = new saveFailPrompt();
+                    frame.setVisible(true);
+
+                }
+            }
+        });
 
         jLabel14.setText("CVS:");
 
@@ -242,7 +271,7 @@ public class checkoutView extends javax.swing.JFrame {
                                 .addComponent(jLabel14)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 78, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton1)))
@@ -277,6 +306,28 @@ public class checkoutView extends javax.swing.JFrame {
         );
 
         jButton2.setText("Place Order");
+        jButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                if (OrderController.submitOrder(Global.CURRENT_ORDER, jTextField1.getText(), jTextField2.getText(), jTextField3.getText(), jTextField4.getText(), jTextField5.getText(), jTextField6.getText(), jTextField7.getText(), jTextField8.getText(), jTextField9.getText(),
+                jComboBox1.getSelectedItem().toString(), jTextField10.getText(), jTextField11.getText(), jTextField12.getText(), jTextField13.getText())) {
+
+                    orderPrompt frame = new orderPrompt();
+                    frame.setVisible(true);
+                    dispose();
+
+                } else {
+
+                    orderFailPrompt frame = new orderFailPrompt();
+                    frame.setVisible(true);
+
+                }
+
+
+
+            }
+        });
 
         jButton3.setText("Cancel");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -285,35 +336,111 @@ public class checkoutView extends javax.swing.JFrame {
             }
         });
 
+        ArrayList<SavedPaymentInformationModel> userPaymentOption = AccountController.getSavedPayments(Global.CURRENT_ACCOUNT.getUserId());
+
+        final String[] optionCardDisplay = new String[6];
+        final String[] creditCardType = new String[5];
+        final String[] cardHoldersName = new String[5];
+        final String[] creditCardNumber = new String[5];
+        final String[] expirationDate = new String[5];
+        final String[] cvs = new String[5];
+
+
+
+        optionCardDisplay[0] = "Select your credit card number";
+        int count = 1;
+        int increment = 0;
+
+        for(SavedPaymentInformationModel option : userPaymentOption) {
+
+
+            optionCardDisplay[count] = option.getCreditCardNumber();
+            count++;
+
+            creditCardType[increment] = option.getCreditCardType();
+            cardHoldersName[increment] = option.getCardHoldersName();
+            creditCardNumber[increment] = option.getCreditCardNumber();
+            expirationDate[increment] = option.getExpirationDate();
+            cvs[increment] = option.getCvs();
+            increment++;
+
+        }
+
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(optionCardDisplay));
+
+
+        jComboBox2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                String paymentOption = jComboBox2.getSelectedItem().toString();
+
+
+                for (int i = 0; i < 5; i++) {
+
+
+
+                    if (paymentOption == creditCardNumber[i]) {
+                        //ComboBoxModel models = new DefaultComboBoxModel(creditCardType);
+                        //jComboBox2.setModel(models);
+                        jTextField10.setText(cardHoldersName[i]);
+                        jTextField11.setText(creditCardNumber[i]);
+                        jTextField12.setText(expirationDate[i]);
+                        jTextField13.setText(cvs[i]);
+
+                    }
+
+                }
+
+
+                //System.out.println(paymentOption);
+
+
+            }
+
+        });
+
+
+
+
+
+
+
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton3)
+                        .addGap(18, 18, 18))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
+                .addContainerGap())
         );
 
         pack();
@@ -337,6 +464,8 @@ public class checkoutView extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         dispose();
+        shoppingCartView frame = new shoppingCartView();
+        frame.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
@@ -379,6 +508,7 @@ public class checkoutView extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
