@@ -225,8 +225,18 @@ public class checkoutView extends javax.swing.JFrame {
         jButton1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-                AccountController.insertSavedPaymentInformationModel(Global.CURRENT_ACCOUNT.getUserId(), jComboBox1.getSelectedItem().toString(), jTextField10.getText(), jTextField11.getText(), jTextField12.getText(), jTextField13.getText());
+                if (AccountController.insertSavedPaymentInformationModel(Global.CURRENT_ACCOUNT.getUserId(), jComboBox1.getSelectedItem().toString(), jTextField10.getText(), jTextField11.getText(), jTextField12.getText(), jTextField13.getText())) {
 
+
+                    savePrompt frame = new savePrompt();
+                    frame.setVisible(true);
+
+                } else {
+
+                    saveFailPrompt frame = new saveFailPrompt();
+                    frame.setVisible(true);
+
+                }
             }
         });
 
@@ -305,6 +315,7 @@ public class checkoutView extends javax.swing.JFrame {
 
                     orderPrompt frame = new orderPrompt();
                     frame.setVisible(true);
+                    dispose();
 
                 } else {
 
@@ -453,6 +464,8 @@ public class checkoutView extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         dispose();
+        shoppingCartView frame = new shoppingCartView();
+        frame.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
