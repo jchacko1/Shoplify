@@ -5,6 +5,12 @@
  */
 package views;
 
+import controllers.ItemController;
+import models.Enums;
+import models.ItemModel;
+
+import java.util.ArrayList;
+
 /**
  *
  * @author ART
@@ -72,9 +78,64 @@ public class subscriptionCartView extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        ArrayList<ItemModel> itemsList = ItemController.getItems();
+
+        String[] meat = new String[6];
+        String[] dairy = new String[6];
+        String[] fruit = new String[6];
+        String[] vegetable = new String[6];
+        String[] drink = new String[6];
+        String[] dessert = new String[6];
+        String[] bread = new String[6];
+        int countMeat = 0;
+        int countDairy = 0;
+        int countFruit = 0;
+        int countVegetable = 0;
+        int countDrink = 0;
+        int countDessert = 0;
+        int countBread = 0;
+
+
+
+        for (ItemModel item : itemsList) {
+
+                if (item.getCategory() == Enums.Category.Meat) {
+
+                    meat[countMeat] = item.getName();
+                    countMeat++;
+
+                } else if (item.getCategory() == Enums.Category.Dairy) {
+                    dairy[countDairy] = item.getName();
+                    countDairy++;
+
+                } else if (item.getCategory() == Enums.Category.Fruit) {
+                    fruit[countFruit] = item.getName();
+                    countFruit++;
+
+                } else if (item.getCategory() == Enums.Category.Vegetables) {
+                    vegetable[countVegetable] = item.getName();
+                    countVegetable++;
+
+                } else if (item.getCategory() == Enums.Category.Drink) {
+                    drink[countDrink] = item.getName();
+                    countDrink++;
+
+                } else if (item.getCategory() == Enums.Category.Dessert) {
+                    dessert[countDessert] = item.getName();
+                    countDessert++;
+
+                } else if (item.getCategory() == Enums.Category.Bread) {
+                    bread[countBread] = item.getName();
+                    countBread++;
+                }
+
+        }
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(meat));
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(dairy));
 
         jLabel8.setText("Meats:");
 
@@ -82,21 +143,21 @@ public class subscriptionCartView extends javax.swing.JFrame {
 
         jLabel10.setText("Fruits:");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(fruit));
 
         jLabel11.setText("Vegetables:");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(vegetable));
 
         jLabel12.setText("Drinks:");
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(drink));
 
         jLabel13.setText("Desserts:");
 
         jLabel14.setText("Breads:");
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(dessert));
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Items"));
 
@@ -121,7 +182,7 @@ public class subscriptionCartView extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(bread));
 
         jButton1.setText("Remove all items");
 
