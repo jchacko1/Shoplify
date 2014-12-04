@@ -25,6 +25,7 @@ public class AdminManager {
     public void deleteItem(int itemId)
     {
         _itemService.deleteItem(itemId);
+        _itemService.deleteItemDetails(itemId);
     }
 
     public void addItem(String itemName, double price, int quantity, String description, int categoryId, int shoppingCartItemId)

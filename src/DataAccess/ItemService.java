@@ -137,4 +137,9 @@ public class ItemService {
     {
         _itemRepository.deleteItemsFromSubscription(subscriptionId);
     }
+
+    public void deleteItemDetails(int itemId)
+    {
+        _itemRepository.deleteItemDetails(itemId);
+    }
 }
