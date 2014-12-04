@@ -203,7 +203,8 @@ public class OrderModel {
 
     public void setTax()
     {
-       Utilities.round( _tax = _taxPercentage * _subTotal, 2);
+        _tax = _taxPercentage * _subTotal;
+        Utilities.round( _tax , 2);
     }
 
     public int getOrderId()
