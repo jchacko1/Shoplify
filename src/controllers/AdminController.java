@@ -28,4 +28,8 @@ public class AdminController {
     {
       _adminManager.addItem(itemName, price, 1, description,categoryId,-1);
     }
+
+    public static void deleteUser(int userId){
+        _adminManager.deleteUser(userId);
+    }
 }

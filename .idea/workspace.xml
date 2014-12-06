@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/shoplify.db" afterPath="$PROJECT_DIR$/src/DataAccess/shoplify.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/AdminController.java" afterPath="$PROJECT_DIR$/src/controllers/AdminController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessLogic/AdminManager.java" afterPath="$PROJECT_DIR$/src/businessLogic/AdminManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/AdminService.java" afterPath="$PROJECT_DIR$/src/DataAccess/AdminService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/UserRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/UserRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -82,29 +84,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AccountRepository.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataAccess/AccountRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1635" max-vertical-offset="5115">
-              <caret line="232" column="5" selection-start-line="232" selection-start-column="5" selection-end-line="232" selection-end-column="5" />
-              <folding>
-                <marker date="1417636749000" expanded="true" signature="865:1015" placeholder="Insert into ..." />
-                <marker date="1417636749000" expanded="true" signature="1116:1142" placeholder="SELECT last_..." />
-                <marker date="1417636749000" expanded="true" signature="2338:2440" placeholder="Update Accou..." />
-                <marker date="1417636749000" expanded="true" signature="3411:3475" placeholder="SELECT * FRO..Account..." />
-                <marker date="1417636749000" expanded="true" signature="4946:5049" placeholder="SELECT * FRO..Account..." />
-                <marker date="1417636749000" expanded="true" signature="6370:6432" placeholder="SELECT * FRO..Account..." />
-                <marker date="1417636749000" expanded="true" signature="8567:8593" placeholder="SELECT last_..." />
-                <marker date="1417636749000" expanded="true" signature="9924:10106" placeholder="Update Subsc..." />
-                <marker date="1417636749000" expanded="true" signature="11004:11317" placeholder="Insert into ..." />
-                <marker date="1417636749000" expanded="true" signature="12379:12453" placeholder="SELECT * FRO..SavedPaymentInformation..." />
-                <marker date="1417636749000" expanded="true" signature="13932:14011" placeholder="SELECT * FRO..Subscription..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="User" pinned="false" current="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..User">
           <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
             <state />
@@ -120,14 +100,78 @@
       <file leaf-file-name="UserRepository.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataAccess/UserRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="2850">
-              <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2769" max-vertical-offset="3285">
+              <caret line="202" column="24" selection-start-line="202" selection-start-column="24" selection-end-line="202" selection-end-column="24" />
               <folding>
-                <marker date="1417841913000" expanded="true" signature="1504:1538" placeholder="SELECT * FRO..User..." />
-                <marker date="1417841913000" expanded="true" signature="4404:5046" placeholder="Insert into ..." />
-                <marker date="1417841913000" expanded="true" signature="5101:5127" placeholder="SELECT last_..." />
-                <marker date="1417841913000" expanded="true" signature="6820:7623" placeholder="Update User ..." />
-                <marker date="1417841913000" expanded="true" signature="8654:9586" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="1504:1538" placeholder="SELECT * FRO..User..." />
+                <marker date="1417845026000" expanded="true" signature="4404:5046" placeholder="Insert into ..." />
+                <marker date="1417845026000" expanded="true" signature="5101:5127" placeholder="SELECT last_..." />
+                <marker date="1417845026000" expanded="true" signature="6820:7623" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="8654:9586" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10733" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10765" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10756" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10755" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10753" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10753" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10747" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10753" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10730" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10725" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10722" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10716" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10716" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10716" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10715" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10715" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10714" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10714" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10777" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10775" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10769" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10750" placeholder="Update User ..." />
+                <marker date="1417845026000" expanded="true" signature="10691:10731" placeholder="Update User ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataAccess/AdminService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="690">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#818#819#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/businessLogic/AdminManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="645">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1077#1078#0" expanded="true" />
+                <element signature="e#1125#1126#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controllers/AdminController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6104651" vertical-offset="0" max-vertical-offset="516">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding>
+                <element signature="e#804#805#0" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -162,28 +206,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderRepository.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataAccess/OrderRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1605" max-vertical-offset="5040">
-              <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
-              <folding>
-                <marker date="1417636749000" expanded="true" signature="1511:1574" placeholder="SELECT * FRO..UserOrder..." />
-                <marker date="1417636749000" expanded="true" signature="3587:4443" placeholder="Update UserO..." />
-                <marker date="1417636749000" expanded="true" signature="5672:6034" placeholder="INSERT INTO ..." />
-                <marker date="1417636749000" expanded="true" signature="6087:6121" placeholder="select max(o..userorder..." />
-                <marker date="1417636749000" expanded="true" signature="7299:7451" placeholder="INSERT INTO ..." />
-                <marker date="1417636749000" expanded="true" signature="8363:8426" placeholder="Select max(S..OrderItems..." />
-                <marker date="1417636749000" expanded="true" signature="9524:9660" placeholder="Update Order..." />
-                <marker date="1417636749000" expanded="true" signature="10443:10955" placeholder="Update UserO..." />
-                <marker date="1417636749000" expanded="true" signature="11942:12021" placeholder="Select * fro..OrderItems..." />
-                <marker date="1417636749000" expanded="true" signature="13551:13683" placeholder="Delete from ..." />
-                <marker date="1417636749000" expanded="true" signature="14582:14664" placeholder="Select Order..UserOrder..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserModel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/UserModel.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -207,9 +229,11 @@
       <file leaf-file-name="UserService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataAccess/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="1110">
+              <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -242,11 +266,9 @@
         <option value="$PROJECT_DIR$/src/views/reminderListView.java" />
         <option value="$PROJECT_DIR$/src/controllers/ReminderController.java" />
         <option value="$PROJECT_DIR$/src/models/SubscriptionUserModel.java" />
-        <option value="$PROJECT_DIR$/src/DataAccess/UserService.java" />
         <option value="$PROJECT_DIR$/src/businessLogic/UserManager.java" />
         <option value="$PROJECT_DIR$/src/DataAccess/ReminderService.java" />
         <option value="$PROJECT_DIR$/src/models/AdminModel.java" />
-        <option value="$PROJECT_DIR$/src/DataAccess/AdminService.java" />
         <option value="$PROJECT_DIR$/src/controllers/UserController.java" />
         <option value="$PROJECT_DIR$/src/models/ItemDetailsModel.java" />
         <option value="$PROJECT_DIR$/src/views/homepageView.java" />
@@ -264,11 +286,9 @@
         <option value="$PROJECT_DIR$/src/businessLogic/ItemManager.java" />
         <option value="$PROJECT_DIR$/src/businessLogic/OrderManager.java" />
         <option value="$PROJECT_DIR$/src/models/AdminUserModel.java" />
-        <option value="$PROJECT_DIR$/src/controllers/AdminController.java" />
         <option value="$PROJECT_DIR$/src/controllers/ItemController.java" />
         <option value="$PROJECT_DIR$/src/DataAccess/ItemService.java" />
         <option value="$PROJECT_DIR$/src/DataAccess/ItemRepository.java" />
-        <option value="$PROJECT_DIR$/src/businessLogic/AdminManager.java" />
         <option value="db-console:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/" />
         <option value="$PROJECT_DIR$/src/models/OrderModel.java" />
         <option value="dbtable:/cced1510/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Item" />
@@ -277,9 +297,13 @@
         <option value="dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..OrderItems" />
         <option value="dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Item" />
         <option value="dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..UserOrder" />
-        <option value="$PROJECT_DIR$/src/DataAccess/UserRepository.java" />
         <option value="db-console:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/" />
         <option value="dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..User" />
+        <option value="$PROJECT_DIR$/src/DataAccess/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/DataAccess/AdminService.java" />
+        <option value="$PROJECT_DIR$/src/DataAccess/UserService.java" />
+        <option value="$PROJECT_DIR$/src/businessLogic/AdminManager.java" />
+        <option value="$PROJECT_DIR$/src/controllers/AdminController.java" />
       </list>
     </option>
   </component>
@@ -369,7 +393,7 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -543,20 +567,71 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Shoplify" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <module name="" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="depsClasspath" value="false" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Shoplify" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Shoplify" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -567,35 +642,7 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -611,25 +658,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
@@ -688,33 +717,31 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
       <method />
     </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Shoplify" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -751,6 +778,12 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -771,10 +804,158 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Shoplify" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Shoplify" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Shoplify" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <list size="5">
@@ -882,7 +1063,7 @@
       <workItem from="1417724767188" duration="346000" />
       <workItem from="1417738749520" duration="2262000" />
       <workItem from="1417775224834" duration="180000" />
-      <workItem from="1417841557807" duration="2144000" />
+      <workItem from="1417841557807" duration="3826000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1112,11 +1293,15 @@
       <created>1417842998391</created>
       <updated>1417842998391</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Update Disable Column into User DB and set Disable default value = 0">
+      <created>1417843784556</created>
+      <updated>1417843784557</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234765000" />
+    <option name="totallyTimeSpent" value="236447000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1140,7 +1325,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33285713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1162,7 +1347,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854986" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3297587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18655589" sideWeight="0.49930266" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18655589" sideWeight="0.49930266" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17142858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18820679" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.2898975" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" x="686" y="194" width="396" height="507" />
@@ -1225,7 +1410,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Debugged adding item to order, creating order, and getting items on an order" />
     <MESSAGE value="Refactored names of Global variables" />
     <MESSAGE value="Refactored code to try to figure out if more than one Account exists for a username" />
     <MESSAGE value="More refactors for checking if more than one Account has been found in the database" />
@@ -1250,7 +1434,8 @@
     <MESSAGE value="Functionality for deleting all items from a Subscription" />
     <MESSAGE value="Added getters for Admin-specific properties. Added new function for inserting into ItemDetails db table" />
     <MESSAGE value="Add Disable Column into User DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Disable Column into User DB" />
+    <MESSAGE value="Update Disable Column into User DB and set Disable default value = 0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Disable Column into User DB and set Disable default value = 0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1350,13 +1535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="2550">
           <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataAccess/AdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="600">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1501,13 +1679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessLogic/AdminManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5517774" vertical-offset="0" max-vertical-offset="647">
-          <caret line="32" column="66" selection-start-line="32" selection-start-column="66" selection-end-line="32" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/global/Global.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
@@ -1557,18 +1728,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <caret line="28" column="75" selection-start-line="28" selection-start-column="75" selection-end-line="28" selection-end-column="75" />
+    <entry file="dbDummy://dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Account">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataAccess/UserService.java">
+    <entry file="dbDummy://db-console:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="358">
+          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataAccess/OrderRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3809524" vertical-offset="3295" max-vertical-offset="5040">
+          <caret line="235" column="39" selection-start-line="235" selection-start-column="39" selection-end-line="235" selection-end-column="39" />
+          <folding>
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..UserOrder..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="Update UserO..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="select max(o..userorder..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="Select max(S..OrderItems..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="Update Order..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="Update UserO..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="Select * fro..OrderItems..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="Delete from ..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="Select Order..UserOrder..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataAccess/AccountRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1635" max-vertical-offset="5115">
+          <caret line="232" column="5" selection-start-line="232" selection-start-column="5" selection-end-line="232" selection-end-column="5" />
+          <folding>
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="SELECT last_..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="Update Accou..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Account..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Account..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Account..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="SELECT last_..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="Update Subsc..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="Insert into ..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..SavedPaymentInformation..." />
+            <marker date="1417636749000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Subscription..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..User">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="270">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -1600,23 +1825,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataAccess/OrderRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/models/UserModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1605" max-vertical-offset="5040">
-          <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
-          <folding>
-            <marker date="1417636749000" expanded="true" signature="1511:1574" placeholder="SELECT * FRO..UserOrder..." />
-            <marker date="1417636749000" expanded="true" signature="3587:4443" placeholder="Update UserO..." />
-            <marker date="1417636749000" expanded="true" signature="5672:6034" placeholder="INSERT INTO ..." />
-            <marker date="1417636749000" expanded="true" signature="6087:6121" placeholder="select max(o..userorder..." />
-            <marker date="1417636749000" expanded="true" signature="7299:7451" placeholder="INSERT INTO ..." />
-            <marker date="1417636749000" expanded="true" signature="8363:8426" placeholder="Select max(S..OrderItems..." />
-            <marker date="1417636749000" expanded="true" signature="9524:9660" placeholder="Update Order..." />
-            <marker date="1417636749000" expanded="true" signature="10443:10955" placeholder="Update UserO..." />
-            <marker date="1417636749000" expanded="true" signature="11942:12021" placeholder="Select * fro..OrderItems..." />
-            <marker date="1417636749000" expanded="true" signature="13551:13683" placeholder="Delete from ..." />
-            <marker date="1417636749000" expanded="true" signature="14582:14664" placeholder="Select Order..UserOrder..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1628,75 +1841,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/UserModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1410">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Account">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="358">
-          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataAccess/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="2850">
-          <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2769" max-vertical-offset="3285">
+          <caret line="202" column="24" selection-start-line="202" selection-start-column="24" selection-end-line="202" selection-end-column="24" />
           <folding>
-            <marker date="1417841913000" expanded="true" signature="1504:1538" placeholder="SELECT * FRO..User..." />
-            <marker date="1417841913000" expanded="true" signature="4404:5046" placeholder="Insert into ..." />
-            <marker date="1417841913000" expanded="true" signature="5101:5127" placeholder="SELECT last_..." />
-            <marker date="1417841913000" expanded="true" signature="6820:7623" placeholder="Update User ..." />
-            <marker date="1417841913000" expanded="true" signature="8654:9586" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="1504:1538" placeholder="SELECT * FRO..User..." />
+            <marker date="1417845026000" expanded="true" signature="4404:5046" placeholder="Insert into ..." />
+            <marker date="1417845026000" expanded="true" signature="5101:5127" placeholder="SELECT last_..." />
+            <marker date="1417845026000" expanded="true" signature="6820:7623" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="8654:9586" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10733" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10765" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10756" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10755" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10753" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10753" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10747" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10753" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10730" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10725" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10722" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10716" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10716" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10716" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10715" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10715" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10714" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10714" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10777" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10775" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10769" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10750" placeholder="Update User ..." />
+            <marker date="1417845026000" expanded="true" signature="10691:10731" placeholder="Update User ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataAccess/AccountRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/DataAccess/AdminService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1635" max-vertical-offset="5115">
-          <caret line="232" column="5" selection-start-line="232" selection-start-column="5" selection-end-line="232" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="690">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
-            <marker date="1417636749000" expanded="true" signature="865:1015" placeholder="Insert into ..." />
-            <marker date="1417636749000" expanded="true" signature="1116:1142" placeholder="SELECT last_..." />
-            <marker date="1417636749000" expanded="true" signature="2338:2440" placeholder="Update Accou..." />
-            <marker date="1417636749000" expanded="true" signature="3411:3475" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417636749000" expanded="true" signature="4946:5049" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417636749000" expanded="true" signature="6370:6432" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417636749000" expanded="true" signature="8567:8593" placeholder="SELECT last_..." />
-            <marker date="1417636749000" expanded="true" signature="9924:10106" placeholder="Update Subsc..." />
-            <marker date="1417636749000" expanded="true" signature="11004:11317" placeholder="Insert into ..." />
-            <marker date="1417636749000" expanded="true" signature="12379:12453" placeholder="SELECT * FRO..SavedPaymentInformation..." />
-            <marker date="1417636749000" expanded="true" signature="13932:14011" placeholder="SELECT * FRO..Subscription..." />
+            <element signature="imports" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..User">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/DataAccess/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="1110">
+          <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="270">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-          <folding />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/businessLogic/AdminManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="645">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1077#1078#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6104651" vertical-offset="0" max-vertical-offset="516">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#804#805#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

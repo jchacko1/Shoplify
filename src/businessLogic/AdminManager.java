@@ -13,6 +13,8 @@ public class AdminManager {
     private AdminService _adminService = new AdminService();
     private ItemService _itemService = new ItemService();
 
+
+
     public AdminModel getAdmin(int adminId){
         return _adminService.getAdmin(adminId);
     }
@@ -32,5 +34,9 @@ public class AdminManager {
     {
         int newPrimaryKey = _itemService.addItem(itemName, price, quantity, description,categoryId,shoppingCartItemId);
         _itemService.addItemDetails(newPrimaryKey,"",-1,-1,"",-1);
+    }
+
+    public void deleteUser(int userId) {
+        _adminService.deleteUser(userId);
     }
 }
