@@ -12,6 +12,11 @@ import java.util.Calendar;
  */
 public class UserRepository extends BaseRepository {
 
+    /**
+     * Get user info from userId
+     * @param userId
+     * @return
+     */
     public UserModelDto getUser(int userId)
     {
         {
