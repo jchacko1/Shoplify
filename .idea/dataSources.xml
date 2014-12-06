@@ -4,7 +4,6 @@
     <data-source source="LOCAL" name="SQLite -" uuid="b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
-      <auto-commit>false</auto-commit>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/src/DataAccess/shoplify.db</jdbc-url>
       <libraries />
