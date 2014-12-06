@@ -1,6 +1,12 @@
 package controllers;
 
+import DataAccess.ItemService;
+import businessLogic.ReminderManager;
+import businessLogic.ShoppingCartManager;
+import models.Enums;
+import models.ItemModel;
 import models.ReminderModel;
+import models.ShoppingCartModel;
 
 import java.util.*;
 
@@ -9,6 +15,9 @@ import java.util.*;
  */
 public class ReminderController {
     // The master reminderList for the application.
+
+    private static ReminderManager _reminderManager = new ReminderManager();
+    private static ItemService _itemService = new ItemService();
     public static ArrayList<ReminderModel> reminderList;
     private ReminderModel reminder;
 
@@ -22,7 +31,18 @@ public class ReminderController {
         reminderList.add(reminder);
     }
 
-   // public static ReminderModel get
+    public static void addItemToList(ReminderModel reminderModel, int itemId)
+    {   //todo get item from reminder list
+        ItemModel itemModel = new ItemModel(itemId,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null); //todo needs to be a call to get an Item
+        _reminderManager.addItemToReminderList(reminderModel, itemModel);
+    }
+
+    public static void deleteItemFromCart(ReminderModel reminderModel, int itemId)
+    {   //todo get item from reminder list
+        ItemModel itemModel = new ItemModel(itemId,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null); //todo needs to be a call to get an Item
+        _reminderManager.deleteItemFromReminderList(reminderModel, itemModel);
+    }
+
 
 
 }
