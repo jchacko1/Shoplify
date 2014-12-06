@@ -7,8 +7,6 @@
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/shoplify.db" afterPath="$PROJECT_DIR$/src/DataAccess/shoplify.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/UserRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -84,32 +82,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Account" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Account">
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..User">
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.6896553" vertical-offset="0" max-vertical-offset="270">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AccountRepository.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataAccess/AccountRepository.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -132,10 +104,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRepository.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="User" pinned="false" current="true" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..User">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="270">
+              <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRepository.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataAccess/UserRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5813953" vertical-offset="705" max-vertical-offset="2850">
+            <state vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="2850">
               <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
               <folding>
                 <marker date="1417841913000" expanded="true" signature="1504:1538" placeholder="SELECT * FRO..User..." />
@@ -293,8 +278,8 @@
         <option value="dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..Item" />
         <option value="dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..UserOrder" />
         <option value="$PROJECT_DIR$/src/DataAccess/UserRepository.java" />
-        <option value="dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..User" />
         <option value="db-console:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/" />
+        <option value="dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..User" />
       </list>
     </option>
   </component>
@@ -897,7 +882,7 @@
       <workItem from="1417724767188" duration="346000" />
       <workItem from="1417738749520" duration="2262000" />
       <workItem from="1417775224834" duration="180000" />
-      <workItem from="1417841557807" duration="1362000" />
+      <workItem from="1417841557807" duration="2144000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1123,11 +1108,15 @@
       <created>1417646831891</created>
       <updated>1417646831891</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Add Disable Column into User DB">
+      <created>1417842998391</created>
+      <updated>1417842998391</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233983000" />
+    <option name="totallyTimeSpent" value="234765000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1236,7 +1225,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Code to insert users and orders" />
     <MESSAGE value="Debugged adding item to order, creating order, and getting items on an order" />
     <MESSAGE value="Refactored names of Global variables" />
     <MESSAGE value="Refactored code to try to figure out if more than one Account exists for a username" />
@@ -1261,7 +1249,8 @@
     <MESSAGE value="Changed insertSavedPaymentInformationModel to return a boolean" />
     <MESSAGE value="Functionality for deleting all items from a Subscription" />
     <MESSAGE value="Added getters for Admin-specific properties. Added new function for inserting into ItemDetails db table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added getters for Admin-specific properties. Added new function for inserting into ItemDetails db table" />
+    <MESSAGE value="Add Disable Column into User DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Disable Column into User DB" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1576,26 +1565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataAccess/AccountRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1635" max-vertical-offset="5115">
-          <caret line="232" column="5" selection-start-line="232" selection-start-column="5" selection-end-line="232" selection-end-column="5" />
-          <folding>
-            <marker date="1417636749000" expanded="true" signature="865:1015" placeholder="Insert into ..." />
-            <marker date="1417636749000" expanded="true" signature="1116:1142" placeholder="SELECT last_..." />
-            <marker date="1417636749000" expanded="true" signature="2338:2440" placeholder="Update Accou..." />
-            <marker date="1417636749000" expanded="true" signature="3411:3475" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417636749000" expanded="true" signature="4946:5049" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417636749000" expanded="true" signature="6370:6432" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417636749000" expanded="true" signature="8567:8593" placeholder="SELECT last_..." />
-            <marker date="1417636749000" expanded="true" signature="9924:10106" placeholder="Update Subsc..." />
-            <marker date="1417636749000" expanded="true" signature="11004:11317" placeholder="Insert into ..." />
-            <marker date="1417636749000" expanded="true" signature="12379:12453" placeholder="SELECT * FRO..SavedPaymentInformation..." />
-            <marker date="1417636749000" expanded="true" signature="13932:14011" placeholder="SELECT * FRO..Subscription..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataAccess/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
@@ -1686,20 +1655,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..User">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6896553" vertical-offset="0" max-vertical-offset="270">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataAccess/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5813953" vertical-offset="705" max-vertical-offset="2850">
+        <state vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="2850">
           <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
           <folding>
             <marker date="1417841913000" expanded="true" signature="1504:1538" placeholder="SELECT * FRO..User..." />
@@ -1708,6 +1666,37 @@
             <marker date="1417841913000" expanded="true" signature="6820:7623" placeholder="Update User ..." />
             <marker date="1417841913000" expanded="true" signature="8654:9586" placeholder="Update User ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataAccess/AccountRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1635" max-vertical-offset="5115">
+          <caret line="232" column="5" selection-start-line="232" selection-start-column="5" selection-end-line="232" selection-end-column="5" />
+          <folding>
+            <marker date="1417636749000" expanded="true" signature="865:1015" placeholder="Insert into ..." />
+            <marker date="1417636749000" expanded="true" signature="1116:1142" placeholder="SELECT last_..." />
+            <marker date="1417636749000" expanded="true" signature="2338:2440" placeholder="Update Accou..." />
+            <marker date="1417636749000" expanded="true" signature="3411:3475" placeholder="SELECT * FRO..Account..." />
+            <marker date="1417636749000" expanded="true" signature="4946:5049" placeholder="SELECT * FRO..Account..." />
+            <marker date="1417636749000" expanded="true" signature="6370:6432" placeholder="SELECT * FRO..Account..." />
+            <marker date="1417636749000" expanded="true" signature="8567:8593" placeholder="SELECT last_..." />
+            <marker date="1417636749000" expanded="true" signature="9924:10106" placeholder="Update Subsc..." />
+            <marker date="1417636749000" expanded="true" signature="11004:11317" placeholder="Insert into ..." />
+            <marker date="1417636749000" expanded="true" signature="12379:12453" placeholder="SELECT * FRO..SavedPaymentInformation..." />
+            <marker date="1417636749000" expanded="true" signature="13932:14011" placeholder="SELECT * FRO..Subscription..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..User">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="270">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
