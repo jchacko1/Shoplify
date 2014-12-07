@@ -32,6 +32,27 @@ public class OrderController {
     public static boolean submitOrder(OrderModel order, String firstName, String lastName, String address, String city, String state, String zipCode, String country, String phoneNumber, String email,
     String creditCardType, String cardHoldersName, String creditCardNumber, String expirationDate, String cvs)
     {
+        if(Global.REMINDERITEMLIST != null && Global.REMINDERITEMLIST.isEmpty())
+        {
+            boolean itemIsInCart = false;
+            for(ItemModel itemInReminderList : Global.REMINDERITEMLIST)
+            {
+                itemIsInCart = false;
+                for(ItemModel itemInCart : Global.CURRENT_ORDER._shoppingCart.getItems())
+                {
+                    if(itemInReminderList.getItemID() == itemInCart.getItemID())
+                    {
+                        itemIsInCart = true;
+                    }
+                }
+                if(!itemIsInCart)
+                {
+                    return false;
+                }
+            }
+        }
+
+
         if(Utilities.isNotNullOrEmpty(firstName) && Utilities.isNotNullOrEmpty(lastName) && Utilities.isNotNullOrEmpty(address) && Utilities.isNotNullOrEmpty(city) && Utilities.isNotNullOrEmpty(state) && Utilities.isNotNullOrEmpty(zipCode) && Utilities.isNotNullOrEmpty(country)
                 && Utilities.isNotNullOrEmpty(phoneNumber) && Utilities.isNotNullOrEmpty(email) && Utilities.isNotNullOrEmpty(creditCardType) && Utilities.isNotNullOrEmpty(cardHoldersName) && Utilities.isNotNullOrEmpty(creditCardNumber)
                 && Utilities.isNotNullOrEmpty(expirationDate) && Utilities.isNotNullOrEmpty(cvs))

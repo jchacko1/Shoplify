@@ -35,15 +35,16 @@ public class ReminderService {
         _itemRepository.deleteItemFromShoppingList(itemId,reminderId);
     }
 
-
     /**
      * TODO: how can we save the list with item into ShoppingList DB;
-     * @param saveList
+     * @param shoppingListId
      * @param itemId
      */
-    public void saveCurrentList(Collection<ItemModel> saveList, int itemId){
+    public void saveCurrentList(int shoppingListId, int itemId){
 
         //TODO: how can we add the item into savelist
        // saveList.add(_itemRepository.addItemToShoppingList(itemId, shoppingListId));
+        //_itemRepository.saveReminderList(shoppingListId, itemId);
+
     }
 }
