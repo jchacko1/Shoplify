@@ -207,7 +207,7 @@ public class homepageView2 extends javax.swing.JFrame {
         });
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/user.png"))); // NOI18N
-        jButton2.setText("Login/Signup");
+        jButton2.setText(userFirstName + " " + userLastName);
         jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -344,6 +344,13 @@ public class homepageView2 extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/barcode.png"))); // NOI18N
 
         jButton11.setText("Subcription");
+        jButton11.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                subscriptionCartView frame = new subscriptionCartView();
+                frame.setVisible(true);
+            }
+        });
 
         jMenu1.setText("File");
 

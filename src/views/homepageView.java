@@ -238,7 +238,7 @@ public class homepageView extends JFrame {
 
         jPanel11.setLayout(new javax.swing.OverlayLayout(jPanel11));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/3874990-grocery-store.jpg"))); // NOI18N
+        //jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/3874990-grocery-store.jpg"))); // NOI18N
         jPanel11.add(jLabel1);
 
         jLayeredPane1.add(jPanel11);
