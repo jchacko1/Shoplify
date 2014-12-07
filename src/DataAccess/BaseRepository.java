@@ -6,7 +6,8 @@ package DataAccess;
 public class BaseRepository {
     private final String _classForName = "org.sqlite.JDBC";
     private final String _connectionString = "jdbc:sqlite:src/DataAccess/shoplify.db";
-
+    //This is for Jar output
+    //private final String _connectionString = "jdbc:sqlite:shoplify.db";
 
     public String getClassForName()
     {
@@ -17,7 +18,5 @@ public class BaseRepository {
     {
         return _connectionString;
     }
-
-
 
 }
