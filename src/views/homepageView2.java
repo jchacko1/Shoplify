@@ -226,6 +226,9 @@ public class homepageView2 extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setEnabled(false);
+
+
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel3.setPreferredSize(new java.awt.Dimension(881, 493));
         jPanel3.setRequestFocusEnabled(false);
@@ -503,6 +506,7 @@ public class homepageView2 extends javax.swing.JFrame {
                     System.out.println(i);
                     itemPopupView frame = new itemPopupView(btNum);
                     frame.setVisible(true);
+                    jButton3.setEnabled(true);
                     //
                     //            button.
                 }

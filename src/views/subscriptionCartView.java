@@ -13,6 +13,7 @@ import models.ItemModel;
 import models.SubscriptionUserModel;
 import models.UserModel;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class subscriptionCartView extends javax.swing.JFrame {
      */
     public subscriptionCartView() {
         initComponents();
+
     }
 
     /**
@@ -336,11 +338,12 @@ public class subscriptionCartView extends javax.swing.JFrame {
             }
         });
 
+
         jButton4.setText("Save");
         jButton4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AccountController.createSubscription(jTextField1.getText(), Global.CURRENT_ACCOUNT.getUserModel());
+                String display = AccountController.createSubscription(jTextField1.getText(), Global.CURRENT_ACCOUNT.getUserModel());
                 UserModel userModel = Global.CURRENT_ACCOUNT.getUserModel();
                 if(userModel.getUserType() == Enums.UserType.SUBSCRIPTION)
                 {
