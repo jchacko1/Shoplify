@@ -13,7 +13,7 @@ public class ItemDetailsModel {
 
     public ItemDetailsModel(String itemIngredients, int itemCalories, int itemWeight, String itemExpirationDate, boolean isItemReturnable)
     {
-         _itemIngredients = itemIngredients;
+        _itemIngredients = itemIngredients;
         _itemCalories = itemCalories;
         _itemWeight = itemWeight;
         _itemExpirationDate = itemExpirationDate;

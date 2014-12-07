@@ -50,10 +50,9 @@ public class ItemService {
     }*/
 
 
-    public ArrayList<ItemModel> getItems(){
-
+    public ArrayList<ItemModel> getItems()
+    {
         return _itemRepository.getItems();
-
     }
 
     public Set<Integer> getItemIdsByOrderIds( ArrayList<Integer> orderIds)
