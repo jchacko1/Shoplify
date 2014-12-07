@@ -19,9 +19,16 @@ public class UserModel {
     private Enums.UserType _userType;
     private int _accountId;
 
-    public UserModel()
+    public UserModel(){
+
+    }
+
+    public UserModel(String firstName, String lastName)
     {
         //return new UserModel();
+
+        _firstName = firstName;
+        _lastName = lastName;
     }
 
     public UserModel(int userId, String createDate, String firstName, String lastName, boolean isAdmin, Enums.UserType userType, int accountId)

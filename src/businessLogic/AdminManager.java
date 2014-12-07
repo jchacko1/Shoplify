@@ -15,7 +15,6 @@ public class AdminManager {
     private ItemService _itemService = new ItemService();
 
 
-
     public AdminModel getAdmin(int adminId){
         return _adminService.getAdmin(adminId);
     }

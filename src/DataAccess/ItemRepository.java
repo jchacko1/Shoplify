@@ -61,6 +61,7 @@ public class ItemRepository extends BaseRepository {
         return null;
     }
 
+
     public ArrayList<ReminderModel> getShoppingList(int userId)
     {
         //TODO get a "shopping list based on userId
@@ -120,14 +121,27 @@ public class ItemRepository extends BaseRepository {
 
     }
 
-    //TODO: how can we delete item from shoppingListItems table?
     public void deleteItemFromShoppingList(int itemId, int shoppingListId)
     {
-
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin delete item on shoppingListItems try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            stmt.executeUpdate( "Delete From ShoppingListItems where ShoppingListId = " + '"' + shoppingListId + '"' + "and ItemId = " + '"' + itemId + '"' + ";");
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
     }
 
-
-    //TODO: we need userId or orderId?
     public ArrayList<ItemModel> getOrderItemsHistory(int orderId)
     {
         ArrayList<ItemModel> items = new ArrayList<ItemModel>();
@@ -172,7 +186,6 @@ public class ItemRepository extends BaseRepository {
         double price = 0.0;
         int quantity = -1;
         String description = "";
-        //Enums.Category category;
         int category;
         int shoppingCartItemId = -1;
         String imagePath = null;
@@ -197,21 +210,14 @@ public class ItemRepository extends BaseRepository {
                 price = rs.getDouble("Price");
                 quantity = rs.getInt("Quantity");
                 description = rs.getString("Description");
-               // System.out.print("Description");
-                //category = (Enums.Category.values()[rs.getInt("CategoryId")]);
                 category = rs.getInt("CategoryId");
                 shoppingCartItemId = rs.getInt("ShoppingCartItemId");
                 imagePath = rs.getString("ImagePath");
 
                 //Add items from into list;
                // System.out.println( "ItemName = " + itemName + "ItemId = " + itemId + "Price = " + price + "Quantity = " + quantity + "Description = " + description + "Category" + category + "Shopping Cart Item id = "+ shoppingCartItemId + "Image path = " + imagePath );
-               // System.out.println("ArrayList size  = " + items.size() + "Category Id = " + category);
                 ItemModel itemModel = new ItemModel(itemId,itemName,price,quantity,description,Enums.Category.values()[category],shoppingCartItemId,imagePath);
                 items.add(itemModel);
-
-
-               // System.out.println("ArrayList size is =" + items.size());
-
             }
             rs.close();
             stmt.close();
@@ -221,8 +227,6 @@ public class ItemRepository extends BaseRepository {
             System.exit(0);
         }
         System.out.println("Operation done successfully");
-        //return null;
-       // return new ItemModel[]{new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1)};
         return items;
     }
 
@@ -542,5 +546,6 @@ public class ItemRepository extends BaseRepository {
         }
         System.out.println("Operation done successfully");
     }
+
 
 }

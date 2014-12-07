@@ -7,17 +7,13 @@ import java.util.*;
 public class ReminderModel {
 
     private int _reminderId;
-    private Date _expectedDate;
-    private Date _completionDate;
     private int _userId;
     private int _itemId;
 
     private ArrayList<ItemModel> _items;
 
-    public ReminderModel(int reminderId, Date expectedDate ,Date completionDate, int userId, int itemId) {
+    public ReminderModel(int reminderId, int userId, int itemId) {
         this._reminderId = reminderId;
-        this._expectedDate = expectedDate;
-        this._completionDate = completionDate;
         this._userId = userId;
         this._itemId = itemId;
     }
@@ -68,10 +64,9 @@ public class ReminderModel {
         this._itemId = itemId;
     }
 
-    public Date getExpectedDate(){
-        return _expectedDate;
-    }
-    public Date getCompletionDate() {
-        return _completionDate;
+    public void saveCurrentList(Collection<ItemModel> saveList){
+        for(ItemModel i : saveList){
+
+        }
     }
 }
