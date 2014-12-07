@@ -18,6 +18,10 @@ public class UserService {
         _userRepository = new UserRepository();
     }
 
+    public ArrayList<UserModel> getUsers(){
+        return _userRepository.getUsers();
+    }
+
     public UserModel getUser(int userId)
     {
         UserModelDto userModelDto = _userRepository.getUser(userId);

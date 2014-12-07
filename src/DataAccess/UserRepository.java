@@ -5,12 +5,60 @@ import models.*;
 import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 /**
  * Created by jmarquez on 11/2/2014.
  */
 public class UserRepository extends BaseRepository {
+
+
+    public ArrayList<UserModel> getUsers()
+    {
+        ArrayList<UserModel> users = new ArrayList<UserModel>();
+
+        String firstName = "";
+        String lastName = "";
+
+        Connection c = null;
+        Statement stmt = null;
+
+        try {
+            System.out.println("begin User table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM User;");
+            while ( rs.next() ) {
+
+                firstName = rs.getString("FirstName");
+                lastName = rs.getString("LastName");
+
+                //Add users from into list;
+                UserModel userModel = new UserModel(firstName,lastName);
+
+                users.add(userModel);
+
+                // System.out.println("ArrayList size is =" + users.size());
+
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+        //return null;
+        // return new ItemModel[]{new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1)};
+        return users;
+    }
+
 
     /**
      * Get user info from userId

@@ -14,6 +14,10 @@ public class UserController {
     private static UserManager _userManager = new UserManager();
     private static ItemManager _itemManager = new ItemManager();
 
+    public static ArrayList<UserModel> getUsers(){
+        return _userManager.getUsers();
+    }
+
     public static models.UserModel getUser(int userId)
     {
         return

@@ -37,7 +37,7 @@ public class ReminderController {
         _reminderManager.addItemToReminderList(reminderModel, itemModel);
     }
 
-    public static void deleteItemFromCart(ReminderModel reminderModel, int itemId)
+    public static void deleteItemFromList(ReminderModel reminderModel, int itemId)
     {   //todo get item from reminder list
         ItemModel itemModel = new ItemModel(itemId,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null); //todo needs to be a call to get an Item
         _reminderManager.deleteItemFromReminderList(reminderModel, itemModel);

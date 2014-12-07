@@ -7,11 +7,15 @@ import models.RegisteredUserModel;
 import models.SubscriptionUserModel;
 import models.UserModel;
 
+import java.util.ArrayList;
+
 /**
  * Created by jmarquez on 11/2/2014.
  */
 public class UserManager {
     private UserService _userService = new UserService();
+
+    public ArrayList<UserModel> getUsers(){ return _userService.getUsers(); }
 
     public UserModel getUser(int userId)
     {
