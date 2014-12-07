@@ -302,7 +302,7 @@ public class ItemRepository extends BaseRepository {
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            stmt.executeUpdate( "Insert Into SubscriptionItem(SubscriptionId, ItemId, Quantity) VALUES(= " + '"' + subscriptionId + '"' + "," + '"' + itemId + '"' + "," + '"' + quantity + '"' + ");");
+            stmt.executeUpdate( "Insert Into SubscriptionItem(SubscriptionId, ItemId, Quantity) VALUES(" + '"' + subscriptionId + '"' + "," + '"' + itemId + '"' + "," + '"' + quantity + '"' + ");");
             stmt.close();
             c.close();
         } catch ( Exception e ) {
@@ -344,7 +344,7 @@ public class ItemRepository extends BaseRepository {
                 c.setAutoCommit(false);
                 System.out.println("Opened database successfully");
                 stmt = c.createStatement();
-                stmt.executeUpdate( "Delete From SubscriptionItem where SubscriptionId = " + '"' + subscriptionId + '"' + "and ItemId = " + '"' + itemId + '"' + ";");
+                stmt.executeUpdate( "Delete From SubscriptionItem where SubscriptionId = " + '"' + subscriptionId + '"' + " and ItemId = " + '"' + itemId + '"' + ";");
                 stmt.close();
                 c.close();
             } catch ( Exception e ) {
@@ -488,7 +488,7 @@ public class ItemRepository extends BaseRepository {
             System.out.println("begin delete all items on subscription try block");
             Class.forName(getClassForName());
             c = DriverManager.getConnection(getConnectionString());
-            c.setAutoCommit(false);
+            c.setAutoCommit(true);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
             stmt.executeUpdate( "Delete From SubscriptionItem where SubscriptionId = " + '"' + subscriptionId + '"' + ";");

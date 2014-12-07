@@ -74,6 +74,8 @@ public class OrderManager {
 
     public  void deleteItemOnOrder(int orderId, int itemId) throws ClassNotFoundException {
         _orderService.deleteItemOnOrder(orderId, itemId);
+        ItemModel item = ItemController.getItem(itemId);
+        Global.CURRENT_ORDER._shoppingCart.deleteItem(item);
         Global.CURRENT_ORDER.updateAllPriceTotals();
         updateOrder(Global.CURRENT_ORDER);
     }

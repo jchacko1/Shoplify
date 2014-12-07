@@ -294,10 +294,12 @@ public class OrderRepository extends BaseRepository {
             System.out.println("begin Delete from OrderItems for order table try block");
             Class.forName(getClassForName());
             c = DriverManager.getConnection(getConnectionString());
-            c.setAutoCommit(false);
+            c.setAutoCommit(true);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
-            stmt.executeUpdate("Delete from OrderItems where OrderId = " + '"' + String.valueOf(orderId) + '"' + "and ItemID = " + '"' + String.valueOf(itemId) + '"'  + ";");
+            String query =    "DELETE FROM OrderItems WHERE OrderId = " + orderId +  " AND ItemID = " + itemId;
+            PreparedStatement preparedStatement = c.prepareStatement(query);
+            preparedStatement.executeUpdate();
             stmt.close();
             c.close();
         } catch ( Exception e ) {
