@@ -219,6 +219,9 @@ public class homepageView extends JFrame {
             }
         });
 
+        jButton3.setEnabled(false);
+
+
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel3.setPreferredSize(new java.awt.Dimension(881, 493));
         jPanel3.setRequestFocusEnabled(false);
