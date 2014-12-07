@@ -477,7 +477,7 @@ public class homepageView extends JFrame {
                     itemPopupView frame = new itemPopupView(btNum);
                     frame.setVisible(true);
                     //
-                    //            button.
+                    //            button..
                 }
             }
             if (e.getSource() instanceof JButton) {

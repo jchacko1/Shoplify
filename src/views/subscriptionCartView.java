@@ -321,7 +321,7 @@ public class subscriptionCartView extends javax.swing.JFrame {
 
                 subscriptionItemIds.add(itemId);
 
-                //ItemController.addItemToSubscription(itemId, 1, 1);
+                //ItemController.addItemToSubscription(itemId, 1, 1);;;;;;;
 
                 jTextArea2.append(item + "\n");
             }

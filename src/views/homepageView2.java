@@ -471,7 +471,7 @@ public class homepageView2 extends javax.swing.JFrame {
                 if (e.getSource() == searchButtons[i]) {
                     int btNum = Integer.valueOf(searchButtons[i].getName());
                     //System.out.println(button.toString());
-//                    System.out.print("!!!!!!Button " + buttons[i].getName() + " pressed!!!!!1");
+//                    System.out.print("!!!!!!Button " + buttons[i].getName() + " pressed!!!!!!1");
                     System.out.println(i);
                     try {
                         //todo pass in quantity!
