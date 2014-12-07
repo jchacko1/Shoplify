@@ -8,6 +8,7 @@ import models.UserModelDto;
  */
 public class AdminService {
 
+    DataAccess.UserRepository _userRepository;
 
     public boolean add(AdminModel model){
         //TODO: check the admin model
@@ -28,7 +29,6 @@ public class AdminService {
     }
 
 
-
     public AdminModel getModel(String userId){
         return null;
     }
@@ -36,5 +36,11 @@ public class AdminService {
     public AdminModel getModel(String loginName, String password){
         return null;
     }
+
+
+    public void deleteUser(int userId){
+        _userRepository.deleteUser(userId);
+    }
+
 
 }

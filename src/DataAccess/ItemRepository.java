@@ -501,4 +501,46 @@ public class ItemRepository extends BaseRepository {
         System.out.println("Operation done successfully");
     }
 
+    public void addItemDetails(int newPrimaryKey,String itemIngredients,int itemCalories,int itemWeight,String itemExpirationDate,int isItemReturnable)
+    {
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin insert Item Details table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(true);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            String query = "Insert into ItemDetails(ItemId, ItemIngredients,ItemCalories,ItemWeight,ItemExpirationDate,IsItemReturnable)values(" + '"' + newPrimaryKey + '"' + "," + '"'  + itemIngredients + '"' + "," + '"' + itemCalories + '"' + "," + '"' + itemWeight + '"' + "," + '"' + itemExpirationDate + '"' + "," + '"' + isItemReturnable + '"' + ");";
+            stmt.executeUpdate(query);
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+    }
+
+    public void deleteItemDetails(int itemId)
+    {
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin delete item details for an item try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            stmt.executeUpdate( "Delete From ItemDetails where ItemId = " + '"' + itemId + '"' + ";");
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+    }
+
 }

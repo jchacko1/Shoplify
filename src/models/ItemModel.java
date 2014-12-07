@@ -17,6 +17,7 @@ public class ItemModel implements Comparable<ItemModel> {
     private String description;
     private Enums.Category category;
     private int shoppingCartItemId;
+    private int reminderListItemId;
 
     //item image match
     private int imageId;
@@ -99,6 +100,9 @@ public class ItemModel implements Comparable<ItemModel> {
        return imageName;
    }
 
+   public int getReminderListItemId() { return reminderListItemId; }
+
+   public void setReminderListItemId(int id) { reminderListItemId = id; }
 
    public int getShoppingCartItemId() {
         return shoppingCartItemId;

@@ -24,8 +24,12 @@ public class AdminController {
         _adminManager.deleteItem(itemId);
     }
 
-    public static void addItem(String itemName, double price, int quantity, String description, int categoryId, int shoppingCartItemId)
+    public static void addItem(String itemName, double price,String description, int categoryId)
     {
-        _adminManager.addItem(itemName, price, quantity, description,categoryId,shoppingCartItemId);
+      _adminManager.addItem(itemName, price, 1, description,categoryId,-1);
+    }
+
+    public static void deleteUser(int userId){
+        _adminManager.deleteUser(userId);
     }
 }

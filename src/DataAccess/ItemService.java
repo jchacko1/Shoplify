@@ -96,7 +96,7 @@ public class ItemService {
         _itemRepository.deleteItem(itemId);
     }
 
-    public void addItem(String itemName, double price, int quantity, String description, int categoryId, int shoppingCartItemId)
+    public int addItem(String itemName, double price, int quantity, String description, int categoryId, int shoppingCartItemId)
     {
         int newPrimaryKey = _itemRepository.getHighestPrimaryKey() + 1;
         String imagePath = "";
@@ -125,10 +125,21 @@ public class ItemService {
                 break;
         }
         _itemRepository.addItem(newPrimaryKey,itemName, price, quantity, description,categoryId,shoppingCartItemId, imagePath);
+        return newPrimaryKey;
+    }
+
+    public void addItemDetails(int newPrimaryKey,String itemIngredients,int itemCalories,int itemWeight,String itemExpirationDate,int isItemReturnable)
+    {
+        _itemRepository.addItemDetails(newPrimaryKey, itemIngredients, itemCalories, itemWeight, itemExpirationDate, isItemReturnable);
     }
 
     public void deleteItemsFromSubscription(int subscriptionId)
     {
         _itemRepository.deleteItemsFromSubscription(subscriptionId);
+    }
+
+    public void deleteItemDetails(int itemId)
+    {
+        _itemRepository.deleteItemDetails(itemId);
     }
 }

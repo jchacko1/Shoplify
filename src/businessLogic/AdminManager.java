@@ -13,6 +13,8 @@ public class AdminManager {
     private AdminService _adminService = new AdminService();
     private ItemService _itemService = new ItemService();
 
+
+
     public AdminModel getAdmin(int adminId){
         return _adminService.getAdmin(adminId);
     }
@@ -25,10 +27,16 @@ public class AdminManager {
     public void deleteItem(int itemId)
     {
         _itemService.deleteItem(itemId);
+        _itemService.deleteItemDetails(itemId);
     }
 
     public void addItem(String itemName, double price, int quantity, String description, int categoryId, int shoppingCartItemId)
     {
-        _itemService.addItem(itemName, price, quantity, description,categoryId,shoppingCartItemId);
+        int newPrimaryKey = _itemService.addItem(itemName, price, quantity, description,categoryId,shoppingCartItemId);
+        _itemService.addItemDetails(newPrimaryKey,"",-1,-1,"",-1);
+    }
+
+    public void deleteUser(int userId) {
+        _adminService.deleteUser(userId);
     }
 }
