@@ -103,6 +103,7 @@ public class subscriptionCartView extends javax.swing.JFrame {
             if (item.getCategory() == Enums.Category.Meat) {
 
                 meat[countMeat] = item.getName();
+                int d = item.getItemID();
                 countMeat++;
 
             } else if (item.getCategory() == Enums.Category.Dairy) {

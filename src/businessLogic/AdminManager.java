@@ -3,6 +3,7 @@ package businessLogic;
 import DataAccess.AdminService;
 import DataAccess.ItemService;
 import DataAccess.UserService;
+import global.Global;
 import models.AdminModel;
 
 /**
@@ -38,5 +39,10 @@ public class AdminManager {
 
     public void deleteUser(int userId) {
         _adminService.deleteUser(userId);
+    }
+
+    public boolean isLoggedInUserAnAdmin()
+    {
+        return Global.CURRENT_ACCOUNT.getUserModel().getIsAdmin();
     }
 }

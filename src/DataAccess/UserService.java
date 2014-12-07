@@ -75,4 +75,9 @@ public class UserService {
     {
         return _userRepository.updateSubscriptionUser(subscriptionUserModel);
     }
+
+    public boolean isUserDisabled(int userId)
+    {
+        return _userRepository.isUserDisabled(userId);
+    }
 }

@@ -51,4 +51,9 @@ public class UserManager {
     {
         return _userService.updateSubscriptionUser(subscriptionUserModel);
     }
+
+    public boolean isUserDisabled(int userId)
+    {
+       return _userService.isUserDisabled(userId);
+    }
 }

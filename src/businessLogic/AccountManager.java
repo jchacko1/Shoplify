@@ -27,7 +27,21 @@ public class AccountManager {
         if(accountModel != null)
         {
             UserModel userModel = UserController.getUser(accountModel.getUserId());
-            accountModel.setUserModel(userModel);
+            if(userModel != null)
+            {
+                if(UserController.isUserDisabled(userModel.getUserId()))
+                {
+                    //user is disabled, so dont let them log in
+                    return null;
+                }
+                accountModel.setUserModel(userModel);
+            }
+            else
+            {
+                //we couldnt find a user with this account, something is wrong so dont let the user log in
+              return null;
+            }
+
         }
         return accountModel;
     }
