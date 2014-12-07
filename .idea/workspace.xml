@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/controllers/ItemController.java" line="42" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/ReminderController.java" afterPath="$PROJECT_DIR$/src/controllers/ReminderController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controllers/UserController.java" afterPath="$PROJECT_DIR$/src/controllers/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/businessLogic/UserManager.java" afterPath="$PROJECT_DIR$/src/businessLogic/UserManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/UserModel.java" afterPath="$PROJECT_DIR$/src/models/UserModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/UserRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/UserService.java" afterPath="$PROJECT_DIR$/src/DataAccess/UserService.java" />
+    <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="Updated ReminderList related method">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -77,8 +71,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -88,10 +82,10 @@
     <splitter split-orientation="vertical" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="ReminderController.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="ReminderController.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/controllers/ReminderController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7442748" vertical-offset="90" max-vertical-offset="690">
+                <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="690">
                   <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
                   <folding />
                 </state>
@@ -101,23 +95,19 @@
           <file leaf-file-name="AdminController.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/controllers/AdminController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="450">
+                <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="690">
                   <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="UserController.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="UserController.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/controllers/UserController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="2385">
-                  <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#414#415#0" expanded="true" />
-                    <element signature="e#460#461#0" expanded="true" />
-                  </folding>
+                <state vertical-scroll-proportion="0.41860464" vertical-offset="75" max-vertical-offset="2295">
+                  <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -125,7 +115,7 @@
           <file leaf-file-name="UserManager.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/businessLogic/UserManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+                <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="975">
                   <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
                   <folding />
                 </state>
@@ -135,13 +125,9 @@
           <file leaf-file-name="UserService.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/DataAccess/UserService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+                <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1335">
                   <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#387#388#0" expanded="true" />
-                    <element signature="e#436#437#0" expanded="true" />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -149,7 +135,7 @@
           <file leaf-file-name="ItemManager.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/businessLogic/ItemManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1680">
+                <state vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="1980">
                   <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
                   <folding />
                 </state>
@@ -159,7 +145,7 @@
           <file leaf-file-name="ItemService.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="364" max-vertical-offset="1935">
+                <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2265">
                   <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
                   <folding />
                 </state>
@@ -169,7 +155,7 @@
           <file leaf-file-name="ItemRepository.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemRepository.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="2812" max-vertical-offset="8160">
+                <state vertical-scroll-proportion="0.0" vertical-offset="3390" max-vertical-offset="8280">
                   <caret line="226" column="5" selection-start-line="166" selection-start-column="4" selection-end-line="226" selection-end-column="5" />
                   <folding>
                     <marker date="1417724757000" expanded="true" signature="1048:1103" placeholder="SELECT * FRO..Item..." />
@@ -198,20 +184,9 @@
           <file leaf-file-name="UserRepository.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/DataAccess/UserRepository.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3990">
+                <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="4485">
                   <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-                  <folding>
-                    <element signature="e#377#388#0" expanded="true" />
-                    <marker date="1417978356000" expanded="true" signature="894:908" placeholder="SELECT * FRO..User..." />
-                    <marker date="1417978356000" expanded="true" signature="894:907" placeholder="SELECT * FRO..." />
-                    <marker date="1417978356000" expanded="true" signature="894:912" placeholder="SELECT * FRO..User..." />
-                    <marker date="1417978356000" expanded="true" signature="3010:3044" placeholder="SELECT * FRO..User..." />
-                    <marker date="1417978356000" expanded="true" signature="5910:6552" placeholder="Insert into ..." />
-                    <marker date="1417978356000" expanded="true" signature="6607:6633" placeholder="SELECT last_..." />
-                    <marker date="1417978356000" expanded="true" signature="8326:9129" placeholder="Update User ..." />
-                    <marker date="1417978356000" expanded="true" signature="10160:11092" placeholder="Update User ..." />
-                    <marker date="1417978356000" expanded="true" signature="12197:12275" placeholder="Update User ..." />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -219,7 +194,7 @@
           <file leaf-file-name="UserModel.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/models/UserModel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1455">
+                <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="2145">
                   <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
                   <folding />
                 </state>
@@ -230,20 +205,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="ShoppingCartController.java" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/controllers/ShoppingCartController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5" vertical-offset="134" max-vertical-offset="600">
-                  <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ShoppingCartManager.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="ShoppingCartManager.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/businessLogic/ShoppingCartManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1215">
+                <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1095">
                   <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
                   <folding />
                 </state>
@@ -253,7 +218,7 @@
           <file leaf-file-name="ShoppingCartModel.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/models/ShoppingCartModel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1245">
+                <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1365">
                   <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
                   <folding />
                 </state>
@@ -380,7 +345,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -434,6 +398,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -730,6 +695,10 @@
       <option name="usbDebugPort" value="7936" />
       <method />
     </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -749,10 +718,6 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -1100,6 +1065,7 @@
       <workItem from="1417841557807" duration="6940000" />
       <workItem from="1417975511695" duration="675000" />
       <workItem from="1417977286320" duration="1398000" />
+      <workItem from="1417978776200" duration="57000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1345,7 +1311,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241634000" />
+    <option name="totallyTimeSpent" value="241691000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1383,7 +1349,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5006974" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18655589" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28899083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13285714" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" x="254" y="269" width="857" height="230" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5006974" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854986" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1420,6 +1386,7 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
     <MESSAGE value="More refactors for checking if more than one Account has been found in the database" />
     <MESSAGE value="Used different getter when trying to build UserModel for ForgotMyPassword functionality" />
     <MESSAGE value="Added getter for getting Account password" />
@@ -1712,14 +1679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessLogic/ShoppingCartManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="282" max-vertical-offset="1095">
-          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataAccess/AdminService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.4193548" vertical-offset="11" max-vertical-offset="690">
@@ -1731,7 +1690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="570">
           <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1822,18 +1780,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3990">
           <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding>
-            <element signature="e#377#388#0" expanded="true" />
-            <marker date="1417978356000" expanded="true" signature="894:908" placeholder="SELECT * FRO..User..." />
-            <marker date="1417978356000" expanded="true" signature="894:907" placeholder="SELECT * FRO..." />
-            <marker date="1417978356000" expanded="true" signature="894:912" placeholder="SELECT * FRO..User..." />
-            <marker date="1417978356000" expanded="true" signature="3010:3044" placeholder="SELECT * FRO..User..." />
-            <marker date="1417978356000" expanded="true" signature="5910:6552" placeholder="Insert into ..." />
-            <marker date="1417978356000" expanded="true" signature="6607:6633" placeholder="SELECT last_..." />
-            <marker date="1417978356000" expanded="true" signature="8326:9129" placeholder="Update User ..." />
-            <marker date="1417978356000" expanded="true" signature="10160:11092" placeholder="Update User ..." />
-            <marker date="1417978356000" expanded="true" signature="12197:12275" placeholder="Update User ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1841,23 +1788,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
           <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="2385">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1869,18 +1800,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/ReminderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="690">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/ShoppingCartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5" vertical-offset="134" max-vertical-offset="600">
+        <state vertical-scroll-proportion="0.30078125" vertical-offset="208" max-vertical-offset="600">
           <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/ReminderController.java">
+    <entry file="file://$PROJECT_DIR$/src/businessLogic/ShoppingCartManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7442748" vertical-offset="90" max-vertical-offset="690">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="282" max-vertical-offset="1095">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41860464" vertical-offset="75" max-vertical-offset="2295">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
           <folding />
         </state>
       </provider>
