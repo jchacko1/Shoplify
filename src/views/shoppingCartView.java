@@ -131,7 +131,7 @@ public class shoppingCartView extends javax.swing.JFrame {
 
 
 
-        String header[] = new String[]{"Item Name", "Price ($)", "Quantity", "Check to delete"};
+        String header[] = new String[]{"Item Name", "Item ID", "Price ($)", "Check to delete"};
 
         dtm.setColumnIdentifiers(header);
         jTable1.setModel(dtm);
@@ -155,10 +155,18 @@ public class shoppingCartView extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
                 for (int i = 0; i < dtm.getRowCount(); i++) {
                     Boolean checked = (Boolean) dtm.getValueAt(i, 3);
+                    int itemId = (Integer) dtm.getValueAt(i,1);
                     if (checked) {
                         dtm.removeRow(i);
-                        //OrderController.deleteItemOnOrder(itemId, shoppingCartItemId);
+
+                        try {
+                            OrderController.deleteItemOnOrder(itemId);
+                        } catch (ClassNotFoundException e1) {
+                            e1.printStackTrace();
+                        }
+
                         i--;
+                        //System.out.println(itemId);
                     }
                 }
             }
@@ -172,7 +180,7 @@ public class shoppingCartView extends javax.swing.JFrame {
 
 
 
-            dtm.addRow(new Object[]{item.getName(), item.getPrice(), "1", false});
+            dtm.addRow(new Object[]{item.getName(), item.getItemID(), item.getPrice(), false});
 
         }
 
