@@ -492,7 +492,7 @@ public class ItemRepository extends BaseRepository {
             System.out.println("begin delete all items on subscription try block");
             Class.forName(getClassForName());
             c = DriverManager.getConnection(getConnectionString());
-            c.setAutoCommit(false);
+            c.setAutoCommit(true);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
             stmt.executeUpdate( "Delete From SubscriptionItem where SubscriptionId = " + '"' + subscriptionId + '"' + ";");
