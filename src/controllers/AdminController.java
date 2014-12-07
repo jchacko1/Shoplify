@@ -32,4 +32,9 @@ public class AdminController {
     public static void deleteUser(int userId){
         _adminManager.deleteUser(userId);
     }
+
+    public static boolean isLoggedInUserAnAdmin()
+    {
+        return _adminManager.isLoggedInUserAnAdmin();
+    }
 }
