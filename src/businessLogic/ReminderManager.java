@@ -22,13 +22,18 @@ public class ReminderManager {
         return _reminderService.getReminderList(reminderId);
     }
 
-    public void addItemToReminderList(int itemId, int reminderId)
+    public void addItemToReminderList(ReminderModel reminderModel, ItemModel itemModel)
     {
-        _reminderService.addItemToReminderList(itemId, reminderId);
+        //_reminderService.addItemToReminderList(reminderModel, itemId);
+        reminderModel.addItem(itemModel);
+        itemModel.setReminderListItemId(Utilities.getRandomNumber());
+
+
     }
 
-    public void deleteItemFromReminderList(int itemId, int reminder)
+    public void deleteItemFromReminderList(ReminderModel reminderModel, ItemModel itemModel)
     {
-        _reminderService.deleteItemFromReminderList(itemId,reminder);
+       // _reminderService.deleteItemFromReminderList(reminderModel,itemId);
+        reminderModel.deleteItem(itemModel);
     }
 }

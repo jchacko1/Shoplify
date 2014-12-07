@@ -13,10 +13,7 @@ import DataAccess.*;
 import controllers.OrderController;
 import controllers.SearchController;
 import global.Global;
-import models.AccountModel;
-import models.Enums;
-import models.ItemModel;
-import models.SearchModel;
+import models.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -42,6 +39,7 @@ public class homepageView2 extends javax.swing.JFrame {
     AccountModel accountModel = Global.CURRENT_ACCOUNT;
     String userFirstName = accountModel.getUserModel().getFirstName();
     String userLastName = accountModel.getUserModel().getLastName();
+    UserModel userModel = Global.CURRENT_ACCOUNT.getUserModel();
 
     public homepageView2() {
         initComponents();
@@ -213,6 +211,10 @@ public class homepageView2 extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+
+        if(userModel.getUserType() == Enums.UserType.GUEST) {
+            jButton2.setEnabled(false);
+        }
 
         jButton3.setIcon(new ImageIcon(getClass().getResource("/pics/shopping_cart_webshop.png"))); // NOI18N
         jButton3.addActionListener(new ActionListener() {
@@ -459,7 +461,7 @@ public class homepageView2 extends javax.swing.JFrame {
                 if (e.getSource() == searchButtons[i]) {
                     int btNum = Integer.valueOf(searchButtons[i].getName());
                     //System.out.println(button.toString());
-//                    System.out.print("!!!!!!Button " + buttons[i].getName() + " pressed!!!!!1");
+//                    System.out.print("!!!!!!Button " + buttons[i].getName() + " pressed!!!!!!1");
                     System.out.println(i);
                     try {
                         //todo pass in quantity!

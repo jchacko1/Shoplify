@@ -213,4 +213,33 @@ public class UserRepository extends BaseRepository {
         return true;
     }
 
+    //TODO: Test it on GUI
+
+    /**
+     * Soft delete user, which set the disable = 1 (true)
+     * @param userId
+     */
+    public void deleteUser(int userId){
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin update User table disable Column try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(true);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            //String query = "select max(accountid) from account";
+            //accountId = stmt.executeUpdate(query);
+            //System.out.println("Last AccountId is:" + accountId);
+            String query = "Update User set Disable =" + '"' +1 +'"' + "where UserId = " +'"' + userId +'"' + ";";
+            stmt.executeUpdate(query);
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+    }
+
 }
