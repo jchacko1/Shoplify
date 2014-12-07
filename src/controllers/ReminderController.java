@@ -1,6 +1,7 @@
 package controllers;
 
 import DataAccess.ItemService;
+import DataAccess.ReminderService;
 import businessLogic.ReminderManager;
 import businessLogic.ShoppingCartManager;
 import models.Enums;
@@ -17,6 +18,7 @@ public class ReminderController {
     // The master reminderList for the application.
 
     private static ReminderManager _reminderManager = new ReminderManager();
+    private static ReminderService _reminderService = new ReminderService();
     private static ItemService _itemService = new ItemService();
     public static ArrayList<ReminderModel> reminderList;
     private ReminderModel reminder;
@@ -41,6 +43,10 @@ public class ReminderController {
     {   //todo get item from reminder list
         ItemModel itemModel = new ItemModel(itemId,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null); //todo needs to be a call to get an Item
         _reminderManager.deleteItemFromReminderList(reminderModel, itemModel);
+    }
+
+    public static void saveCurrentList(Collection<ItemModel> saveList,int itemId){
+        _reminderService.saveCurrentList(saveList, itemId);
     }
 
 

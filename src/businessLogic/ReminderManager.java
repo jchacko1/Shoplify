@@ -5,6 +5,7 @@ import models.ItemModel;
 import models.ReminderModel;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Created by KellyAnn on 11/30/14.
@@ -28,7 +29,6 @@ public class ReminderManager {
         reminderModel.addItem(itemModel);
         itemModel.setReminderListItemId(Utilities.getRandomNumber());
 
-
     }
 
     public void deleteItemFromReminderList(ReminderModel reminderModel, ItemModel itemModel)
@@ -36,4 +36,5 @@ public class ReminderManager {
        // _reminderService.deleteItemFromReminderList(reminderModel,itemId);
         reminderModel.deleteItem(itemModel);
     }
+
 }

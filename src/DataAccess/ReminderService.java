@@ -6,6 +6,7 @@ import models.ReminderModel;
 
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Created by KellyAnn on 11/30/14.
@@ -34,4 +35,15 @@ public class ReminderService {
         _itemRepository.deleteItemFromShoppingList(itemId,reminderId);
     }
 
+
+    /**
+     * TODO: how can we save the list with item into ShoppingList DB;
+     * @param saveList
+     * @param itemId
+     */
+    public void saveCurrentList(Collection<ItemModel> saveList, int itemId){
+
+        //TODO: how can we add the item into savelist
+       // saveList.add(_itemRepository.addItemToShoppingList(itemId, shoppingListId));
+    }
 }

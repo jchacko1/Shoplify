@@ -61,6 +61,7 @@ public class ItemRepository extends BaseRepository {
         return null;
     }
 
+
     public ArrayList<ReminderModel> getShoppingList(int userId)
     {
         //TODO get a "shopping list based on userId
@@ -120,14 +121,27 @@ public class ItemRepository extends BaseRepository {
 
     }
 
-    //TODO: how can we delete item from shoppingListItems table?
     public void deleteItemFromShoppingList(int itemId, int shoppingListId)
     {
-
+        Connection c = null;
+        Statement stmt = null;
+        try {
+            System.out.println("begin delete item on shoppingListItems try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            stmt.executeUpdate( "Delete From ShoppingListItems where ShoppingListId = " + '"' + shoppingListId + '"' + "and ItemId = " + '"' + itemId + '"' + ";");
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
     }
 
-
-    //TODO: we need userId or orderId?
     public ArrayList<ItemModel> getOrderItemsHistory(int orderId)
     {
         ArrayList<ItemModel> items = new ArrayList<ItemModel>();
@@ -542,5 +556,6 @@ public class ItemRepository extends BaseRepository {
         }
         System.out.println("Operation done successfully");
     }
+
 
 }
