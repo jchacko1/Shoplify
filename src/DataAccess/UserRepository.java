@@ -246,11 +246,14 @@ public class UserRepository extends BaseRepository {
             //String query = "select max(accountid) from account";
             //accountId = stmt.executeUpdate(query);
             //System.out.println("Last AccountId is:" + accountId);
-            String query = "Update User set FirstName = " + "'" + subscriptionUserModel.getFirstName() + "'" + ",LastName = " + "'" + subscriptionUserModel.getLastName() + "'" + ", isAdmin = " + subscriptionUserModel.getIsAdmin() + ", UserType = " + subscriptionUserModel.getUserTypeId()
+            String query = "Update User set FirstName = " + "'" + subscriptionUserModel.getFirstName() + "'" + ",LastName = " + "'" + subscriptionUserModel.getLastName() + "'" +
+                    ", IsAdmin = " + subscriptionUserModel.getIsAdminInt() + ", UserType = " + subscriptionUserModel.getUserTypeId()
                     + ", Address = "  + "'" + subscriptionUserModel.getAddress() + "'" + ", PhoneNumber = " + "'" + subscriptionUserModel.getPhoneNumber() + "'" +
-                    ", DateOfBirth = " + "'" + subscriptionUserModel.getDateOfBirth() + "'" + ", Gender = " + "'" + subscriptionUserModel.getGender() + "'" + ", Email = " + "'" + subscriptionUserModel.getEmail() + "'" +
-                    ", SecurityQuestionId = " + "'" + subscriptionUserModel.getSecurityQuestionId() + "'" + ",SecurityAnswer = " + "'" + subscriptionUserModel.getSecurityAnswer() + "'" +
-                   "SubscriptionId = " + subscriptionUserModel.getSubscriptionId() + " where UserId = " + subscriptionUserModel.getUserId() + ";";
+                    ", DateOfBirth = " + "'" + subscriptionUserModel.getDateOfBirth() + "'" + ", Gender = " + "'" + subscriptionUserModel.getGender() + "'"
+                    + ", Email = " + "'" + subscriptionUserModel.getEmail() + "'" +
+                    ", SecurityQuestionId = " + "'" + subscriptionUserModel.getSecurityQuestionId() + "'" +
+                    ",SecurityAnswer = " + "'" + subscriptionUserModel.getSecurityAnswer() + "'" +
+                   ",SubscriptionId = " + subscriptionUserModel.getSubscriptionId() + " where UserId = " + subscriptionUserModel.getUserId() + ";";
             stmt.executeUpdate(query);
             stmt.close();
             c.close();

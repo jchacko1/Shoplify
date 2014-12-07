@@ -303,7 +303,7 @@ public class ItemRepository extends BaseRepository {
             System.out.println("begin get OrderItems for items table try block");
             Class.forName(getClassForName());
             c = DriverManager.getConnection(getConnectionString());
-            c.setAutoCommit(false);
+            c.setAutoCommit(true);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
             stmt.executeUpdate( "Insert Into SubscriptionItem(SubscriptionId, ItemId, Quantity) VALUES(" + '"' + subscriptionId + '"' + "," + '"' + itemId + '"' + "," + '"' + quantity + '"' + ");");
