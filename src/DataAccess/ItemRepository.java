@@ -280,7 +280,7 @@ public class ItemRepository extends BaseRepository {
             stmt = c.createStatement();
             ResultSet rs = stmt.executeQuery( "Select * from SubscriptionItem where SubscriptionId = " + '"' + String.valueOf(subscriptionId) + '"' + ";");
             while ( rs.next() ) {
-                ItemModel item = ItemController.getItem(rs.getInt("SubscriptionId"));
+                ItemModel item = ItemController.getItem(rs.getInt("ItemId"));
                 item.setQuantity(rs.getInt("Quantity"));
                 items.add(item);
             }
