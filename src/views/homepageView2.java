@@ -346,7 +346,7 @@ public class homepageView2 extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/barcode.png"))); // NOI18N
 
-        jButton11.setText("Subcription");
+        jButton11.setText("Subscription");
         jButton11.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

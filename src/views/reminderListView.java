@@ -132,7 +132,7 @@ public class reminderListView extends javax.swing.JFrame {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         Date date = new Date();
 
-        jLabel7.setText("Date: " + dateFormat.format(date));
+        jLabel7.setText("Date: " + dateFormat.format(date) + "       NOTE: After you save a Reminder List, you will NOT be able to submit your order until you have added all Reminder List items to your current order!");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(meat));
         jComboBox1.addActionListener(new ActionListener() {
@@ -258,7 +258,9 @@ public class reminderListView extends javax.swing.JFrame {
 
         jButton4.setText("Save");
 
-        jButton6.setText("Import");
+        jButton6.setText("");
+        jButton6.setBorder(javax.swing.BorderFactory.createCompoundBorder());
+
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -371,6 +373,8 @@ public class reminderListView extends javax.swing.JFrame {
                         .addComponent(jButton2)))
                 .addContainerGap())
         );
+
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()

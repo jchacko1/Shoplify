@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a526bfd-fbaf-4707-bb81-d8bf8553cb63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/ItemRepository.java" afterPath="$PROJECT_DIR$/src/DataAccess/ItemRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DataAccess/shoplify.db" afterPath="$PROJECT_DIR$/src/DataAccess/shoplify.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/homepageView2.java" afterPath="$PROJECT_DIR$/src/views/homepageView2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/reminderListView.java" afterPath="$PROJECT_DIR$/src/views/reminderListView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/subscriptionCartView.java" afterPath="$PROJECT_DIR$/src/views/subscriptionCartView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Shoplify.iws" />
@@ -81,138 +84,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AccountController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
+      <file leaf-file-name="homepageView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1316" max-vertical-offset="2856">
-              <caret line="93" column="44" selection-start-line="93" selection-start-column="44" selection-end-line="93" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/AdminController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/businessLogic/AdminManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/ItemController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="503" max-vertical-offset="1564">
-              <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/businessLogic/ItemManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="543" max-vertical-offset="1904">
-              <caret line="80" column="47" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SQLite -" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.5172414" vertical-offset="75" max-vertical-offset="1564">
-              <caret line="7" column="49" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountRepository.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataAccess/AccountRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3587" max-vertical-offset="5916">
-              <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.0384617" vertical-offset="2059" max-vertical-offset="19005">
+              <caret line="203" column="8" selection-start-line="203" selection-start-column="8" selection-end-line="203" selection-end-column="77" />
               <folding>
-                <marker date="1417989116637" expanded="true" signature="865:1015" placeholder="Insert into ..." />
-                <marker date="1417989116637" expanded="true" signature="1116:1142" placeholder="SELECT last_..." />
-                <marker date="1417989116637" expanded="true" signature="2338:2440" placeholder="Update Accou..." />
-                <marker date="1417989116637" expanded="true" signature="3411:3475" placeholder="SELECT * FRO..Account..." />
-                <marker date="1417989116637" expanded="true" signature="4946:5049" placeholder="SELECT * FRO..Account..." />
-                <marker date="1417989116637" expanded="true" signature="6370:6432" placeholder="SELECT * FRO..Account..." />
-                <marker date="1417989116637" expanded="true" signature="8314:8459" placeholder="Insert into ..." />
-                <marker date="1417989116637" expanded="true" signature="8548:8574" placeholder="SELECT last_..." />
-                <marker date="1417989116637" expanded="true" signature="9910:10092" placeholder="Update Subsc..." />
-                <marker date="1417989116637" expanded="true" signature="10990:11303" placeholder="Insert into ..." />
-                <marker date="1417989116637" expanded="true" signature="12365:12439" placeholder="SELECT * FRO..SavedPaymentInformation..." />
-                <marker date="1417989116637" expanded="true" signature="13918:13997" placeholder="SELECT * FRO..Subscription..." />
+                <element signature="e#21841#22800#0" expanded="true" />
+                <element signature="e#22793#22794#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemRepository.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemRepository.java">
+      <file leaf-file-name="reminderListView.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/views/reminderListView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.82608694" vertical-offset="4219" max-vertical-offset="9333">
-              <caret line="283" column="85" selection-start-line="283" selection-start-column="56" selection-end-line="283" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.5939086" vertical-offset="3156" max-vertical-offset="6450">
+              <caret line="258" column="33" selection-start-line="258" selection-start-column="33" selection-end-line="258" selection-end-column="33" />
               <folding>
-                <marker date="1417992289426" expanded="true" signature="1048:1103" placeholder="SELECT * FRO..Item..." />
-                <marker date="1417992289426" expanded="true" signature="3128:3207" placeholder="Select * fro..ShoppingList..." />
-                <marker date="1417992289426" expanded="true" signature="4299:4422" placeholder="INSERT INTO ..." />
-                <marker date="1417992289426" expanded="true" signature="5223:5344" placeholder="Delete From ..." />
-                <marker date="1417992289426" expanded="true" signature="6241:6321" placeholder="Select * fro..OrderItems..." />
-                <marker date="1417992289426" expanded="true" signature="7798:7816" placeholder="SELECT * FRO..Item..." />
-                <marker date="1417992289426" expanded="true" signature="9840:9902" placeholder="SELECT * FRO..OrderItems..." />
-                <marker date="1417992289426" expanded="true" signature="11158:11257" placeholder="Select * fro..SubscriptionItem..." />
-                <marker date="1417992289426" expanded="true" signature="12330:12491" placeholder="Insert Into ..." />
-                <marker date="1417992289426" expanded="true" signature="13295:13455" placeholder="Update Subsc..." />
-                <marker date="1417992289426" expanded="true" signature="14293:14414" placeholder="Delete From ..." />
-                <marker date="1417992289426" expanded="true" signature="15276:15338" placeholder="SELECT * FRO..ItemDetails..." />
-                <marker date="1417992289426" expanded="true" signature="16776:16864" placeholder="Update Item ..." />
-                <marker date="1417992289426" expanded="true" signature="17585:17650" placeholder="Update Item ..." />
-                <marker date="1417992289426" expanded="true" signature="18535:18901" placeholder="Insert into ..." />
-                <marker date="1417992289426" expanded="true" signature="19700:19728" placeholder="select max(I..Item..." />
-                <marker date="1417992289426" expanded="true" signature="20685:20766" placeholder="Delete From ..." />
-                <marker date="1417992289426" expanded="true" signature="21635:21961" placeholder="Insert into ..." />
-                <marker date="1417992289426" expanded="true" signature="22710:22770" placeholder="Delete From ..." />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2176">
-              <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
-              <folding>
-                <element signature="e#2386#2387#0" expanded="true" />
-                <element signature="e#2436#2437#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/businessLogic/AccountManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2329" max-vertical-offset="2516">
-              <caret line="137" column="27" selection-start-line="137" selection-start-column="27" selection-end-line="137" selection-end-column="27" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -232,8 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/controllers/ReportController.java" />
-        <option value="$PROJECT_DIR$/src/businessLogic/ReportManager.java" />
         <option value="dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..UserOrder" />
         <option value="dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..ReturnOrder" />
         <option value="$PROJECT_DIR$/src/models/ReturnModel.java" />
@@ -246,7 +136,6 @@
         <option value="dbtable:/dc66351c/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..ShoppingList" />
         <option value="$PROJECT_DIR$/src/controllers/ImageController.java" />
         <option value="$PROJECT_DIR$/src/views/checkoutView.java" />
-        <option value="$PROJECT_DIR$/src/views/reminderListView.java" />
         <option value="$PROJECT_DIR$/src/controllers/ReminderController.java" />
         <option value="$PROJECT_DIR$/src/DataAccess/ReminderService.java" />
         <option value="$PROJECT_DIR$/src/models/AdminModel.java" />
@@ -283,6 +172,9 @@
         <option value="$PROJECT_DIR$/src/controllers/AccountController.java" />
         <option value="$PROJECT_DIR$/src/businessLogic/AdminManager.java" />
         <option value="$PROJECT_DIR$/src/DataAccess/ItemRepository.java" />
+        <option value="db-console:/17ed7fbf/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/" />
+        <option value="$PROJECT_DIR$/src/views/subscriptionCartView.java" />
+        <option value="$PROJECT_DIR$/src/views/reminderListView.java" />
       </list>
     </option>
   </component>
@@ -294,10 +186,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -327,7 +218,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -470,6 +360,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -484,7 +375,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="FullScreen" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="recentsLimit" value="5" />
@@ -515,7 +406,7 @@
       <recent name="C:\MyApps\Github\Shoplify\src\views" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.homepageView">
+  <component name="RunManager" selected="Application.reminderListView">
     <configuration default="false" name="homepageView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -881,10 +772,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.homepageView" />
-        <item index="1" class="java.lang.String" itemvalue="Application.loginView" />
-        <item index="2" class="java.lang.String" itemvalue="Application.accountView" />
-        <item index="3" class="java.lang.String" itemvalue="Application.reminderListView" />
+        <item index="0" class="java.lang.String" itemvalue="Application.reminderListView" />
+        <item index="1" class="java.lang.String" itemvalue="Application.homepageView" />
+        <item index="2" class="java.lang.String" itemvalue="Application.loginView" />
+        <item index="3" class="java.lang.String" itemvalue="Application.accountView" />
         <item index="4" class="java.lang.String" itemvalue="Application.checkoutView" />
       </list>
     </recent_temporary>
@@ -982,6 +873,8 @@
       <workItem from="1417984330244" duration="2068000" />
       <workItem from="1417986801484" duration="4348000" />
       <workItem from="1417991218615" duration="1070000" />
+      <workItem from="1417992336773" duration="1354000" />
+      <workItem from="1417993697937" duration="1404000" />
     </task>
     <task id="LOCAL-00001" summary="-Created Model classes &#10;&#10;-Moved Forms into &quot;views&quot; folder&#10;&#10;-Database driver added&#10;&#10;-folders created for Models, Views, Controllers, and Data Access">
       <created>1413895792104</created>
@@ -1223,7 +1116,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251411000" />
+    <option name="totallyTimeSpent" value="254169000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1246,18 +1139,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33405405" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14605543" sideWeight="0.5027027" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32324323" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14605543" sideWeight="0.4972973" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1453958" sideWeight="0.4972973" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3362162" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3352855" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5006974" order="5" side_tool="true" content_ui="tabs" />
@@ -1265,18 +1157,19 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28899083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24648649" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" x="254" y="269" width="857" height="230" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5006974" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3297587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18901454" sideWeight="0.106290676" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3297587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18976545" sideWeight="0.49930266" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32540542" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18901454" sideWeight="0.8937093" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32503662" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1881663" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.2898975" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" x="686" y="194" width="396" height="507" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3338214" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1361,21 +1254,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controllers/AccountController.java</url>
-          <line>109</line>
-          <properties />
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/businessLogic/ItemManager.java</url>
-          <line>85</line>
-          <properties />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="39" />
+      <option name="time" value="52" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1383,6 +1262,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/businessLogic/AccountManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2055" max-vertical-offset="2220">
+          <caret line="137" column="27" selection-start-line="137" selection-start-column="27" selection-end-line="137" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/businessLogic/ShoppingCartManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="1095">
@@ -1436,13 +1323,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15831135" vertical-offset="0" max-vertical-offset="5820">
           <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/reminderListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2010">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1502,13 +1382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="6352" max-vertical-offset="20995">
-          <caret line="465" column="70" selection-start-line="465" selection-start-column="70" selection-end-line="465" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/homepageView2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="6369" max-vertical-offset="21012">
@@ -1555,7 +1428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
           <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1568,7 +1440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2076" max-vertical-offset="3519">
           <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1579,21 +1450,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/..OrderItems">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataAccess/OrderRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="5746">
           <caret line="301" column="46" selection-start-line="301" selection-start-column="46" selection-end-line="301" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1608,7 +1468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="886" max-vertical-offset="2278">
           <caret line="80" column="103" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1643,7 +1502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="249" max-vertical-offset="799">
           <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1651,7 +1509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="708" max-vertical-offset="1258">
           <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1670,7 +1527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4067" max-vertical-offset="5032">
           <caret line="263" column="72" selection-start-line="263" selection-start-column="20" selection-end-line="263" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1682,47 +1538,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/subscriptionCartView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5797" max-vertical-offset="9928">
-          <caret line="341" column="161" selection-start-line="341" selection-start-column="33" selection-end-line="341" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessLogic/AccountManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1828" max-vertical-offset="2380">
-          <caret line="137" column="27" selection-start-line="137" selection-start-column="27" selection-end-line="137" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataAccess/AccountRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3587" max-vertical-offset="5916">
           <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-          <folding>
-            <marker date="1417989116637" expanded="true" signature="865:1015" placeholder="Insert into ..." />
-            <marker date="1417989116637" expanded="true" signature="1116:1142" placeholder="SELECT last_..." />
-            <marker date="1417989116637" expanded="true" signature="2338:2440" placeholder="Update Accou..." />
-            <marker date="1417989116637" expanded="true" signature="3411:3475" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417989116637" expanded="true" signature="4946:5049" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417989116637" expanded="true" signature="6370:6432" placeholder="SELECT * FRO..Account..." />
-            <marker date="1417989116637" expanded="true" signature="8314:8459" placeholder="Insert into ..." />
-            <marker date="1417989116637" expanded="true" signature="8548:8574" placeholder="SELECT last_..." />
-            <marker date="1417989116637" expanded="true" signature="9910:10092" placeholder="Update Subsc..." />
-            <marker date="1417989116637" expanded="true" signature="10990:11303" placeholder="Insert into ..." />
-            <marker date="1417989116637" expanded="true" signature="12365:12439" placeholder="SELECT * FRO..SavedPaymentInformation..." />
-            <marker date="1417989116637" expanded="true" signature="13918:13997" placeholder="SELECT * FRO..Subscription..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1316" max-vertical-offset="2856">
-          <caret line="93" column="44" selection-start-line="93" selection-start-column="44" selection-end-line="93" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -1731,7 +1550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
           <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1739,15 +1557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
           <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/686e0e86/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5172414" vertical-offset="75" max-vertical-offset="1564">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1759,10 +1568,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/businessLogic/ItemManager.java">
+    <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="543" max-vertical-offset="1904">
-          <caret line="80" column="47" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4125" max-vertical-offset="8235">
+          <caret line="283" column="56" selection-start-line="283" selection-start-column="56" selection-end-line="283" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1771,37 +1580,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2176">
           <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/businessLogic/AccountManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.934877" vertical-offset="1289" max-vertical-offset="2100">
+          <caret line="137" column="27" selection-start-line="137" selection-start-column="27" selection-end-line="137" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/17ed7fbf/b3d7b316-6bb8-41a2-93a7-a5ec67f8ff1e/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="135">
+          <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/subscriptionCartView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75126904" vertical-offset="5209" max-vertical-offset="8685">
+          <caret line="406" column="0" selection-start-line="406" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
           <folding>
-            <element signature="e#2386#2387#0" expanded="true" />
-            <element signature="e#2436#2437#0" expanded="true" />
+            <element signature="e#7241#7678#0" expanded="true" />
+            <element signature="e#7667#7668#0" expanded="true" />
+            <element signature="e#14486#14658#0" expanded="true" />
+            <element signature="e#14647#14648#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataAccess/ItemRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/controllers/AccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82608694" vertical-offset="4219" max-vertical-offset="9333">
-          <caret line="283" column="85" selection-start-line="283" selection-start-column="56" selection-end-line="283" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1378" max-vertical-offset="2520">
+          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/businessLogic/ItemManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64761907" vertical-offset="883" max-vertical-offset="1680">
+          <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/homepageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0384617" vertical-offset="2059" max-vertical-offset="19005">
+          <caret line="203" column="8" selection-start-line="203" selection-start-column="8" selection-end-line="203" selection-end-column="77" />
           <folding>
-            <marker date="1417992289426" expanded="true" signature="1048:1103" placeholder="SELECT * FRO..Item..." />
-            <marker date="1417992289426" expanded="true" signature="3128:3207" placeholder="Select * fro..ShoppingList..." />
-            <marker date="1417992289426" expanded="true" signature="4299:4422" placeholder="INSERT INTO ..." />
-            <marker date="1417992289426" expanded="true" signature="5223:5344" placeholder="Delete From ..." />
-            <marker date="1417992289426" expanded="true" signature="6241:6321" placeholder="Select * fro..OrderItems..." />
-            <marker date="1417992289426" expanded="true" signature="7798:7816" placeholder="SELECT * FRO..Item..." />
-            <marker date="1417992289426" expanded="true" signature="9840:9902" placeholder="SELECT * FRO..OrderItems..." />
-            <marker date="1417992289426" expanded="true" signature="11158:11257" placeholder="Select * fro..SubscriptionItem..." />
-            <marker date="1417992289426" expanded="true" signature="12330:12491" placeholder="Insert Into ..." />
-            <marker date="1417992289426" expanded="true" signature="13295:13455" placeholder="Update Subsc..." />
-            <marker date="1417992289426" expanded="true" signature="14293:14414" placeholder="Delete From ..." />
-            <marker date="1417992289426" expanded="true" signature="15276:15338" placeholder="SELECT * FRO..ItemDetails..." />
-            <marker date="1417992289426" expanded="true" signature="16776:16864" placeholder="Update Item ..." />
-            <marker date="1417992289426" expanded="true" signature="17585:17650" placeholder="Update Item ..." />
-            <marker date="1417992289426" expanded="true" signature="18535:18901" placeholder="Insert into ..." />
-            <marker date="1417992289426" expanded="true" signature="19700:19728" placeholder="select max(I..Item..." />
-            <marker date="1417992289426" expanded="true" signature="20685:20766" placeholder="Delete From ..." />
-            <marker date="1417992289426" expanded="true" signature="21635:21961" placeholder="Insert into ..." />
-            <marker date="1417992289426" expanded="true" signature="22710:22770" placeholder="Delete From ..." />
+            <element signature="e#21841#22800#0" expanded="true" />
+            <element signature="e#22793#22794#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/reminderListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5939086" vertical-offset="3156" max-vertical-offset="6450">
+          <caret line="258" column="33" selection-start-line="258" selection-start-column="33" selection-end-line="258" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
