@@ -32,6 +32,7 @@ public class UserModel {
         _isAdmin = isAdmin;
         _userType = userType;
         _accountId = accountId;
+
     }
 
     public int getUserId()

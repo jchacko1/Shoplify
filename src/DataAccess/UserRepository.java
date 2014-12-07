@@ -85,6 +85,33 @@ public class UserRepository extends BaseRepository {
         }
     }
 
+    public boolean isUserDisabled(int userId)
+    {
+
+            Connection c = null;
+            Statement stmt = null;
+            int disable = 0;
+            try {
+                System.out.println("begin User table try block");
+                Class.forName(getClassForName());
+                c = DriverManager.getConnection(getConnectionString());
+                c.setAutoCommit(false);
+                System.out.println("Opened database successfully");
+                stmt = c.createStatement();
+                ResultSet rs = stmt.executeQuery( "SELECT * FROM User WHERE UserId = " + userId + ";" );
+                while ( rs.next() ) {
+                    disable = rs.getInt("Disable");
+                }
+                rs.close();
+                stmt.close();
+                c.close();
+            } catch ( Exception e ) {
+                System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+                System.exit(0);
+            }
+        return disable == 1;
+    }
+
     public RegisteredUserModel createRegisteredUser(String firstName, String lastName, String dateOfBirth,String gender,int accountId, String address,String email, String phoneNumber, int securityQuestionId, String securityAnswer)
     {
         {

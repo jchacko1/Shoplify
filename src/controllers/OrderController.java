@@ -20,11 +20,6 @@ public class OrderController {
     }
 
     public static OrderModel createOrder() throws ClassNotFoundException {
-//        if(Global.CURRENT_ACCOUNT == null)
-//        {
-//            //todo remove this code
-//            Global.CURRENT_ACCOUNT = AccountController.getAccountWithLogin("BholaRules","ImpossibleExams");
-//        }
         if(Global.CURRENT_ACCOUNT != null)
         {
             OrderModel orderModel = _orderManager.createOrder(0.00,0.00,0.00,Global.CURRENT_ACCOUNT.getUserId(),0.00,0,Global.SHIPPING_FEE);

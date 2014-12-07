@@ -107,6 +107,10 @@ public class UserController {
                          }
     }
 
+    public static boolean isUserDisabled(int userId)
+    {
+        return _userManager.isUserDisabled(userId);
+    }
 
     public static boolean isValidUser(UserModel userModel){
 
