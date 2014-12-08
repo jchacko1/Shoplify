@@ -71,6 +71,18 @@ public class ReminderController {
         }
     }
 
+    public ArrayList<ItemModel> getItemsOnGlobalReminderList()
+    {
+            ArrayList<ItemModel> reminderListItems = new ArrayList<ItemModel>();
+            if(Global.REMINDERITEMLIST == null || Global.REMINDERITEMLIST.isEmpty())
+            {
+               return reminderListItems;
+            }
+
+            reminderListItems = Global.REMINDERITEMLIST;
+           return reminderListItems;
+    }
+
     public static ArrayList<ItemModel> getReminderList(int userId){
 
         return _reminderService.getReminderList(userId);
