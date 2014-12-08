@@ -7,11 +7,8 @@ package views;
 
 
 
-import controllers.ImageController;
-import controllers.ItemController;
+import controllers.*;
 import DataAccess.*;
-import controllers.OrderController;
-import controllers.SearchController;
 import global.Global;
 import models.AccountModel;
 import models.Enums;
@@ -1130,8 +1127,15 @@ public class homepageView2 extends javax.swing.JFrame {
         validate();
     }
     private void jButton2ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        accountView frame = new accountView();
-        frame.setVisible(true);
+        Boolean isAdmin = AdminController.isLoggedInUserAnAdmin();
+        if(isAdmin = true){
+            adminAccountView frame0 = new adminAccountView();
+            frame0.setVisible(true);
+        }
+        else {
+            accountView frame = new accountView();
+            frame.setVisible(true);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton13ActionPerformed(ActionEvent evt){//GEN-FIRST:event_jButton13ActionPerformed
