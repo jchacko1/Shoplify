@@ -10,6 +10,7 @@ import models.ItemModel;
 import models.ReminderModel;
 import models.ShoppingCartModel;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 /**
@@ -70,6 +71,14 @@ public class ReminderController {
         }
     }
 
+    public static ArrayList<ItemModel> getReminderList(int userId){
+
+        return _reminderService.getReminderList(userId);
+    }
+
+    public static ArrayList<ItemModel> getItemsOnReminderList(int shoppingListId){
+        return _reminderService.getItemsOnReminderList(shoppingListId);
+    }
 
 
 }
