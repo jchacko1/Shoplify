@@ -107,12 +107,12 @@ public class subscriptionCartView extends javax.swing.JFrame {
         ArrayList<ItemModel> itemsList = ItemController.getItems();
 
         final String[] meat = new String[6];
-        String[] dairy = new String[6];
-        String[] fruit = new String[6];
-        String[] vegetable = new String[6];
-        String[] drink = new String[6];
-        String[] dessert = new String[6];
-        String[] bread = new String[6];
+        final String[] dairy = new String[6];
+        final String[] fruit = new String[6];
+        final String[] vegetable = new String[6];
+        final String[] drink = new String[6];
+        final String[] dessert = new String[6];
+        final String[] bread = new String[6];
         final int[] meatInt = new int[6];
         final int[] dairyInt = new int[6];
         final int[] fruitInt = new int[6];
