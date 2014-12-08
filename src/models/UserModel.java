@@ -133,6 +133,18 @@ public class UserModel {
         return _isAdmin;
     }
 
+    public int getIsAdminInt()
+    {
+        if(_isAdmin)
+        {
+              return 1;
+        }
+        else
+        {
+              return 0;
+        }
+    }
+
     public void setAccountId(int accountId)
     {
         _accountId = accountId;

@@ -207,7 +207,7 @@ public class homepageView2 extends javax.swing.JFrame {
         });
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/user.png"))); // NOI18N
-        jButton2.setText("Login/Signup");
+        jButton2.setText(userFirstName + " " + userLastName);
         jButton2.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -225,6 +225,9 @@ public class homepageView2 extends javax.swing.JFrame {
                 }
             }
         });
+
+        jButton3.setEnabled(false);
+
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel3.setPreferredSize(new java.awt.Dimension(881, 493));
@@ -343,7 +346,14 @@ public class homepageView2 extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/barcode.png"))); // NOI18N
 
-        jButton11.setText("Subcription");
+        jButton11.setText("Subscription");
+        jButton11.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                subscriptionCartView frame = new subscriptionCartView();
+                frame.setVisible(true);
+            }
+        });
 
         jMenu1.setText("File");
 
@@ -464,7 +474,7 @@ public class homepageView2 extends javax.swing.JFrame {
                 if (e.getSource() == searchButtons[i]) {
                     int btNum = Integer.valueOf(searchButtons[i].getName());
                     //System.out.println(button.toString());
-//                    System.out.print("!!!!!!Button " + buttons[i].getName() + " pressed!!!!!1");
+//                    System.out.print("!!!!!!Button " + buttons[i].getName() + " pressed!!!!!!1");
                     System.out.println(i);
                     try {
                         //todo pass in quantity!
@@ -496,6 +506,7 @@ public class homepageView2 extends javax.swing.JFrame {
                     System.out.println(i);
                     itemPopupView frame = new itemPopupView(btNum);
                     frame.setVisible(true);
+                    jButton3.setEnabled(true);
                     //
                     //            button.
                 }

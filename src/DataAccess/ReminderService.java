@@ -18,11 +18,10 @@ public class ReminderService {
         _itemRepository = new ItemRepository();
     }
 
-    public ArrayList<ItemModel> getReminderList(int reminderId){
-       if(reminderId > 0) {
-           //return _itemRepository.getShoppingList(reminderId);
-       }
-       return null;
+    public ArrayList<ItemModel> getReminderList(int userId){
+
+        return _itemRepository.getShoppingList(userId);
+
     }
 
     public void addItemToReminderList(int itemId, int reminderId)
@@ -35,15 +34,20 @@ public class ReminderService {
         _itemRepository.deleteItemFromShoppingList(itemId,reminderId);
     }
 
-
     /**
      * TODO: how can we save the list with item into ShoppingList DB;
-     * @param saveList
+     * @param shoppingListId
      * @param itemId
      */
-    public void saveCurrentList(Collection<ItemModel> saveList, int itemId){
+    public void saveCurrentList(int shoppingListId, int itemId){
 
         //TODO: how can we add the item into savelist
        // saveList.add(_itemRepository.addItemToShoppingList(itemId, shoppingListId));
+        //_itemRepository.saveReminderList(shoppingListId, itemId);
+
+    }
+
+    public  ArrayList<ItemModel> getItemsOnReminderList(int shoppingListId){
+        return _itemRepository.getItemsOnReminderList(shoppingListId);
     }
 }

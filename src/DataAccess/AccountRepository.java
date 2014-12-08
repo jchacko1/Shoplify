@@ -209,12 +209,12 @@ public class AccountRepository extends BaseRepository {
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
             String query = "Insert into Subscription(UserId, ShipDate, Enabled)values(" + '"' + userId + '"' + "," + '"'  + shipDate + '"' + "," + '"' + isEnabled + '"' + ");";
-            //subscriptionId = stmt.executeUpdate(query);
+            stmt.executeUpdate(query);
             ResultSet rs = stmt.executeQuery("SELECT last_insert_rowid()");
             while ( rs.next() ) {
                 subscriptionId = rs.getInt(1);
             }
-            System.out.println("AccountId is:" + subscriptionId);
+            System.out.println("SubscriptionId is:" + subscriptionId);
             stmt.close();
             c.close();
         } catch ( Exception e ) {

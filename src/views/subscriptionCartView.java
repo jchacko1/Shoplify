@@ -5,10 +5,15 @@
  */
 package views;
 
+import controllers.AccountController;
 import controllers.ItemController;
+import global.Global;
 import models.Enums;
 import models.ItemModel;
+import models.SubscriptionUserModel;
+import models.UserModel;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -18,12 +23,13 @@ import java.util.ArrayList;
  * @author ART
  */
 public class subscriptionCartView extends javax.swing.JFrame {
-
+    ArrayList<Integer> subscriptionItemIds = new ArrayList<Integer>();
     /**
      * Creates new form subscriptionCartView
      */
     public subscriptionCartView() {
         initComponents();
+
     }
 
     /**
@@ -63,7 +69,26 @@ public class subscriptionCartView extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
+        jTextField1.setText("Month/Day/Year");
         jTextArea2.setEditable(false);
+
+        UserModel userModel = Global.CURRENT_ACCOUNT.getUserModel();
+        if(userModel.getUserType() == Enums.UserType.SUBSCRIPTION) {
+            SubscriptionUserModel subscriptionUserModel = (SubscriptionUserModel) userModel;
+
+            int subscriptionId = subscriptionUserModel.getSubscriptionId();
+            if (subscriptionId > -1) {
+                ArrayList<ItemModel> itemsOnSubscription = ItemController.getItemsOnSubscription(subscriptionId);
+                for(ItemModel item : itemsOnSubscription)
+                {
+                    String str = item.getName();
+                    jTextArea2.append(str + "\n");
+                }
+
+                String subscriptionShippingDate = AccountController.getSubscriptionDate(subscriptionUserModel.getSubscriptionId());
+                jTextField1.setText(subscriptionShippingDate);
+            }
+        }
 
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
@@ -77,17 +102,24 @@ public class subscriptionCartView extends javax.swing.JFrame {
 
         jLabel7.setText("Shipping date:");
 
-        jTextField1.setText("Month/Day/Year");
+
 
         ArrayList<ItemModel> itemsList = ItemController.getItems();
 
-        String[] meat = new String[6];
-        String[] dairy = new String[6];
-        String[] fruit = new String[6];
-        String[] vegetable = new String[6];
-        String[] drink = new String[6];
-        String[] dessert = new String[6];
-        String[] bread = new String[6];
+        final String[] meat = new String[6];
+        final String[] dairy = new String[6];
+        final String[] fruit = new String[6];
+        final String[] vegetable = new String[6];
+        final String[] drink = new String[6];
+        final String[] dessert = new String[6];
+        final String[] bread = new String[6];
+        final int[] meatInt = new int[6];
+        final int[] dairyInt = new int[6];
+        final int[] fruitInt = new int[6];
+        final int[] vegetableInt = new int[6];
+        final int[] drinkInt = new int[6];
+        final int[] dessertInt = new int[6];
+        final int[] breadInt = new int[6];
         int countMeat = 0;
         int countDairy = 0;
         int countFruit = 0;
@@ -95,6 +127,13 @@ public class subscriptionCartView extends javax.swing.JFrame {
         int countDrink = 0;
         int countDessert = 0;
         int countBread = 0;
+        int countMeatInt = 0;
+        int countDairyInt = 0;
+        int countFruitInt = 0;
+        int countVegetableInt = 0;
+        int countDrinkInt = 0;
+        int countDessertInt = 0;
+        int countBreadInt = 0;
 
 
 
@@ -103,32 +142,52 @@ public class subscriptionCartView extends javax.swing.JFrame {
             if (item.getCategory() == Enums.Category.Meat) {
 
                 meat[countMeat] = item.getName();
-                int d = item.getItemID();
+                meatInt[countMeatInt] = item.getItemID();
                 countMeat++;
+                countMeatInt++;
+                //subscriptionItemIds.add(item.getItemID());
 
             } else if (item.getCategory() == Enums.Category.Dairy) {
                 dairy[countDairy] = item.getName();
+                dairyInt[countDairyInt] = item.getItemID();
                 countDairy++;
+                countDairyInt++;
+                //subscriptionItemIds.add(item.getItemID());
 
             } else if (item.getCategory() == Enums.Category.Fruit) {
                 fruit[countFruit] = item.getName();
+                fruitInt[countFruitInt] = item.getItemID();
                 countFruit++;
+                countFruitInt++;
+                //subscriptionItemIds.add(item.getItemID());
 
             } else if (item.getCategory() == Enums.Category.Vegetables) {
                 vegetable[countVegetable] = item.getName();
+                vegetableInt[countVegetableInt] = item.getItemID();
                 countVegetable++;
+                countVegetableInt++;
+                //subscriptionItemIds.add(item.getItemID());
 
             } else if (item.getCategory() == Enums.Category.Drink) {
                 drink[countDrink] = item.getName();
+                drinkInt[countDrinkInt] = item.getItemID();
                 countDrink++;
+                countDrinkInt++;
+                //subscriptionItemIds.add(item.getItemID());
 
             } else if (item.getCategory() == Enums.Category.Dessert) {
                 dessert[countDessert] = item.getName();
+                dessertInt[countDessertInt] = item.getItemID();
                 countDessert++;
+                countDessertInt++;
+                //subscriptionItemIds.add(item.getItemID());
 
             } else if (item.getCategory() == Enums.Category.Bread) {
                 bread[countBread] = item.getName();
+                breadInt[countBreadInt] = item.getItemID();
                 countBread++;
+                countBreadInt++;
+                //subscriptionItemIds.add(item.getItemID());
             }
 
         }
@@ -140,6 +199,12 @@ public class subscriptionCartView extends javax.swing.JFrame {
 
                 String item = jComboBox1.getSelectedItem().toString();
 
+                int itemId = jComboBox1.getSelectedIndex();
+
+                subscriptionItemIds.add(meatInt[itemId]);
+
+                //ItemController.addItemToSubscription(itemId, 1, 1);
+
                 jTextArea2.append(item + "\n");
             }
         });
@@ -150,6 +215,12 @@ public class subscriptionCartView extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 String item = jComboBox2.getSelectedItem().toString();
+
+                int itemId = jComboBox2.getSelectedIndex();
+
+                subscriptionItemIds.add(dairyInt[itemId]);
+
+                //ItemController.addItemToSubscription(itemId, 1, 1);
 
                 jTextArea2.append(item + "\n");
             }
@@ -168,6 +239,12 @@ public class subscriptionCartView extends javax.swing.JFrame {
 
                 String item = jComboBox3.getSelectedItem().toString();
 
+                int itemId = jComboBox3.getSelectedIndex();
+
+                subscriptionItemIds.add(fruitInt[itemId]);
+
+                //ItemController.addItemToSubscription(itemId, 1, 1);
+
                 jTextArea2.append(item + "\n");
             }
         });
@@ -181,6 +258,12 @@ public class subscriptionCartView extends javax.swing.JFrame {
 
                 String item = jComboBox4.getSelectedItem().toString();
 
+                int itemId = jComboBox4.getSelectedIndex();
+
+                subscriptionItemIds.add(vegetableInt[itemId]);
+
+                //ItemController.addItemToSubscription(itemId, 1, 1);
+
                 jTextArea2.append(item + "\n");
             }
         });
@@ -193,6 +276,12 @@ public class subscriptionCartView extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 String item = jComboBox5.getSelectedItem().toString();
+
+                int itemId = jComboBox5.getSelectedIndex();
+
+                subscriptionItemIds.add(drinkInt[itemId]);
+
+                //ItemController.addItemToSubscription(itemId, 1, 1);
 
                 jTextArea2.append(item + "\n");
             }
@@ -208,6 +297,12 @@ public class subscriptionCartView extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 String item = jComboBox6.getSelectedItem().toString();
+
+                int itemId = jComboBox6.getSelectedIndex();
+
+                subscriptionItemIds.add(dessertInt[itemId]);
+
+                //ItemController.addItemToSubscription(itemId, 1, 1);
 
                 jTextArea2.append(item + "\n");
             }
@@ -243,6 +338,12 @@ public class subscriptionCartView extends javax.swing.JFrame {
 
                 String item = jComboBox7.getSelectedItem().toString();
 
+                int itemId = jComboBox7.getSelectedIndex();
+
+                subscriptionItemIds.add(breadInt[itemId]);
+
+                //ItemController.addItemToSubscription(itemId, 1, 1);;;;;;;
+
                 jTextArea2.append(item + "\n");
             }
         });
@@ -252,12 +353,57 @@ public class subscriptionCartView extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 jTextArea2.setText("");
+                ItemController.deleteItemsFromSubscription(1);
             }
         });
 
+
         jButton4.setText("Save");
+        jButton4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                UserModel userModel = Global.CURRENT_ACCOUNT.getUserModel();
+                if(userModel.getUserType() == Enums.UserType.SUBSCRIPTION)
+                {
+                    SubscriptionUserModel subscriptionUserModel = (SubscriptionUserModel) userModel;
+                    subscriptionUserModel.setSubscriptionId(-1);
+                    String display = AccountController.createSubscription(jTextField1.getText(), Global.CURRENT_ACCOUNT.getUserModel());
+
+                        int subscriptionId = subscriptionUserModel.getSubscriptionId();
+                        for(Integer itemId : subscriptionItemIds)
+                        {
+                            ItemController.addItemToSubscription(itemId, 1, subscriptionId);
+                        }
+                    subscriptionItemIds.clear();
+
+                }
+                else
+                {
+                    String display = AccountController.createSubscription(jTextField1.getText(), Global.CURRENT_ACCOUNT.getUserModel());
+                    if(userModel.getUserType() == Enums.UserType.SUBSCRIPTION)
+                    {
+                        SubscriptionUserModel subscriptionUserModel = (SubscriptionUserModel) userModel;
+                        int subscriptionId = subscriptionUserModel.getSubscriptionId();
+                        for(Integer itemId : subscriptionItemIds)
+                        {
+                            ItemController.addItemToSubscription(itemId, 1, subscriptionId);
+                        }
+                        subscriptionItemIds.clear();
+                    }
+                }
+
+            }
+        });
+
+        jTextField1.setEditable(false);
 
         jButton5.setText("Edit");
+        jButton5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jTextField1.setEditable(true);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

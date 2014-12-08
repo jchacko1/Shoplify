@@ -98,7 +98,16 @@ public class AccountController {
 
     public static String createSubscription(String shipDate,  UserModel userModel)
     {
-        if(userModel.getUserType() == Enums.UserType.REGISTERED || userModel.getUserType() == Enums.UserType.SUBSCRIPTION)
+        RegisteredUserModel registeredUserModel = null;
+        if(userModel.getUserType() == Enums.UserType.REGISTERED)
+        {
+            registeredUserModel = (RegisteredUserModel)userModel;
+            SubscriptionUserModel subscriptionUserModel = new SubscriptionUserModel(registeredUserModel.getUserId(), registeredUserModel.getCreateDate(),registeredUserModel.getFirstName(),registeredUserModel.getLastName(),registeredUserModel.getIsAdmin(), Enums.UserType.SUBSCRIPTION,registeredUserModel.getAccountId(),registeredUserModel.getAddress(),registeredUserModel.getPhoneNumber(),registeredUserModel.getDateOfBirth(),registeredUserModel.getGender(),registeredUserModel.getEmail(),-1,registeredUserModel.getSecurityQuestionId(),registeredUserModel.getSecurityAnswer());
+
+            userModel = subscriptionUserModel;
+        }
+
+        if(userModel.getUserType() == Enums.UserType.SUBSCRIPTION)
         {
             SubscriptionUserModel subscriptionUserModel = (SubscriptionUserModel)userModel;
                 //stop a Subscription user from creating a subscription, they already have one
@@ -115,6 +124,9 @@ public class AccountController {
 
                 //Update the user in the database with the new SubscriptionId and possibly a new UserType
                 UserController.updateUser(subscriptionUserModel);
+
+                //Update the User on the order
+                Global.CURRENT_ACCOUNT.setUserModel(userModel);
 
                 return "Subscription created!";
             }
@@ -154,6 +166,5 @@ public class AccountController {
     {
          return _accountManager.getSavedPayments(userId);
     }
-
 
 }

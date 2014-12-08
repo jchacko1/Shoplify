@@ -219,6 +219,9 @@ public class homepageView extends JFrame {
             }
         });
 
+        jButton3.setEnabled(false);
+
+
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel3.setPreferredSize(new java.awt.Dimension(881, 493));
         jPanel3.setRequestFocusEnabled(false);
@@ -238,7 +241,7 @@ public class homepageView extends JFrame {
 
         jPanel11.setLayout(new javax.swing.OverlayLayout(jPanel11));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/3874990-grocery-store.jpg"))); // NOI18N
+        //jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/3874990-grocery-store.jpg"))); // NOI18N
         jPanel11.add(jLabel1);
 
         jLayeredPane1.add(jPanel11);
@@ -477,7 +480,7 @@ public class homepageView extends JFrame {
                     itemPopupView frame = new itemPopupView(btNum);
                     frame.setVisible(true);
                     //
-                    //            button.
+                    //            button..
                 }
             }
             if (e.getSource() instanceof JButton) {

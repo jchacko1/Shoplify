@@ -4,11 +4,13 @@ import DataAccess.ItemService;
 import DataAccess.ReminderService;
 import businessLogic.ReminderManager;
 import businessLogic.ShoppingCartManager;
+import global.Global;
 import models.Enums;
 import models.ItemModel;
 import models.ReminderModel;
 import models.ShoppingCartModel;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 /**
@@ -45,10 +47,50 @@ public class ReminderController {
         _reminderManager.deleteItemFromReminderList(reminderModel, itemModel);
     }
 
-    public static void saveCurrentList(Collection<ItemModel> saveList,int itemId){
-        _reminderService.saveCurrentList(saveList, itemId);
+    public static void saveCurrentList(int shoppingListId,int itemId){
+
+        _reminderService.saveCurrentList(shoppingListId, itemId);
+
     }
 
+    public static void setReminderList(ArrayList<Integer> reminderList){
+        ArrayList<ItemModel> items = new ArrayList<ItemModel>();
+        for(Integer itemId : reminderList)
+        {
+         ItemModel item = ItemController.getItem(itemId);
+            items.add(item);
+        }
+        Global.REMINDERITEMLIST = items;
+    }
+
+    public static void clearReminderList()
+    {
+        if(Global.REMINDERITEMLIST != null)
+        {
+            Global.REMINDERITEMLIST.clear();
+        }
+    }
+
+    public static ArrayList<ItemModel> getItemsOnGlobalReminderList()
+    {
+            ArrayList<ItemModel> reminderListItems = new ArrayList<ItemModel>();
+            if(Global.REMINDERITEMLIST == null || Global.REMINDERITEMLIST.isEmpty())
+            {
+               return reminderListItems;
+            }
+
+            reminderListItems = Global.REMINDERITEMLIST;
+           return reminderListItems;
+    }
+
+    public static ArrayList<ItemModel> getReminderList(int userId){
+
+        return _reminderService.getReminderList(userId);
+    }
+
+    public static ArrayList<ItemModel> getItemsOnReminderList(int shoppingListId){
+        return _reminderService.getItemsOnReminderList(shoppingListId);
+    }
 
 
 }

@@ -62,11 +62,10 @@ public class ItemRepository extends BaseRepository {
     }
 
 
-    public ArrayList<ReminderModel> getShoppingList(int userId)
+    public ArrayList<ItemModel> getShoppingList(int userId)
     {
-        //TODO get a "shopping list based on userId
 
-        ArrayList<ReminderModel> shoppingList = new ArrayList<ReminderModel>();
+        ArrayList<ItemModel> shoppingList = new ArrayList<ItemModel>();
        /* shoppingList.add(new ItemModel(1,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
         shoppingList.add(new ItemModel(2,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));
         shoppingList.add(new ItemModel(3,"Name",0.00,5,"Description", Enums.Category.Bread,-1, null));*/
@@ -98,6 +97,36 @@ public class ItemRepository extends BaseRepository {
 
         return shoppingList;
     }
+
+    public ArrayList<ItemModel> getItemsOnReminderList(int shoppingListId)
+    {
+        ArrayList<ItemModel> items = new ArrayList<ItemModel>();
+        Connection c = null;
+        Statement stmt = null;
+        int itemId = 0;
+        try {
+            System.out.println("begin get Items on Subscription for items table try block");
+            Class.forName(getClassForName());
+            c = DriverManager.getConnection(getConnectionString());
+            c.setAutoCommit(false);
+            System.out.println("Opened database successfully");
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery( "Select * from ShoppingListItems where ShoppingListId = " + '"' + String.valueOf(shoppingListId) + '"' + ";");
+            while ( rs.next() ) {
+                ItemModel item = ItemController.getItem(rs.getInt("ItemId"));
+                items.add(item);
+            }
+            rs.close();
+            stmt.close();
+            c.close();
+        } catch ( Exception e ) {
+            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+            System.exit(0);
+        }
+        System.out.println("Operation done successfully");
+        return items;
+    }
+
 
     public void addItemToShoppingList(int ItemId, int ShoppingListId)
     {
@@ -280,7 +309,7 @@ public class ItemRepository extends BaseRepository {
             stmt = c.createStatement();
             ResultSet rs = stmt.executeQuery( "Select * from SubscriptionItem where SubscriptionId = " + '"' + String.valueOf(subscriptionId) + '"' + ";");
             while ( rs.next() ) {
-                ItemModel item = ItemController.getItem(rs.getInt("SubscriptionId"));
+                ItemModel item = ItemController.getItem(rs.getInt("ItemId"));
                 item.setQuantity(rs.getInt("Quantity"));
                 items.add(item);
             }
@@ -303,7 +332,7 @@ public class ItemRepository extends BaseRepository {
             System.out.println("begin get OrderItems for items table try block");
             Class.forName(getClassForName());
             c = DriverManager.getConnection(getConnectionString());
-            c.setAutoCommit(false);
+            c.setAutoCommit(true);
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
             stmt.executeUpdate( "Insert Into SubscriptionItem(SubscriptionId, ItemId, Quantity) VALUES(" + '"' + subscriptionId + '"' + "," + '"' + itemId + '"' + "," + '"' + quantity + '"' + ");");

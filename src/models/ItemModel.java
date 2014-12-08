@@ -92,13 +92,6 @@ public class ItemModel implements Comparable<ItemModel> {
        return imageId;
    }
 
-    /**
-     *
-     * @return item's image name
-     */
-   public String getImageName(){
-       return imageName;
-   }
 
    public int getReminderListItemId() { return reminderListItemId; }
 

@@ -42,6 +42,7 @@ public class ShoppingCartModel {
         }
     }
 
+
     public void editItem(ItemModel item){
         for(ItemModel itemToEdit : _items)
             if(itemToEdit.getShoppingCartItemId() == item.getShoppingCartItemId() && itemToEdit.getItemID() == item.getItemID())

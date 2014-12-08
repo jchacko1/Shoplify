@@ -138,6 +138,8 @@ public class itemPopupView extends javax.swing.JFrame {
              int itemID = jButton1.getMnemonic();
              System.out.print("\n\nAdding item " + itemID + "to cart");
              OrderController.addItemToOrder(itemID, quantaty);
+
+
         } catch (ClassNotFoundException e1) {
             e1.printStackTrace();
         }
