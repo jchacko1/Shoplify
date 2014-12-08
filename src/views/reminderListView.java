@@ -74,6 +74,12 @@ public class reminderListView extends javax.swing.JFrame {
         jTextArea4.setRows(5);
 
         jTextArea2.setEditable(false);
+        ArrayList<ItemModel> itemsOnReminderlist = ReminderController.getItemsOnGlobalReminderList();
+        for(ItemModel item : itemsOnReminderlist)
+        {
+            String str = item.getName();
+            jTextArea2.append(str + "\n");
+        }
 
         ArrayList<ItemModel> itemsList = ItemController.getItems();
 
@@ -330,6 +336,8 @@ public class reminderListView extends javax.swing.JFrame {
             }
         });
 
+
+
         jButton4.setText("Save");
         jButton4.addActionListener(new ActionListener() {
             @Override
@@ -337,6 +345,8 @@ public class reminderListView extends javax.swing.JFrame {
                 ReminderController.setReminderList(reminderlistItemIds);
             }
         });
+
+
 
         jButton6.setText("");
         jButton6.setBorder(javax.swing.BorderFactory.createCompoundBorder());
