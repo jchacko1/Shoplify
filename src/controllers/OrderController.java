@@ -32,7 +32,7 @@ public class OrderController {
     public static boolean submitOrder(OrderModel order, String firstName, String lastName, String address, String city, String state, String zipCode, String country, String phoneNumber, String email,
     String creditCardType, String cardHoldersName, String creditCardNumber, String expirationDate, String cvs)
     {
-        if(Global.REMINDERITEMLIST != null && Global.REMINDERITEMLIST.isEmpty())
+        if(Global.REMINDERITEMLIST != null && !Global.REMINDERITEMLIST.isEmpty())
         {
             boolean itemIsInCart = false;
             for(ItemModel itemInReminderList : Global.REMINDERITEMLIST)
